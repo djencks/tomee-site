@@ -1,0 +1,121 @@
+Title: TomEE and WebSphere MQ Notice:    Licensed to the Apache Software Foundation (ASF) under one            or more contributor license agreements.
+See the NOTICE file            distributed with this work for additional information            regarding copyright ownership.
+The ASF licenses this file            to you under the Apache License, Version 2.0 (the            "License");
+you may not use this file except in compliance            with the License.
+You may obtain a copy of the License at            .              http://www.apache.org/licenses/LICENSE-2.0            .            Unless required by applicable law or agreed to in writing,            software distributed under the License is distributed on an            "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY            KIND, either express or implied.
+See the License for the            specific language governing permissions and limitations            under the License.
+
+*Steps to integrate TomEE with Websphere MQ*
+
+. Unzip rar file place jars under tomee/lib
+. Added the below to conf/tomee.xml
+
+....
+
+    <tomee>
+    <Container id="wmq" type="MESSAGE">
+    ResourceAdapter=wmqRA
+    MessageListenerInterface=javax.jms.MessageListener
+    ActivationSpecClass=com.ibm.mq.connector.inbound.ActivationSpecImpl
+    </Container>
+
+
+   <Resource id="wmqRA" type="com.ibm.mq.connector.ResourceAdapterImpl" class-name="com.ibm.mq.connector.ResourceAdapterImpl">
+    connectionConcurrency=5
+    maxConnections=10
+    logWriterEnabled=true
+    reconnectionRetryCount=5
+    reconnectionRetryInterval=300000
+    traceEnabled=false
+    traceLevel=3
+   </Resource>
+
+   <Resource **id="qcf"**  type="javax.jms.ConnectionFactory" class-name="com.ibm.mq.connector.outbound.ManagedConnectionFactoryImpl">
+    TransactionSupport=none
+    ResourceAdapter=wmqRA
+    HostName=10.a.b.c
+    Port=1414
+    QueueManager=QM_TIERL
+   Channel=SYSTEM.ADMIN.SVRCONN
+   TransportType=Client
+   UserName=xyz
+   Password=*****
+  </Resource>
+
+  <Resource id="wmq-javax.jms.QueueConnectionFactory"  type="javax.jms.QueueConnectionFactory" class-name="com.ibm.mq.connector.outbound.ManagedQueueConnectionFactoryImpl">
+    TransactionSupport=xa
+    ResourceAdapter=wmqRA
+  </Resource>
+
+  <Resource id="wmq-javax.jms.TopicConnectionFactory"  type="javax.jms.TopicConnectionFactory" class-name="com.ibm.mq.connector.outbound.ManagedTopicConnectionFactoryImpl">
+    TransactionSupport=xa
+    ResourceAdapter=wmqRA
+  </Resource>
+
+  <Resource **id="queue"** type="javax.jms.Queue"
+class-name="com.ibm.mq.connector.outbound.MQQueueProxy">
+    arbitraryProperties
+    baseQueueManagerName
+    baseQueueName
+    CCSID=1208
+    encoding=NATIVE
+    expiry=APP
+    failIfQuiesce=true
+    persistence=APP
+    priority=APP
+    readAheadClosePolicy=ALL
+    targetClient=JMS
+  </Resource>
+
+  <Resource id="wmq-javax.jms.Topic" type="javax.jms.Topic" class-name="com.ibm.mq.connector.outbound.MQTopicProxy">
+    arbitraryProperties
+    baseTopicName
+    brokerCCDurSubQueue=SYSTEM.JMS.D.CC.SUBSCRIBER.QUEUE
+    brokerDurSubQueue=SYSTEM.JMS.D.SUBSCRIBER.QUEUE
+    brokerPubQueue
+    brokerPubQueueManager
+    brokerVersion=1
+    CCSID=1208
+    encoding=NATIVE
+    expiry=APP
+    failIfQuiesce=true
+    persistence=APP
+    priority=APP
+    readAheadClosePolicy=ALL
+    targetClient=JMS
+  </Resource>
+
+ </tomee>	
+
+3. In web.xml add the below to access resources
+ <resource-ref>
+     <res-ref-name>myqcf< /res-ref-name>
+    <res-type>javax.jms.ConnectionFactory < /res-type>
+    <res-auth>Container</res-auth>< /br>
+    <res-sharing-scope>Shareable< /res-sharing-scope>
+    <mapped-name>qcf< /mapped-name>
+  </resource-ref>
+
+ <resource-env-ref>
+   <resource-env-ref-name>myqueue< /resource-env-ref-name>
+   <resource-env-ref-type>javax.jms.Queue< /resource-env-ref-type>
+   <mapped-name>queue< /mapped-name>
+  </resource-env-ref>
+....
+
+*Code:*
+
+
+     @Resource(name = "qcf")
+     private ConnectionFactory connectionFactory;
+     @Resource(name = "queue")
+     private Queue queue;
+     Connection connection = connectionFactory.createConnection();
+     Session session = connection.createSession(false, QueueSession.AUTO_ACKNOWLEDGE);
+     MessageProducer producer = session.createProducer(queue);
+     TextMessage message = session.createTextMessage();
+     message.setText("Test Message");
+     connection.start();
+     producer.send(message);
+     session.close();
+     connection.close();

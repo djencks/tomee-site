@@ -1,0 +1,21 @@
+Title: Contact
+
+== Product Support
+
+If you have questions or comments about the software or documentation on this site, please subscribe to the appropriate link:../support.html[mailing list].
+
+== Security Issues
+
+If you would like to report a security issues with Apache TomEE, please contact link:mailto:security.AT.apache.DOT.org[security.AT.apache.DOT.org].
+Only security issues should be sent to this address.
+
+== General Apache Issues
+
+The TomEE Project is an effort of the http://www.apache.org[Apache Software Foundation].
+The address for general ASF correspondence and licensing questions is:
+
+link:mailto:apache.AT.apache.DOT.org[apache.AT.apache.DOT.org]
+
+You can find more contact information for the Apache Software Foundation on http://www.apache.org/foundation/contact.html[the contact page of the main Apache site].
+
+You may also use http://search.apache.org/[Apache Site Search] to scan all the Apache sites at once.

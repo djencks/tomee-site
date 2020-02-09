@@ -1,0 +1,19 @@
+:doctype: book
+
+Title: EJB 3.0 Specification +++<a name="EJB3.0Specification-Specification">++++++</a>+++
+
+= Specification
+
+The EJB 3.0 specification can be downloaded from the http://www.jcp.org/en/jsr/detail?id=220[JSR 220]  at the JCP (Java Community Process) website after clicking through the JCP's online agreement.
+The specification is very large, but there's a download named _'ejb-3_0-fr-spec-simplified.pdf'_ that is very short and highly recommended as an introduction to EJB 3.0.
+
++++<a name="EJB3.0Specification-Documentation">++++++</a>+++
+
+= Documentation
+
+. link:annotations,-xml-and-defaults.html[Annotations, XML and Defaults]
+. link:security-annotations.html[Security Annotations]
+. link:basics---security#securitypropagation.html[Security Propagation]
+. link:transaction-annotations.html[Transaction Annotations]
+. link:injection-of-other-ejbs-example.html[EJB Injection]
+. link:resource-injection.html[Resource Injection]

@@ -1,0 +1,301 @@
+:doctype: book
+
+Title: Testing Transactions Example
+
++++<a name="TestingTransactionsExample-Overview">++++++</a>+++
+
+= Overview
+
+Testing an EntityManager that uses the default, PersistenceContextType.TRANSACTION, can be challenging due to Entities detaching around transaction boundaries.
+If you were to take the link:injection-of-entitymanager-example.html[Injection of EntityManager Example]  which uses an EXTENDED persistence context and switch it to a TRANSACTION persistence context making no other changes, you'd find that the test would fail.
+This would be because of the detach.
+
+Generally, when using an EntityManager with TRANSACTION persistence context, your transaction should surround your use of the Entities themselves, not just the use of the EntityManager.
+Using a link:unit-testing-transactions.html[transaction in your unit test]  can make testing these scenarios possible.
+
+This example shows use of @PersistenceContext to have an _EntityManager_ with an _TRANSACTION_ persistence context injected into a _@Stateful_ bean using the _@TransactionAttribute_ annotation and a TestCase that runs test code in a JTA _Transaction_.
+An EJB 3 @Entity bean is used with the EntityManager to create, persist and merge data to a database.
+
+_The source for this example is in the "testing-transactions" directory located in the http://tomee.apache.org/downloads.html[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page]._
+
++++<a name="TestingTransactionsExample-TheCode">++++++</a>+++
+
+= The Code
+
+In the code below we see that the transaction attribute for all method of the bean has been changed the default, which is TransactionAttributeType.REQUIRED, to TransactionAttributeType.MANDATORY.
+The MANDATORY transaction attribute is similar to REQUIRED in that the bean method is guaranteed to be executed in a transaction, but with the added restriction that if a transaction isn't started by the client before calling the method, an exception will be thrown.
+
+The benefit of MANDATORY in this example is that it is impossible for the client to get detached Entity issues.
+The client either has a transaction and therefore gets Entities which are still attached and persistent, or the client would get an exception stating that the use of a transaction is mandatory.
+
+See the link:transaction-annotations.html[Transaction Annotations]  page for a full description of the available transaction attributes.
+
++++<a name="TestingTransactionsExample-Writingaunittestfortheexample">++++++</a>+++
+
+== Movie
+
+....
+package org.superbiz.injection.tx;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Movie {
+
+    private String director;
+    private String title;
+    private int year;
+
+    public Movie() {
+    }
+
+    public Movie(String director, String title, int year) {
+        this.director = director;
+        this.title = title;
+        this.year = year;
+    }
+
+    public String getDirector() {
+        return director;
+    }
+
+    public void setDirector(String director) {
+        this.director = director;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+}
+....
+
+== Movies
+
+....
+package org.superbiz.injection.tx;
+
+import javax.ejb.Stateful;
+import javax.ejb.TransactionAttribute;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceContextType;
+import javax.persistence.Query;
+import java.util.List;
+
+import static javax.ejb.TransactionAttributeType.MANDATORY;
+
+//START SNIPPET: code
+@Stateful(name = "Movies")
+@TransactionAttribute(MANDATORY)
+public class Movies {
+
+    @PersistenceContext(unitName = "movie-unit", type = PersistenceContextType.TRANSACTION)
+    private EntityManager entityManager;
+
+    public void addMovie(Movie movie) throws Exception {
+        entityManager.persist(movie);
+    }
+
+    public void deleteMovie(Movie movie) throws Exception {
+        entityManager.remove(movie);
+    }
+
+    public List<Movie> getMovies() throws Exception {
+        Query query = entityManager.createQuery("SELECT m from Movie as m");
+        return query.getResultList();
+    }
+}
+....
+
+== persistence.xml
+
+....
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+
+  <persistence-unit name="movie-unit">
+    <jta-data-source>movieDatabase</jta-data-source>
+    <non-jta-data-source>movieDatabaseUnmanaged</non-jta-data-source>
+    <class>org.superbiz.injection.tx.Movie</class>
+
+    <properties>
+      <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>
+    </properties>
+  </persistence-unit>
+</persistence>
+....
+
+= Writing a unit test for the example
+
+The magic in the TestCase below is the _TransactionBean_ @Stateless bean which is tucked away as an inner class of the TestCase itself.
+With this bean, we can call our test code within the scope of a container controlled transaction.
+This allows our test code to use the EntityManager and the Entities in the scope of a transaction, avoid any detach issues and satisfying the TransactionAttributeType.MANDATORY requirement of our MoviesImpl @Stateful bean.
+
+[cols=3*]
+|===
+| {snippet:id=code
+| url=openejb3/examples/testing-transactions/src/test/java/org/superbiz/injection/tx/MoviesTest.java
+| lang=java}
+|===
+
+Curious on the InitialContext parameters used?
+See the link:injection-of-datasource-example.html[Injection of DataSource Example]  for an explanation of how any Resource can be configured via properties in the TestCase itself or via an openejb.xml file.
+
+== MoviesTest
+
+....
+package org.superbiz.injection.tx;
+
+import junit.framework.TestCase;
+
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.embeddable.EJBContainer;
+import java.util.List;
+import java.util.Properties;
+import java.util.concurrent.Callable;
+
+import static javax.ejb.TransactionAttributeType.REQUIRES_NEW;
+
+/**
+ * See the transaction-rollback example as it does the same thing
+ * via UserTransaction and shows more techniques for rollback
+ */
+//START SNIPPET: code
+public class MoviesTest extends TestCase {
+
+    @EJB
+    private Movies movies;
+
+    @EJB
+    private Caller transactionalCaller;
+
+    protected void setUp() throws Exception {
+        final Properties p = new Properties();
+        p.put("movieDatabase", "new://Resource?type=DataSource");
+        p.put("movieDatabase.JdbcDriver", "org.hsqldb.jdbcDriver");
+        p.put("movieDatabase.JdbcUrl", "jdbc:hsqldb:mem:moviedb");
+
+        EJBContainer.createEJBContainer(p).getContext().bind("inject", this);
+    }
+
+    private void doWork() throws Exception {
+
+        movies.addMovie(new Movie("Quentin Tarantino", "Reservoir Dogs", 1992));
+        movies.addMovie(new Movie("Joel Coen", "Fargo", 1996));
+        movies.addMovie(new Movie("Joel Coen", "The Big Lebowski", 1998));
+
+        List<Movie> list = movies.getMovies();
+        assertEquals("List.size()", 3, list.size());
+
+        for (Movie movie : list) {
+            movies.deleteMovie(movie);
+        }
+
+        assertEquals("Movies.getMovies()", 0, movies.getMovies().size());
+    }
+
+    public void testWithTransaction() throws Exception {
+        transactionalCaller.call(new Callable() {
+            public Object call() throws Exception {
+                doWork();
+                return null;
+            }
+        });
+    }
+
+    public void testWithoutTransaction() throws Exception {
+        try {
+            doWork();
+            fail("The Movies bean should be using TransactionAttributeType.MANDATORY");
+        } catch (javax.ejb.EJBTransactionRequiredException e) {
+            // good, our Movies bean is using TransactionAttributeType.MANDATORY as we want
+        }
+    }
+
+
+    public static interface Caller {
+        public <V> V call(Callable<V> callable) throws Exception;
+    }
+
+    /**
+     * This little bit of magic allows our test code to execute in
+     * the scope of a container controlled transaction.
+     */
+    @Stateless
+    @TransactionAttribute(REQUIRES_NEW)
+    public static class TransactionBean implements Caller {
+
+        public <V> V call(Callable<V> callable) throws Exception {
+            return callable.call();
+        }
+    }
+}
+....
+
+= Running
+
+....
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.superbiz.injection.tx.MoviesTest
+Apache OpenEJB 4.0.0-beta-1    build: 20111002-04:06
+http://tomee.apache.org/
+INFO - openejb.home = /Users/dblevins/examples/testing-transactions
+INFO - openejb.base = /Users/dblevins/examples/testing-transactions
+INFO - Using 'javax.ejb.embeddable.EJBContainer=true'
+INFO - Configuring Service(id=Default Security Service, type=SecurityService, provider-id=Default Security Service)
+INFO - Configuring Service(id=Default Transaction Manager, type=TransactionManager, provider-id=Default Transaction Manager)
+INFO - Configuring Service(id=movieDatabase, type=Resource, provider-id=Default JDBC Database)
+INFO - Found EjbModule in classpath: /Users/dblevins/examples/testing-transactions/target/classes
+INFO - Found EjbModule in classpath: /Users/dblevins/examples/testing-transactions/target/test-classes
+INFO - Beginning load: /Users/dblevins/examples/testing-transactions/target/classes
+INFO - Beginning load: /Users/dblevins/examples/testing-transactions/target/test-classes
+INFO - Configuring enterprise application: /Users/dblevins/examples/testing-transactions
+INFO - Configuring Service(id=Default Stateful Container, type=Container, provider-id=Default Stateful Container)
+INFO - Auto-creating a container for bean Movies: Container(type=STATEFUL, id=Default Stateful Container)
+INFO - Configuring Service(id=Default Stateless Container, type=Container, provider-id=Default Stateless Container)
+INFO - Auto-creating a container for bean TransactionBean: Container(type=STATELESS, id=Default Stateless Container)
+INFO - Configuring Service(id=Default Managed Container, type=Container, provider-id=Default Managed Container)
+INFO - Auto-creating a container for bean org.superbiz.injection.tx.MoviesTest: Container(type=MANAGED, id=Default Managed Container)
+INFO - Configuring PersistenceUnit(name=movie-unit)
+INFO - Auto-creating a Resource with id 'movieDatabaseNonJta' of type 'DataSource for 'movie-unit'.
+INFO - Configuring Service(id=movieDatabaseNonJta, type=Resource, provider-id=movieDatabase)
+INFO - Adjusting PersistenceUnit movie-unit <non-jta-data-source> to Resource ID 'movieDatabaseNonJta' from 'movieDatabaseUnmanaged'
+INFO - Enterprise application "/Users/dblevins/examples/testing-transactions" loaded.
+INFO - Assembling app: /Users/dblevins/examples/testing-transactions
+INFO - PersistenceUnit(name=movie-unit, provider=org.apache.openjpa.persistence.PersistenceProviderImpl) - provider time 406ms
+INFO - Jndi(name="java:global/testing-transactions/Movies!org.superbiz.injection.tx.Movies")
+INFO - Jndi(name="java:global/testing-transactions/Movies")
+INFO - Jndi(name="java:global/testing-transactions/TransactionBean!org.superbiz.injection.tx.MoviesTest$Caller")
+INFO - Jndi(name="java:global/testing-transactions/TransactionBean")
+INFO - Jndi(name="java:global/EjbModule2036741132/org.superbiz.injection.tx.MoviesTest!org.superbiz.injection.tx.MoviesTest")
+INFO - Jndi(name="java:global/EjbModule2036741132/org.superbiz.injection.tx.MoviesTest")
+INFO - Created Ejb(deployment-id=Movies, ejb-name=Movies, container=Default Stateful Container)
+INFO - Created Ejb(deployment-id=TransactionBean, ejb-name=TransactionBean, container=Default Stateless Container)
+INFO - Created Ejb(deployment-id=org.superbiz.injection.tx.MoviesTest, ejb-name=org.superbiz.injection.tx.MoviesTest, container=Default Managed Container)
+INFO - Started Ejb(deployment-id=Movies, ejb-name=Movies, container=Default Stateful Container)
+INFO - Started Ejb(deployment-id=TransactionBean, ejb-name=TransactionBean, container=Default Stateless Container)
+INFO - Started Ejb(deployment-id=org.superbiz.injection.tx.MoviesTest, ejb-name=org.superbiz.injection.tx.MoviesTest, container=Default Managed Container)
+INFO - Deployed Application(path=/Users/dblevins/examples/testing-transactions)
+INFO - EJBContainer already initialized.  Call ejbContainer.close() to allow reinitialization
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.403 sec
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+....

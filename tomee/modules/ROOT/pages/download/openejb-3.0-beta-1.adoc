@@ -1,0 +1,186 @@
+:doctype: book
+
+Title: OpenEJB 3.0 beta 1
+
+* Release Date: September 29th, 2007
+* EJB 3.0 support
+* EJB 2.1 support
+* EJB 2.0 support
+* EJB 1.1 support
+
++++<a name="OpenEJB3.0beta1-Download">++++++</a>+++
+
+= Download
+
++++<a name="OpenEJB3.0beta1-OpenEJBStandloneServer">++++++</a>+++
+
+[discrete]
+==== OpenEJB Standlone Server
+
+* http://archive.apache.org/dist/openejb/3.0-beta-1/openejb-3.0-beta-1.zip[openejb-3.0-beta-1.zip]
+
+([pgp|http://www.apache.org/dist/openejb/3.0-beta-1/openejb-3.0-beta-1.zip.asc], [md5|http://www.apache.org/dist/openejb/3.0-beta-1/openejb-3.0-beta-1.zip.md5] )
+
+* http://archive.apache.org/dist/openejb/3.0-beta-1/openejb-3.0-beta-1.tar.gz[openejb-3.0-beta-1.tar.gz]
+
+([pgp|http://www.apache.org/dist/openejb/3.0-beta-1/openejb-3.0-beta-1.tar.gz.asc], [md5|http://www.apache.org/dist/openejb/3.0-beta-1/openejb-3.0-beta-1.tar.gz.md5] )
+
++++<a name="OpenEJB3.0beta1-OpenEJBforTomcat">++++++</a>+++
+
+[discrete]
+==== OpenEJB for Tomcat
+
+* http://archive.apache.org/dist/openejb/3.0-beta-1/openejb.war[openejb.war]  ([pgp|http://www.apache.org/dist/openejb/3.0-beta-1/openejb.war.asc], [md5|http://www.apache.org/dist/openejb/3.0-beta-1/openejb.war.md5] )
+
++++<a name="OpenEJB3.0beta1-EJB3.0andotherexamples(sourceincluded)">++++++</a>+++
+
+[discrete]
+==== EJB 3.0 and other examples (source included)
+
+* http://archive.apache.org/dist/openejb/3.0-beta-1/examples-3.0-beta-1.tar.gz[examples-3.0-beta-1.tar.gz]
+
+([pgp|http://www.apache.org/dist/openejb/3.0-beta-1/examples-3.0-beta-1.tar.gz.asc], [md5|http://www.apache.org/dist/openejb/3.0-beta-1/examples-3.0-beta-1.tar.gz.md5] )
+
+* http://archive.apache.org/dist/openejb/3.0-beta-1/examples-3.0-beta-1.zip[examples-3.0-beta-1.zip]
+
+([pgp|http://www.apache.org/dist/openejb/3.0-beta-1/examples-3.0-beta-1.zip.asc], [md5|http://www.apache.org/dist/openejb/3.0-beta-1/examples-3.0-beta-1.zip.md5] )
+
++++<a name="OpenEJB3.0beta1-SourceCode">++++++</a>+++
+
+[discrete]
+==== Source Code
+
+* http://archive.apache.org/dist/openejb/3.0-beta-1/openejb-3.0-beta-1-src.zip[openejb-3.0-beta-1-src.zip]
+
+([pgp|http://www.apache.org/dist/openejb/3.0-beta-1/openejb-3.0-beta-1-src.zip.asc], [md5|http://www.apache.org/dist/openejb/3.0-beta-1/openejb-3.0-beta-1-src.zip.md5] )
+
+* http://archive.apache.org/dist/openejb/3.0-beta-1/openejb-3.0-beta-1-src.tar.gz[openejb-3.0-beta-1-src.tar.gz]
+
+([pgp|http://www.apache.org/dist/openejb/3.0-beta-1/openejb-3.0-beta-1-src.tar.gz.asc], [md5|http://www.apache.org/dist/openejb/3.0-beta-1/openejb-3.0-beta-1-src.tar.gz.md5] )
+
++++<a name="OpenEJB3.0beta1-TestedOn">++++++</a>+++
+
+= Tested On
+
+[cols=6*]
+|===
+| Embedded
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+
+| Standalone
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+
+| Tomcat 6.0.14
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+
+| Tomcat 6.0.13
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+
+| Tomcat 6.0.10
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+
+| Tomcat 6.0.9
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+| \{center}(/)\{center}
+|===
+
++++<a name="OpenEJB3.0beta1-NewFeatures">++++++</a>+++
+
+= New Features
+
++++<a name="OpenEJB3.0beta1-EJB3.0">++++++</a>+++
+
+== EJB 3.0
+
+OpenEJB 3.0 supports the EJB 3.0 specification as well as the prior EJB 2.1, EJB 2.0, and EJB 1.1.
+New features in EJB 3.0 include:
+
+* Annotations instead of xml
+* No home interfaces
+* Business Interfaces
+* Dependency Injection
+* Intercpetors
+* Java Persistence API
+* Service Locator (ala SessionContext.lookup)
+* POJO-style beans
+
+EJB 2.x features since OpenEJB 1.0 also include:
+
+* MessageDriven Beans
+* Container-Managed Persistence (CMP) 2.0
+* Timers
+
+The two aspects of EJB that OpenEJB does not yet support are:
+
+* Web Services (JAX-WS, JAX-RPC)
+* CORBA
+
+JAX-WS and CORBA support will be added in future releases.
+Support for the JAX-RPC API is not a planned feature.
+
++++<a name="OpenEJB3.0beta1-EJBPluginforTomcat6">++++++</a>+++
+
+== EJB Plugin for Tomcat 6
+
+OpenEJB 3.0 can be link:openejbx30:tomcat.html[plugged into]  any Tomcat 6 server, adding support for EJBs in Web Apps.
+War files themselves can contain EJBs and the Servlets can use new JavaEE 5 annotations, XA transactions, JPA, and JMS.
+Webapps can even support fat java clients connecting over HTTP.
+
++++<a name="OpenEJB3.0beta1-CMPviaJPA">++++++</a>+++
+
+== CMP via JPA
+
+Our CMP implementation is a thin layer over the new Java Persistence API (JPA).
+This means when you deploy an old style CMP 1.1 or CMP 2.1 bean it is internally converted and ran as a JPA bean.
+This makes it possible to use both CMP and JPA in the same application without any coherence issues that can come from using two competing persistence technologies against the same data.
+Everything is ultimately JPA in the end.
+
++++<a name="OpenEJB3.0beta1-ExtendedDependencyInjection">++++++</a>+++
+
+== Extended Dependency Injection
+
+Dependency Injection in EJB 3.0 via @Resource is largely limited to objects provided by the container, such as DataSources, JMS Topics and Queues.
+It is possible for you to supply your own configuration information for injection, but standard rules allow for only data of type String, Character, Boolean, Integer, Short, Long, Double, Float and Byte.
+If you needed a URL, for example, you'd have to have it injected as a String then convert it yourself to a URL.
+This is just plain silly as the conversion of Strings to other basic data types has existed in JavaBeans long before Enterprise JavaBeans existed.
+
+OpenEJB 3.0 supports injection of any data type for which you can supply a JavaBeans PropertyEditor.
+We include several built-in PropertyEditors already such as Date, InetAddress, Class, File, URL, URI, Map, List and more.+++<div class="code panel" style="border-style: solid;border-width: 1px;">+++*MyBean.java*
+
+import java.net.URI;
+import java.io.File;
+import java.util.Date;
+@Stateful public class MyBean { @Resource URI blog;
+@Resource Date birthday;
+@Resource File homeDirectory;
+} +++<a name="OpenEJB3.0beta1-TheMETA-INF/env-entries.properties">++++++</a>+++ ## The META-INF/env-entries.properties Along the lines of injection, one of the last remaining things in EJB 3 that people need an ejb-jar.xml file for is to supply the value of env-entries.
+Env Entries are the source of data for all user supplied data injected into your bean;
+the afore mentioned String, Boolean, Integer, etc.
+This is a very big burden as each env-entry is going to cost you 5 lines of xml and the complication of having to figure out how to add you bean declaration in xml as an override of an existing bean and not accidentally as a new bean.
+All this can be very painful when all you want is to supply the value of a few @Resource String fields in you bean class.
+To fix this, OpenEJB supports the idea of a META-INF/env-entries.properties file where we will look for the value of things that need injection that are not container controlled resources (i.e.
+datasources and things of that nature).
+You can configure you ejbs via a properties file and skip the need for an ejb-jar.xml and it's 5 lines per property madness.+++</div>+++

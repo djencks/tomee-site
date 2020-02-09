@@ -1,0 +1,195 @@
+:doctype: book
+
+Title: Apache OpenEJB 3.1.3
+
+* Release Date: October 20th, 2010
+* Partial EJB 3.1 support
+* EJB 3.0 support
+* EJB 2.1 support
+* EJB 2.0 support
+* EJB 1.1 support
+
++++<a name="ApacheOpenEJB3.1.3-Download">++++++</a>+++
+
+= Download
+
++++<a name="ApacheOpenEJB3.1.3-ApacheOpenEJBStandaloneServer">++++++</a>+++
+
+[discrete]
+==== Apache OpenEJB Standalone Server
+
+* Apache OpenEJB 3.1.3
+* Apache ActiveMQ 5.3.1
+* Apache CXF 2.2.10
+* Apache OpenJPA 1.2.1
+* Apache Geronimo Connector & Transaction 2.1
+
+_binaries_
+
+* http://archive.apache.org/dist/openejb/3.1.3/openejb-3.1.3.zip[openejb-3.1.3.zip]  (http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3.zip.asc, [md5](http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3.zip.md5)[pgp]
+* http://archive.apache.org/dist/openejb/3.1.3/openejb-3.1.3.tar.gz[openejb-3.1.3.tar.gz]  (http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3.tar.gz.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3.tar.gz.md5[md5] )
+
++++<a name="ApacheOpenEJB3.1.3-ApacheOpenEJBforTomcat">++++++</a>+++
+
+[discrete]
+==== Apache OpenEJB for Tomcat
+
+* Apache OpenEJB 3.1.3
+* Apache ActiveMQ 5.3.1
+* Apache CXF 2.2.10
+* Apache OpenJPA 1.2.1
+* Apache Geronimo Connector & Transaction 2.1
+
+_binaries_
+
+* http://archive.apache.org/dist/openejb/3.1.3/openejb.war[openejb.war]  (http://www.apache.org/dist/openejb/3.1.3/openejb.war.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/openejb.war.md5[md5])
+
++++<a name="ApacheOpenEJB3.1.3-ApacheTomtom-Pre-bundledTomcat">++++++</a>+++
+
+[discrete]
+==== Apache Tomtom - Pre-bundled Tomcat
+
+* Apache Tomcat 6.0.29
+* Apache OpenEJB 3.1.3
+* Apache ActiveMQ 5.3.1
+* Apache CXF 2.2.10
+* Apache OpenJPA 1.2.1
+* Apache Geronimo Connector & Transaction 2.1
+
+_binaries_
+
+* http://archive.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.zip[tomtom-6.0.29.313.zip]  (http://www.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.zip.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.zip.md5[md5] )
+* http://archive.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.tar.gz[tomtom-6.0.29.313.tar.gz] (http://www.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.tar.gz.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.tar.gz.md5[md5] )
+
++++<a name="ApacheOpenEJB3.1.3-EJB3.1andotherexamples(sourceincluded)">++++++</a>+++
+
+[discrete]
+==== EJB 3.1 and other examples (source included)
+
+* http://archive.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.tar.gz[openejb-examples-3.1.3.tar.gz](http://www.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.tar.gz.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.tar.gz.md5[md5]
+* http://archive.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.zip[openejb-examples-3.1.3.zip] (http://www.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.zip.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.zip.md5[md5]
+
++++<a name="ApacheOpenEJB3.1.3-SourceCode">++++++</a>+++
+
+[discrete]
+==== Source Code
+
+* http://archive.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.zip[openejb-3.1.3-src.zip] (http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.zip.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.zip.md5[md5]
+* http://archive.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.tar.gz[openejb-3.1.3-src.tar.gz] (http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.tar.gz.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.tar.gz.md5[md5]
+
++++<a name="ApacheOpenEJB3.1.3-ReleaseNotes">++++++</a>+++
+
+[discrete]
+==== Release Notes
+
+* http://www.apache.org/dist/openejb/3.1.3/RELEASE-NOTES.txt[RELEASE-NOTES.txt]
+
++++<a name="ApacheOpenEJB3.1.3-TestedOn">++++++</a>+++
+
+= Tested On+++<table>++++++<tr>++++++<th>++++++</th>++++++<th>+++Windows XP (JDK 1.5)+++</th>++++++<th>+++Windows XP (JDK 1.6)+++</th>++++++<th>+++Linux (JDK 1.5)+++</th>++++++<th>+++Linux (JDK 1.6)+++</th>++++++<th>+++Mac OSX (JDK 1.5)+++</th>++++++<th>+++Mac OSX (JDK 1.6)+++</th>++++++</tr>+++
++++<tr>++++++<td>+++Embedded+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
++++<tr>++++++<td>+++Standalone+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
++++<tr>++++++<td>+++Tomcat 6.0.29+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
++++<tr>++++++<td>+++Tomcat 6.0.28+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
++++<tr>++++++<td>+++Tomcat 6.0.26+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
++++<tr>++++++<td>+++Tomcat 6.0.24+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
++++<tr>++++++<td>+++Tomcat 5.5.31+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
++++<tr>++++++<td>+++Tomcat 5.5.30+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
++++<tr>++++++<td>+++Tomcat 5.5.29+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
++++<tr>++++++<td>+++Tomcat 5.5.28+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>++++++</table>+++
+
++++<a name="ApacheOpenEJB3.1.3-Changelog">++++++</a>+++
+
+= Changelog
+
++++<a name="ApacheOpenEJB3.1.3-NewFeatures">++++++</a>+++
+
+[discrete]
+=== New Features
+
+* https://issues.apache.org/jira/browse/OPENEJB-1283[OPENEJB-1283]  Apache TomTom: Pre-packaged OpenEJB/Tomcat bundle
+* https://issues.apache.org/jira/browse/OPENEJB-1272[OPENEJB-1272]  JMX Monitoring
+* https://issues.apache.org/jira/browse/OPENEJB-1139[OPENEJB-1139]  EJB 3.1 No-interface view (@LocalBean)
+* https://issues.apache.org/jira/browse/OPENEJB-1377[OPENEJB-1377]  Multipoint service - TCP based heartbeat & node discovery
+* https://issues.apache.org/jira/browse/OPENEJB-1141[OPENEJB-1141]  EE6 @ManagedBean
+* https://issues.apache.org/jira/browse/OPENEJB-1115[OPENEJB-1115]  Quartz Resource Adapter
+* https://issues.apache.org/jira/browse/OPENEJB-1235[OPENEJB-1235]  New Stateless pool options: PoolMin, IdleTimeout, MaxAge, Flush and more
+
++++<a name="ApacheOpenEJB3.1.3-Improvements">++++++</a>+++
+
+[discrete]
+=== Improvements
+
+[discrete]
+==== Upgrades
+
+* https://issues.apache.org/jira/browse/OPENEJB-1227[OPENEJB-1227]  Support for ActiveMQ 5
+* https://issues.apache.org/jira/browse/OPENEJB-977[OPENEJB-977]   Upgrade to CXF 2.2.10
+
+[discrete]
+==== Client-Server & Failover
+
+* https://issues.apache.org/jira/browse/OPENEJB-1293[OPENEJB-1293]  Conditional Client Failover based on container or bean thrown Exception types
+* https://issues.apache.org/jira/browse/OPENEJB-1292[OPENEJB-1292]  Client Failover on connection pool timeout
+* https://issues.apache.org/jira/browse/OPENEJB-1232[OPENEJB-1232]  Client Failover and ConnnectionStrategy configurable on a per bean basis
+* https://issues.apache.org/jira/browse/OPENEJB-1100[OPENEJB-1100]  EJB Clients using http can set connectTimeout and readTimeout
+* https://issues.apache.org/jira/browse/OPENEJB-1369[OPENEJB-1369]  Help, expanded options and cleaner output for MulticastTool
+* https://issues.apache.org/jira/browse/OPENEJB-1112[OPENEJB-1112]  ejbds service (ejbd+ssl) setup on port 4203
+* https://issues.apache.org/jira/browse/OPENEJB-1370[OPENEJB-1370]  Broadcast InetAddress.getLocalHost() when ejbd is bound to 0.0.0.0
+* https://issues.apache.org/jira/browse/OPENEJB-1281[OPENEJB-1281]  Preconfigured failover with JNDI provider url such as "failover:ejbd://foo:4201,ejbd://bar:4201"
+* https://issues.apache.org/jira/browse/OPENEJB-1289[OPENEJB-1289]  Client connection pool timeouts events catchable as ConnectionPoolTimeoutException
+
+[discrete]
+==== Testing
+
+* https://issues.apache.org/jira/browse/OPENEJB-1240[OPENEJB-1240]  @WebServiceRef support for @LocalClient
+* https://issues.apache.org/jira/browse/OPENEJB-1130[OPENEJB-1130]  Stricter ClientModule classpath discovery prevents possible NameAlreadyBoundException
+* https://issues.apache.org/jira/browse/OPENEJB-1372[OPENEJB-1372]  Default openejb.descriptors.output to true when there are validation failures
+* https://issues.apache.org/jira/browse/OPENEJB-1353[OPENEJB-1353]  Be more tolerant of truly empty beans.xml and ejb-jar.xml -- zero length files
+* https://issues.apache.org/jira/browse/OPENEJB-1107[OPENEJB-1107]  Updated builtin exclude list
+* https://issues.apache.org/jira/browse/OPENEJB-1122[OPENEJB-1122]  Create a sample to illustrate the SEI inheritance
+* https://issues.apache.org/jira/browse/OPENEJB-1378[OPENEJB-1378]  Example: MDB with Quartz Resource Adapter
+* https://issues.apache.org/jira/browse/OPENEJB-1381[OPENEJB-1381]  Example: WebService SEI Inheritance
+* https://issues.apache.org/jira/browse/OPENEJB-1380[OPENEJB-1380]  Example: Common Troubleshooting Flags
+* https://issues.apache.org/jira/browse/OPENEJB-1379[OPENEJB-1379]  Example: Transaction Rollback
+* https://issues.apache.org/jira/browse/OPENEJB-847[OPENEJB-847]  Validation: @Resource UserTransaction injection mistakenly used on bean with Container-Managed Transactions
+
+[discrete]
+==== Misc
+
+* https://issues.apache.org/jira/browse/OPENEJB-1255[OPENEJB-1255]  Time-based configuration options can now be additive, as in "1 hour, 27 minutes and 34 seconds"
+* https://issues.apache.org/jira/browse/OPENEJB-1111[OPENEJB-1111]  PAX friendly LogStreamFactory for use in OSGi environments
+* https://issues.apache.org/jira/browse/OPENEJB-1276[OPENEJB-1276]  Add #getTransactionIdentifier(Transaction tx) to o.a.o.hibernate.TransactionManagerLookup
+* https://issues.apache.org/jira/browse/OPENEJB-1279[OPENEJB-1279]  Stateless PreDestroy called on undeploy/shutdown
+* https://issues.apache.org/jira/browse/OPENEJB-1208[OPENEJB-1208]  Handle "destinationName" as synonym for the "destination" ActivationConfigProperty
+* https://issues.apache.org/jira/browse/OPENEJB-1238[OPENEJB-1238]  Custom JNDI name format properties at bean, app, or server level
+* https://issues.apache.org/jira/browse/OPENEJB-1365[OPENEJB-1365]  New log4j.category.OpenEJB.persistence log category
+* https://issues.apache.org/jira/browse/OPENEJB-1242[OPENEJB-1242]  suport connector 1.6 and 1.0 dds in jee jaxb tree
+* https://issues.apache.org/jira/browse/OPENEJB-1027[OPENEJB-1027]  Add the application name to the data sources matching heuristics
+* https://issues.apache.org/jira/browse/OPENEJB-1301[OPENEJB-1301]  MDB InstanceLimit settable on a per-bean basis via openejb-jar.xml
+* https://issues.apache.org/jira/browse/OPENEJB-1123[OPENEJB-1123]  Allow default security service to be overriden
+* https://issues.apache.org/jira/browse/OPENEJB-1275[OPENEJB-1275]  JMX: EJB Method invocations
+* https://issues.apache.org/jira/browse/OPENEJB-1273[OPENEJB-1273]  JMX: Stateless Pool Stats
+
++++<a name="ApacheOpenEJB3.1.3-Bugs">++++++</a>+++
+
+[discrete]
+=== Bugs
+
+* https://issues.apache.org/jira/browse/OPENEJB-1282[OPENEJB-1282]  mappedName fails to work for @Singleton
+* https://issues.apache.org/jira/browse/OPENEJB-1258[OPENEJB-1258]  Boolean conversion problem in ejb-jar.xml
+* https://issues.apache.org/jira/browse/OPENEJB-1118[OPENEJB-1118]  Split package org.apache.openejb.client
+* https://issues.apache.org/jira/browse/OPENEJB-1252[OPENEJB-1252]  URL\->File decoding should avoid "+" in paths
+* https://issues.apache.org/jira/browse/OPENEJB-1251[OPENEJB-1251]  osgi annotation import needs to specify version 1.1 to avoid picking up jdk's v 1 classes
+* https://issues.apache.org/jira/browse/OPENEJB-1297[OPENEJB-1297]  HeartBeat message is not read correctly for multipoint cluster
+* https://issues.apache.org/jira/browse/OPENEJB-1300[OPENEJB-1300]  Possible Windows jvm bug results in "java.lang.ClassCastException: org.apache.xbean.recipe.ObjectRecipe cannot be cast to ...."
+* https://issues.apache.org/jira/browse/OPENEJB-1120[OPENEJB-1120]  TomcatSecurityService should grant the guest role when no user is logged in
+* https://issues.apache.org/jira/browse/OPENEJB-1020[OPENEJB-1020]  Inheritance not supported in JAX-WS endpoint interfaces exposed via CXF
+* https://issues.apache.org/jira/browse/OPENEJB-1347[OPENEJB-1347]  ClassCastException in ClassLoaderUtil.clearSunJarFileFactoryCache
+* https://issues.apache.org/jira/browse/OPENEJB-1127[OPENEJB-1127]  Unpacked RARs ignored
+* https://issues.apache.org/jira/browse/OPENEJB-1249[OPENEJB-1249]  Undeploy apps and stop ResourceAdapters on shutdown
+* https://issues.apache.org/jira/browse/OPENEJB-1109[OPENEJB-1109]  Deploy time java.sql.SQLException: Auto-commit can not be set while enrolled in a transaction
+* https://issues.apache.org/jira/browse/OPENEJB-1261[OPENEJB-1261]  JSP Error on installer-view.jsp with Tomcat 6.0.26
+* https://issues.apache.org/jira/browse/OPENEJB-1053[OPENEJB-1053]  web.xml: unexpected element (uri:"http://java.sun.com/xml/ns/javaee", local:"taglib"
+* https://issues.apache.org/jira/browse/OPENEJB-1116[OPENEJB-1116]  CMP2 EntityBean conflict when a persistent property exists called "deleted"
+* https://issues.apache.org/jira/browse/OPENEJB-1114[OPENEJB-1114]+++<ejb-class>+++element should be optional for +++<session>+++and +++<message-driven>+++declarations * [OPENEJB-1315](https://issues.apache.org/jira/browse/OPENEJB-1315) NPE when deploying EJB modules. * [OPENEJB-1241](https://issues.apache.org/jira/browse/OPENEJB-1241) Using @WebServiceRef does not allow standard JAX-WS Api usage * [OPENEJB-1309](https://issues.apache.org/jira/browse/OPENEJB-1309) Make the DependOn sort algorithm stable * [OPENEJB-1244](https://issues.apache.org/jira/browse/OPENEJB-1244) upgrade legacy activemq 4 support to 4.1.2 * [OPENEJB-1245](https://issues.apache.org/jira/browse/OPENEJB-1245) Possible Stateful bean passivation/activation error: ClassNotFoundException * [OPENEJB-1129](https://issues.apache.org/jira/browse/OPENEJB-1129) Reverse lookup for logging may cause poor client/server performance * [OPENEJB-1239](https://issues.apache.org/jira/browse/OPENEJB-1239) Bad client connection is never getting discarded from pool * [OPENEJB-1286](https://issues.apache.org/jira/browse/OPENEJB-1286) Bug in reporting invalid @PostActivate/@PrePassivate usage in Stateful and Singleton beans * [OPENEJB-1131](https://issues.apache.org/jira/browse/OPENEJB-1131) JDK 1.6.0 u18 has a ClassCastException in ClassLoaderUtil.clearSunJarFileFactoryCache * [OPENEJB-1247](https://issues.apache.org/jira/browse/OPENEJB-1247) @Singleton @PreDestroy on container system shutdown+++</message-driven>++++++</session>++++++</ejb-class>+++

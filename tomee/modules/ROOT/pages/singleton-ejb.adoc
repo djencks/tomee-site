@@ -1,0 +1,1 @@
+Title: Singleton EJB {include:OPENEJBx30:Singleton Beans}

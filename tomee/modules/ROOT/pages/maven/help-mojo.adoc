@@ -1,0 +1,96 @@
++++<div class="section">+++== tomee:help+++<a name="tomee:help">++++++</a>+++
+
+*Full name*:
+
+org.apache.openejb.maven:tomee-maven-plugin[:Current Version]:help
+
+*Description*:
+
+Display help information on tomee-maven-plugin.
++ Call +++<tt>+++mvn tomee:help -Ddetail=true -Dgoal=<goal-name>+++</tt>+++ to display parameter details.
+
+*Attributes*:
+
+* The goal is thread-safe and supports parallel builds.+++<div class="section">+++=== Optional Parameters+++<a name="Optional_Parameters">++++++</a>++++++<table class="bodyTable" border="0">++++++<tr class="a">++++++<th>+++Name+++</th>+++
+
++++<th>+++Type+++</th>+++
+
++++<th>+++Since+++</th>+++
+
++++<th>+++Description+++</th>++++++</tr>+++
+
++++<tr class="b">++++++<td>++++++<b>++++++<a href="#detail">+++detail+++</a>++++++</b>++++++</td>+++
+
++++<td>++++++<tt>+++boolean+++</tt>++++++</td>+++
+
++++<td>++++++<tt>+++-+++</tt>++++++</td>+++
+
++++<td>+++If +++<tt>+++true+++</tt>+++, display all settable properties for each
+goal.+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++detail+++</tt>+++.+++</td>++++++</tr>+++
+
++++<tr class="a">++++++<td>++++++<b>++++++<a href="#goal">+++goal+++</a>++++++</b>++++++</td>+++
+
++++<td>++++++<tt>+++String+++</tt>++++++</td>+++
+
++++<td>++++++<tt>+++-+++</tt>++++++</td>+++
+
++++<td>+++The name of the goal for which to show help. If unspecified, all
+goals will be displayed.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++goal+++</tt>+++.+++</td>++++++</tr>+++
+
++++<tr class="b">++++++<td>++++++<b>++++++<a href="#indentSize">+++indentSize+++</a>++++++</b>++++++</td>+++
+
++++<td>++++++<tt>+++int+++</tt>++++++</td>+++
+
++++<td>++++++<tt>+++-+++</tt>++++++</td>+++
+
++++<td>+++The number of spaces per indentation level, should be positive.+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++2+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++indentSize+++</tt>+++.+++</td>++++++</tr>+++
+
++++<tr class="a">++++++<td>++++++<b>++++++<a href="#lineLength">+++lineLength+++</a>++++++</b>++++++</td>+++
+
++++<td>++++++<tt>+++int+++</tt>++++++</td>+++
+
++++<td>++++++<tt>+++-+++</tt>++++++</td>+++
+
++++<td>+++The maximum length of a display line, should be positive.+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++80+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++lineLength+++</tt>+++.+++</td>++++++</tr>++++++</table>++++++</div>++++++<div class="section">+++=== Parameter Details+++<a name="Parameter_Details">++++++</a>+++
+
+*+++<a name="detail">+++detail+++</a>+++:*
+
+If +++<tt>+++true+++</tt>+++, display all settable properties for each goal.
+
+* *Type*: +++<tt>+++boolean+++</tt>+++
+* *Required*: +++<tt>+++No+++</tt>+++
+* *User Property*: +++<tt>+++detail+++</tt>+++
+* *Default*: +++<tt>+++false+++</tt>+++
+
+'''
+
+*+++<a name="goal">+++goal+++</a>+++:*
+
+The name of the goal for which to show help.
+If unspecified, all goals will be displayed.
+
+* *Type*: +++<tt>+++java.lang.String+++</tt>+++
+* *Required*: +++<tt>+++No+++</tt>+++
+* *User Property*: +++<tt>+++goal+++</tt>+++
+
+'''
+
+*+++<a name="indentSize">+++indentSize+++</a>+++:*
+
+The number of spaces per indentation level, should be positive.
+
+* *Type*: +++<tt>+++int+++</tt>+++
+* *Required*: +++<tt>+++No+++</tt>+++
+* *User Property*: +++<tt>+++indentSize+++</tt>+++
+* *Default*: +++<tt>+++2+++</tt>+++
+
+'''
+
+*+++<a name="lineLength">+++lineLength+++</a>+++:*
+
+The maximum length of a display line, should be positive.
+
+* *Type*: +++<tt>+++int+++</tt>+++
+* *Required*: +++<tt>+++No+++</tt>+++
+* *User Property*: +++<tt>+++lineLength+++</tt>+++
+* *Default*: +++<tt>+++80+++</tt>++++++</div>++++++</div>+++
