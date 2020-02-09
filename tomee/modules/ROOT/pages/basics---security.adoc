@@ -4,7 +4,7 @@ Title: Basics - Security This section is under construction, please check back l
 
 == Related Documents
 
-link:security.html[Security]  - login module configuration link:security-annotations.html[Security Annotations]  - EJB3 related annotation based security.
+xref:security.adoc[Security]  - login module configuration xref:security-annotations.adoc[Security Annotations]  - EJB3 related annotation based security.
 
 +++<a name="Basics-Security-ServerSideSecurity">++++++</a>+++
 

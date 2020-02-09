@@ -78,7 +78,7 @@ Title: OpenEJB 3.1.2
 
 This release is largely focused on bug fixes and small improvements with a couple new features.
 Scanning support for JSF 2.0 ManagedBeans allows for a nice OpenEJB/Tomcat/Mojarra stack.
-link:openejbx30:datasource-password-encryption.html[Database passwords]  listed in the openejb.xml can now be encrypted using our new 'cipher' command line tool.
+xref:openejbx30:datasource-password-encryption.adoc[Database passwords]  listed in the openejb.xml can now be encrypted using our new 'cipher' command line tool.
 Focus areas of improvements/fixes include @LocalClient support, remote client disconnections and connection caching, AltDD support, Stateful bean caching, and additional JNDI name formatting options.
 
 +++<a name="OpenEJB3.1.2-Changelog">++++++</a>+++

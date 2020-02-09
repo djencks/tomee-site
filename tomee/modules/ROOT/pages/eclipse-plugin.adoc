@@ -13,7 +13,7 @@ From there, the sky is the limit so feel free to suggest features on the [OpenEJ
 
 = How to get involved?
 
-Just the same as getting involved with any part of OpenEJB -- send a mail to the link:mailing-lists#mailinglists-developermailinglist.html[OpenEJB Dev list]  and say "Hi!"	We're a very relaxed group so no need to be perfect or overly prepared.
+Just the same as getting involved with any part of OpenEJB -- send a mail to the xref:mailing-lists#mailinglists-developermailinglist.adoc[OpenEJB Dev list]  and say "Hi!"	We're a very relaxed group so no need to be perfect or overly prepared.
 Just dive right in, we're always happy to have more.
 
 +++<a name="EclipsePlugin-WheredoIgetit?">++++++</a>+++

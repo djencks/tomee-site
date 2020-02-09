@@ -103,7 +103,7 @@ Support for the JAX-RPC API is not a planned feature.
 
 == EJB Plugin for Tomcat 6 and 5.5
 
-OpenEJB 3.0 can be link:openejbx30:tomcat.html[plugged into]  any Tomcat 6 or Tomcat 5.5 server, adding support for EJBs in Web Apps.
+OpenEJB 3.0 can be xref:openejbx30:tomcat.adoc[plugged into]  any Tomcat 6 or Tomcat 5.5 server, adding support for EJBs in Web Apps.
 War files themselves can contain EJBs and the Servlets can use new JavaEE 5 annotations, XA transactions, JPA, and JMS.
 Webapps can even support fat java clients connecting over HTTP.
 
@@ -195,7 +195,7 @@ Very ideal for beginners and people using OpenEJB in a classroom setting.
 == JNDI Name Formatting
 
 A complication when using EJB is that plain client applications are at the mercy of vendor's chosen methodology for how JNDI names should be constructed.
-OpenEJB breaks the mold by allowing you to link:openejbx30:jndi-names.html[specify the exact format]  you'd like OpenEJB to use for your server or any individual application.
+OpenEJB breaks the mold by allowing you to xref:openejbx30:jndi-names.adoc[specify the exact format]  you'd like OpenEJB to use for your server or any individual application.
 Supply us with a formatting string, such as "ejb/\{ejbName}/{interfaceClass.simpleName}", to get a JNDI layout that best matches your needs.
 
 +++<a name="OpenEJB3.0beta2-Changelog">++++++</a>+++

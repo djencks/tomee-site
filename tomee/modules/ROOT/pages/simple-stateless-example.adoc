@@ -100,7 +100,7 @@ Note that JNDI names for Java SE clients are not standardized by the EJB spec.
 This is unfortunate and something being addressed in EJB 3.1.
 The default schema that OpenEJB uses is ejbName + interfaceType (i.e.
 Local, Remote, LocalHome, RemoteHome), so in our example "CalculatorImpl" + "Local" and "CalculatorImpl" + "Remote".
-You can in fact change this default to be absolutely link:jndi-names.html[anything you want]  including interface class name, ejb class name, and more.
+You can in fact change this default to be absolutely xref:jndi-names.adoc[anything you want]  including interface class name, ejb class name, and more.
 
 == CalculatorBean
 

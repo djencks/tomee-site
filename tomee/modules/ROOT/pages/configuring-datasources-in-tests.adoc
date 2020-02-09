@@ -31,9 +31,9 @@ This is possible by definition of a classpath for the resource which points to t
 
 This will allow an application to communicate through legacy drivers to the same JDBC provider.
 
-See link:embedded-configuration.html[Embedded Configuration]  for further details on properties and overrides.
+See xref:embedded-configuration.adoc[Embedded Configuration]  for further details on properties and overrides.
 
-See link:containers-and-resources.html[Containers and Resources]  for a full list of supported Resource types and their properties.
+See xref:containers-and-resources.adoc[Containers and Resources]  for a full list of supported Resource types and their properties.
 
 +++<a name="ConfiguringDataSourcesinTests-Noteon<jta-data-source>and<non-jta-data-source>">++++++</a>+++
 

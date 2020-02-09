@@ -4,7 +4,7 @@ Title: Quickstart +++<a name="Quickstart-Installation">++++++</a>+++
 
 = Installation
 
-To install OpenEJB, simply link:downloads.html[download the latest binary]  and unpack your zip or tar.gz into the directory where you want OpenEJB to live.
+To install OpenEJB, simply xref:downloads.adoc[download the latest binary]  and unpack your zip or tar.gz into the directory where you want OpenEJB to live.
 
 Windows users can download the zip and unpack it with the WinZip program.
 
@@ -31,11 +31,11 @@ _C:\openejb-3.0> bin\openejb_
 
 For UNIX/Linux/Mac OS X users, that looks like this:
 
-`link:user@host-openejb-3.0.html[user@host openejb-3.0]
+`xref:user@host-openejb-3.0.adoc[user@host openejb-3.0]
 
 = ./bin/openejb`
 
-You really only need to know two commands to use OpenEJB, link:openejbx30:deploy-tool.html[deploy]  and [start|OPENEJBx30:Startup] . Both are completely documented and have examples.
+You really only need to know two commands to use OpenEJB, xref:openejbx30:deploy-tool.adoc[deploy]  and [start|OPENEJBx30:Startup] . Both are completely documented and have examples.
 
 For help information and command options, try this:
 
@@ -51,11 +51,11 @@ ____
 
 That's it!
 
-If you don't have any EJBs or clients to run, try the ubiquitous link:openejbx30:hello-world.html[Hello World]  example.
+If you don't have any EJBs or clients to run, try the ubiquitous xref:openejbx30:hello-world.adoc[Hello World]  example.
 
 +++<a name="Quickstart-Jointhemailinglist">++++++</a>+++
 
 = Join the mailing list
 
 The OpenEJB User list is where the general OpenEJB community goes to ask questions, make suggestions, chat with other users, and keep a finger on the pulse of the project.
-More information about the user list and dev list can be found link:mailing-lists.html[here]
+More information about the user list and dev list can be found xref:mailing-lists.adoc[here]

@@ -9,7 +9,7 @@ See the License for the            specific language governing permissions and l
 
 = Downloading a Distribution Archive
 
-Download a distribution archive of the latest TomEE release from the link:downloads.html[Downloads] page.
+Download a distribution archive of the latest TomEE release from the xref:downloads.adoc[Downloads] page.
 If you are not sure which one to use, take apache-tomee-webprofile-x.y.z.zip.
 
 If you want to try out the latest development snapshot (e.g.

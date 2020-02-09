@@ -60,7 +60,7 @@ If a no-arg constructor is present, that constructor will be used instead.
 
 Ideally, we would like the annotations to be used on the parameters directly as shown below.
 Unfortunately, this does not work as the Java EE annotation classes do not permit usage on parameters.
-If you'd like to see that change as much as we do, definitely voice your support by sending note to link:mailto:jsr-316-comments@jcp.org.html[jsr-316-comments@jcp.org]
+If you'd like to see that change as much as we do, definitely voice your support by sending note to xref:mailto:jsr-316-comments@jcp.org.adoc[jsr-316-comments@jcp.org]
 
 Not yet possible
 

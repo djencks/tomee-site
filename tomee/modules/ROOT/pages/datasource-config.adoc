@@ -76,7 +76,7 @@ If a property is specified that is not supported by the declared DataSource a wa
 If a DataSource is needed by the application and one is not declared, TomEE will create one dynamically using default settings.
 Multiple DataSource declarations are allowed.
 
-See the link:common-datasource-configurations.html[Common DataSource Configurations] page for examples of configuring datasources for Derby, MySQL, Oracle and other common databases.
+See the xref:common-datasource-configurations.adoc[Common DataSource Configurations] page for examples of configuring datasources for Derby, MySQL, Oracle and other common databases.
 
 = Supported Properties+++<table>++++++<tr>++++++<th>+++Property+++</th>+++
 +++<th>+++Type+++</th>+++
@@ -396,4 +396,4 @@ in resource properties to ensure the resource is pooled.
 
 == Details about DataSource and their factories (advanced configuration)
 
-link:datasource-configuration-by-creator.html[Configuration by creator]
+xref:datasource-configuration-by-creator.adoc[Configuration by creator]

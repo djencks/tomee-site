@@ -7,8 +7,8 @@ Apache TomEE is assembled from a vanilla Apache Tomcat zip file.
 We start with Apache Tomcat, add our jars and zip up the rest.
 The result is Tomcat with added EE features - TomEE.
 
-link:downloads.html[Download Apache TomEE Now &raquo;]&nbsp;
-and link:documentation.html[get started today!]
+xref:downloads.adoc[Download Apache TomEE Now &raquo;]&nbsp;
+and xref:documentation.adoc[get started today!]
 
 == TomEE
 

@@ -76,10 +76,10 @@ Title: OpenEJB 3.1
 
 Major new features:
 
-* link:openejb-3.1#ejb3.1singletons.html[EJB 3.1 Singleton Support]
-* link:openejb-3.1#constructorinjection%28proposedejb3.1feature%29.html[EJB Constructor Injection]
-* link:openejb-3.1#springintegration.html[Spring Integration]
-* link:openejb-3.1#multicastdiscovery.html[Multicast Client-Server Discovery]
+* xref:openejb-3.1#ejb3.1singletons.adoc[EJB 3.1 Singleton Support]
+* xref:openejb-3.1#constructorinjection%28proposedejb3.1feature%29.adoc[EJB Constructor Injection]
+* xref:openejb-3.1#springintegration.adoc[Spring Integration]
+* xref:openejb-3.1#multicastdiscovery.adoc[Multicast Client-Server Discovery]
 
 Significant Improvements:
 
@@ -105,7 +105,7 @@ Singletons gives you some important things that are missing in EJB 3.0 and prior
 Singletons also give provide a great place to hold data that pertains to the entire application and all users using it, without the need for a static.
 Additionally, Singleton beans have multi-threaded capabilities allowing them to be invoked by several threads at one time similar to a Servlet.
 
-See the link:openejbx30:singleton-beans.html[Singleton API]  and [Singleton Example]  pages.
+See the xref:openejbx30:singleton-beans.adoc[Singleton API]  and [Singleton Example]  pages.
 
 +++<a name="OpenEJB3.1-EmbeddableforTestingandJavaSEusage(proposedEJB3.1feature)">++++++</a>+++
 
@@ -133,7 +133,7 @@ See the examples zip for a dozen embedded testing examples that range from simpl
 == Collapsed EAR (EJBs in .WARs) (proposed EJB 3.1 feature)
 
 Along the lines of the Tomcat integration where OpenEJB can be plugged into Tomcat, we've expanded the idea to also allow your EJBs to be plugged into your webapp.
-We call this innovative feature link:collapsed-ear.html[Collapsed EAR] .  In this style 100% of your classes, including your EJBs, can be packed into your WEB-INF/classes and WEB-INF/lib directories.
+We call this innovative feature xref:collapsed-ear.adoc[Collapsed EAR] .  In this style 100% of your classes, including your EJBs, can be packed into your WEB-INF/classes and WEB-INF/lib directories.
 The result is that your WAR file becomes a replacement for an EAR.
 Unlike an EAR, all multi-packaging and multi-classloader requirements are stripped away and collapsed down to one archive and one classloader all your components, EJBs or otherwise, can share.
 
@@ -213,7 +213,7 @@ Support for the JAX-RPC API is not a planned feature.
 
 == EJB Plugin for Tomcat 6 and 5.5
 
-OpenEJB 3.1 can be link:openejbx30:tomcat.html[plugged into]  any Tomcat 6 or Tomcat 5.5 server, adding support for EJBs in Web Apps.
+OpenEJB 3.1 can be xref:openejbx30:tomcat.adoc[plugged into]  any Tomcat 6 or Tomcat 5.5 server, adding support for EJBs in Web Apps.
 War files themselves can contain EJBs and the Servlets can use new JavaEE 5 annotations, XA transactions, JPA, and JMS.
 Webapps can even support fat java clients connecting over HTTP.
 
@@ -228,7 +228,7 @@ In the case of Tomcat 5.5 which doesn't support dependency injection at all, eve
 
 Add OpenEJB 3.1 to your Spring application to gain the ability for EJBs to be easily injected into Spring beans (and vice versa) and add Java EE 5 capabilities such as JPA, JAX-WS, JMS, J2EE Connectors, transactions, and security.
 
-See the link:openejbx30:spring.html[Spring]  page and [Spring Example|OPENEJBx30:Spring EJB and JPA]  for an example.
+See the xref:openejbx30:spring.adoc[Spring]  page and [Spring Example|OPENEJBx30:Spring EJB and JPA]  for an example.
 
 +++<a name="OpenEJB3.1-MulticastDiscovery">++++++</a>+++
 

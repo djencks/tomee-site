@@ -39,4 +39,4 @@ Critically speaking, forcing more than one classloader on an application is wher
 
 = Example with Tomcat
 
-If you want to try to work with Servlets/JSP and OpenEJB using Tomcat, see the link:openejbx30:tomcat.html[setup page]  and the "/webapps/ejb-examples" section of the link:downloads.html[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page].
+If you want to try to work with Servlets/JSP and OpenEJB using Tomcat, see the xref:openejbx30:tomcat.adoc[setup page]  and the "/webapps/ejb-examples" section of the xref:downloads.adoc[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page].

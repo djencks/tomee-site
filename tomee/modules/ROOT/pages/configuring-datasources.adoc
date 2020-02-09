@@ -35,17 +35,17 @@ It is also possible to specify the path to the driver jar file using a classpath
   . . . .
  <Resource>
 
-See link:containers-and-resources.html[Containers and Resources]  for a complete list of supported DataSource properties.
+See xref:containers-and-resources.adoc[Containers and Resources]  for a complete list of supported DataSource properties.
 
-See link:datasource-password-encryption.html[DataSource Password Encryption]  for information on specifying non-plain-text database passwords in your openejb.xml file.
+See xref:datasource-password-encryption.adoc[DataSource Password Encryption]  for information on specifying non-plain-text database passwords in your openejb.xml file.
 
-See link:common-datasource-configurations.html[Common DataSource Configurations]  for a list of the commonly used databases and their driver configurations.
+See xref:common-datasource-configurations.adoc[Common DataSource Configurations]  for a list of the commonly used databases and their driver configurations.
 
-See link:datasource-configuration-by-creator.html[DataSource Configuration by Creator]  for a list of the different properties supported for each data source creator.
+See xref:datasource-configuration-by-creator.adoc[DataSource Configuration by Creator]  for a list of the different properties supported for each data source creator.
 
 You may also need data partitioning per customer or depending on any other business criteria.
 That's also an available feature.
-See link:dynamic-datasource.html[Dynamic Datasource] for more details.
+See xref:dynamic-datasource.adoc[Dynamic Datasource] for more details.
 
 +++<a name="ConfiguringDataSources-JNDInamesforconfiguredDataSources">++++++</a>+++
 

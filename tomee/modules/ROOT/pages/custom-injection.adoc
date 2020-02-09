@@ -4,7 +4,7 @@ Title: Custom Injection
 
 = Overview
 
-As noted in the link:injection-of-env-entry-example.html[Injection of env-entry Example] , the EJB 3.0 supported env-entry types are fairly limited.
+As noted in the xref:injection-of-env-entry-example.adoc[Injection of env-entry Example] , the EJB 3.0 supported env-entry types are fairly limited.
 Also the use of several +++<env-entry>+++tags in an ejb-jar.xml can get a bit verbose.+++</env-entry>+++
 
 OpenEJB does not restrict you to just these data types or require you to use an ejb-jar.xml to declare them.
@@ -15,9 +15,9 @@ OpenEJB does not restrict you to just these data types or require you to use an 
 List+++<URI>+++myURIs)+++</URI>+++
 * You may use a `META-INF/env-entries.properties` file as an alternative to an ejb-jar.xml
 
-See link:built-in-type-converters.html[Built-in Type Converters] for a full list of supported env-entry types.
+See xref:built-in-type-converters.adoc[Built-in Type Converters] for a full list of supported env-entry types.
 
-The source for this example is the "custom-injection" directory located in the link:downloads.html[openejb-examples.zip] available on the http://tomee.apache.org/downloads.html[download page].
+The source for this example is the "custom-injection" directory located in the xref:downloads.adoc[openejb-examples.zip] available on the http://tomee.apache.org/downloads.html[download page].
 
 +++<a name="CustomInjection-TheCode">++++++</a>+++
 
@@ -162,7 +162,7 @@ public class StratocasterTest extends TestCase {
 = Running it
 
 Running the example is fairly simple.
-In the "custom-injection" directory of the link:openejb:download.html[examples zip], just run:
+In the "custom-injection" directory of the xref:openejb:download.adoc[examples zip], just run:
 
 ____
 $ mvn clean install

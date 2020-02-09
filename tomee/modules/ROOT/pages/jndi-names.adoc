@@ -29,7 +29,7 @@ There are other pre-defined variables available which you could use to customize
 
 The _openejb.jndiname.format_ property allows you to supply a template for the global JNDI names of all your EJBs.
 With it, you have complete control over the structure of the JNDI layout can institute a design pattern just right for your client apps.
-See the link:service-locator.html[Service Locator]  doc for clever ways to use the JNDI name formatting functionality in client code.+++<table>++++++<tr>++++++<td>+++variable+++</td>++++++<td>+++description+++</td>++++++</tr>+++
+See the xref:service-locator.adoc[Service Locator]  doc for clever ways to use the JNDI name formatting functionality in client code.+++<table>++++++<tr>++++++<td>+++variable+++</td>++++++<td>+++description+++</td>++++++</tr>+++
 +++<tr>++++++<td>+++moduleId+++</td>++++++<td>+++Typically the name of the ejb-jar file+++<br>++++++</br>+++ or the +++<ejb-jar id="">+++id value if specified</td></tr>
 +++<tr>++++++<td>+++ejbType+++</td>++++++<td>+++STATEFUL, STATELESS, BMP_ENTITY, CMP_ENTITY, or MESSAGE_DRIVEN+++</td>++++++</tr>+++
 +++<tr>++++++<td>+++ejbClass+++</td>++++++<td>+++for a class named org.acme.superfun.WidgetBean results in org.acme.superfun.WidgetBean+++</td>++++++</tr>+++

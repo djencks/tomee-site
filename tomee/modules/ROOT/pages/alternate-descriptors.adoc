@@ -6,7 +6,7 @@ This is focused mostly on testing where it is often desirable to use a slightly 
 = When nothing else does the trick
 
 Note that this approach was added as a catch-all for when one of the simpler overriding techniques will not work.
-For the common case of needing to tweak your persistence.xml, see the link:configuring-persistenceunits-in-tests.html[Configuring PersistenceUnits in Tests]  page for a simpler approach.
+For the common case of needing to tweak your persistence.xml, see the xref:configuring-persistenceunits-in-tests.adoc[Configuring PersistenceUnits in Tests]  page for a simpler approach.
 
 For many reasons it is very inconvenient to have to maintain two sets of descriptors, one for production and one for testing.
 We aggressively add features based on user feedback and questions.

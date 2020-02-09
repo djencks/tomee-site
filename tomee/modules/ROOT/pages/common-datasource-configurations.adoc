@@ -1,6 +1,6 @@
 Title: Common DataSource Configurations
 
-See the link:datasource-config.html[DataSource Configuration] for details on all configuration options for DataSources.
+See the xref:datasource-config.adoc[DataSource Configuration] for details on all configuration options for DataSources.
 
 +++<a name="CommonDataSourceConfigurations-HSQLDB">++++++</a>+++
 

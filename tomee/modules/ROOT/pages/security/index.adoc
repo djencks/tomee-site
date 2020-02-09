@@ -12,9 +12,9 @@ These source patches may be used by users wishing to build their own local versi
 
 Lists of security problems fixed in released versions of Apache TomEE are available:
 
-* link:tomee.html[Apache TomEE 1.5 Security Vulnerabilities]
-* link:tomee.html[Apache TomEE 1.6 Security Vulnerabilities]
-* link:tomee.html[Apache TomEE 1.7 Security Vulnerabilities]
+* xref:tomee.adoc[Apache TomEE 1.5 Security Vulnerabilities]
+* xref:tomee.adoc[Apache TomEE 1.6 Security Vulnerabilities]
+* xref:tomee.adoc[Apache TomEE 1.7 Security Vulnerabilities]
 
 == Reporting New Security Problems with Apache TomEE
 
@@ -35,7 +35,7 @@ Questions about:
 * obtaining further information on a published vulnerability
 * availability of patches and/or new releases
 
-should be addressed to the link:support.html[users mailing list].
+should be addressed to the xref:support.adoc[users mailing list].
 
 The private security mailing address is: security (at) apache (dot) org
 

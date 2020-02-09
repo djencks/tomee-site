@@ -46,7 +46,7 @@ The blacklist and whitelist is configured via the system properties:
 * `tomee.serialization.class.whitelist`
 * `tomee.serialization.class.blacklist`
 
-You will also find these properties in link:properties-listing.html[System Properties Listing]
+You will also find these properties in xref:properties-listing.adoc[System Properties Listing]
 
 These rules apply for the whitelist:
 

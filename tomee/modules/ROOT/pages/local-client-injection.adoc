@@ -55,7 +55,7 @@ public class MoviesTest extends TestCase {
 
 = Discovery
 
-All EJB modules are scanned for @LocalClient classes, even if those EJB Modules are inside .war files as with the link:collapsed-ear.html[Collapsed EAR] .  As well any modules that contain a META-INF/application-client.xml file will be scanned for @LocalClient classes.
+All EJB modules are scanned for @LocalClient classes, even if those EJB Modules are inside .war files as with the xref:collapsed-ear.adoc[Collapsed EAR] .  As well any modules that contain a META-INF/application-client.xml file will be scanned for @LocalClient classes.
 
 If you see the following error message and are absolutely sure the module containing your @LocalClient class is being properly identified as an EJB module or a Client module, than it is possible you are seeing some classloading issues.
 

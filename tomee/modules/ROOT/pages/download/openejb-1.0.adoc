@@ -44,7 +44,7 @@ Remote invocations from EJB Clients can now be layered over HTTP and serviced by
 No extra ports necesarry.
 Simply point your EJB client to the URL of the LoaderSerlvet and go!
 All HTTP requests to the LoaderServlet will be sent into the embedded OpenEJB container.
-Combine this with the link:collapsed-ear.html[Collapsed EAR]  approach to embedding OpenEJB and you get a single webapp containing it's own private EJBs and OpenEJB container which can now support it's own remote java clients as well as web browsers.
+Combine this with the xref:collapsed-ear.adoc[Collapsed EAR]  approach to embedding OpenEJB and you get a single webapp containing it's own private EJBs and OpenEJB container which can now support it's own remote java clients as well as web browsers.
 Or combine this with traditional style of embedding OpenEJB into the root of Tomcat at a global level and turn your Tomcat server into a no holds-barred EJB server.
 If you want no remoting at all, simply remove the LoaderServet's serlvet-mapping and the door is closed.
 
@@ -82,7 +82,7 @@ Note that no other EJB 2.0 features (such as CMP 2 or MDBs)   are supported in t
 
 == Collapsed EAR support
 
-link:collapsed-ear.html[Collapsed EAR] s are an OpenEJB invention allowing you to  combine your ejbs and servlets in the same archive and  classloader.
+xref:collapsed-ear.adoc[Collapsed EAR] s are an OpenEJB invention allowing you to  combine your ejbs and servlets in the same archive and  classloader.
 This is essentially a new way to embed OpenEJB  into Tomcat so that OpenEJB and your EJBs are loaded only  into your webapp.
 Combine this with an embedded database  and you have a complete mini-J2EE environment that can be  hosted in your Tomcat webapp space.
 

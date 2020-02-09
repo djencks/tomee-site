@@ -7,11 +7,11 @@ Title: Testing Transactions Example
 = Overview
 
 Testing an EntityManager that uses the default, PersistenceContextType.TRANSACTION, can be challenging due to Entities detaching around transaction boundaries.
-If you were to take the link:injection-of-entitymanager-example.html[Injection of EntityManager Example]  which uses an EXTENDED persistence context and switch it to a TRANSACTION persistence context making no other changes, you'd find that the test would fail.
+If you were to take the xref:injection-of-entitymanager-example.adoc[Injection of EntityManager Example]  which uses an EXTENDED persistence context and switch it to a TRANSACTION persistence context making no other changes, you'd find that the test would fail.
 This would be because of the detach.
 
 Generally, when using an EntityManager with TRANSACTION persistence context, your transaction should surround your use of the Entities themselves, not just the use of the EntityManager.
-Using a link:unit-testing-transactions.html[transaction in your unit test]  can make testing these scenarios possible.
+Using a xref:unit-testing-transactions.adoc[transaction in your unit test]  can make testing these scenarios possible.
 
 This example shows use of @PersistenceContext to have an _EntityManager_ with an _TRANSACTION_ persistence context injected into a _@Stateful_ bean using the _@TransactionAttribute_ annotation and a TestCase that runs test code in a JTA _Transaction_.
 An EJB 3 @Entity bean is used with the EntityManager to create, persist and merge data to a database.
@@ -28,7 +28,7 @@ The MANDATORY transaction attribute is similar to REQUIRED in that the bean meth
 The benefit of MANDATORY in this example is that it is impossible for the client to get detached Entity issues.
 The client either has a transaction and therefore gets Entities which are still attached and persistent, or the client would get an exception stating that the use of a transaction is mandatory.
 
-See the link:transaction-annotations.html[Transaction Annotations]  page for a full description of the available transaction attributes.
+See the xref:transaction-annotations.adoc[Transaction Annotations]  page for a full description of the available transaction attributes.
 
 +++<a name="TestingTransactionsExample-Writingaunittestfortheexample">++++++</a>+++
 
@@ -151,7 +151,7 @@ This allows our test code to use the EntityManager and the Entities in the scope
 |===
 
 Curious on the InitialContext parameters used?
-See the link:injection-of-datasource-example.html[Injection of DataSource Example]  for an explanation of how any Resource can be configured via properties in the TestCase itself or via an openejb.xml file.
+See the xref:injection-of-datasource-example.adoc[Injection of DataSource Example]  for an explanation of how any Resource can be configured via properties in the TestCase itself or via an openejb.xml file.
 
 == MoviesTest
 

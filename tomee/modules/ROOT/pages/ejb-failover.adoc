@@ -48,15 +48,15 @@ A given server will broadcast all it's services with the group prefixed in the U
 
 Multicast
 
-* link:multicast-discovery.html[Multicast UDP Discovery]
-* link:multipulse-discovery.html[Multipulse UDP Discovery]
+* xref:multicast-discovery.adoc[Multicast UDP Discovery]
+* xref:multipulse-discovery.adoc[Multipulse UDP Discovery]
 
 Multipoint
 
-* link:multipoint-discovery.html[Multipoint TCP Discovery]
-* link:multipoint-considerations.html[Considerations]
-* link:multipoint-recommendations.html[Recommendations]
+* xref:multipoint-discovery.adoc[Multipoint TCP Discovery]
+* xref:multipoint-considerations.adoc[Considerations]
+* xref:multipoint-recommendations.adoc[Recommendations]
 
 Logging
 
-* link:failover-logging.html[Failover Logging Events]
+* xref:failover-logging.adoc[Failover Logging Events]

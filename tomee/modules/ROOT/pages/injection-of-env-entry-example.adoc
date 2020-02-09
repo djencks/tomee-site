@@ -21,9 +21,9 @@ EJB 3.0 supported env-entry types are limited to the following:+++</env-entry>++
 
 It should be noted that OpenEJB does not restrict you to just these data types and allows for anything convertible from a String to be injected provided there is a java.beans.PropertyEditor installed to handle the type you want.
 Additionally, a plain properties file packed in your META-INF directory can be used to supply the injected values instead of using the ejb-jar.xml.
-See the link:custom-injection.html[Custom Injection]  example for details.
+See the xref:custom-injection.adoc[Custom Injection]  example for details.
 
-_The source for this example is the "injection-of-env-entry" directory located in the link:openejb:download.html[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page]._
+_The source for this example is the "injection-of-env-entry" directory located in the xref:openejb:download.adoc[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page]._
 
 +++<a name="Injectionofenv-entryExample-TheCode">++++++</a>+++
 
@@ -73,7 +73,7 @@ For example, this annotation could have been used on the corresponding _field_ l
 = Running it
 
 Running the example is fairly simple.
-In the "injection-of-env-entry" directory of the link:openejb:download.html[examples zip] , just run:
+In the "injection-of-env-entry" directory of the xref:openejb:download.adoc[examples zip] , just run:
 
 ____
 $ mvn clean install

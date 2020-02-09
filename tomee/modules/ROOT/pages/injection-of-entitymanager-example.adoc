@@ -9,14 +9,14 @@ Title: Injection of EntityManager Example
 Shows use of _@PersistenceContext_ to have an _EntityManager_ with an _EXTENDED_ persistence context injected into a @Stateful bean.
 An EJB 3 _@Entity_ bean is used with the EntityManager to create, persist and merge data to a database.
 
-If you need to use a TRANSACTION persistence context, see link:testing-transactions-example.html[this example]
+If you need to use a TRANSACTION persistence context, see xref:testing-transactions-example.adoc[this example]
 
 +++<a name="InjectionofEntityManagerExample-Writingaunittestfortheexample">++++++</a>+++
 
 = Writing a unit test for the example
 
 Curious on the InitialContext parameters used?
-See the link:injection-of-datasource-example.html[Injection of DataSource Example]  for an explanation of how any Resource can be configured via properties in the TestCase itself or via an openejb.xml file.
+See the xref:injection-of-datasource-example.adoc[Injection of DataSource Example]  for an explanation of how any Resource can be configured via properties in the TestCase itself or via an openejb.xml file.
 
 == Movie
 

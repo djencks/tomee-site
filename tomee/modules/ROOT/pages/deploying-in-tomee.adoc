@@ -10,7 +10,7 @@ See the License for the            specific language governing permissions and l
 Deploying applications in TomEE is as simple as deploying them in Tomcat.
 
 You could deploy your application in Eclipse just like how you would deploy with Tomcat.
-For an example, link:tomee-and-eclipse.html[tomee-and-eclipse] shows how to use TomEE with Eclipse.
+For an example, xref:tomee-and-eclipse.adoc[tomee-and-eclipse] shows how to use TomEE with Eclipse.
 
 Or you can simply package your application as a standard *WAR* file and copy it to the *[TomEE]/webapps* folder, or as an *EAR* file and copy it to the *[TomEE]/apps* folder.
 

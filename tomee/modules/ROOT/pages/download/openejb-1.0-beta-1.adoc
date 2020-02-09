@@ -31,7 +31,7 @@ Note that no other EJB 2.0 features (such as CMP 2 or MDBs)   are supported in t
 
 == Collapsed EAR support
 
-link:collapsed-ear.html[Collapsed EAR] s are an OpenEJB invention allowing you to  combine your ejbs and servlets in the same archive and  classloader.
+xref:collapsed-ear.adoc[Collapsed EAR] s are an OpenEJB invention allowing you to  combine your ejbs and servlets in the same archive and  classloader.
 This is essentially a new way to embed OpenEJB  into Tomcat so that OpenEJB and your EJBs are loaded only  into your webapp.
 Combine this with an embedded database  and you have a complete mini-J2EE environment that can be  hosted in your Tomcat webapp space.
 

@@ -45,13 +45,13 @@ Everything you can configure via an openejb.xml (minus the +++<Deployment>+++ele
 See [Configuring Containers in Tests](configuring-containers-in-tests.html) and [Configuring DataSources in Tests](configuring-datasources-in-tests.html).+++</Deployment>+++
 
 Everything in your logging.properties can be configured/overridden via properties.
-See link:configuring-logging-in-tests.html[Configuring Logging in Tests].
+See xref:configuring-logging-in-tests.adoc[Configuring Logging in Tests].
 
 The properties of persistence units declared in a persistence.xml can be configured/overridden via properties.
-See link:configuring-persistenceunits-in-tests.html[Configuring PersistenceUnits in Tests].
+See xref:configuring-persistenceunits-in-tests.adoc[Configuring PersistenceUnits in Tests].
 
 OpenEJB has many flags that can also be set as properties.
-See link:properties-listing.html[OpenEJB Properties]  for details on those.
+See xref:properties-listing.adoc[OpenEJB Properties]  for details on those.
 
 +++<a name="EmbeddedConfiguration-ExampleofusingInitialContextproperties">++++++</a>+++
 

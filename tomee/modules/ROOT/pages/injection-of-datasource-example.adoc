@@ -27,7 +27,7 @@ As seen in this example, the data source can also be declared via properties as 
 
 This style of properties creation can be used in the InitialContext properties, set into the System properties, or passed in on the command line as vm properties.
 
-_The source for this example is in the "injection-of-datasource" directory located in the link:openejb:download.html[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page]._ \{div} {div:style=clear:both;}\{div}
+_The source for this example is in the "injection-of-datasource" directory located in the xref:openejb:download.adoc[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page]._ \{div} {div:style=clear:both;}\{div}
 
 +++<a name="InjectionofDataSourceExample-TheCode">++++++</a>+++
 
@@ -73,7 +73,7 @@ In your production system you can place the properties into the OPENEJB_HOME/con
 = Running
 
 Running the example is fairly simple.
-In the "injection-of-datasource" directory of the link:openejb:download.html[examples zip] , just run:
+In the "injection-of-datasource" directory of the xref:openejb:download.adoc[examples zip] , just run:
 
 ____
 $ mvn clean install

@@ -26,7 +26,7 @@ If you are not replacing the embedded.logging.properties you will pick these up 
 
 = Overriding (recommended)
 
-As mentioned in link:embedded-configuration.html[Embedded Configuration]  much can be done with simple overriding.
+As mentioned in xref:embedded-configuration.adoc[Embedded Configuration]  much can be done with simple overriding.
 The default embedded.logging.properties is quite good and there is really no need to replace it completely if all you want to do is tweak a few values.
 
 You can also put logging tweaks right in your InitialContext properties like so:

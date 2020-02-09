@@ -46,13 +46,13 @@ The default openejb.xml file has most of the useful properties for each componen
 It is safe to delete them and be assured that no behavior will change if a smaller config file is desired.
 
 Overriding can also be done via the command line or plain Java system properties.
-See link:system-properties.html[System Properties]  for details.
+See xref:system-properties.adoc[System Properties]  for details.
 
 +++<a name="openejb.xml-Whatpropertiesareavailable?">++++++</a>+++
 
 == What properties are available?
 
-To know what properties can be overriden the './bin/openejb properties' command is very useful: see link:properties-tool.html[Properties Tool]
+To know what properties can be overriden the './bin/openejb properties' command is very useful: see xref:properties-tool.adoc[Properties Tool]
 
 Its function is to connect to a running server and print a canonical list of all properties OpenEJB can see via the various means of configuration.
 When sending requests for help to the users list or jira, it is highly encouraged to send the output of this tool with your message.

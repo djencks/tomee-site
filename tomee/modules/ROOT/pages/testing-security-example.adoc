@@ -6,26 +6,26 @@ Title: Testing Security Example
 
 = Overview
 
-Builds upon the link:injection-of-entitymanager-example.html[Injection of EntityManager Example]  but adds the use of _@RolesAllowed_ and _@PermitAll_ in the @Stateful bean to restrict who can perform create, persist and remove operations on the EntityManager.
+Builds upon the xref:injection-of-entitymanager-example.adoc[Injection of EntityManager Example]  but adds the use of _@RolesAllowed_ and _@PermitAll_ in the @Stateful bean to restrict who can perform create, persist and remove operations on the EntityManager.
 Shows a TestCase using the _@RunAs_ annotation to execute and test the bean code as various users.
 
 In this example we restrict the ability to create Movie Entities to a _Manager_ or an _Employee_.
 Reads are open to anyone, logged in or not.
 And delete operations are only allowed by a _Manager_.
 
-See the link:security-annotations.html[Security Annotations]  page for a full description of how the security annotations work.
+See the xref:security-annotations.adoc[Security Annotations]  page for a full description of how the security annotations work.
 
-_The source for this example is in the "testing-security" directory located in the link:openejb:download.html[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page]._
+_The source for this example is in the "testing-security" directory located in the xref:openejb:download.adoc[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page]._
 
 +++<a name="TestingSecurityExample-TheCode">++++++</a>+++
 
 = The Code
 
-Just as with the link:testing-transactions-example.html[Testing Transactions Example]  the magic of this unit test is in the _ManagerBean_ and _EmployeeBean_ @Stateless beans that we've tucked into our TestCase as inner classes.
+Just as with the xref:testing-transactions-example.adoc[Testing Transactions Example]  the magic of this unit test is in the _ManagerBean_ and _EmployeeBean_ @Stateless beans that we've tucked into our TestCase as inner classes.
 These beans allow us to execute our test code as either a Manager or as an Employee and test that Movies @Stateful bean is setup to restrict and permit calls according to our intended design.
 
 _Curious on the InitialContext parameters used?
-See the link:injection-of-datasource-example.html[Injection of DataSource Example]  for an explanation of how any Resource can be configured via properties in the TestCase itself or via an openejb.xml file._
+See the xref:injection-of-datasource-example.adoc[Injection of DataSource Example]  for an explanation of how any Resource can be configured via properties in the TestCase itself or via an openejb.xml file._
 
 == Movie
 

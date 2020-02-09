@@ -26,4 +26,4 @@ is injected with the following resource:
  JtaManaged true
  </Resource>
 
-For more on how to configure, read through link:/configuring-datasources.html[configuring-datasources], link:containers-and-resources.html[containers-and-resources] docs.
+For more on how to configure, read through xref:/configuring-datasources.adoc[configuring-datasources], xref:containers-and-resources.adoc[containers-and-resources] docs.

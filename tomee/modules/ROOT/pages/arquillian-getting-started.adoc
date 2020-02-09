@@ -3,7 +3,7 @@ Title: Getting started with Arquillian and TomEE
 Arquillian is a testing framework on top of JUnit (or TestNG if you prefer).
 It makes it easier to do integration tests in a managed environment (JEE environment here after).
 
-We provide an embedded and remote adapter, see link:arquillian-available-adapters.html[the available adapters] for more details.
+We provide an embedded and remote adapter, see xref:arquillian-available-adapters.adoc[the available adapters] for more details.
 
 In a managed environment it is usually quite difficult to perform unit tests, due to the fact that most of the time you have to mock almost the entire environment.
 It is very time consuming and requires complicated integration tests that must reflect the production environment as best as possible.

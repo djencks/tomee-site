@@ -11,26 +11,26 @@ See the License for the            specific language governing permissions and l
 
 === Java EE Basics
 
-* link:basics---getting-things.html[Getting Things]
-* link:basics---security.html[Security]
-* link:basics---transactions.html[Transactions] }
+* xref:basics---getting-things.adoc[Getting Things]
+* xref:basics---security.adoc[Security]
+* xref:basics---transactions.adoc[Transactions] }
 
 {span-one-third
 
 === Applications
 
-* link:callbacks.html[Callbacks]
-* link:understanding-callbacks.html[Understanding Callbacks]
-* link:ejb-refs.html[EJB Refs]
-* link:annotations,-xml-and-defaults.html[XML Overrides] }
+* xref:callbacks.adoc[Callbacks]
+* xref:understanding-callbacks.adoc[Understanding Callbacks]
+* xref:ejb-refs.adoc[EJB Refs]
+* xref:annotations,-xml-and-defaults.adoc[XML Overrides] }
 
 {span-one-third
 
 === Java Persistence Architecture
 
-* link:jpa-concepts.html[JPA Concepts]
-* link:jpa-usage.html[General]
-* link:openjpa.html[OpenJPA]
+* xref:jpa-concepts.adoc[JPA Concepts]
+* xref:jpa-usage.adoc[General]
+* xref:openjpa.adoc[OpenJPA]
 * link:hibernate.html[Hibernate] }
 
 }
@@ -41,8 +41,8 @@ See the License for the            specific language governing permissions and l
 
 === Enterprise JavaBeans
 
-* link:singleton-beans.html[Singleton Beans]
-* link:security-annotations.html[Security Annotations]
-* link:transaction-annotations.html[Transaction Annotations] }
+* xref:singleton-beans.adoc[Singleton Beans]
+* xref:security-annotations.adoc[Security Annotations]
+* xref:transaction-annotations.adoc[Transaction Annotations] }
 
 }

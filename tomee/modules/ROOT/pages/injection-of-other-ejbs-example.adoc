@@ -15,7 +15,7 @@ In this particular example, we will create two session stateless beans:
 
 The DataReader bean uses the DataStore to retrieve some informations, and we will see how we can, inside the DataReader bean, get a reference to the DataStore bean using the @EJB annotation, thus avoiding the use of the JNDI API.
 
-_The source for this example is the "injection-of-ejbs" directory located in the link:openejb:download.html[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page]._
+_The source for this example is the "injection-of-ejbs" directory located in the xref:openejb:download.adoc[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page]._
 
 +++<a name="InjectionofotherEJBsExample-TheCode">++++++</a>+++
 
@@ -128,7 +128,7 @@ We need just to write a setup method to create and initialize the InitialContext
 = Running
 
 Running the example is fairly simple.
-In the "injection-of-ejbs" directory of the link:openejb:download.html[examples zip] , just run:
+In the "injection-of-ejbs" directory of the xref:openejb:download.adoc[examples zip] , just run:
 
 ____
 $ mvn clean install

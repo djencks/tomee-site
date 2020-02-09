@@ -133,7 +133,7 @@ See the examples zip for a dozen embedded testing examples that range from simpl
 
 == EJB Plugin for Tomcat 6 and 5.5
 
-OpenEJB 3.0 can be link:openejbx30:tomcat.html[plugged into]  any Tomcat 6 or Tomcat 5.5 server, adding support for EJBs in Web Apps.
+OpenEJB 3.0 can be xref:openejbx30:tomcat.adoc[plugged into]  any Tomcat 6 or Tomcat 5.5 server, adding support for EJBs in Web Apps.
 War files themselves can contain EJBs and the Servlets can use new JavaEE 5 annotations, XA transactions, JPA, and JMS.
 Webapps can even support fat java clients connecting over HTTP.
 
@@ -147,7 +147,7 @@ In the case of Tomcat 5.5 which doesn't support dependency injection at all, eve
 == Collapsed EAR (EJBs in .WARs)
 
 Along the lines of the Tomcat integration where OpenEJB can be plugged into Tomcat, we've expanded the idea to also allow your EJBs to be plugged into your webapp.
-We call this innovative feature link:collapsed-ear.html[Collapsed EAR] .  In this style 100% of your classes, including your EJBs, can be packed into your WEB-INF/classes and WEB-INF/lib directories.
+We call this innovative feature xref:collapsed-ear.adoc[Collapsed EAR] .  In this style 100% of your classes, including your EJBs, can be packed into your WEB-INF/classes and WEB-INF/lib directories.
 The result is that your WAR file becomes a replacement for an EAR.
 Unlike an EAR, all multi-packaging and multi-classloader requirements are stripped away and collapsed down to one archive and one classloader all your components, EJBs or otherwise, can share.
 

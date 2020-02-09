@@ -2,7 +2,7 @@
 
 Title: TomEE and Arquillian
 
-Check out the link:arquillian-getting-started.html[Getting started] page if you are not at all familiar with Arquillian.
+Check out the xref:arquillian-getting-started.adoc[Getting started] page if you are not at all familiar with Arquillian.
 
 All the Arquillian Adapters for TomEE support the following configuration options in the *src/test/resources/arquillian.xml*:
 

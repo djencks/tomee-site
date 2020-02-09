@@ -14,7 +14,7 @@ This allows it to serve as an application lifecycle listener which is something 
 It has an _@Startup_ annotation which is similar in concept to the servlet +++<load-on-startup>+++, but unlike servlets it doesn't take a number as an argument.
 Instead, you can use an *@DependsOn* annotation to say which other Singletons you need and the container will ensure they start before you.+++</load-on-startup>+++
 
-See the link:singleton-example.html[Singleton Example]  for sample bean code and client.
+See the xref:singleton-example.adoc[Singleton Example]  for sample bean code and client.
 
 +++<a name="SingletonBeans-Concurrency">++++++</a>+++
 
@@ -125,7 +125,7 @@ Here is the order of preference:
 . boot-level via InitialContext(Properties) or EJBContainer.createEjbContainer(Map<Object,Object>)
 . system-level in System.getProperties()
 
-The value of the property can be phrased in plain english such as "1 hour and 23 minutes and 17 seconds" see link:configuring-durations.html[Configuring Durations]  for details.
+The value of the property can be phrased in plain english such as "1 hour and 23 minutes and 17 seconds" see xref:configuring-durations.adoc[Configuring Durations]  for details.
 
 +++<a name="SingletonBeans-StartupandStartupOrdering">++++++</a>+++
 
