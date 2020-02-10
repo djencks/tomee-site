@@ -2,7 +2,7 @@
 
 Title: OpenEJB 0.9.2
 
-{excerpt:hidden=true} xref:openejb-0.9.2.adoc[OpenEJB 0.9.2]
+{excerpt:hidden=true} xref:download/openejb-0.9.2.adoc[OpenEJB 0.9.2]
 
 * June 5th, 2003
  ** http://dist.codehaus.org/openejb/distributions/openejb-0.9.2.zip[openejb-0.9.2.zip]

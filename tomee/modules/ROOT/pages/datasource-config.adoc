@@ -396,4 +396,8 @@ in resource properties to ensure the resource is pooled.
 
 == Details about DataSource and their factories (advanced configuration)
 
-xref:datasource-configuration-by-creator.adoc[Configuration by creator]
+
+//FIXME CHOOSE ONE
+xref:7.0@tomee::datasource-configuration-by-creator.adoc[]
+xref:7.1@tomee::datasource-configuration-by-creator.adoc[]
+xref:8.0@tomee::datasource-configuration-by-creator.adoc[Configuration by creator]

@@ -12,7 +12,7 @@ These source patches may be used by users wishing to build their own local versi
 
 Lists of security problems fixed in released versions of Apache TomEE are available:
 
-* xref:tomee.adoc[Apache TomEE 1.5 Security Vulnerabilities]
+* xref:security/tomee.adoc[Apache TomEE 1.5 Security Vulnerabilities]
 * xref:tomee.adoc[Apache TomEE 1.6 Security Vulnerabilities]
 * xref:tomee.adoc[Apache TomEE 1.7 Security Vulnerabilities]
 

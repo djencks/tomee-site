@@ -41,7 +41,11 @@ See xref:datasource-password-encryption.adoc[DataSource Password Encryption]  fo
 
 See xref:common-datasource-configurations.adoc[Common DataSource Configurations]  for a list of the commonly used databases and their driver configurations.
 
-See xref:datasource-configuration-by-creator.adoc[DataSource Configuration by Creator]  for a list of the different properties supported for each data source creator.
+See 
+//FIXME CHOOSE ONE
+xref:7.0@tomee::datasource-configuration-by-creator.adoc[]
+xref:7.1@tomee::datasource-configuration-by-creator.adoc[]
+xref:8.0@tomee::datasource-configuration-by-creator.adoc[DataSource Configuration by Creator]  for a list of the different properties supported for each data source creator.
 
 You may also need data partitioning per customer or depending on any other business criteria.
 That's also an available feature.
