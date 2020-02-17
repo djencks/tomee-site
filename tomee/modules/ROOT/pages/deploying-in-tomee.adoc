@@ -18,7 +18,7 @@ Read on to learn more about packaging EJBs in a WAR file.
 
 === Packaging
 
-+++<a name="CollapsedEAR-Onearchive">++++++</a>+++
+
 
 ==== One archive
 
@@ -30,7 +30,7 @@ The basic idea of this approach is that your Servlets and EJBs are together in y
 * Can put the web.xml and ejb-jar.xml in the same archive (the WAR file)
 * EJBs can see Servlet classes and vice versa
 
-+++<a name="CollapsedEAR-NotquiteJ2EE(itistrulyJava EE6)">++++++</a>+++
+
 
 ==== Not quite J2EE (But it is Java EE 6)
 

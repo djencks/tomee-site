@@ -1,4 +1,4 @@
-= Singleton Beans +++<a name="SingletonBeans-SingletonOverview">++++++</a>+++
+= Singleton Beans
 
 = Singleton Overview
 
@@ -14,27 +14,27 @@ Instead, you can use an *@DependsOn* annotation to say which other Singletons yo
 
 See the xref:singleton-example.adoc[Singleton Example]  for sample bean code and client.
 
-+++<a name="SingletonBeans-Concurrency">++++++</a>+++
+
 
 == Concurrency
 
 Singletons support two modes of concurrent access, Container-Managed Concurrency (the default) and Bean-Managed Concurrency.
 
-+++<a name="SingletonBeans-Bean-ManagedConcurrency">++++++</a>+++
+
 
 === Bean-Managed Concurrency
 
 With Bean-Managed Concurrency, annotated as _@ConcurrencyManagement(BEAN)_, the container sends all invocations into the bean and lets the Singleton bean instance decide how and when to synchronize access, if at all.
 Here the 'synchronization' keyword is allowed as well as the full javax.util.concurrent set of libraries.
 
-+++<a name="SingletonBeans-Container-ManagedConcurrency">++++++</a>+++
+
 
 === Container-Managed Concurrency
 
 With Container-Managed Concurrency, annotated as _@ConcurrencyManagement(CONTAINER)_, the container will enforce concurrency for you via locking method access to the bean.
 Two modes, called locks exist and can be assigned to both the bean class and methods of the bean class.
 
-+++<a name="SingletonBeans-Locktype">++++++</a>+++
+
 
 ==== Lock type
 
@@ -72,7 +72,7 @@ Essentially:
 The EJB container may use something other than ReadWriteLock but the semantics of a ReadWriteLock must be followed.
 Internally, we use an instance of http://java.sun.com/j2se/1.5.0/docs/api/java/util/concurrent/locks/ReentrantReadWriteLock.html[java.util.concurrent.ReentrantReadWriteLock]  which supports correct memory synchronization, some reentrancy, lock downgrading, and [more|http://java.sun.com/j2se/1.5.0/docs/api/java/util/concurrent/locks/ReentrantReadWriteLock.html] .
 
-+++<a name="SingletonBeans-AcquiringtheLock">++++++</a>+++
+
 
 ==== Acquiring the Lock
 
@@ -109,7 +109,7 @@ public interface Lock {
 
 In the event it is not possible to acquire the lock a _javax.ejb.ConcurrentAccessException_ or _javax.ejb.ConcurrentAccessTimeoutException_ will be thrown.
 
-+++<a name="SingletonBeans-DefaultTimeout">++++++</a>+++
+
 
 ==== Default Timeout
 
@@ -125,7 +125,7 @@ Here is the order of preference:
 
 The value of the property can be phrased in plain english such as "1 hour and 23 minutes and 17 seconds" see xref:configuring-durations.adoc[Configuring Durations]  for details.
 
-+++<a name="SingletonBeans-StartupandStartupOrdering">++++++</a>+++
+
 
 == Startup and Startup Ordering
 
@@ -154,7 +154,7 @@ The @DependsOn allows the Container to calculate the correct startup order and s
 All Singletons will automatically be available to your business methods regardless if @DependsOn is used.
 Because of the greater chance of creating circular dependencies, it is better not to use the @DependsOn annotation "just in case" and should only be used when truly needed.
 
-+++<a name="SingletonBeans-XMLandAnnotationOverriding">++++++</a>+++
+
 
 = XML and Annotation Overriding
 

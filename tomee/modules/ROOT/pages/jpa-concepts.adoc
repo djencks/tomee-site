@@ -1,4 +1,4 @@
-= JPA Concepts +++<a name="JPAConcepts-JPA101">++++++</a>+++
+= JPA Concepts
 
 = JPA 101
 
@@ -38,7 +38,7 @@ With <persistence-unit transaction-type="*JTA*"> the *container* will do EntityM
 * Everyone with an EntityManager reference to the *same unit* in the *same transaction* will automatically have a reference to the *same PersistenceContext/Cache*
 * The PersistenceContext/Cache is *flushed* and cleared at JTA *commit* time
 
-+++<a name="JPAConcepts-Cache==PersistenceContext">++++++</a>+++
+
 
 = Cache == PersistenceContext
 
@@ -57,7 +57,7 @@ In any given transaction you want exactly one PersistenceContext/Cache for a giv
 Using a JTA unit with an EntityManager created by the container will always guarantee that this is the case.
 With a RESOURCE_LOCAL unit and an EntityManagerFactory you should create and use exactly one EntityManager instance in your transaction to ensure there is only one active PersistenceContext/Cache for the given set of data active against the current transaction.
 
-+++<a name="JPAConcepts-CachesandDetaching">++++++</a>+++
+
 
 = Caches and Detaching
 
@@ -82,7 +82,7 @@ You *cannot* call EntityManager.persist() or EntityManager.remove() on a Detache
 
 Calling EntityManager.merge() will re-attach a Detached object.
 
-+++<a name="JPAConcepts-ValidRESOURCE_LOCALUnitusage">++++++</a>+++
+
 
 = Valid RESOURCE_LOCAL Unit usage
 

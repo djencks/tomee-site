@@ -2,3 +2,9 @@ name: common
 version: "0.0"
 nav:
 - modules/ROOT/nav0.adoc
+asciidoc:
+  attributes:
+    supported-properties-table-layout: cols="2,1,3,5",options="header"
+    properties-table-layout: cols="3a,2a,5a",options="header"
+    tested-on-layout: cols="7*",options="header"
+

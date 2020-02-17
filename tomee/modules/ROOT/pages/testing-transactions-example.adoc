@@ -1,6 +1,6 @@
 = Testing Transactions Example
 
-+++<a name="TestingTransactionsExample-Overview">++++++</a>+++
+
 
 = Overview
 
@@ -16,7 +16,7 @@ An EJB 3 @Entity bean is used with the EntityManager to create, persist and merg
 
 _The source for this example is in the "testing-transactions" directory located in the http://tomee.apache.org/downloads.html[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page]._
 
-+++<a name="TestingTransactionsExample-TheCode">++++++</a>+++
+
 
 = The Code
 
@@ -28,7 +28,7 @@ The client either has a transaction and therefore gets Entities which are still 
 
 See the xref:transaction-annotations.adoc[Transaction Annotations]  page for a full description of the available transaction attributes.
 
-+++<a name="TestingTransactionsExample-Writingaunittestfortheexample">++++++</a>+++
+
 
 == Movie
 

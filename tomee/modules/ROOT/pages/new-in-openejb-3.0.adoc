@@ -1,4 +1,4 @@
-= New in OpenEJB 3.0 +++<a name="NewinOpenEJB3.0-EJB3.0">++++++</a>+++
+= New in OpenEJB 3.0
 
 = EJB 3.0
 
@@ -28,11 +28,11 @@ The two aspects of EJB that OpenEJB does not yet support are:
 JAX-WS and CORBA support will be added in future releases.
 Support for the JAX-RPC API is not a planned feature.
 
-+++<a name="NewinOpenEJB3.0-ExtensionstoEJB3.0">++++++</a>+++
+
 
 = Extensions to EJB 3.0
 
-+++<a name="NewinOpenEJB3.0-CMPviaJPA">++++++</a>+++
+
 
 == CMP via JPA
 
@@ -41,7 +41,7 @@ This means when you deploy an old style CMP 1.1 or CMP 2.1 bean it is internally
 This makes it possible to use both CMP and JPA in the same application without any coherence issues that can come from using two competing persistence technologies against the same data.
 Everything is ultimately JPA in the end.
 
-+++<a name="NewinOpenEJB3.0-ExtendedDependencyInjection">++++++</a>+++
+
 
 == Extended Dependency Injection
 
@@ -66,7 +66,7 @@ public class MyBean {
 }
 ....
 
-+++<a name="NewinOpenEJB3.0-TheMETA-INF/env-entries.properties">++++++</a>+++
+
 
 == The META-INF/env-entries.properties
 
@@ -84,7 +84,7 @@ You can configure you ejbs via a properties file and skip the need for an ejb-ja
  birthday = locale=en_US style=MEDIUM Mar 1, 1954
  homeDirectory = /home/esmith/
 
-+++<a name="NewinOpenEJB3.0-SupportforGlassFishdescriptors">++++++</a>+++
+
 
 == Support for GlassFish descriptors
 
@@ -92,7 +92,7 @@ Unit testing EJBs with OpenEJB is a major feature and draw for people, even for 
 The descriptor format for Geronimo is natively understood by OpenEJB as OpenEJB is the EJB Container provider for Geronimo.
 However, OpenEJB also supports the GlassFish descriptors so people using GlassFish as their final server can still use OpenEJB for testing EJBs via plain JUnit tests in their build and only have one set of vendor descriptors to maintain.
 
-+++<a name="NewinOpenEJB3.0-JavaEE5EARandApplicationClientsupport">++++++</a>+++
+
 
 == JavaEE 5 EAR and Application Client support
 
@@ -101,7 +101,7 @@ EAR support is limited to ejbs, application clients, and libraries;
 WAR files and RAR files will be ignored.
 Per the JavaEE 5 spec, the META-INF/application.xml and META-INF/application-client.xml files are optional.
 
-+++<a name="NewinOpenEJB3.0-ApplicationValidationforEJB3.0">++++++</a>+++
+
 
 == Application Validation for EJB 3.0
 
@@ -115,43 +115,43 @@ The most verbose level will tell you in detail what you did wrong, what the opti
 even including valid code and annotation usage tailored to your app that you can copy and paste into your application.
 Very ideal for beginners and people using OpenEJB in a classroom setting.
 
-+++<a name="NewinOpenEJB3.0-MostconfigurableJNDInamesever">++++++</a>+++
+
 
 == Most configurable JNDI names ever
 
-+++<a name="NewinOpenEJB3.0-GeneralImprovements">++++++</a>+++
+
 
 = General Improvements
 
-+++<a name="NewinOpenEJB3.0-OnlineDeployment">++++++</a>+++
+
 
 == Online Deployment
 
-+++<a name="NewinOpenEJB3.0-SecurityService">++++++</a>+++
+
 
 == Security Service
 
-+++<a name="NewinOpenEJB3.0-ConnectionPooling">++++++</a>+++
+
 
 == Connection Pooling
 
-+++<a name="NewinOpenEJB3.0-ConfigurationOverriding">++++++</a>+++
+
 
 == Configuration Overriding
 
-+++<a name="NewinOpenEJB3.0-FlexibleJNDINameFormatting">++++++</a>+++
+
 
 == Flexible JNDI Name Formatting
 
-+++<a name="NewinOpenEJB3.0-CleanerEmbedding">++++++</a>+++
+
 
 == Cleaner Embedding
 
-+++<a name="NewinOpenEJB3.0-Tomcat6Support">++++++</a>+++
+
 
 == Tomcat 6 Support
 
-+++<a name="NewinOpenEJB3.0-Businesslocalsremotable">++++++</a>+++
+
 
 == Business locals remotable
 

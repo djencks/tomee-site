@@ -1,6 +1,6 @@
 = Common PersistenceProvider properties While not a definitive list, it does help to show a side-by-side view of common properties used by the various persistence providers out there.
 
-+++<a name="CommonPersistenceProviderproperties-TopLink">++++++</a>+++
+
 
 = TopLink
 
@@ -13,7 +13,7 @@
    <property name="toplink.target-server" value="pl.zsk.samples.ejbservice.OpenEJBServerPlatform"/>
  </properties>
 
-+++<a name="CommonPersistenceProviderproperties-OpenJPA">++++++</a>+++
+
 
 = OpenJPA
 
@@ -29,7 +29,7 @@
    <property name="openjpa.Log" value="DefaultLevel=TRACE,SQL=TRACE" />
  </properties>
 
-+++<a name="CommonPersistenceProviderproperties-Hibernate">++++++</a>+++
+
 
 = Hibernate
 

@@ -1,4 +1,5 @@
 = StatelessContainer Configuration
+:supported-properties-table-layout: cols="2,1,3,5",options="header"
 
 A StatelessContainer can be declared via xml in the `<tomee-home>/conf/tomee.xml` file or in a `WEB-INF/resources.xml` file using a declaration like the following.
 All properties in the element body are optional.
@@ -44,79 +45,154 @@ If a property is specified that is not supported by the declared StatelessContai
 If a StatelessContainer is needed by the application and one is not declared, TomEE will create one dynamically using default settings.
 Multiple StatelessContainer declarations are allowed.
 
-= Supported Properties+++<table>++++++<tr>++++++<th>+++Property+++</th>+++
-+++<th>+++Type+++</th>+++
-+++<th>+++Default+++</th>+++
-+++<th>+++Description+++</th>++++++</tr>+++
-+++<tr>++++++<td>++++++<a href="#accessTimeout">+++accessTimeout+++</a>++++++</td>+++
-  +++<td>++++++<a href="configuring-durations.html">+++time+++</a>++++++</td>+++
-  +++<td>+++30&nbsp;seconds+++</td>+++
-  +++<td>+++Specifies the time an invokation should wait for an instance
-of the pool to become available.+++</td>++++++</tr>+++
-+++<tr>++++++<td>++++++<a href="#callbackThreads">+++callbackThreads+++</a>++++++</td>+++
-  +++<td>+++int+++</td>+++
-  +++<td>+++5+++</td>+++
-  +++<td>+++The number of threads for constructing and destroying beans.+++</td>++++++</tr>+++
-+++<tr>++++++<td>++++++<a href="#closeTimeout">+++closeTimeout+++</a>++++++</td>+++
-  +++<td>++++++<a href="configuring-durations.html">+++time+++</a>++++++</td>+++
-  +++<td>+++5&nbsp;minutes+++</td>+++
-  +++<td>+++Maximum time to wait for instances to be destroyed when shutting down the pool+++</td>++++++</tr>+++
-+++<tr>++++++<td>++++++<a href="#garbageCollection">+++garbageCollection+++</a>++++++</td>+++
-  +++<td>+++boolean+++</td>+++
-  +++<td>+++false+++</td>+++
-  +++<td>+++Allows Garbage Collection to be used as a mechanism for shrinking
-the pool.+++</td>++++++</tr>+++
-+++<tr>++++++<td>++++++<a href="#idleTimeout">+++idleTimeout+++</a>++++++</td>+++
-  +++<td>++++++<a href="configuring-durations.html">+++time+++</a>++++++</td>+++
-  +++<td>+++0&nbsp;minutes+++</td>+++
-  +++<td>+++Specifies the maximum time that an instance should be allowed to
-sit idly in the pool without use before it should be retired and
-removed.+++</td>++++++</tr>+++
-+++<tr>++++++<td>++++++<a href="#maxAge">+++maxAge+++</a>++++++</td>+++
-  +++<td>++++++<a href="configuring-durations.html">+++time+++</a>++++++</td>+++
-  +++<td>+++0&nbsp;hours+++</td>+++
-  +++<td>+++Specifies the maximum time that an instance should live before
-it should be retired and removed from use.+++</td>++++++</tr>+++
-+++<tr>++++++<td>++++++<a href="#maxAgeOffset">+++maxAgeOffset+++</a>++++++</td>+++
-  +++<td>+++int+++</td>+++
-  +++<td>+++-1+++</td>+++
-  +++<td>+++Applies to MaxAge usage and would rarely be changed, but is a
-nice feature to understand.+++</td>++++++</tr>+++
-+++<tr>++++++<td>++++++<a href="#maxSize">+++maxSize+++</a>++++++</td>+++
-  +++<td>+++int+++</td>+++
-  +++<td>+++10+++</td>+++
-  +++<td>+++Specifies the size of the instance pool for this stateless
-SessionBean container.+++</td>++++++</tr>+++
-+++<tr>++++++<td>++++++<a href="#minSize">+++minSize+++</a>++++++</td>+++
-  +++<td>+++int+++</td>+++
-  +++<td>+++0+++</td>+++
-  +++<td>+++Specifies the minimum number of bean instances that should be in
-the pool for each bean.+++</td>++++++</tr>+++
-+++<tr>++++++<td>++++++<a href="#replaceAged">+++replaceAged+++</a>++++++</td>+++
-  +++<td>+++boolean+++</td>+++
-  +++<td>+++true+++</td>+++
-  +++<td>+++When `ReplaceAged` is enabled, any instances in the pool that
-expire due to reaching their `MaxAge` will be replaced immediately
-so that the pool will remain at its current size.+++</td>++++++</tr>+++
-+++<tr>++++++<td>++++++<a href="#replaceFlushed">+++replaceFlushed+++</a>++++++</td>+++
-  +++<td>+++boolean+++</td>+++
-  +++<td>+++false+++</td>+++
-  +++<td>+++When `ReplaceFlushed` is enabled, any instances in the pool that
-are flushed will be replaced immediately so that the pool will
-remain at its current size.+++</td>++++++</tr>+++
-+++<tr>++++++<td>++++++<a href="#strictPooling">+++strictPooling+++</a>++++++</td>+++
-  +++<td>+++boolean+++</td>+++
-  +++<td>+++true+++</td>+++
-  +++<td>+++StrictPooling tells the container what to do when the pool
-reaches it's maximum size and there are incoming requests that
-need instances.+++</td>++++++</tr>+++
-+++<tr>++++++<td>++++++<a href="#sweepInterval">+++sweepInterval+++</a>++++++</td>+++
-  +++<td>++++++<a href="configuring-durations.html">+++time+++</a>++++++</td>+++
-  +++<td>+++5&nbsp;minutes+++</td>+++
-  +++<td>+++The frequency in which the container will sweep the pool and
-evict expired instances.+++</td>++++++</tr>++++++</table>+++
+== Supported Properties
 
-+++<a name="accessTimeout">++++++</a>+++
+[{supported-properties-table-layout}]
+|===
+
+|Property
+
+|Type
+
+|Default
+
+|Description
+
+
+|+++<a href="#accessTimeout">+++accessTimeout+++</a>+++
+
+|+++<a href="configuring-durations.html">+++time+++</a>+++
+
+|30&nbsp;seconds
+
+|Specifies the time an invokation should wait for an instance
+of the pool to become available.
+
+
+|+++<a href="#callbackThreads">+++callbackThreads+++</a>+++
+
+|int
+
+|5
+
+|The number of threads for constructing and destroying beans.
+
+
+|+++<a href="#closeTimeout">+++closeTimeout+++</a>+++
+
+|+++<a href="configuring-durations.html">+++time+++</a>+++
+
+|5&nbsp;minutes
+
+|Maximum time to wait for instances to be destroyed when shutting down the pool
+
+
+|+++<a href="#garbageCollection">+++garbageCollection+++</a>+++
+
+|boolean
+
+|false
+
+|Allows Garbage Collection to be used as a mechanism for shrinking
+the pool.
+
+
+|+++<a href="#idleTimeout">+++idleTimeout+++</a>+++
+
+|+++<a href="configuring-durations.html">+++time+++</a>+++
+
+|0&nbsp;minutes
+
+|Specifies the maximum time that an instance should be allowed to
+sit idly in the pool without use before it should be retired and
+removed.
+
+
+|+++<a href="#maxAge">+++maxAge+++</a>+++
+
+|+++<a href="configuring-durations.html">+++time+++</a>+++
+
+|0&nbsp;hours
+
+|Specifies the maximum time that an instance should live before
+it should be retired and removed from use.
+
+
+|+++<a href="#maxAgeOffset">+++maxAgeOffset+++</a>+++
+
+|int
+
+|-1
+
+|Applies to MaxAge usage and would rarely be changed, but is a
+nice feature to understand.
+
+
+|+++<a href="#maxSize">+++maxSize+++</a>+++
+
+|int
+
+|10
+
+|Specifies the size of the instance pool for this stateless
+SessionBean container.
+
+
+|+++<a href="#minSize">+++minSize+++</a>+++
+
+|int
+
+|0
+
+|Specifies the minimum number of bean instances that should be in
+the pool for each bean.
+
+
+|+++<a href="#replaceAged">+++replaceAged+++</a>+++
+
+|boolean
+
+|true
+
+|When `ReplaceAged` is enabled, any instances in the pool that
+expire due to reaching their `MaxAge` will be replaced immediately
+so that the pool will remain at its current size.
+
+
+|+++<a href="#replaceFlushed">+++replaceFlushed+++</a>+++
+
+|boolean
+
+|false
+
+|When `ReplaceFlushed` is enabled, any instances in the pool that
+are flushed will be replaced immediately so that the pool will
+remain at its current size.
+
+
+|+++<a href="#strictPooling">+++strictPooling+++</a>+++
+
+|boolean
+
+|true
+
+|StrictPooling tells the container what to do when the pool
+reaches it's maximum size and there are incoming requests that
+need instances.
+
+
+|+++<a href="#sweepInterval">+++sweepInterval+++</a>+++
+
+|+++<a href="configuring-durations.html">+++time+++</a>+++
+
+|5&nbsp;minutes
+
+|The frequency in which the container will sweep the pool and
+evict expired instances.
+|===
+
+
+
 
 == accessTimeout
 
@@ -129,7 +205,7 @@ Or any combination such as "1 hour and 27 minutes and 10 seconds"
 
 Any usage of the `javax.ejb.AccessTimeout` annotation will override this setting for the bean or method where the annotation is used.
 
-+++<a name="callbackThreads">++++++</a>+++
+
 
 == callbackThreads
 
@@ -138,7 +214,7 @@ The number of threads for constructing and destroying beans.
 When sweeping the pool for expired instances a thread pool is used to process calling `@PreDestroy` on expired instances as well as creating new instances as might be required to fill the pool to the minimum after a Flush or `MaxAge` expiration.
 The `CallbackThreads` setting dictates the size of the thread pool and is shared by all beans deployed in the container.
 
-+++<a name="closeTimeout">++++++</a>+++
+
 
 == closeTimeout
 
@@ -150,7 +226,7 @@ The `CloseTimeout` specifies the maximum time to wait for the pool to close and 
 Usable time units: nanoseconds, microsecons, milliseconds, seconds, minutes, hours, days.
 Or any combination such as `1 hour and 27 minutes and 10 seconds`
 
-+++<a name="garbageCollection">++++++</a>+++
+
 
 == garbageCollection
 
@@ -165,7 +241,7 @@ The setting should be increased to get the most out of the `GarbageCollection` f
 Much higher settings are safe.
 Even a setting as high as 3600000 (1 hour per free MB in the heap) does not affect the ability for the VM to garbage collect SoftReferences in the event that memory is needed to avoid an `OutOfMemoryException`.
 
-+++<a name="idleTimeout">++++++</a>+++
+
 
 == idleTimeout
 
@@ -176,7 +252,7 @@ Only instances in surplus of the pool's `MinSize` are eligible to expire via `Id
 Usable time units: nanoseconds, microsecons, milliseconds, seconds, minutes, hours, days.
 Or any combination such as "1 hour and 27 minutes and 10 seconds"
 
-+++<a name="maxAge">++++++</a>+++
+
 
 == maxAge
 
@@ -188,7 +264,7 @@ Useful for situations where bean instances are designed to hold potentially expe
 Usable time units: nanoseconds, microsecons, milliseconds, seconds, minutes, hours, days.
 Or any combination such as `1 hour and 27 minutes and 10 seconds`
 
-+++<a name="maxAgeOffset">++++++</a>+++
+
 
 == maxAgeOffset
 
@@ -219,7 +295,7 @@ Using the same example `MinSize` of 4 and `MaxAge` of `100 years`, the life span
 A `MaxAgeOffset` of 0 will cause no "spreading" of the age of the first instances used to fill the pool to the minimum and these instances will of course reach their MaxAge at the same time.
 It is possible to set to decimal values such as -0.5, 0.5, -1.2, or 1.2.
 
-+++<a name="maxSize">++++++</a>+++
+
 
 == maxSize
 
@@ -228,7 +304,7 @@ Specifies the size of the instance pool for this stateless SessionBean container
 Each `@Stateless` bean will get its own instance pool.
 If StrictPooling is not used, instances will still be created beyond this number if there is demand, but they will not be returned to the pool and instead will be immediately expire.
 
-+++<a name="minSize">++++++</a>+++
+
 
 == minSize
 
@@ -245,7 +321,7 @@ If the pool is flushed it is immediately refilled to the minimum size with `MaxA
 If an instance from the minimum side of the pool reaches its `MaxAge`, it is also immediately replaced.
 Replacement is done in a background queue using the number of threads specified by `CallbackThreads`.
 
-+++<a name="replaceAged">++++++</a>+++
+
 
 == replaceAged
 
@@ -257,7 +333,7 @@ The aim of his option is to prevent user requests from paying the instance creat
 
 Instances from the minimum side of the pool are always replaced when they reach their `MaxAge`, this setting dictates the treatment of non-minimum instances.
 
-+++<a name="replaceFlushed">++++++</a>+++
+
 
 == replaceFlushed
 
@@ -290,7 +366,7 @@ public class MyBean {
 }
 ....
 
-+++<a name="strictPooling">++++++</a>+++
+
 
 == strictPooling
 
@@ -306,7 +382,7 @@ The instances will last for just one method invocation and then are removed.
 Setting `StrictPooling` to `false` and `MaxSize` to `0` will result in no pooling.
 Instead instances will be created on demand and live for exactly one method call before being removed.
 
-+++<a name="sweepInterval">++++++</a>+++
+
 
 == sweepInterval
 

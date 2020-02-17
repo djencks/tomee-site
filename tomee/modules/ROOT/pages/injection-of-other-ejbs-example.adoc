@@ -1,4 +1,4 @@
-= Injection of other EJBs Example +++<a name="InjectionofotherEJBsExample-Overview">++++++</a>+++
+= Injection of other EJBs Example
 
 = Overview
 
@@ -15,17 +15,17 @@ The DataReader bean uses the DataStore to retrieve some informations, and we wil
 
 _The source for this example is the "injection-of-ejbs" directory located in the xref:openejb:download.adoc[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page]._
 
-+++<a name="InjectionofotherEJBsExample-TheCode">++++++</a>+++
+
 
 = The Code
 
 In this example we develop two simple session stateless beans (DataReader and DataStore), and show how we can use the @EJB annotation in one of these beans to get the reference to the other session bean
 
-+++<a name="InjectionofotherEJBsExample-DataStoresessionbean">++++++</a>+++
+
 
 == DataStore session bean
 
-+++<a name="InjectionofotherEJBsExample-Bean">++++++</a>+++
+
 
 === Bean
 
@@ -36,7 +36,7 @@ In this example we develop two simple session stateless beans (DataReader and Da
 | lang=java}
 |===
 
-+++<a name="InjectionofotherEJBsExample-Localbusinessinterface">++++++</a>+++
+
 
 === Local business interface
 
@@ -47,7 +47,7 @@ In this example we develop two simple session stateless beans (DataReader and Da
 | lang=java}
 |===
 
-+++<a name="InjectionofotherEJBsExample-Remotebusinessinterface">++++++</a>+++
+
 
 === Remote business interface
 
@@ -58,11 +58,11 @@ In this example we develop two simple session stateless beans (DataReader and Da
 | lang=java}
 |===
 
-+++<a name="InjectionofotherEJBsExample-DataReadersessionbean">++++++</a>+++
+
 
 == DataReader session bean
 
-+++<a name="InjectionofotherEJBsExample-Bean">++++++</a>+++
+
 
 === Bean
 
@@ -85,7 +85,7 @@ private DataStoreRemote dataStoreRemote;
 private DataStoreLocal dataStoreLocal;
 ....
 
-+++<a name="InjectionofotherEJBsExample-Localbusinessinterface">++++++</a>+++
+
 
 === Local business interface
 
@@ -107,7 +107,7 @@ private DataStoreLocal dataStoreLocal;
 * EJB interceptors
 * JAX-WS service endpoints \{tip}
 
-+++<a name="InjectionofotherEJBsExample-Writingaunittestfortheexample">++++++</a>+++
+
 
 = Writing a unit test for the example
 
@@ -121,7 +121,7 @@ We need just to write a setup method to create and initialize the InitialContext
 | lang=java}
 |===
 
-+++<a name="InjectionofotherEJBsExample-Running">++++++</a>+++
+
 
 = Running
 

@@ -4,7 +4,7 @@ Any EJB component will, by default, partake in that transaction.
 Here are some basic rules to understand about transactions.
 Keep note that this is the default behaviour, and the system can be configured to behave differently, depending on the needs of your system, bean, or individual methods of your beans.
 
-+++<a name="Basics-Transactions-Participants">++++++</a>+++
+
 
 == Participants
 
@@ -16,7 +16,7 @@ Examples are
 . EntityManager (a.k.a.
 Persistence context)
 
-+++<a name="Basics-Transactions-Behaviour">++++++</a>+++
+
 
 == Behaviour
 
@@ -26,7 +26,7 @@ The basic default behaviours are
 . A transaction ends at the end of the first EJB method, in the same chain
 . If a bean that has started a transaction, uses another bean, that bean will automatically use the same transaction as the calling bean.
 
-+++<a name="Basics-Transactions-Configuration">++++++</a>+++
+
 
 == Configuration
 

@@ -1,6 +1,6 @@
 = Injection of EntityManager Example
 
-+++<a name="InjectionofEntityManagerExample-Overview">++++++</a>+++
+
 
 = Overview+++<object width="400" height="250">++++++<param name="movie" value="http://www.youtube.com/v/s4uiIoAehgQ?fs=1&amp;hl=en_US&amp;rel=0">++++++</param>+++</param>+++<param name="allowFullScreen" value="true">++++++</param>+++</param>+++<param name="allowscriptaccess" value="always">++++++</param>+++</param>+++<embed src="http://www.youtube.com/v/s4uiIoAehgQ?fs=1&amp;hl=en_US&amp;rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="400" height="250">++++++</embed>+++</embed>+++</object>+++
 
@@ -9,7 +9,7 @@ An EJB 3 _@Entity_ bean is used with the EntityManager to create, persist and me
 
 If you need to use a TRANSACTION persistence context, see xref:testing-transactions-example.adoc[this example]
 
-+++<a name="InjectionofEntityManagerExample-Writingaunittestfortheexample">++++++</a>+++
+
 
 = Writing a unit test for the example
 

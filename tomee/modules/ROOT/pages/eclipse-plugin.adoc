@@ -1,4 +1,4 @@
-= Eclipse Plugin +++<a name="EclipsePlugin-Whatisit?">++++++</a>+++
+= Eclipse Plugin
 
 = What is it?
 
@@ -7,14 +7,14 @@ The initial offering will probably provide basic functionality by taking advanta
 This means full debugging and Eclipse project integration.
 From there, the sky is the limit so feel free to suggest features on the [OpenEJB Dev list|Mailing Lists#MailingLists-DeveloperMailingList] .
 
-+++<a name="EclipsePlugin-Howtogetinvolved?">++++++</a>+++
+
 
 = How to get involved?
 
 Just the same as getting involved with any part of OpenEJB -- send a mail to the xref:mailing-lists#mailinglists-developermailinglist.adoc[OpenEJB Dev list]  and say "Hi!"	We're a very relaxed group so no need to be perfect or overly prepared.
 Just dive right in, we're always happy to have more.
 
-+++<a name="EclipsePlugin-WheredoIgetit?">++++++</a>+++
+
 
 = Where do I get it?
 
@@ -22,13 +22,13 @@ The initiative is just launching, but you can grab what we have right here and s
 
 http://svn.apache.org/repos/asf/tomee/openejb-eclipse-plugin/trunk/
 
-+++<a name="EclipsePlugin-WhatdoIneedtohelp?">++++++</a>+++
+
 
 = What do I need to help?
 
 http://www.eclipse.org[Eclipse]  http://www.eclipse.org/webtools[Eclipse Web Tools]
 
-+++<a name="EclipsePlugin-Resources">++++++</a>+++
+
 
 = Resources
 

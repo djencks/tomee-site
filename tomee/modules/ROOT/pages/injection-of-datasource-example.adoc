@@ -1,4 +1,4 @@
-= Injection of DataSource Example +++<a name="InjectionofDataSourceExample-Overview">++++++</a>+++
+= Injection of DataSource Example
 
 = Overview
 
@@ -27,7 +27,7 @@ This style of properties creation can be used in the InitialContext properties, 
 
 _The source for this example is in the "injection-of-datasource" directory located in the xref:openejb:download.adoc[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page]._ \{div} {div:style=clear:both;}\{div}
 
-+++<a name="InjectionofDataSourceExample-TheCode">++++++</a>+++
+
 
 = The Code
 
@@ -38,7 +38,7 @@ _The source for this example is in the "injection-of-datasource" directory locat
 | lang=java}
 |===
 
-+++<a name="InjectionofDataSourceExample-Writingaunittestfortheexample">++++++</a>+++
+
 
 = Writing a unit test for the example
 
@@ -66,7 +66,7 @@ In your production system you can place the properties into the OPENEJB_HOME/con
   JdbcUrl = jdbc:hsqldb:mem:moviedb
  </Resource>
 
-+++<a name="InjectionofDataSourceExample-Running">++++++</a>+++
+
 
 = Running
 

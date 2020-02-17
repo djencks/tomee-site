@@ -1,6 +1,6 @@
 = System Properties
 
-+++<a name="SystemProperties-Overridingopenejb.xml">++++++</a>+++
+
 
 You can find a list of properties xref:properties-listing.adoc[here].
 But read on to understand how these can be used.
@@ -24,7 +24,7 @@ ____
 ./bin/openejb start -Dmysql.JdbcDriver=com.mysql.jdbc.Driver -Dmysql.JdbcUrl=jdbc:mysql://localhost/test -Dmysql.UserName=test
 ____
 
-+++<a name="SystemProperties-OverridingServerServices">++++++</a>+++
+
 
 = Overriding Server Services
 

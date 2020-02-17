@@ -1,7 +1,7 @@
 = Service Locator The functionality of the xref:jndi-names.adoc[openejb.jndiname.format]  allows for writing some really fun service locator code.
 Creating the exact layout you want using the exact data you want means you can create robust libraries for pulling things out of JNDI.
 
-+++<a name="ServiceLocator-Lookupexamples">++++++</a>+++
+
 
 = Lookup examples
 
@@ -34,7 +34,7 @@ public class MyLocator {
 }
 ....
 
-+++<a name="ServiceLocator-Justtheinterface">++++++</a>+++
+
 
 == Just the interface
 
@@ -57,7 +57,7 @@ MyLocator locator = new MyLocator("ejb/superbiz");
 Widget widget = locator.lookup(Widget.class);
 Store store = locator.lookup(Store.class);
 
-+++<a name="ServiceLocator-Interfaceclassandaprefix">++++++</a>+++
+
 
 == Interface class and a prefix
 
@@ -82,7 +82,7 @@ MyLocator locator = new MyLocator("accountingApp");
 Widget widget = locator.lookup("RedWidgetBean", Widget.class);
 Store store = locator.lookup("StoreBean", Store.class);
 
-+++<a name="ServiceLocator-Interfaceclassandejbclass">++++++</a>+++
+
 
 == Interface class and ejb class
 
@@ -110,7 +110,7 @@ MyLocator locator = new MyLocator("ejb/purchasingApp");
 Widget widget = locator.lookup(Widget.class, RedWidgetBean.class);
 Store store = locator.lookup(Store.class, StoreBean.class);
 
-+++<a name="ServiceLocator-Interfaceclassandejbclasswithsimplenames">++++++</a>+++
+
 
 == Interface class and ejb class with simple names
 

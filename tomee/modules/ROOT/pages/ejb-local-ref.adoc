@@ -1,4 +1,4 @@
-= ejb-local-ref +++<a name="ejb-local-ref-Viaannotation">++++++</a>+++
+= ejb-local-ref
 
 = Via annotation
 
@@ -29,7 +29,7 @@ public class MyEjbLocalRefBean implements MyBeanInterface {
 }
 ....
 
-+++<a name="ejb-local-ref-Viaxml">++++++</a>+++
+
 
 = Via xml
 

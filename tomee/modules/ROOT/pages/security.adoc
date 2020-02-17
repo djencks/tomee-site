@@ -1,6 +1,7 @@
-= Security +++<a name="Security-Security-HowTo.">++++++</a>+++
+= Security
+:properties-table-layout: cols="3a,2a,5a",options="header"
 
-= Security - How To.
+== Security - How To.
 
 We currently have two authentication mechanisms to choose from:
 
@@ -9,6 +10,8 @@ We currently have two authentication mechanisms to choose from:
 
 To make your program authenticate itself to the server, simply construct your InitialContext with the standard javax.naming.Context properties for user/pass info, which is:
 
+[source,java]
+----
  Properties props = new Properties();
  props.setProperty(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.RemoteInitialContextFactory");
  props.setProperty(Context.PROVIDER_URL, "ejbd://localhost:4201");
@@ -18,6 +21,7 @@ To make your program authenticate itself to the server, simply construct your In
  // optional
  InitialContext ctx = new InitialContext(props);
  ctx.lookup(...);
+----
 
 That will get you logged in and all your calls from that context should execute as you.
 
@@ -27,19 +31,35 @@ To specify which of the realms you want to authenticate against, you can set the
 If you don't speficy a realm name, the default (currently _PropertiesLogin_) is used.
 For examples and more information on JAAS configuration, see the http://java.sun.com/javase/6/docs/technotes/guides/security/jaas/JAASRefGuide.html[JAAS Reference Guide] .
 
-+++<a name="Security-PropertiesLoginModule">++++++</a>+++
+
 
 == PropertiesLoginModule
 
-Supported options:+++<table>++++++<tr>++++++<th>+++Option+++</th>++++++<th>+++Description+++</th>++++++<th>+++Required+++</th>++++++</tr>+++
-+++<tr>++++++<td>+++UsersFile+++</td>++++++<td>+++name of the properties file that contains the users and their
-passwords+++</td>++++++<td>+++*yes*+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++GroupsFile+++</td>++++++<td>+++name of the properties file that contains the groups and their
-member lists+++</td>++++++<td>+++*yes*+++</td>++++++</tr>++++++</table>+++
+Supported options:
+[{properties-table-layout}]
+|===
+
+|Option
+|Description
+|Required
+
+
+|UsersFile
+|name of the properties file that contains the users and their
+passwords
+|*yes*
+
+
+|GroupsFile
+|name of the properties file that contains the groups and their
+member lists
+|*yes*
+|===
+
 
 _UsersFile_ and _GroupsFile_ are read in on every login, so +you can update them+ on a running system and those users will "show up" immediately +without the need for a restart+ of any kind.
 
-+++<a name="Security-SQLLoginModule">++++++</a>+++
+
 
 == SQLLoginModule
 
@@ -56,29 +76,67 @@ This query should normally return a single row, which can be achieved by the use
 Any such placeholders in both queries will be filled in with the username that the client is trying to log in with.
 The _groupSelect_ query must return a two-column list of user names and their groups (or "roles" in the EJB world).
 
-Supported options:+++<table>++++++<tr>++++++<th>+++Option+++</th>++++++<th>+++Description+++</th>++++++<th>+++Required+++</th>++++++</tr>+++
-+++<tr>++++++<td>+++dataSourceName+++</td>++++++<td>+++the name of a data source+++</td>++++++<td>+++*yes* (alternative 1)+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++jdbcURL+++</td>++++++<td>+++a standard JDBC URL+++</td>++++++<td>+++*yes* (alternative 2)+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++jdbcDriver+++</td>++++++<td>+++the fully qualified class name of the database driver+++</td>++++++<td>+++no+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++jdbcUser+++</td>++++++<td>+++the user name for accessing the database+++</td>++++++<td>+++no+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++jdbcPassword+++</td>++++++<td>+++the password for accessing the database+++</td>++++++<td>+++no+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++userSelect+++</td>++++++<td>+++the SQL query that returns a list of users and their
-passwords+++</td>++++++<td>+++*yes*
-</tr>
-+++<tr>++++++<td>+++groupSelect+++</td>++++++<td>+++the SQL query that returns a list of users and groups
-(roles)+++</td>++++++<td>+++*yes*
-</tr>
-+++<tr>++++++<td>+++digest+++</td>++++++<td>+++the name of the digest algorithm (e.g. "MD5" or "SHA") for digest
-authentication+++</td>++++++<td>+++no+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++encoding+++</td>++++++<td>+++the digest encoding, can be "hex" or "base64"+++</td>++++++<td>+++no+++</td>++++++</tr>+++
-</table>
+Supported options:
+[{properties-table-layout}]
+|===
 
-+++<a name="Security-PLUGPOINTS">++++++</a>+++
-# PLUG POINTS
+|Option
+|Description
+|Required
+
+
+|dataSourceName
+|the name of a data source
+|*yes* (alternative 1)
+
+
+|jdbcURL
+|a standard JDBC URL
+|*yes* (alternative 2)
+
+
+|jdbcDriver
+|the fully qualified class name of the database driver
+|no
+
+
+|jdbcUser
+|the user name for accessing the database
+|no
+
+
+|jdbcPassword
+|the password for accessing the database
+|no
+
+
+|userSelect
+|the SQL query that returns a list of users and their
+passwords
+|*yes*
+
+|groupSelect
+|the SQL query that returns a list of users and groups
+(roles)
+|*yes*
+
+|digest
+|the name of the digest algorithm (e.g. "MD5" or "SHA") for digest authentication
+|no
+
+
+|encoding
+|the digest encoding, can be "hex" or "base64"
+|no
+|===
+
+
+== PLUG POINTS
 
 There are four-five different plug points where you could customize the
 functionality.	From largest to smallest:
-- *The SecurityService interface*:  As before all security work
+
+* *The SecurityService interface*:  As before all security work
 (authentication and authorization) is behind this interface, only the
 methods on it have been updated.  If you want to do something really "out
 there" or need total control, this is where you go. Plugging in your own
@@ -88,20 +146,19 @@ the default. +You can add a new SecurityService impl by creating a
 service-jar.xml and packing it in your jar+.  You can configure OpenEJB to
 use a different SecurityService via the openejb.xml.
 
-- *JaccProvider super class*:  If you want to plug in your own JACC
+* *JaccProvider super class*:  If you want to plug in your own JACC
 implementation to perform custom authorization (maybe do some fancy
 auditing), this is one way to do it without really having to understand
 JACC too much.	We will plug your provider in to all the places required by
-JACC if you simply +set the system property+
-"*org.apache.openejb.core.security.JaccProvider*" with the name of your
+JACC if you simply set the system property `org.apache.openejb.core.security.JaccProvider` with the name of your
 JaccProvider impl.
 
-- *Regular JACC*.  The JaccProvider is simply a wrapper around the many
+* *Regular JACC*.  The JaccProvider is simply a wrapper around the many
 things you have to do to create and plugin a JACC provider, but you can
 still plugin a JACC provider in the standard ways.  Read the JACC spec for
 that info.
 
-- *JAAS LoginModule*.  You can setup a different JAAS LoginModule to do all
+* *JAAS LoginModule*.  You can setup a different JAAS LoginModule to do all
 your authentication by simply editing the conf/login.config file which is a
 plain JAAS config file.  At the moment we only support username/password
 based login modules.  At some point it would be nice to support any kind of
@@ -112,10 +169,12 @@ and write a strategy for telling the OpenEJB client what data to send to
 the server with each invocation request. See the [JAAS LoginModule Developer's Guide](http://java.sun.com/javase/6/docs/technotes/guides/security/jaas/JAASLMDevGuide.html)
  for more information.
 
-- *Client IdentityResolver*.  This is the just mentioned interface you
+* *Client IdentityResolver*.  This is the just mentioned interface you
 would have to implement to supply the OpenEJB client with alternate data to
 send to the server with each invocation request. If you're plugging in a
 new version of this it is likely that you may also want to plugin in your
 own SecurityService implementation. Reason being, the object returned from
 IdentiyResolve.getIdentity() is sent across the wire and straight in to the
-SecurityService.associate(Object) method.+++</td>++++++</tr>++++++</td>++++++</tr>++++++</table>+++
+SecurityService.associate(Object) method.
+
+

@@ -1,4 +1,4 @@
-= Multiple Business Interface Hazzards +++<a name="MultipleBusinessInterfaceHazzards-UndeclaredThrowableException">++++++</a>+++
+= Multiple Business Interface Hazzards
 
 = UndeclaredThrowableException
 
@@ -91,7 +91,7 @@ public class ExceptionTest extends TestCase {
 }
 ....
 
-+++<a name="MultipleBusinessInterfaceHazzards-IllegalArgumentException">++++++</a>+++
+
 
 = IllegalArgumentException
 

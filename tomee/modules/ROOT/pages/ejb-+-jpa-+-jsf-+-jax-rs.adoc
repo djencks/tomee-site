@@ -1,4 +1,4 @@
-= EJB + JPA + JSF + JAX-RS +++<a name="EJB+JPA+JSF+JAX-RS-BusinessCase">++++++</a>+++
+= EJB + JPA + JSF + JAX-RS
 
 = Business Case
 
@@ -8,7 +8,7 @@ The example covers the entire technical solution, including architecture, design
 The product is hosted at http://oss.rempl.com  with its source code available at [http://svn.rempl.com/trunk/rempl/rempl-oss] . The purpose of the system is to collect UML meta information from open source products and make it visible for end-users in form of diagrams and texts.
 More information about the product and its documentation you can get at [http://www.rempl.com/rempl-oss/] .
 
-+++<a name="EJB+JPA+JSF+JAX-RS-ArchitectureandDesign">++++++</a>+++
+
 
 = Architecture and Design
 
@@ -32,7 +32,7 @@ Business Layer includes EJB (OpenEJB), http://www.rempl.com/rempl-oss/apidocs/co
 
 Persistence Layer includes JPA (OpenJPA), JDBC (MySQL JDBC Driver) and the MySQL server.
 
-+++<a name="EJB+JPA+JSF+JAX-RS-BuildAutomationandTests">++++++</a>+++
+
 
 = Build Automation and Tests
 
@@ -56,13 +56,13 @@ _more later..._
 _On-location testing is not yet automated...
 working on it..._
 
-+++<a name="EJB+JPA+JSF+JAX-RS-ConfigurationandPlumbing">++++++</a>+++
+
 
 = Configuration and Plumbing
 
 TBD...
 
-+++<a name="EJB+JPA+JSF+JAX-RS-Implementation">++++++</a>+++
+
 
 = Implementation
 

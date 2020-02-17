@@ -1,4 +1,4 @@
-+++<div class="section">+++== tomee:list+++<a name="tomee:list">++++++</a>+++
++++<div class="section">+++== tomee:list
 
 *Full name*:
 
@@ -13,53 +13,79 @@ List deployed EJB in a running TomEE.
 
 * Requires a Maven project to be executed.
 * Requires dependency resolution of artifacts in scope: +++<tt>+++runtime+++</tt>+++.
-* Requires dependency collection of artifacts in scope: +++<tt>+++runtime+++</tt>+++.+++<div class="section">+++=== Optional Parameters+++<a name="Optional_Parameters">++++++</a>++++++<table class="bodyTable" border="0">++++++<tr class="a">++++++<th>+++Name+++</th>+++
+* Requires dependency collection of artifacts in scope: +++<tt>+++runtime+++</tt>+++.+++<div class="section">+++=== Optional Parameters+++<table class="bodyTable" border="0">++++++<tr class="a">+++
+|Name
 
-+++<th>+++Type+++</th>+++
 
-+++<th>+++Since+++</th>+++
+|Type
 
-+++<th>+++Description+++</th>++++++</tr>+++
 
-+++<tr class="b">++++++<td>++++++<b>++++++<a href="#password">+++password+++</a>++++++</b>++++++</td>+++
+|Since
 
-+++<td>++++++<tt>+++String+++</tt>++++++</td>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
+|Description
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.pwd+++</tt>+++.+++</td>++++++</tr>+++
++++<tr class="b">+++
+|+++<b>++++++<a href="#password">+++password+++</a>++++++</b>+++
 
-+++<tr class="a">++++++<td>++++++<b>++++++<a href="#realm">+++realm+++</a>++++++</b>++++++</td>+++
 
-+++<td>++++++<tt>+++String+++</tt>++++++</td>+++
+|+++<tt>+++String+++</tt>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.realm+++</tt>+++.+++</td>++++++</tr>+++
+|+++<tt>+++-+++</tt>+++
 
-+++<tr class="b">++++++<td>++++++<b>++++++<a href="#tomeeHost">+++tomeeHost+++</a>++++++</b>++++++</td>+++
 
-+++<td>++++++<tt>+++String+++</tt>++++++</td>+++
+|(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.pwd+++</tt>+++.
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
++++<tr class="a">+++
+|+++<b>++++++<a href="#realm">+++realm+++</a>++++++</b>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++localhost+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.host+++</tt>+++.+++</td>++++++</tr>+++
 
-+++<tr class="a">++++++<td>++++++<b>++++++<a href="#tomeeHttpPort">+++tomeeHttpPort+++</a>++++++</b>++++++</td>+++
+|+++<tt>+++String+++</tt>+++
 
-+++<td>++++++<tt>+++int+++</tt>++++++</td>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
+|+++<tt>+++-+++</tt>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++8080+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.http+++</tt>+++.+++</td>++++++</tr>+++
 
-+++<tr class="b">++++++<td>++++++<b>++++++<a href="#user">+++user+++</a>++++++</b>++++++</td>+++
+|(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.realm+++</tt>+++.
 
-+++<td>++++++<tt>+++String+++</tt>++++++</td>+++
++++<tr class="b">+++
+|+++<b>++++++<a href="#tomeeHost">+++tomeeHost+++</a>++++++</b>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.user+++</tt>+++.+++</td>++++++</tr>++++++</table>++++++</div>++++++<div class="section">+++=== Parameter Details+++<a name="Parameter_Details">++++++</a>+++
+|+++<tt>+++String+++</tt>+++
+
+
+|+++<tt>+++-+++</tt>+++
+
+
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++localhost+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.host+++</tt>+++.
+
++++<tr class="a">+++
+|+++<b>++++++<a href="#tomeeHttpPort">+++tomeeHttpPort+++</a>++++++</b>+++
+
+
+|+++<tt>+++int+++</tt>+++
+
+
+|+++<tt>+++-+++</tt>+++
+
+
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++8080+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.http+++</tt>+++.
+
++++<tr class="b">+++
+|+++<b>++++++<a href="#user">+++user+++</a>++++++</b>+++
+
+
+|+++<tt>+++String+++</tt>+++
+
+
+|+++<tt>+++-+++</tt>+++
+
+
+|(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.user+++</tt>+++.
+|===
++++</div>++++++<div class="section">+++=== Parameter Details
 
 *+++<a name="password">+++password+++</a>+++:*
 

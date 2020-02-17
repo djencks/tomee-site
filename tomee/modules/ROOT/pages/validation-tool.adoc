@@ -1,18 +1,18 @@
 = Validation Tool
 
-+++<a name="ValidationTool-NAME">++++++</a>+++
+
 
 = NAME
 
 openejb validate - OpenEJB Validation Tool
 
-+++<a name="ValidationTool-SYNOPSIS">++++++</a>+++
+
 
 = SYNOPSIS
 
 openejb validate xref:options.adoc[options]  jarfiles
 
-+++<a name="ValidationTool-NOTE">++++++</a>+++
+
 
 = NOTE
 
@@ -46,7 +46,7 @@ From here on out, it will be assumed that you know how to execute the right open
 
 _openejb validate -help_
 
-+++<a name="ValidationTool-DESCRIPTION">++++++</a>+++
+
 
 = DESCRIPTION
 
@@ -66,7 +66,7 @@ The validation tool currently checks for the following things:
 
 More checks will be added in the future.
 
-+++<a name="ValidationTool-OPTIONS">++++++</a>+++
+
 
 = OPTIONS
 
@@ -102,11 +102,11 @@ Outputs verbose details on each failure, usually with details on how to correct 
 | Show examples of how to use the options.
 |===
 
-+++<a name="ValidationTool-COMMONISSUES">++++++</a>+++
+
 
 = COMMON ISSUES
 
-+++<a name="ValidationTool-MisslocatedclassorNoClassDefFoundError">++++++</a>+++
+
 
 == Misslocated class or NoClassDefFoundError
 

@@ -1,18 +1,18 @@
 = Basics - Security This section is under construction, please check back later.
 
-+++<a name="Basics-Security-RelatedDocuments">++++++</a>+++
+
 
 == Related Documents
 
 xref:security.adoc[Security]  - login module configuration xref:security-annotations.adoc[Security Annotations]  - EJB3 related annotation based security.
 
-+++<a name="Basics-Security-ServerSideSecurity">++++++</a>+++
+
 
 == Server Side Security
 
 There's a few things that should be noted about security from the server side perspective.
 
-+++<a name="Basics-Security-SecurityPropagation">++++++</a>+++
+
 
 === Security Propagation
 

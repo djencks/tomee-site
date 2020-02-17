@@ -1,4 +1,4 @@
-= Properties Tool +++<a name="PropertiesTool-PropertiesCommandlineTool">++++++</a>+++
+= Properties Tool
 
 = Properties Command line Tool
 
@@ -16,7 +16,7 @@ Content from this file can be safely copied as-is into the conf/system.propertie
 These properties may also be applied back into the openejb.xml file by pasting the properties without the "+++<id>+++." prefix into the respective component declarations.
 The only warning is that any properties of type "+++<id>+++.password" will have their values masked, so make sure you edit them if you reapply them back into conf/openejb.xml or conf/system.properties.+++</id>++++++</id>+++
 
-+++<a name="PropertiesTool-PropertyOverriding">++++++</a>+++
+
 
 = Property Overriding
 
@@ -36,7 +36,7 @@ In an embedded environment, the properties can be added to the Hashtable passed 
 
 At startup, OpenEJB will find the component with the given id and apply the new property value before constructing the individual component.
 
-+++<a name="PropertiesTool-Exampleoutput">++++++</a>+++
+
 
 = Example output
 

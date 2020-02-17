@@ -20,32 +20,58 @@ Simply add the following to the +++<plugins>+++, and optionally the +++<pluginMa
      </plugin>
  </plugins>
 
-###Plugin Goals+++<table border="0" class="bodyTable">++++++<tr class="a">++++++<th>+++Goal+++</th>+++
-+++<th>+++Description+++</th>++++++</tr>+++
-+++<tr class="b">++++++<td>++++++<a href="build-mojo.html">+++tomee:build+++</a>++++++</td>+++
-+++<td>+++Create TomEE, but do not run it.+++</td>++++++</tr>+++
-+++<tr class="a">++++++<td>++++++<a href="configtest-mojo.html">+++tomee:configtest+++</a>++++++</td>+++
-+++<td>+++Run the Apache Tomcat `configtest` command.+++</td>++++++</tr>+++
-+++<tr class="b">++++++<td>++++++<a href="debug-mojo.html">+++tomee:debug+++</a>++++++</td>+++
-+++<td>+++Same as `run` but with debug activated on the default or specified port.+++</td>++++++</tr>+++
-+++<tr class="a">++++++<td>++++++<a href="deploy-mojo.html">+++tomee:deploy+++</a>++++++</td>+++
-+++<td>+++Deploy an application in a running TomEE.+++</td>++++++</tr>+++
-+++<tr class="b">++++++<td>++++++<a href="exec-mojo.html">+++tomee:exec+++</a>++++++</td>+++
-+++<td>+++Undocumented.+++</td>++++++</tr>+++
-+++<tr class="a">++++++<td>++++++<a href="help-mojo.html">+++tomee:help+++</a>++++++</td>+++
-+++<td>+++Display help information on the tomee-maven-plugin.+++<br>++++++</br>+++
+###Plugin Goals+++<table border="0" class="bodyTable">++++++<tr class="a">+++
+|Goal
+
+|Description
++++<tr class="b">+++
+|+++<a href="build-mojo.html">+++tomee:build+++</a>+++
+
+|Create TomEE, but do not run it.
++++<tr class="a">+++
+|+++<a href="configtest-mojo.html">+++tomee:configtest+++</a>+++
+
+|Run the Apache Tomcat `configtest` command.
++++<tr class="b">+++
+|+++<a href="debug-mojo.html">+++tomee:debug+++</a>+++
+
+|Same as `run` but with debug activated on the default or specified port.
++++<tr class="a">+++
+|+++<a href="deploy-mojo.html">+++tomee:deploy+++</a>+++
+
+|Deploy an application in a running TomEE.
++++<tr class="b">+++
+|+++<a href="exec-mojo.html">+++tomee:exec+++</a>+++
+
+|Undocumented.
++++<tr class="a">+++
+|+++<a href="help-mojo.html">+++tomee:help+++</a>+++
+
+|Display help information on the tomee-maven-plugin.+++<br>++++++</br>+++
 Call +++<code>+++mvn tomee:help -Ddetail=true
--Dgoal=<goal-name>+++</code>+++ to display parameter details.+++</td>++++++</tr>+++
-+++<tr class="b">++++++<td>++++++<a href="list-mojo.html">+++tomee:list+++</a>++++++</td>+++
-+++<td>+++Largely inspired by the OpenEJB command helper, but with some differences. List deployed EJB's in a running TomEE.+++</td>++++++</tr>+++
-+++<tr class="a">++++++<td>++++++<a href="run-mojo.html">+++tomee:run+++</a>++++++</td>+++
-+++<td>+++Start and wait for TomEE.+++</td>++++++</tr>+++
-+++<tr class="b">++++++<td>++++++<a href="start-mojo.html">+++tomee:start+++</a>++++++</td>+++
-+++<td>+++Start TomEE and continue.+++</td>++++++</tr>+++
-+++<tr class="a">++++++<td>++++++<a href="stop-mojo.html">+++tomee:stop+++</a>++++++</td>+++
-+++<td>+++Stop a TomEE started with start command.+++</td>++++++</tr>+++
-+++<tr class="b">++++++<td>++++++<a href="undeploy-mojo.html">+++tomee:undeploy+++</a>++++++</td>+++
-+++<td>+++Undeploy an application in a running TomEE+++</td>++++++</tr>++++++</table>+++
+-Dgoal=<goal-name>+++</code>+++ to display parameter details.
++++<tr class="b">+++
+|+++<a href="list-mojo.html">+++tomee:list+++</a>+++
+
+|Largely inspired by the OpenEJB command helper, but with some differences. List deployed EJB's in a running TomEE.
++++<tr class="a">+++
+|+++<a href="run-mojo.html">+++tomee:run+++</a>+++
+
+|Start and wait for TomEE.
++++<tr class="b">+++
+|+++<a href="start-mojo.html">+++tomee:start+++</a>+++
+
+|Start TomEE and continue.
++++<tr class="a">+++
+|+++<a href="stop-mojo.html">+++tomee:stop+++</a>+++
+
+|Stop a TomEE started with start command.
++++<tr class="b">+++
+|+++<a href="undeploy-mojo.html">+++tomee:undeploy+++</a>+++
+
+|Undeploy an application in a running TomEE
+|===
+
 
 Note that for the tomee:deploy and tomee:undeploy goals, the path can either be specified within the +++<configuration>++++++</configuration>+++ section of the `pom.xml` using the +++<path>+++parameter, or it can be passed via the user property tomee-plugin.archive.
 If a relative path is passed for the deploy path archive, this must be relative to the TomEE server.+++</path>+++

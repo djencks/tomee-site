@@ -1,4 +1,4 @@
-= ejb-ref +++<a name="ejb-ref-Viaannotation">++++++</a>+++
+= ejb-ref
 
 = Via annotation
 
@@ -27,7 +27,7 @@ public class MyEjbRemoteRefBean implements MyBeanInterface {
 }
 ....
 
-+++<a name="ejb-ref-Viaxml">++++++</a>+++
+
 
 = Via xml
 

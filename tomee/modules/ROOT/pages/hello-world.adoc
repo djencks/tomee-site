@@ -3,7 +3,7 @@ It does not hide steps or rely on special build tools or IDEs and is about the m
 
 _See the xref:examples.adoc[Examples]  page for a full list of examples that range from [@Stateles|Simple Stateless Example]  and [@Stateful|Simple Stateful Example]  beans, to [Dependency Injection|Injection of env-entry Example] , JDBC [DataSources|Injection of DataSource Example] , JPA [EntityManagers|Injection of EntityManager Example]  and more._
 
-+++<a name="HelloWorld-AbasicEJBexample">++++++</a>+++
+
 
 == A basic EJB example
 
@@ -18,7 +18,7 @@ Here are some basic steps you need to perform to get started with OpenEJB
 . Run the client
 . Stop the server
 
-+++<a name="HelloWorld-DownloadandinstallOpenEJB">++++++</a>+++
+
 
 == Download and install OpenEJB
 
@@ -36,11 +36,11 @@ Although you may not see any file except for a README.txt file right now, but af
 It is highly recommeded to read the README.txt file under this directory
 * _logs_: Contains log files.
 
-+++<a name="HelloWorld-Setupyourdevelopmentenvironment">++++++</a>+++
+
 
 == Setup your development environment
 
-+++<a name="HelloWorld-Createaworkingdirectory">++++++</a>+++
+
 
 === Create a working directory
 
@@ -53,12 +53,12 @@ Go to the projects directory
  karan@poweredge:~$ cd projects
 
 We will do all our work in this directory.
-+++<a name="HelloWorld-InstallJava">++++++</a>+++
+
 
 === Install Java
 
 Download and install Java (version 5 or higher).
-Also set it up so that you can run the java and javac commands from any directory +++<a name="HelloWorld-SetOPENEJB_HOME">++++++</a>+++
+Also set it up so that you can run the java and javac commands from any directory
 
 === Set OPENEJB_HOME
 
@@ -66,11 +66,11 @@ We will setup this variable to refer to the openejb install location.
 
  karan@poweredge:~/projects$ export OPENEJB_HOME=/home/karan/install/openejb-3.0
 
-+++<a name="HelloWorld-WriteanEJB">++++++</a>+++
+
 
 == Write an EJB
 
-Whatever files you create should be placed under the projects directory +++<a name="HelloWorld-CreatetheRemoteInterface">++++++</a>+++
+Whatever files you create should be placed under the projects directory
 
 === Create the Remote Interface
 
@@ -83,7 +83,7 @@ Using your favorite editor, create a file named Hello.java (shown below)
  	public String sayHello();
  }
 
-+++<a name="HelloWorld-CreatetheBeanClass">++++++</a>+++
+
 
 === Create the Bean Class
 
@@ -98,7 +98,7 @@ Now create a file named HelloBean.java (shown below)
  	}
  }
 
-+++<a name="HelloWorld-Compilethesourcecode">++++++</a>+++
+
 
 === Compile the source code
 
@@ -111,7 +111,7 @@ Lets compile our source (make sure you are in the projects directory)
 The above will compile all the .java files and also create the required packages.
 You should now see a package named org under the projects directory.
 All class files should be under org/acme directory.
-+++<a name="HelloWorld-PackagetheEJB">++++++</a>+++
+
 
 === Package the EJB
 
@@ -129,7 +129,7 @@ Below is the output from running the above command:
  adding: org/acme/Hello.class(in = 203) (out= 168)(deflated 17%)
  adding: org/acme/HelloBean.class(in = 383) (out= 275)(deflated 28%)
 
-+++<a name="HelloWorld-WriteanEJBClient">++++++</a>+++
+
 
 == Write an EJB Client
 
@@ -154,7 +154,7 @@ String result = h.sayHello();
 System.out.println(result);
 }     }
 
-+++<a name="HelloWorld-CompileHelloClient.java">++++++</a>+++
+
 
 === Compile HelloClient.java
 
@@ -162,7 +162,7 @@ Run the following command:
 
  karan@poweredge:~/projects$ javac  -d . HelloClient.java
 
-+++<a name="HelloWorld-StarttheServer">++++++</a>+++
+
 
 == Start the Server
 
@@ -190,7 +190,7 @@ Once the Server starts, you will see an output similar to the below in your cons
 
 Take out a minute to browse through the conf and logs directories.
 You should now see some configuration and log files under the respective directories.
-+++<a name="HelloWorld-DeploytheEJB">++++++</a>+++
+
 
 == Deploy the EJB
 
@@ -210,7 +210,7 @@ The above command should give you the following output:
 
 Notice how the output neatly lays out various deployment details.
 One thing you might want to note from the output is the JNDI name.
-This is the JNDI name we used in the client to lookup the EJB +++<a name="HelloWorld-RuntheClient">++++++</a>+++
+This is the JNDI name we used in the client to lookup the EJB
 
 == Run the Client
 
@@ -222,7 +222,7 @@ The above should give you the following output:
 
  Hello World!!!!
 
-+++<a name="HelloWorld-Help!,itdidn'tworkforme!!.">++++++</a>+++
+
 
 == Help! , it didn't work for me!!.
 
@@ -230,7 +230,7 @@ No problem, we are here to help.
 Just send us an email at users@tomee.apache.org.
 If possible, send us the contents of logs/openejb.log file in the email.
 
-+++<a name="HelloWorld-Lookingformore?">++++++</a>+++
+
 
 = Looking for more?
 

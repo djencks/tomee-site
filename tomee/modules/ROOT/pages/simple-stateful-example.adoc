@@ -1,4 +1,4 @@
-= Simple Stateful Example +++<a name="SimpleStatefulExample-Overview">++++++</a>+++
+= Simple Stateful Example
 
 = Overview
 
@@ -24,14 +24,14 @@ _This example is the "simple-stateful" example located in the xref:openejb:downl
 
 \{div} {div:style=clear:both;}\{div}
 
-+++<a name="SimpleStatefulExample-TheCode">++++++</a>+++
+
 
 = The Code
 
 In this example we develop a simple counter stateful session EJB.
 Every stateful session bean implementation must be annotated using the annotation _@Stateful_ or marked that way in the ejb-jar.xml file.
 
-+++<a name="SimpleStatefulExample-Bean">++++++</a>+++
+
 
 == Bean
 
@@ -49,7 +49,7 @@ Users of EJB 2.x may notice the bean actually implements the business interfaces
 In the prior version of EJB implementing the remote interface (which derives from javax.ejb.EJBObject) in your bean was just not allowed.
 Now there is no javax.ejb.EJBObject requirement, so implementing the business interfaces is standard practice for EJB 3.0.
 
-+++<a name="SimpleStatefulExample-Localbusinessinterface">++++++</a>+++
+
 
 == Local business interface
 
@@ -71,7 +71,7 @@ You can use the _@Local_ annotation to explicitly state that an interface is a l
 You'll notice that in EJB 3.0 the Local Business Interface of a stateless session bean does not need to extend from javax.ejb.EJBLocalObject and does not need a javax.ejb.EJBLocalHome interface as they did in EJB 2.x and prior.
 Per the vocabulary of the EJB spec, interfaces that implement javax.ejb.EJBLocalObject or javax.ejb.EJBLocalHome are considered Component Interfaces and the plain java interface above is considered a Business Interface.
 
-+++<a name="SimpleStatefulExample-Remotebusinessinterface">++++++</a>+++
+
 
 == Remote business interface
 
@@ -95,14 +95,14 @@ It does not need to extend javax.ejb.EJBObject, it does not need a javax.ejb.EJB
 
 At minimum the interface must be annotated with _@Remote_ either in the interface itself or in the bean class, or the interface must be declared via +++<business-remote>+++in the ejb-jar.xml.+++</business-remote>+++
 
-+++<a name="SimpleStatefulExample-Writingaunittestfortheexample">++++++</a>+++
+
 
 = Writing a unit test for the example
 
 Writing an unit test for the stateful session EJB is quite simple.
 We need just to write a setup method to create and initialize the InitialContext, and then write our test methods
 
-+++<a name="SimpleStatefulExample-setUp">++++++</a>+++
+
 
 [discrete]
 ==== setUp
@@ -114,7 +114,7 @@ We need just to write a setup method to create and initialize the InitialContext
 | lang=java}
 |===
 
-+++<a name="SimpleStatefulExample-Testthelocalbusinessinterface">++++++</a>+++
+
 
 [discrete]
 ==== Test the local business interface
@@ -126,7 +126,7 @@ We need just to write a setup method to create and initialize the InitialContext
 | lang=java}
 |===
 
-+++<a name="SimpleStatefulExample-Testtheremotebusinessinterface">++++++</a>+++
+
 
 [discrete]
 ==== Test the remote business interface
@@ -145,7 +145,7 @@ Local, Remote, LocalHome, RemoteHome), so in our example "CounterImpl" + "Local"
 You can in fact change this default to be absolutely xref:jndi-names.adoc[anything you want]  including interface class name, ejb class name, and more.
 \{info}
 
-+++<a name="SimpleStatefulExample-Running">++++++</a>+++
+
 
 = Running
 

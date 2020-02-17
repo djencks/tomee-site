@@ -1,4 +1,4 @@
-= Collapsed EAR +++<a name="CollapsedEAR-Onearchive">++++++</a>+++
+= Collapsed EAR
 
 = One archive
 
@@ -9,7 +9,7 @@ The basic idea of this approach is that your Servlets and EJBs are together in y
 * Can put the web.xml and ejb-jar.xml in the same archive (the WAR file).
 * EJBs can see Servlet classes and vice versa.
 
-+++<a name="CollapsedEAR-NotquiteJ2EE(itistrulyJava EE6)">++++++</a>+++
+
 
 = Not quite J2EE (it is truly Java EE6)
 
@@ -33,7 +33,7 @@ To pull that off, J2EE has to kill you on packaging:
 
 Critically speaking, forcing more than one classloader on an application is where J2EE "jumps the shark" for a large majority of people's needs.
 
-+++<a name="CollapsedEAR-ExamplewithTomcat">++++++</a>+++
+
 
 = Example with Tomcat
 

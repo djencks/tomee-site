@@ -1,14 +1,14 @@
 = Remote Server
 
 !http://www.openejb.org/images/diagram-remote-server.gif|valign=top, align=right, hspace=15!
-+++<a name="RemoteServer-AccessingEJBsRemotely">++++++</a>+++
+
 
 = Accessing EJBs Remotely
 
 When using OpenEJB as a stand-alone server you can connect across a network and access EJBs from a remote client.
 The client code for accessing an EJB's Remote Interface is the same, however to actually connect across a network to the server, you need to specify different JNDI parameters.
 
-+++<a name="RemoteServer-Shortversion">++++++</a>+++
+
 
 = Short version
 

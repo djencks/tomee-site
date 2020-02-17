@@ -11,7 +11,7 @@ We aggressively add features based on user feedback and questions.
 If you are looking for a way to solve a problem without duplicating entire descriptors, please let us know.
 You should never have to go the long way to do something simple.
 
-+++<a name="AlternateDescriptors-openejb.altdd.prefix">++++++</a>+++
+
 
 = openejb.altdd.prefix
 
@@ -48,7 +48,7 @@ This prefixing works for any deployment descriptor in the META-INF/ directory or
 The prefix does not have to be "test" and could be anything you choose.
 You can also have as many prefixed files as you need and could even go as far as to have one prefix per individual test.
 
-+++<a name="AlternateDescriptors-Morethanoneprefix">++++++</a>+++
+
 
 = More than one prefix
 

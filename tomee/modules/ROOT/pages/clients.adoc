@@ -1,6 +1,6 @@
 = Clients
 
-+++<a name="Clients-LocalClient(embeddedcontainer)">++++++</a>+++
+
 
 === Local Client (embedded container)
 
@@ -13,11 +13,11 @@ InitialContext ctx = new InitialContext(p);
 MyBean myBean = (MyBean) ctx.lookup("MyBeanRemote");
 ....
 
-+++<a name="Clients-LocalClient(non-defaultrealmname)">++++++</a>+++
+
 
 === Local Client (non-default realm name)
 
-+++<a name="Clients-Loginconfigurationfile(conf/login.config)">++++++</a>+++
+
 
 === Login configuration file (conf/login.config)
 
@@ -34,7 +34,7 @@ MyBean myBean = (MyBean) ctx.lookup("MyBeanRemote");
  	groupSelect="SELECT username, grp FROM users WHERE username=?";
  };
 
-+++<a name="Clients-Programcode">++++++</a>+++
+
 
 === Code
 
@@ -48,7 +48,7 @@ InitialContext ctx = new InitialContext(p);
 MyBean myBean = (MyBean) ctx.lookup("MyBeanRemote");
 ....
 
-+++<a name="Clients-RemoteClient(openejbstandalone)">++++++</a>+++
+
 
 === Remote Client (openejb standalone)
 
@@ -65,7 +65,7 @@ InitialContext ctx = new InitialContext(p);
 MyBean myBean = (MyBean) ctx.lookup("MyBeanRemote");
 ....
 
-+++<a name="Clients-RemoteClientwithHTTP(openejbstandalone)">++++++</a>+++
+
 
 === Remote Client with HTTP (openejb standalone)
 
@@ -82,7 +82,7 @@ InitialContext ctx = new InitialContext(p);
 MyBean myBean = (MyBean) ctx.lookup("MyBeanRemote");
 ....
 
-+++<a name="Clients-RemoteClientwithHTTP(intomcat)">++++++</a>+++
+
 
 === Remote Client with HTTP (in TomEE)
 
@@ -99,7 +99,7 @@ InitialContext ctx = new InitialContext(p);
 MyBean myBean = (MyBean) ctx.lookup("MyBeanRemote");
 ....
 
-+++<a name="RemoteClientUsingEjbInjection)">++++++</a>+++
+
 
 === Remote Client using @EJB Injection
 

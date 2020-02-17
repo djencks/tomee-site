@@ -1,4 +1,4 @@
-= persistence-context +++<a name="persistence-context-Viaannotation">++++++</a>+++
+= persistence-context
 
 = Via annotation
 
@@ -30,7 +30,7 @@ public class MyBean implements MyInterface {
 }
 ....
 
-+++<a name="persistence-context-Viaxml">++++++</a>+++
+
 
 = Via xml
 

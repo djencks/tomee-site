@@ -17,11 +17,11 @@ See xref:built-in-type-converters.adoc[Built-in Type Converters] for a full list
 
 The source for this example is the "custom-injection" directory located in the xref:downloads.adoc[openejb-examples.zip] available on the http://tomee.apache.org/downloads.html[download page].
 
-+++<a name="CustomInjection-TheCode">++++++</a>+++
+
 
 = The Code
 
-+++<a name="CustomInjection-BeanClass">++++++</a>+++
+
 
 == Bean Class
 
@@ -73,7 +73,7 @@ public class Stratocaster {
 }
 ....
 
-+++<a name="CustomInjection-TheMETA-INF/env-entries.propertiesfile">++++++</a>+++
+
 
 == The META-INF/env-entries.properties file
 
@@ -83,7 +83,7 @@ public class Stratocaster {
  pickups=S,S,S
  style=VINTAGE
 
-+++<a name="CustomInjection-TheCustomTypeandEditor">++++++</a>+++
+
 
 == The Custom Type and Editor
 
@@ -119,7 +119,7 @@ public enum Pickup {
 }
 ....
 
-+++<a name="CustomInjection-TestCase">++++++</a>+++
+
 
 = Test Case
 
@@ -155,7 +155,7 @@ public class StratocasterTest extends TestCase {
 }
 ....
 
-+++<a name="CustomInjection-Runningit">++++++</a>+++
+
 
 = Running it
 

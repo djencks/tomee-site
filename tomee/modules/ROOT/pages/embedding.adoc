@@ -4,7 +4,7 @@
 . Ensure your EJB modules are discoverable
 . Use the LocalInitialContextFactory to boot OpenEJB
 
-+++<a name="Embedding-Importantdocs">++++++</a>+++
+
 
 == Important docs
 
@@ -19,7 +19,7 @@
 * xref:testcase-with-testbean-inner-class.adoc[TestCase with TestBean inner-class]
 * xref:local-client-injection.adoc[TestCase Injection (@LocalClient)]
 
-+++<a name="Embedding-Examples">++++++</a>+++
+
 
 == Examples
 

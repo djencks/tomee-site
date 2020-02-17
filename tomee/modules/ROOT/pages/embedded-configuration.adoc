@@ -1,6 +1,6 @@
 = Embedded Configuration
 
-+++<a name="EmbeddedConfiguration-Defaults,OverridesandOrder">++++++</a>+++
+
 
 = Defaults, Overrides and Order
 
@@ -35,7 +35,7 @@ You can put 100% of your configuration in a `jndi.properties` or `openejb.xml` f
 
 You can manage the properties how you wish and there is no need for redundant definitions if you do not want them.
 
-+++<a name="EmbeddedConfiguration-Whatisconfigurable?">++++++</a>+++
+
 
 = What is configurable?
 
@@ -51,7 +51,7 @@ See xref:configuring-persistenceunits-in-tests.adoc[Configuring PersistenceUnits
 OpenEJB has many flags that can also be set as properties.
 See xref:properties-listing.adoc[OpenEJB Properties]  for details on those.
 
-+++<a name="EmbeddedConfiguration-ExampleofusingInitialContextproperties">++++++</a>+++
+
 
 = Example of using InitialContext properties
 
@@ -82,7 +82,7 @@ p.put("openejb.validation.output.level ", " verbose");
 InitialContext initialContext = new InitialContext(p);
 ....
 
-+++<a name="EmbeddedConfiguration-Exampleofusingjndi.properties">++++++</a>+++
+
 
 = Example of using jndi.properties
 

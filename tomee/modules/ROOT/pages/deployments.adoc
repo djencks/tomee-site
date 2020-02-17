@@ -1,10 +1,10 @@
 = Deployments
 
-+++<a name="Deployments-The'Deployments'elementinopenejb.xml">++++++</a>+++
+
 
 = The 'Deployments' element in openejb.xml
 
-+++<a name="Deployments-Asinglejar">++++++</a>+++
+
 
 == A single jar
 
@@ -44,7 +44,7 @@ OpenEJB will simply skip over jars that do contain the required 'META-INF/ejb-ja
 The last Deployments element declares a 'beans' directory relative to openejb.base for holding ejb jars.
 This declaration is simply convention and not required.
 
-+++<a name="Deployments-Anunpackedjar">++++++</a>+++
+
 
 == An unpacked jar
 

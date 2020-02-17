@@ -1,16 +1,16 @@
-= Startup +++<a name="Startup-NAME">++++++</a>+++
+= Startup
 
 = NAME
 
 openejb start - OpenEJB Remote Server
 
-+++<a name="Startup-SYNOPSIS">++++++</a>+++
+
 
 = SYNOPSIS
 
 openejb start <<options.html,#options>>
 
-+++<a name="Startup-NOTE">++++++</a>+++
+
 
 = NOTE
 
@@ -41,7 +41,7 @@ From here on out, it will be assumed that you know how to execute the right open
 
 _openejb start -help_
 
-+++<a name="Startup-DESCRIPTION">++++++</a>+++
+
 
 = DESCRIPTION
 
@@ -54,7 +54,7 @@ OpenEJB issues warnings when it works around a potential problem, encounters som
 OpenEJB itself is configured with the OpenEJB configuration file, which is extremely simple and self-documenting.
 This file is located at c:\openejb-3.0\conf\openejb.xml.
 
-+++<a name="Startup-OPTIONS">++++++</a>+++
+
 
 = OPTIONS
 
@@ -151,11 +151,11 @@ This file is located at c:\openejb-3.0\conf\openejb.xml.
 | Print the version.
 |===
 
-+++<a name="Startup-EXAMPLES">++++++</a>+++
+
 
 = EXAMPLES
 
-+++<a name="Startup-Example:Simplestscenario">++++++</a>+++
+
 
 == Example: Simplest scenario
 
@@ -171,7 +171,7 @@ The following properties would then be used to get an InitialContext from the Re
     java.naming.security.principal   = myuser
     java.naming.security.credentials = mypass
 
-+++<a name="Startup-Example:--conf=file">++++++</a>+++
+
 
 == Example: --conf=file
 
@@ -180,7 +180,7 @@ _openejb start --conf=C:\openejb-3.0\conf\mytest.conf_
 Sets the openejb.configuration system variable to the file _C:\openejb\conf\mytest.conf_.
 When the server starts up and initializes OpenEJB, this configuration will be used to assemble the container system and load beans.
 
-+++<a name="Startup-Example:--local-copy">++++++</a>+++
+
 
 == Example: --local-copy
 
@@ -199,11 +199,11 @@ This is faster, of course, but non-compliant with the EJB standard.
 Local interfaces are not affected;
 their arguments and results are passed by reference and never copied.
 
-+++<a name="Startup-CONFIGOVERRIDEEXAMPLES">++++++</a>+++
+
 
 == CONFIG OVERRIDE EXAMPLES
 
-+++<a name="Startup-Example:-D<service>.bind=<address>">++++++</a>+++
+
 
 == Example: -D+++<service>+++.bind=<address>+++</service>+++
 
@@ -235,7 +235,7 @@ The following properties would then be used to log into the server via a telnet 
 
 _telnet myhost.foo.com 4202_
 
-+++<a name="Startup-Example:-D<service>.port=<port>">++++++</a>+++
+
 
 == Example: -D+++<service>+++.port=+++<port>++++++</port>++++++</service>+++
 
@@ -261,7 +261,7 @@ The following properties would then be used to get an InitialContext from the HT
     java.naming.security.principal   = myuser
     java.naming.security.credentials = mypass
 
-+++<a name="Startup-Example:-D<service>.only_from=<addresses>">++++++</a>+++
+
 
 == Example: -D+++<service>+++.only_from=+++<addresses>++++++</addresses>++++++</service>+++
 
@@ -282,7 +282,7 @@ The DNS name will be resolved and the IP will be added to the admin list.
 The third address refers to a the host by a name (robert)that the opperating system is able to resolve into a valid IP address.
 This is usually done via a hosts file, interal DNS server, or Windows Domain Server.
 
-+++<a name="Startup-Example:-D<service>.threads=<max>">++++++</a>+++
+
 
 == Example: -D+++<service>+++.threads=+++<max>++++++</max>++++++</service>+++
 
@@ -290,7 +290,7 @@ _openejb start -Dejbd.threads=200_
 
 Sets the max number of concurrent threads that can enter the EJBd Server Service to 200.
 
-+++<a name="Startup-Example:-D<service>.disabled=<true/false>">++++++</a>+++
+
 
 == Example: -D+++<service>+++.disabled=<true/false>+++</service>+++
 
@@ -298,7 +298,7 @@ _openejb start -Dtelnet.disabled=true_
 
 Prevents the Telnet Server Service from starting when the OpenEJB Server starts.
 
-+++<a name="Startup-CONSOLEOUTPUT">++++++</a>+++
+
 
 = CONSOLE OUTPUT
 

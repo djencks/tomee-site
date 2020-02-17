@@ -1,4 +1,4 @@
-= Quickstart +++<a name="Quickstart-Installation">++++++</a>+++
+= Quickstart
 
 = Installation
 
@@ -15,7 +15,7 @@ Congratulations, you've installed OpenEJB.
 If you've unpacked OpenEJB into the directory C:\openejb-3.0, for example, then this directory is your OPENEJB_HOME directory.
 The OPENEJB_HOME directory is referred to in various parts of the documentation, so it's good to remember where it is.
 
-+++<a name="Quickstart-UsingOpenEJB">++++++</a>+++
+
 
 = Using OpenEJB
 
@@ -51,7 +51,7 @@ That's it!
 
 If you don't have any EJBs or clients to run, try the ubiquitous xref:openejbx30:hello-world.adoc[Hello World]  example.
 
-+++<a name="Quickstart-Jointhemailinglist">++++++</a>+++
+
 
 = Join the mailing list
 

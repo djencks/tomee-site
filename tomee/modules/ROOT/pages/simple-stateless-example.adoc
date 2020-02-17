@@ -1,6 +1,6 @@
 = Simple Stateless Example
 
-+++<a name="SimpleStatelessExample-Overview">++++++</a>+++
+
 
 = Overview+++<object width="400" height="250">++++++<param name="movie" value="http://www.youtube.com/v/aLx2jta96xU?fs=1&amp;hl=en_US">++++++</param>+++</param>+++<param name="allowFullScreen" value="true">++++++</param>+++</param>+++<param name="allowscriptaccess" value="always">++++++</param>+++</param>+++<embed src="http://www.youtube.com/v/aLx2jta96xU?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="400" height="250">++++++</embed>+++</embed>+++</object>+++
 
@@ -22,7 +22,7 @@ You are essentially checking out or renting a new bean instance on each method c
 With EJB 3.0, it's now possible to write stateless session bean without specifying a deployment descriptor;
 you basically have to write just a remote or local business interface, which is a plain-old-java-interface, annotated with the @Remote or @Local annotation the stateless session bean implementation, a plain-old-java-object which implements the remote or the local business interface and is annotated with the @Stateless annotation
 
-+++<a name="SimpleStatelessExample-TheCode">++++++</a>+++
+
 
 = The Code
 
@@ -32,7 +32,7 @@ Every stateless session bean implementation must be annotated using the annotati
 Our Stateless bean has 2 business interfaces: CalculatorRemote, a remote business interface, and CalculatorLocal, a local business interface.
 A minimum of one business interface is required.
 
-+++<a name="SimpleStatelessExample-Bean">++++++</a>+++
+
 
 == Bean
 
@@ -43,7 +43,7 @@ Users of EJB 2.x may notice the bean actually implements the business interfaces
 In the prior version of EJB implementing the remote interface (which derives from javax.ejb.EJBObject) in your bean was just not allowed.
 Now there is no javax.ejb.EJBObject requirement, so implementing the business interfaces is standard practice for EJB 3.0.
 
-+++<a name="SimpleStatelessExample-Localbusinessinterface">++++++</a>+++
+
 
 == Local business interface
 
@@ -58,7 +58,7 @@ You can use the _@Local_ annotation to explicitly state that an interface is a l
 You'll notice that in EJB 3.0 the Local Business Interface of a stateless session bean does not need to extend from javax.ejb.EJBLocalObject and does not need a javax.ejb.EJBLocalHome interface as they did in EJB 2.x and prior.
 Per the vocabulary of the EJB spec, interfaces that implement javax.ejb.EJBLocalObject or javax.ejb.EJBLocalHome are considered Component Interfaces and the plain java interface above is considered a Business Interface.
 
-+++<a name="SimpleStatelessExample-Remotebusinessinterface">++++++</a>+++
+
 
 == Remote business interface
 
@@ -75,22 +75,22 @@ It does not need to extend javax.ejb.EJBObject, it does not need a javax.ejb.EJB
 
 At minimum the interface must be annotated with _@Remote_ either in the interface itself or in the bean class, or the interface must be declared via +++<business-remote>+++in the ejb-jar.xml.+++</business-remote>+++
 
-+++<a name="SimpleStatelessExample-Writingaunittestfortheexample">++++++</a>+++
+
 
 = Writing a unit test for the example
 
 Writing an unit test for the stateless session EJb is quite simple.
 We need just to write a setup method to create and initialize the InitialContext, and then write our test methods
 
-+++<a name="SimpleStatelessExample-setUp">++++++</a>+++
+
 
 == setUp
 
-+++<a name="SimpleStatelessExample-Testthelocalbusinessinterface">++++++</a>+++
+
 
 == Test the local business interface
 
-+++<a name="SimpleStatelessExample-Testtheremotebusinessinterface">++++++</a>+++
+
 
 == Test the remote business interface
 

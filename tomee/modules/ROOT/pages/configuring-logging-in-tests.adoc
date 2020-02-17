@@ -1,4 +1,4 @@
-= Configuring Logging in Tests +++<a name="ConfiguringLogginginTests-embedded.logging.properties">++++++</a>+++
+= Configuring Logging in Tests
 
 = embedded.logging.properties
 
@@ -20,7 +20,7 @@ There are a couple good reasons for _not_ replacing the embedded.logging.propert
 . We do occasionally add new logging categories.
 If you are not replacing the embedded.logging.properties you will pick these up automatically when you upgrade.
 
-+++<a name="ConfiguringLogginginTests-Overriding(recommended)">++++++</a>+++
+
 
 = Overriding (recommended)
 
@@ -65,7 +65,7 @@ The overriding order is as follows: 1 = highest, 4 = lowest.
 
 By default there are no logging settings in 1-3, so #4 is the only source of logging information.
 
-+++<a name="ConfiguringLogginginTests-Defaultembedded.logging.propertiescontents">++++++</a>+++
+
 
 = Default embedded.logging.properties contents
 

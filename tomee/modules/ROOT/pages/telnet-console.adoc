@@ -1,6 +1,6 @@
 = Telnet Console \{note} Availability: Since OpenEJB 0.9\{note}
 
-+++<a name="TelnetConsole-BasicUsage">++++++</a>+++
+
 
 = Basic Usage
 
@@ -93,7 +93,7 @@ Deployments:
 Connection closed by foreign host.
 ....
 
-+++<a name="TelnetConsole-ConfiguringtheTelnetService">++++++</a>+++
+
 
 = Configuring the Telnet Service
 
@@ -114,7 +114,7 @@ ____
 
 You can change the IP, port, and even the number of threads allowed to concurrently access the Telnet service via this file.
 
-+++<a name="TelnetConsole-DisablingtheTelnetService">++++++</a>+++
+
 
 = Disabling the Telnet Service
 
@@ -124,7 +124,7 @@ Simply edit the config file and set 'disabled' to true
 
 Then restart OpenEJB.
 
-+++<a name="TelnetConsole-RestrictingAccess">++++++</a>+++
+
 
 = Restricting Access
 

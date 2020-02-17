@@ -1,8 +1,8 @@
-= JPA Usage +++<a name="JPAUsage-Thingstowatchoutfor">++++++</a>+++
+= JPA Usage
 
 = Things to watch out for
 
-+++<a name="JPAUsage-Critical:Alwayssetjta-data-sourceandnon-jta-data-source">++++++</a>+++
+
 
 == Critical: Always set jta-data-source and non-jta-data-source
 
@@ -15,7 +15,7 @@ Often times the JPA Provider itself will require both internally to do various o
 
 See xref:containers-and-resources.adoc[Containers and Resources]  for how to configure 'JtaManaged' and a full list of +++<Resource>+++properties for DataSources.+++</Resource>+++
 
-+++<a name="JPAUsage-Bedetachaware">++++++</a>+++
+
 
 == Be detach aware
 
@@ -26,7 +26,7 @@ All ejb methods start a transaction unless a) you xref:transaction-annotations.a
 If you're in a test case or a servlet, it's most likely B that is biting you.
 You're asking an ejb for some persistent objects, it uses the EntityManager in the scope of the transaction started around it's method and returns some persistent objects, by the time you get them the transaction has completed and now the objects are detached.
 
-+++<a name="JPAUsage-Solutions">++++++</a>+++
+
 
 === Solutions
 

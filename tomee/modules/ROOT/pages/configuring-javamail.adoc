@@ -1,4 +1,4 @@
-= Configuring JavaMail +++<a name="ConfiguringJavaMail-DeclaringaJavaMailResource">++++++</a>+++
+= Configuring JavaMail
 
 = Declaring a JavaMail Resource
 

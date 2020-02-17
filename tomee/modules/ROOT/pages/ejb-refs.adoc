@@ -1,7 +1,7 @@
 = EJB Refs
 
 TomEE complains it doesn't know the container type, so I added type="javax.naming.InitialContext" and it worked (mostly).
-+++<a name="EJBRefs-Referencingabeaninanotherjar(withannotations)">++++++</a>+++
+
 
 == Referencing a bean in another jar (with annotations)
 
@@ -51,7 +51,7 @@ To hook this reference up you need to override this ref and add more info in the
 </ejb-jar>
 ....
 
-+++<a name="EJBRefs-Referencingabeaninanotherjar(xmlonly,noannotations)">++++++</a>+++
+
 
 == Referencing a bean in another jar (xml only, no annotations)
 

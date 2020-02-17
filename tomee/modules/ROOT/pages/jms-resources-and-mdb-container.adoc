@@ -1,6 +1,7 @@
 = JMS Resources and MDB Container
+:supported-properties-table-layout: cols="2,1,3,5",options="header"
 
-= External ActiveMQ Broker
+== External ActiveMQ Broker
 
 ....
 <tomee>
@@ -26,7 +27,7 @@
 The `ServerUrl` would be changed to point to the host and port of the ActiveMQ process.
 The various URL formats that ActiveMQ supports also work, such as 'failover:'.
 
-= Internal ActiveMQ Broker
+== Internal ActiveMQ Broker
 
 ....
 <tomee>
@@ -50,7 +51,7 @@ The various URL formats that ActiveMQ supports also work, such as 'failover:'.
 
 The `BrokerXmlConfig` tells ActiveMQ to start on the tcp host/port `someHostName` and `61616`
 
-== Internal ActiveMQ Broker with JDBC Persistence
+=== Internal ActiveMQ Broker with JDBC Persistence
 
 Adding the `DataSource` property to your `ActiveMQResourceAdapter` config will automatically setup JDBC Persistence using the `org.apache.activemq.store.jdbc.JDBCPersistenceAdapter`
 
@@ -71,7 +72,7 @@ Adding the `DataSource` property to your `ActiveMQResourceAdapter` config will a
 </tomee>
 ....
 
-== Internal ActiveMQ Broker with activemq.xml
+=== Internal ActiveMQ Broker with activemq.xml
 
 The link:activemq.xml[activemq.xml] file format requires a number of Spring dependencies, and is therefore not included in the distribution by default.
 This is purley due to the fact that this ActiveMQ file format is parsed using Spring libraries and this is beyond our control.
@@ -115,7 +116,7 @@ Then use the `xbean:file:` url prefix in the `BrokerXmlConfig` as shown belog.
 
 Finally, restart the server.
 
-= Configuration via System properties
+=== Configuration via System properties
 
 The same can be done via properties in an embedded configuration, via the `conf/system.properties` file or on the command line via `-D` flags.
 
@@ -139,7 +140,7 @@ p.put("BarTopic", "new://Resource?type=javax.jms.Topic");
 InitialContext context = new InitialContext(p);
 ....
 
-= Global lookup of JMS Resources
+== Global lookup of JMS Resources
 
 From anywhere in the same VM as the EJB Container you could lookup the above resources like so:
 
@@ -151,89 +152,194 @@ javax.jms.Queue queue = (Queue) context.lookup("openejb:Resource/FooQueue");
 javax.jms.Topic topic = (Topic) context.lookup("openejb:Resource/BarTopic");
 ....
 
-= MDB ActivationConfig
+=== MDB ActivationConfig
 
 Here, the value for `destination` is the physical name of the desired destination.
 The value for `destinationType` is the class name that defines the type of destination.
 It should be `javax.jms.Queue` or `javax.jms.Topic`.
 
-The Activation Spec properties that can be configured are:+++<table>++++++<tbody>++++++<tr>++++++<th>+++Property Name+++</th>+++
-+++<th>+++Required+++</th>+++
-+++<th>+++Default Value+++</th>+++
-+++<th>+++Description+++</th>++++++</tr>+++
-+++<tr>++++++<td>+++acknowledgeMode+++</td>+++
-+++<td>+++no+++</td>+++
-+++<td>+++Auto-acknowledge+++</td>+++
-+++<td>+++The JMS Acknowledgement mode to use. Valid values are: Auto-acknowledge or Dups-ok-acknowledge+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++clientId+++</td>+++
-+++<td>+++no+++</td>+++
-+++<td>+++set in resource adapter+++</td>+++
-+++<td>+++The JMS Client ID to use (only really required for durable topics)+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++destinationType+++</td>+++
-+++<td>+++yes+++</td>+++
-+++<td>+++null+++</td>+++
-+++<td>+++The type of destination; a queue or topic+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++destination+++</td>+++
-+++<td>+++yes+++</td>+++
-+++<td>+++null+++</td>+++
-+++<td>+++The destination name (queue or topic name)+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++enableBatch+++</td>+++
-+++<td>+++no+++</td>+++
-+++<td>+++false+++</td>+++
-+++<td>+++Used to enable transaction batching for increased performance+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++maxMessagesPerBatch+++</td>+++
-+++<td>+++no+++</td>+++
-+++<td>+++10+++</td>+++
-+++<td>+++The number of messages per transaction batch+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++maxMessagesPerSessions+++</td>+++
-+++<td>+++no+++</td>+++
-+++<td>+++10+++</td>+++
-+++<td>+++This is actually the prefetch size for the subscription.  (Yes, badly named).+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++maxSessions+++</td>+++
-+++<td>+++no+++</td>+++
-+++<td>+++10+++</td>+++
-+++<td>+++The maximum number of concurrent sessions to use+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++messageSelector+++</td>+++
-+++<td>+++no+++</td>+++
-+++<td>+++null+++</td>+++
-+++<td>+++Message Selector</A> to use on the subscription to perform content based routing filtering the messages+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++noLocal+++</td>+++
-+++<td>+++no+++</td>+++
-+++<td>+++false+++</td>+++
-+++<td>+++Only required for topic subscriptions; indicates if locally published messages should be included in the subscription or not+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++password+++</td>+++
-+++<td>+++no+++</td>+++
-+++<td>+++set in resource adapter+++</td>+++
-+++<td>+++The password for the JMS connection+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++subscriptionDurability+++</td>+++
-+++<td>+++no+++</td>+++
-+++<td>+++NonDurable+++</td>+++
-+++<td>+++Whether or not a durable (topic) subscription is required. Valid values are: Durable or NonDurable+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++subscriptionName+++</td>+++
-+++<td>+++no+++</td>+++
-+++<td>+++null+++</td>+++
-+++<td>+++The name of the durable subscriber. Only used for durable topics and combined with the clientID to uniquely identify the durable topic subscription+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++userName+++</td>+++
-+++<td>+++no+++</td>+++
-+++<td>+++set in resource adapter+++</td>+++
-+++<td>+++The user for the JMS connection+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++useRAManagedTransaction+++</td>+++
-+++<td>+++no+++</td>+++
-+++<td>+++false+++</td>+++
-+++<td>+++Typically, a resource adapter delivers messages to an endpoint which is managed by a container.  Normally, this container likes to be the one that wants to control the transaction that the inbound message is being delivered on.  But sometimes, you want to deliver to a simpler container system that will not be controlling the inbound transaction.  In these cases, if you set useRAManagedTransaction to true, the resource adapter will commit the transaction if no exception was generated from the MessageListener and rollback if an exception is thrown.+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++initialRedeliveryDelay+++</td>+++
-+++<td>+++no+++</td>+++
-+++<td>+++1000+++</td>+++
-+++<td>+++The delay before redeliveries start.  Also configurable on the ResourceAdapter+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++maximumRedeliveries+++</td>+++
-+++<td>+++no+++</td>+++
-+++<td>+++5+++</td>+++
-+++<td>+++The maximum number of redeliveries or -1 for no maximum. Also configurable on the ResourceAdapter+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++redeliveryBackOffMultiplier+++</td>+++
-+++<td>+++no+++</td>+++
-+++<td>+++5+++</td>+++
-+++<td>+++The multiplier to use if exponential back off is enabled. Also configurable on the ResourceAdapter+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++redeliveryUseExponentialBackOff+++</td>+++
-+++<td>+++no+++</td>+++
-+++<td>+++false+++</td>+++
-+++<td>+++To enable exponential backoff. Also configurable on the ResourceAdapter+++</td>++++++</tr>++++++</tbody>++++++</table>+++
+The Activation Spec properties that can be configured are:
+[{supported-properties-table-layout}]
+|===
+
+|Property Name
+
+|Required
+
+|Default Value
+
+|Description
+
+
+|acknowledgeMode
+
+|no
+
+|Auto-acknowledge
+
+|The JMS Acknowledgement mode to use. Valid values are: Auto-acknowledge or Dups-ok-acknowledge
+
+
+|clientId
+
+|no
+
+|set in resource adapter
+
+|The JMS Client ID to use (only really required for durable topics)
+
+
+|destinationType
+
+|yes
+
+|null
+
+|The type of destination; a queue or topic
+
+
+|destination
+
+|yes
+
+|null
+
+|The destination name (queue or topic name)
+
+
+|enableBatch
+
+|no
+
+|false
+
+|Used to enable transaction batching for increased performance
+
+
+|maxMessagesPerBatch
+
+|no
+
+|10
+
+|The number of messages per transaction batch
+
+
+|maxMessagesPerSessions
+
+|no
+
+|10
+
+|This is actually the prefetch size for the subscription.  (Yes, badly named).
+
+
+|maxSessions
+
+|no
+
+|10
+
+|The maximum number of concurrent sessions to use
+
+
+|messageSelector
+
+|no
+
+|null
+
+|Message Selector</A> to use on the subscription to perform content based routing filtering the messages
+
+
+|noLocal
+
+|no
+
+|false
+
+|Only required for topic subscriptions; indicates if locally published messages should be included in the subscription or not
+
+
+|password
+
+|no
+
+|set in resource adapter
+
+|The password for the JMS connection
+
+
+|subscriptionDurability
+
+|no
+
+|NonDurable
+
+|Whether or not a durable (topic) subscription is required. Valid values are: Durable or NonDurable
+
+
+|subscriptionName
+
+|no
+
+|null
+
+|The name of the durable subscriber. Only used for durable topics and combined with the clientID to uniquely identify the durable topic subscription
+
+
+|userName
+
+|no
+
+|set in resource adapter
+
+|The user for the JMS connection
+
+
+|useRAManagedTransaction
+
+|no
+
+|false
+
+|Typically, a resource adapter delivers messages to an endpoint which is managed by a container.  Normally, this container likes to be the one that wants to control the transaction that the inbound message is being delivered on.  But sometimes, you want to deliver to a simpler container system that will not be controlling the inbound transaction.  In these cases, if you set useRAManagedTransaction to true, the resource adapter will commit the transaction if no exception was generated from the MessageListener and rollback if an exception is thrown.
+
+
+|initialRedeliveryDelay
+
+|no
+
+|1000
+
+|The delay before redeliveries start.  Also configurable on the ResourceAdapter
+
+
+|maximumRedeliveries
+
+|no
+
+|5
+
+|The maximum number of redeliveries or -1 for no maximum. Also configurable on the ResourceAdapter
+
+
+|redeliveryBackOffMultiplier
+
+|no
+
+|5
+
+|The multiplier to use if exponential back off is enabled. Also configurable on the ResourceAdapter
+
+
+|redeliveryUseExponentialBackOff
+
+|no
+
+|false
+
+|To enable exponential backoff. Also configurable on the ResourceAdapter
+
+|===
+

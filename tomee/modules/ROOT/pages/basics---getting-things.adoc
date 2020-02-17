@@ -1,4 +1,4 @@
-= Basics - Getting Things +++<a name="Basics-GettingThings-GettingStufffromtheContainer">++++++</a>+++
+= Basics - Getting Things
 
 = Getting Stuff from the Container
 
@@ -17,7 +17,7 @@ Read these over and over again when things don't work.
 . you _must_ use the _no-arg_ 'new InitialContext()' constructor to lookup something from java:comp/env
 . the annotations and xml for xref:declaring-references.adoc[Declaring References]  are _identical_ in functionality, both _always_ configure lookup with _optional_ dependency injection
 
-+++<a name="Basics-GettingThings-Commonmistakes,misunderstandings,andmyths">++++++</a>+++
+
 
 == Common mistakes, misunderstandings, and myths
 

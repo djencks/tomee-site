@@ -1,6 +1,6 @@
 = Configuring DataSources in tomee.xml
 
-+++<a name="ConfiguringDataSources-ConfiguringDataSourcesinopenejb.xml">++++++</a>+++
+
 
 The *+++<Resource>+++* element is used to configure a *javax.sql.DataSource*.
 It is also used to configure other resources like Timers, Topics, Queues.
@@ -51,11 +51,11 @@ You may also need data partitioning per customer or depending on any other busin
 That's also an available feature.
 See xref:dynamic-datasource.adoc[Dynamic Datasource] for more details.
 
-+++<a name="ConfiguringDataSources-JNDInamesforconfiguredDataSources">++++++</a>+++
+
 
 == JNDI names for configured DataSources
 
-+++<a name="ConfiguringDataSources-Example1">++++++</a>+++
+
 
 === Example 1
 
@@ -65,7 +65,7 @@ See xref:dynamic-datasource.adoc[Dynamic Datasource] for more details.
 
 The global jndi name would be _java:openejb/Resource/Default JDBC Database_
 
-+++<a name="ConfiguringDataSources-Example2">++++++</a>+++
+
 
 === Example 2
 
@@ -75,7 +75,7 @@ The global jndi name would be _java:openejb/Resource/Default JDBC Database_
 
 The global jndi name would be _java:openejb/Resource/Derby Database_
 
-+++<a name="ConfiguringDataSources-ObtainingaDataSource">++++++</a>+++
+
 
 == Obtaining a DataSource
 

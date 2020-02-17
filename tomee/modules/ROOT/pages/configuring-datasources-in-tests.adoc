@@ -1,4 +1,4 @@
-= Configuring DataSources in Tests +++<a name="ConfiguringDataSourcesinTests-InitialContextproperties">++++++</a>+++
+= Configuring DataSources in Tests
 
 = InitialContext properties
 
@@ -33,7 +33,7 @@ See xref:embedded-configuration.adoc[Embedded Configuration]  for further detail
 
 See xref:containers-and-resources.adoc[Containers and Resources]  for a full list of supported Resource types and their properties.
 
-+++<a name="ConfiguringDataSourcesinTests-Noteon<jta-data-source>and<non-jta-data-source>">++++++</a>+++
+
 
 == Note on <jta-data-source> and <non-jta-data-source>
 

@@ -1,6 +1,6 @@
 = Application discovery via the classpath This document details the various ways to get OpenEJB to detect applications you would like deployed while in an embedded mode.
 
-+++<a name="Applicationdiscoveryviatheclasspath-Emptyejb-jar.xmlapproach(recommended)">++++++</a>+++
+
 
 = Empty ejb-jar.xml approach (recommended)
 

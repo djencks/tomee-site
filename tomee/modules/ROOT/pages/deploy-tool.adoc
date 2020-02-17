@@ -1,22 +1,22 @@
 = Deploy Tool
 
-+++<a name="DeployTool-NAME">++++++</a>+++
 
-= NAME
+
+== NAME
 
 openejb deploy - OpenEJB Deploy Tool
 
-+++<a name="DeployTool-SYNOPSIS">++++++</a>+++
 
-= SYNOPSIS
+
+== SYNOPSIS
 
 ____
 openejb deploy <<DeployTool-OPTIONS,options>> <file> [<file> ...]
 ____
 
-+++<a name="DeployTool-NOTE">++++++</a>+++
 
-= NOTE
+
+== NOTE
 
 The OpenEJB Deploy tool is an OPTIONAL tool that allows you to deploy into a running server and get feedback as if the app was deployed and how it was deployed (deploymentIds, jndi names, etc.).
 
@@ -35,14 +35,14 @@ ____
 In UNIX, Linux, or Mac OS X, the deploy tool can be executed as follows:
 
 ____
-user@host# bin/openejb deploy --help
+user@host== bin/openejb deploy --help
 ____
 
 Depending on your OpenEJB version, you may need to change execution bits to make the scripts executable.
 You can do this with the following command.
 
 ____
-user@host# chmod +x bin/openejb
+user@host== chmod +x bin/openejb
 ____
 
 From here on out, it will be assumed that you know how to execute the right openejb script for your operating system and commands will appear in shorthand as show below.
@@ -51,9 +51,9 @@ ____
 openejb deploy --help
 ____
 
-+++<a name="DeployTool-DESCRIPTION">++++++</a>+++
 
-= DESCRIPTION
+
+== DESCRIPTION
 
 The files passed to the Deploy Tool can be any combination of the following:
 
@@ -68,51 +68,75 @@ The type of the files passed is determined as follows:
 EJB applications older that EJB 3.0 should contain a complete `META-INF/ejb-jar.xml` inside the jar, however we do not strictly enforce that -- the act of it being incomplete makes it an EJB 3.0 application by nature.
 * Archives containing a `META-INF/application-client.xml` or with a `META-INF/MANIFEST.MF` containing the `Main-Class` attribute, are assumed to be _Application Client_ archives.
 
-+++<a name="DeployTool-OPTIONS">++++++</a>+++
 
-= OPTIONS+++<table>++++++<tr>++++++<td>+++-d, --debug+++</td>+++
-+++<td>+++Increases the level of detail on validation errors and
-deployment summary.+++</td>++++++</tr>+++
+== OPTIONS
 
-+++<tr>++++++<td>+++--dir+++</td>+++
-+++<td>+++Sets the destination directory where the app will be deployed.
-The default is +++<OPENEJB_HOME>+++/apps/ directory.	Note when changing this
-setting make sure the directory is listed in the openejb.xml via a
-+++<Deployments dir="">++++++</Deployments>+++ tag or the app will not be picked up again on
-restart.
-</tr>
+[cols="3,8",options="header"]
+|===
 
-+++<tr>++++++<td>+++-conf file+++</td>+++
-+++<td>+++Sets the OpenEJB configuration to the specified file.+++</td>++++++</tr>+++
+|-d, --debug
 
-+++<tr>++++++<td>+++-h, --help+++</td>+++
-+++<td>+++Lists these options and exit.+++</td>++++++</tr>+++
+|Increases the level of detail on validation errors and
+deployment summary.
 
-+++<tr>++++++<td>+++-o, --offline+++</td>+++
-+++<td>+++Deploys the app to an offline server by copying the
+
+
+|--dir
+
+|Sets the destination directory where the app will be deployed.
+The default is `/apps/` directory.
+Note when changing this setting make sure the directory is listed in the `openejb.xml` via a tag or the app will not be picked up again on restart.
+
+
+
+|-conf file
+
+|Sets the OpenEJB configuration to the specified file.
+
+
+
+|-h, --help
+
+|Lists these options and exit.
+
+
+
+|-o, --offline
+
+|Deploys the app to an offline server by copying the
 archive into the server's apps/ directory.  The app will be deployed when
-the server is started.	The default is online.+++</td>++++++</tr>+++
+the server is started.	The default is online.
 
-+++<tr>++++++<td>+++-q, --quiet+++</td>+++
-+++<td>+++Decreases the level of detail on validation and skips the
-deployment summary.+++</td>++++++</tr>+++
 
-+++<tr>++++++<td>+++-s, --server-url <url>+++</td>+++
-+++<td>+++Sets the url of the OpenEJB server to which
+
+|-q, --quiet
+
+|Decreases the level of detail on validation and skips the
+deployment summary.
+
+
+
+|-s, --server-url <url>
+
+|Sets the url of the OpenEJB server to which
 the app will be deployed.  The value should be the same as the JNDI
-Provider URL used to lookup EJBs.  The default is 'ejbd://localhost:4201'.+++</td>++++++</tr>+++
-
-+++<tr>++++++<td>+++-v, --version+++</td>+++
-+++<td>+++Prints the OpenEJB version and exits.+++</td>++++++</tr>+++
-</table>
+Provider URL used to lookup EJBs.  The default is 'ejbd://localhost:4201'.
 
 
-+++<a name="DeployTool-EXAMPLES">++++++</a>+++
-# EXAMPLES
+
+|-v, --version
+
+|Prints the OpenEJB version and exits.
+|===
 
 
-+++<a name="DeployTool-Deployingmultiplejarfiles">++++++</a>+++
-## Deploying multiple jar files
+
+
+== EXAMPLES
+
+
+
+=== Deploying multiple jar files
 
 
 > openejb deploy myapp\fooEjbs.jar myapp\barEjbs.jar
@@ -124,8 +148,8 @@ barEjbs.jar. Wildcards can be used as well.
 > openejb deploy myapp\*.jar
 
 
-+++<a name="DeployTool-OUTPUT">++++++</a>+++
-# OUTPUT
+
+== OUTPUT
 
 On running the deploy tool with a valid EJB jar the following output is
 printed on the console
@@ -146,4 +170,4 @@ printed on the console
 Note: In the above case the command used is:
 > openejb deploy hello-addservice.jar
 
-The JAR file contains two EJBs: AddServiceBean and HelloBean.+++</OPENEJB_HOME>++++++</td>++++++</tr>++++++</table>+++
+The JAR file contains two EJBs: AddServiceBean and HelloBean.+++</OPENEJB_HOME>+++

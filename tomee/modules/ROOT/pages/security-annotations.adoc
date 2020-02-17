@@ -6,7 +6,7 @@
 * javax.annotation.security.RunAs
 * javax.annotation.security.DeclareRoles
 
-+++<a name="SecurityAnnotations-Basicidea">++++++</a>+++
+
 
 == Basic idea
 
@@ -15,7 +15,7 @@
 * Security annotations can be applied to entire class and/or individual methods
 * The names of any security roles used must be declared via @DeclareRoles
 
-+++<a name="SecurityAnnotations-Norestrictions">++++++</a>+++
+
 
 == No restrictions
 
@@ -55,7 +55,7 @@ public class OpenSourceProjectBean implements Project {
 
 * Allow anyone logged in or not to invoke 'svnCheckout'.
 
-+++<a name="SecurityAnnotations-RestrictingaMethod">++++++</a>+++
+
 
 == Restricting a Method
 
@@ -81,7 +81,7 @@ public class OpenSourceProjectBean implements Project {
 * Allow only logged in users in the "committer" role to invoke 'svnCommit'.
 * Allow anyone logged in or not to invoke 'svnCheckout'.
 
-+++<a name="SecurityAnnotations-DeclareRoles">++++++</a>+++
+
 
 == DeclareRoles
 
@@ -107,7 +107,7 @@ public class OpenSourceProjectBean implements Project {
 }
 ....
 
-+++<a name="SecurityAnnotations-Restrictingallmethodsinaclass">++++++</a>+++
+
 
 == Restricting all methods in a class
 
@@ -135,7 +135,7 @@ public class OpenSourceProjectBean implements Project {
 
 * Allow only logged in users in the "committer" role to invoke 'svnCommit', 'svnCheckout' or 'submitPatch'.
 
-+++<a name="SecurityAnnotations-Mixingclassandmethodlevelrestrictions">++++++</a>+++
+
 
 == Mixing class and method level restrictions
 
@@ -166,7 +166,7 @@ public class OpenSourceProjectBean implements Project {
 * Allow only logged in users in the "committer" role to invoke 'svnCommit' or 'svnCheckout'
 * Allow only logged in users in the "contributor" role to invoke 'submitPatch'.
 
-+++<a name="SecurityAnnotations-PermitAll">++++++</a>+++
+
 
 == PermitAll
 
@@ -198,7 +198,7 @@ public class OpenSourceProjectBean implements Project {
 * Allow only logged in users in the "contributor" role to invoke 'submitPatch'.
 * Allow anyone logged in or not to invoke 'svnCheckout'.
 
-+++<a name="SecurityAnnotations-DenyAll">++++++</a>+++
+
 
 == DenyAll
 
@@ -237,7 +237,7 @@ public class OpenSourceProjectBean implements Project {
 * Allow anyone logged in or not to invoke 'svnCheckout'.
 * Allow _no one_ logged in or not to invoke 'deleteProject'.
 
-+++<a name="SecurityAnnotations-IllegalUsage">++++++</a>+++
+
 
 = Illegal Usage
 

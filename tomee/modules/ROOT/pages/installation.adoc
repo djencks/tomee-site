@@ -1,4 +1,4 @@
-= Installation +++<a name="Installation-Installation">++++++</a>+++
+= Installation
 
 = Installation
 

@@ -67,17 +67,17 @@ If you add the _openjpa.jdbc.SynchronizeMappings_ property as shown below OpenJP
 </persistence>
 ....
 
-+++<a name="OpenJPA-Auto-commitcannotbesetwhileenrolledinatransaction">++++++</a>+++
+
 
 == Auto-commit can not be set while enrolled in a transaction
 
 Pending
 
-+++<a name="OpenJPA-Thisbrokerisnotconfiguredtousemanagedtransactions.">++++++</a>+++
+
 
 == This broker is not configured to use managed transactions.
 
-+++<a name="OpenJPA-Setup">++++++</a>+++
+
 
 === Setup
 
@@ -101,7 +101,7 @@ inside of a transaction.
 
 Note the default transaction attribute for any ejb method is REQUIRED unless explicitly set otherwise in the bean class or method in question.
 
-+++<a name="OpenJPA-Solutions">++++++</a>+++
+
 
 === Solutions
 

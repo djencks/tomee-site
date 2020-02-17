@@ -1,4 +1,5 @@
- OpenEJB 3.0 beta 1
+= OpenEJB 3.0 beta 1
+:tested-on-layout: cols="7*",options="header"
 
 * Release Date: September 29th, 2007
 * EJB 3.0 support

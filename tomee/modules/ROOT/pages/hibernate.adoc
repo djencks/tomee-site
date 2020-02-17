@@ -1,4 +1,4 @@
-= Hibernate +++<a name="Hibernate-Samplepersistence.xml">++++++</a>+++
+= Hibernate
 
 = Sample persistence.xml
 

@@ -17,14 +17,31 @@ Per EJB 3.0 the default transaction attribute for all EJB 3.0 applications is _R
 The default transaction attribute for EJB 2.1, 2.0 and 1.1 applications is vendor specific.
 In OpenEJB EJB 2.1, 2.0 and 1.1 applications also use _REQUIRED_ as the default.
 
-+++<a name="TransactionAnnotations-AttributeTypessummary">++++++</a>+++
+
 
 == Attribute Types summary
 
-A simplistic way to visualize the transaction attributes is as follows.+++<table>++++++<tr>++++++<td>+++</th>+++<th>+++Failing+++</th>++++++<th>+++Correcting+++</th>++++++<th>+++No Change+++</th>+++</tr>
-+++<tr>++++++<th>+++Transacted </td>+++<td>+++MANDATORY+++</td>++++++<td>+++REQUIRED, REQUIRES_NEW+++</td>++++++<td>+++SUPPORTS+++</td>+++</tr>
-+++<tr>++++++<th>+++Not Transacted </td>+++<td>+++NEVER+++</td>++++++<td>+++NOT_SUPPORTED+++</td>++++++<td>+++SUPPORTS+++</td>+++</tr>
-</table>
+A simplistic way to visualize the transaction attributes is as follows.
+[cols="4*",options="header"]
+|===
+
+|
+|Failing
+|Correcting
+|No Change
+
+
+|Transacted
+|MANDATORY
+|REQUIRED, REQUIRES_NEW
+|SUPPORTS
+
+
+|Not Transacted
+|NEVER
+|NOT_SUPPORTED
+|SUPPORTS
+|===
 
 The "*Transacted*" and "*Not Transacted*" categories represent the
 container guarantee, i.e. if the bean method will or will not be invoked in
@@ -41,27 +58,27 @@ container to adjust the transactional state automatically as needed to
 match the desired state, rather than blocking the invocation by throwing an
 exception.
 
-+++<a name="TransactionAnnotations-DetaileddescriptionofeachAttribute">++++++</a>+++
-### Detailed description of each Attribute
 
-+++<a name="TransactionAnnotations-MANDATORY">++++++</a>+++
-#### MANDATORY
+== Detailed description of each Attribute
+
+
+=== MANDATORY
 
 A _MANDATORY_ method is guaranteed to always be executed in a transaction.
 However, it's the caller's job to take care of suppling the transaction.
 If the caller attempts to invoke the method *outside* of a transaction,
 then the container will block the call and throw them an *exception*.
 
-+++<a name="TransactionAnnotations-REQUIRED">++++++</a>+++
-#### REQUIRED
+
+=== REQUIRED
 
 A _REQUIRED_ method is guaranteed to always be executed in a transaction.
 If the caller attempts to invoke the method *outside* of a transaction, the
 container will *start* a transaction, execute the method, then *commit* the
 transaction.
 
-+++<a name="TransactionAnnotations-REQUIRES_NEW">++++++</a>+++
-#### REQUIRES_NEW
+
+=== REQUIRES_NEW
 
 A _REQUIRES_NEW_ method is guaranteed to always be executed in a
 transaction.  If the caller attempts to invoke the method *inside or
@@ -70,34 +87,35 @@ execute the method, then *commit* the transaction.  Any transaction the
 caller may have in progress will be *suspended* before the method execution
 then *resumed* afterward.
 
-+++<a name="TransactionAnnotations-NEVER">++++++</a>+++
-#### NEVER
+
+=== NEVER
 
 A _NEVER_ method is guaranteed to never be executed in a transaction.
 However, it's the caller's job to ensure there is no transaction.  If the
 caller attempts to invoke the method *inside* of a transaction, then the
 container will block the call and throw them an *exception*.
 
-+++<a name="TransactionAnnotations-NOT_SUPPORTED">++++++</a>+++
-#### NOT_SUPPORTED
+
+=== NOT_SUPPORTED
 
 A _NOT_SUPPORTED_ method is guaranteed to never be executed in a
 transaction.  If the caller attempts to invoke the method *inside* of a
 transaction, the container will *suspend* the caller's transaction, execute
 the method, then *resume* the caller's transaction.
 
-+++<a name="TransactionAnnotations-SUPPORTS">++++++</a>+++
-#### SUPPORTS
+
+=== SUPPORTS
 
 A _SUPPORTS_ method is guaranteed to adopt the exact transactional state of
 the caller.  These methods can be invoked by caller's *inside or outside*
 of a transaction.  The container will do nothing to change that state.
 
+== Where may a transaction attribute be specified?
 
-+++<a name="TransactionAnnotations-OnMethods">++++++</a>+++
-## On Methods
+=== On Methods
 
-
+[source,java]
+----
     @Stateless
     public static class MyBean implements MyBusinessInterface {
 
@@ -110,15 +128,16 @@ of a transaction.  The container will do nothing to change that state.
     	return s;
         }
     }
+----
+
+* _codeRed_ will be invoked with the attribute of _MANDATORY_
+* _codeBlue_ will be invoked with the default attribute of _REQUIRED_
 
 
-- _codeRed_ will be invoked with the attribute of _MANDATORY_
-- _codeBlue_ will be invoked with the default attribute of _REQUIRED_
+=== On Classes
 
-+++<a name="TransactionAnnotations-OnClasses">++++++</a>+++
-## On Classes
-
-
+[source,java]
+----
     @Stateless
     @TransactionAttribute(TransactionAttributeType.MANDATORY)
     public static class MyBean implements MyBusinessInterface {
@@ -131,15 +150,15 @@ of a transaction.  The container will do nothing to change that state.
     	return s;
         }
     }
+----
+
+* _codeRed_ and _codeBlue_ will be invoked with the attribute of _MANDATORY_
 
 
-- _codeRed_ and _codeBlue_ will be invoked with the attribute of
-_MANDATORY_
+=== Mixed on classes and methods
 
-+++<a name="TransactionAnnotations-Mixedonclassesandmethods">++++++</a>+++
-## Mixed on classes and methods
-
-
+[source,java]
+----
     @Stateless
     @TransactionAttribute(TransactionAttributeType.SUPPORTS)
     public static class MyBean implements MyBusinessInterface {
@@ -158,21 +177,22 @@ _MANDATORY_
     	return s;
         }
     }
+----
+
+* _codeRed_ will be invoked with the attribute of _NEVER_
+* _codeBlue_ will be invoked with the attribute of _SUPPORTS_
+* _codeGreen_ will be invoked with the attribute of _REQUIRED_
 
 
-- _codeRed_ will be invoked with the attribute of _NEVER_
-- _codeBlue_ will be invoked with the attribute of _SUPPORTS_
-- _codeGreen_ will be invoked with the attribute of _REQUIRED_
-
-+++<a name="TransactionAnnotations-IllegalUsage">++++++</a>+++
-#  Illegal Usage
+==  Illegal Usage
 
 Generally, transaction annotationss cannot be made on AroundInvoke methods
 and most callbacks.
 
 The following usages of @TransactionAttribute have no effect.
 
-
+[source,java]
+----
     @Stateful
     public class MyStatefulBean implements	MyBusinessInterface  {
 
@@ -205,4 +225,6 @@ The following usages of @TransactionAttribute have no effect.
         public void passivate(){
 
         }
-    }+++</th>++++++</tr>++++++</th>++++++</tr>++++++</td>++++++</tr>++++++</table>+++
+    }
+----
+

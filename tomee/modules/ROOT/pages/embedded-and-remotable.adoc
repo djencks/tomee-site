@@ -1,4 +1,4 @@
-= Embedded and Remotable +++<a name="EmbeddedandRemotable-Overview">++++++</a>+++
+= Embedded and Remotable
 
 = Overview
 
@@ -32,7 +32,7 @@ _The source for this example is in the "telephone-stateful" directory located in
 The LocalInitialContextFactory completely supports remote interfaces and all spec required pass-by-value (serialization) semantics without the need for network sockets.
 This example shows the use of OpenEJB in an embedded environment where connection _outside_ the  vm is required.\{note}
 
-+++<a name="EmbeddedandRemotable-TheCode">++++++</a>+++
+
 
 = The Code
 
@@ -40,7 +40,7 @@ For this example we have a simple Stateful bean called TelephoneBean as defined 
 As a simple way of demonstrating the state we have to methods: speak and listen.
 You call _speak_ and pass in some text, then you call _listen_ to get your answer.
 
-+++<a name="EmbeddedandRemotable-bean">++++++</a>+++
+
 
 == bean
 
@@ -51,7 +51,7 @@ You call _speak_ and pass in some text, then you call _listen_ to get your answe
 | lang=java}
 |===
 
-+++<a name="EmbeddedandRemotable-businessinterface">++++++</a>+++
+
 
 == business interface
 
@@ -69,7 +69,7 @@ The same rule applies to identical usage of @Local.
 The critical thing to know is that if you add another interface the rules change and require that you specify both interfaces in the @Remote annotation as in @Remote({Telephone.class, SecondInterface.class}).
 \{tip}
 
-+++<a name="EmbeddedandRemotable-Embedding">++++++</a>+++
+
 
 = Embedding
 
@@ -79,7 +79,7 @@ We'll do the embedding in our test setUp method, then will make two test methods
 * one for invoking the bean's remote interface via the _LocalInitialContextFactory_ which goes straight against the embedded container system
 * one for invoking the bean's remote interface via the _RemoteInitialContextFactory_ which connects to a Socket and communicates to the embedded container system over the ejbd protocol.
 
-+++<a name="EmbeddedandRemotable-setUp">++++++</a>+++
+
 
 == setUp
 
@@ -115,7 +115,7 @@ These "client" VMs need only have the the _openejb-client jar_ in their classpat
 | lang=java}
 |===
 
-+++<a name="EmbeddedandRemotable-Mavensetup">++++++</a>+++
+
 
 = Maven setup
 
@@ -132,7 +132,7 @@ These "client" VMs need only have the the _openejb-client jar_ in their classpat
 | lang=xml}
 |===
 
-+++<a name="EmbeddedandRemotable-Running">++++++</a>+++
+
 
 = Running
 

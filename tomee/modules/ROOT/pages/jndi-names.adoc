@@ -1,17 +1,17 @@
 = JNDI Names
 
-+++<a name="JNDINames-What'sMyBean'sJNDIName?">++++++</a>+++
 
-= What's My Bean's JNDI Name?
+
+== What's My Bean's JNDI Name?
 
 There are two things to keep in mind before you start reading:
 
 1   OpenEJB provides a default JNDI name to your EJB.
 + 2   You can customize the JNDI name.
 
-+++<a name="JNDINames-DefaultJNDIname">++++++</a>+++
 
-== Default JNDI name
+
+=== Default JNDI name
 
 The default JNDI name is in the following format:
 
@@ -21,54 +21,122 @@ Lets try and understand the above format.
 Both _deploymentId_ and _interfaceType.annotationName_ are pre-defined variables.
 There are other pre-defined variables available which you could use to customize the JNDI name format.
 
-+++<a name="JNDINames-JNDINameFormatting">++++++</a>+++
 
-= JNDI Name Formatting
+
+=== JNDI Name Formatting
 
 The _openejb.jndiname.format_ property allows you to supply a template for the global JNDI names of all your EJBs.
 With it, you have complete control over the structure of the JNDI layout can institute a design pattern just right for your client apps.
-See the xref:service-locator.adoc[Service Locator]  doc for clever ways to use the JNDI name formatting functionality in client code.+++<table>++++++<tr>++++++<td>+++variable+++</td>++++++<td>+++description+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++moduleId+++</td>++++++<td>+++Typically the name of the ejb-jar file+++<br>++++++</br>+++ or the +++<ejb-jar id="">+++id value if specified</td></tr>
-+++<tr>++++++<td>+++ejbType+++</td>++++++<td>+++STATEFUL, STATELESS, BMP_ENTITY, CMP_ENTITY, or MESSAGE_DRIVEN+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++ejbClass+++</td>++++++<td>+++for a class named org.acme.superfun.WidgetBean results in org.acme.superfun.WidgetBean+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++ejbClass.simpleName+++</td>++++++<td>+++for a class named org.acme.superfun.WidgetBean results in WidgetBean+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++ejbClass.packageName+++</td>++++++<td>+++for a class named org.acme.superfun.WidgetBean results in org.acme.superfun+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++ejbName+++</td>++++++<td>+++The ejb-name as specified in xml or via the 'name' attribute in an @Stateful, @Stateless, or @MessageDriven annotation+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++deploymentId+++</td>++++++<td>+++The unique system id for the ejb. Typically the ejbName unless specified in the openejb-jar.xml or via changing the openejb.deploymentId.format+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++interfaceType+++</td>++++++<td>+++see interfaceType.annotationName+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++interfaceType.annotationName+++</td>++++++<td>+++Following the EJB 3 annotations @RemoteHome, @LocalHome, @Remote and @Local
-RemoteHome (EJB 2 EJBHome)
-LocalHome (EJB 2 EJBLocalHome)
-Remote (EJB 3 Business Remote)
-Local (EJB 3 Business Local)
-Endpoint (EJB webservice endpoint)+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++interfaceType.annotationNameLC+++</td>++++++<td>+++This is the same as interfaceType.annotationName, but all in lower case.+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++interfaceType.xmlName+++</td>++++++<td>+++Following the ejb-jar.xml descriptor elements +++<home>+++, +++<local-home>+++, +++<business-remote>+++, +++<business-local>+++, and +++<service-endpoint>+++:
-home (EJB 2 EJBHome)
-local-home (EJB 2 EJBLocalHome)
-business-remote (EJB 3 Business Remote)
-business-local (EJB 3 Business Local)
-service-endpoint (EJB webservice endpoint)</td></tr>
-+++<tr>++++++<td>+++interfaceType.xmlNameCc+++</td>++++++<td>+++Camel-case version of interfaceType.xmlName:
-Home (EJB 2 EJBHome)
-LocalHome (EJB 2 EJBLocalHome)
-BusinessRemote (EJB 3 Business Remote)
-BusinessLocal (EJB 3 Business Local)
-ServiceEndpoint (EJB webservice endpoint)+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++interfaceType.openejbLegacyName+++</td>++++++<td>+++Following the OpenEJB 1.0 hard-coded format:
-(empty string) (EJB 2 EJBHome)
-Local (EJB 2 EJBLocalHome)
-BusinessRemote (EJB 3 Business Remote)
-BusinessLocal (EJB 3 Business Local)
-ServiceEndpoint (EJB webservice endpoint)+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++interfaceClass+++</td>++++++<td>+++(business) for a class named org.acme.superfun.WidgetRemote results in org.acme.superfun.WidgetRemote+++<br>++++++</br>+++
-(home) for a class named org.acme.superfun.WidgetHome results in org.acme.superfun.WidgetHome+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++interfaceClass.simpleName+++</td>++++++<td>+++(business) for a class named org.acme.superfun.WidgetRemote results in WidgetRemote
-(home) for a class named org.acme.superfun.WidgetHome results in WidgetHome+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++interfaceClass.packageName+++</td>++++++<td>+++for a class named org.acme.superfun.WidgetRemote results in org.acme.superfun+++</td>++++++</tr>+++
-</table>
-+++<a name="JNDINames-SettingtheJNDIname">++++++</a>+++
-#  Setting the JNDI name
+See the xref:service-locator.adoc[Service Locator]  doc for clever ways to use the JNDI name formatting functionality in client code.
+
+[cols="2,9a",options="header"]
+|===
+
+|variable
+|description
+
+
+|moduleId
+|Typically the name of the ejb-jar file+ or the id value if specified
+
+
+|ejbType
+|STATEFUL, STATELESS, BMP_ENTITY, CMP_ENTITY, or MESSAGE_DRIVEN
+
+
+|ejbClass
+|for a class named `org.acme.superfun.WidgetBean`, results in `org.acme.superfun.WidgetBean`
+
+
+|ejbClass.simpleName
+|for a class named `org.acme.superfun.WidgetBean` results in `WidgetBean`
+
+
+|ejbClass.packageName
+|for a class named `org.acme.superfun.WidgetBean` results in `org.acme.superfun`
+
+
+|ejbName
+|The ejb-name as specified in xml or via the `name` attribute in an @Stateful, @Stateless, or @MessageDriven annotation
+
+
+|deploymentId
+|The unique system id for the ejb.
+Typically the ejbName unless specified in the openejb-jar.xml or via changing the openejb.deploymentId.format
+
+
+|interfaceType
+|see interfaceType.annotationName
+
+
+|interfaceType.annotationName
+|Following the EJB 3 annotations
+
+* @RemoteHome
+* @LocalHome
+* @Remote
+* @Local
+
+or
+
+* RemoteHome (EJB 2 EJBHome)
+* LocalHome (EJB 2 EJBLocalHome)
+* Remote (EJB 3 Business Remote)
+* Local (EJB 3 Business Local)
+* Endpoint (EJB webservice endpoint)
+
+
+|interfaceType.annotationNameLC
+|This is the same as interfaceType.annotationName, but all in lower case.
+
+
+|interfaceType.xmlName
+|Following the ejb-jar.xml descriptor elements:
+
+* home (EJB 2 EJBHome)
+* local-home (EJB 2 EJBLocalHome)
+* business-remote (EJB 3 Business Remote)
+* business-local (EJB 3 Business Local)
+* service-endpoint (EJB webservice endpoint)
+
+
+|interfaceType.xmlNameCc
+|Camel-case version of interfaceType.xmlName:
+
+* Home (EJB 2 EJBHome)
+* LocalHome (EJB 2 EJBLocalHome)
+* BusinessRemote (EJB 3 Business Remote)
+* BusinessLocal (EJB 3 Business Local)
+* ServiceEndpoint (EJB webservice endpoint)
+
+
+|interfaceType.openejbLegacyName
+|Following the OpenEJB 1.0 hard-coded format:
+
+* (empty string) (EJB 2 EJBHome)
+* Local (EJB 2 EJBLocalHome)
+* BusinessRemote (EJB 3 Business Remote)
+* BusinessLocal (EJB 3 Business Local)
+* ServiceEndpoint (EJB webservice endpoint)
+
+
+|interfaceClass
+|
+* (business) for a class named `org.acme.superfun.WidgetRemote` results in `org.acme.superfun.WidgetRemote`
+* (home) for a class named `org.acme.superfun.WidgetHome` results in `org.acme.superfun.WidgetHome`
+
+
+|interfaceClass.simpleName
+|
+* (business) for a class named `org.acme.superfun.WidgetRemote` results in `WidgetRemote`
+* (home) for a class named `org.acme.superfun.WidgetHome` results in `WidgetHome`
+
+
+|interfaceClass.packageName
+|for a class named `org.acme.superfun.WidgetRemote` results in `org.acme.superfun`
+|===
+
+==  Setting the JNDI name
 
 It's possible to set the desired jndi name format for the whole server
 level, an ejb-jar, an ejb, an ejb's "local" interface
@@ -79,8 +147,8 @@ be used for any given interface of an ejb.  It's possible to specify a
 general format for your server, override it at an ejb level and override
 that further for a specific interface of that ejb.
 
-+++<a name="JNDINames-ViaSystemproperty">++++++</a>+++
-## Via System property
+
+=== Via System property
 
 The jndi name format can be set on a server level via a _system property_,
 for example:
@@ -94,8 +162,8 @@ As usual, other ways of specifying system properties are via the
 conf/system.properties file in a standalone server, or via the
 InitialContext properties when embedded.
 
-+++<a name="JNDINames-Viapropertiesintheopenejb-jar.xml">++++++</a>+++
-## Via properties in the openejb-jar.xml
+
+=== Via properties in the openejb-jar.xml
 
 It's possible to set the openejb.jndiname.format for an ejb-jar jar in a
 META-INF/openejb-jar.xml file as follows:
@@ -105,8 +173,8 @@ META-INF/openejb-jar.xml file as follows:
          openejb.jndiname.format = \{deploymentId}{interfaceType.annotationName}+++</properties>++++++</openejb-jar>+++
 
 
-+++<a name="JNDINames-Viathe<jndi>tagforaspecificejb">++++++</a>+++
-## Via the +++<jndi>+++tag for a specific ejb
+
+=== Via the +++<jndi>+++tag for a specific ejb
 
 The following sets the name specifically for the interface
 org.superbiz.Foo.
@@ -133,20 +201,21 @@ The 'name' attribute can still use templates if it likes, such as:
     +++<openejb-jar>++++++<ejb-deployment ejb-name="FooBean">++++++<jndi name="ejb/{interfaceClass.simpleName}" interface="org.superbiz.Foo">++++++</jndi>++++++</ejb-deployment>++++++</openejb-jar>+++
 
 
-+++<a name="JNDINames-Multiple<jndi>tags">++++++</a>+++
-###  Multiple +++<jndi>+++tags
+
+===  Multiple tags
 
 Multiple +++<jndi>+++tags are allowed making it possible for you to be as
 specific as you need about the jndi name of each interface or each logical
 group of iterfaces (Local, Remote, LocalHome, RemoteHome).
 
 Given an ejb, FooBean, with the following interfaces:
- - business-local: org.superbiz.LocalOne
- - business-local: org.superbiz.LocalTwo
- - business-remote: org.superbiz.RemoteOne
- - business-remote: org.superbiz.RemoteTwo
- - home: org.superbiz.FooHome
- - local-home: org.superbiz.FooLocalHome
+
+* business-local: org.superbiz.LocalOne
+* business-local: org.superbiz.LocalTwo
+* business-remote: org.superbiz.RemoteOne
+* business-remote: org.superbiz.RemoteTwo
+* home: org.superbiz.FooHome
+* local-home: org.superbiz.FooLocalHome
 
 The following four examples would yield the same jndi names.  The intention
 with these examples is to show the various ways you can isolate specific
@@ -197,38 +266,39 @@ or
         +++<jndi name="{interfaceClass.simpleName}">++++++</jndi>++++++</ejb-deployment>++++++</openejb-jar>+++
 
 
-+++<a name="JNDINames-ChangingtheDefaultSetting">++++++</a>+++
-# Changing the Default Setting
+
+== Changing the Default Setting
 
 *You are responsible for ensuring the names don't conflict.*
 
-+++<a name="JNDINames-Conservativesettings">++++++</a>+++
-### Conservative settings
+
+=== Conservative settings
 
 A very conservative setting such as
 
- "\{deploymentId}/\{interfaceClass}"
+ `\{deploymentId}/\{interfaceClass}`
 
-would guarantee that each and every single interface is bound to JNDI.	If
-your bean had a legacy EJBObject interface, three business remote
-interfaces, and two business local interfaces, this pattern would result in
-*six* proxies bound into JNDI.
-+++<pre>+++- \{deploymentId}/{interfaceClass.simpleName}
- - \{moduleId}/\{ejbName}/\{interfaceClass}
- - \{ejbName}/\{interfaceClass}
- - \{moduleId}/\{ejbClass}/\{interfaceClass}
- - \{ejbClass}/\{interfaceClass}
- - \{ejbClass}/{interfaceClass.simpleName}
- - {ejbClass.simpleName}/{interfaceClass.simpleName}
- - \{interfaceClass}/\{ejbName}+++</pre>+++
-Bordeline optimistic:
-+++<pre>+++- \{moduleId}/\{interfaceClass}
- - \{interfaceClass}+++</pre>+++
-The above two settings would work if you the interface wasn't shared by
-other beans.
+would guarantee that each and every single interface is bound to JNDI.
+If your bean had a legacy EJBObject interface, three business remote interfaces, and two business local interfaces, this pattern would result in *six* proxies bound into JNDI.
 
-+++<a name="JNDINames-Pragmaticsettings">++++++</a>+++
-### Pragmatic settings
+* \{deploymentId}/{interfaceClass.simpleName}
+* \{moduleId}/\{ejbName}/\{interfaceClass}
+* \{ejbName}/\{interfaceClass}
+* \{moduleId}/\{ejbClass}/\{interfaceClass}
+* \{ejbClass}/\{interfaceClass}
+* \{ejbClass}/{interfaceClass.simpleName}
+* {ejbClass.simpleName}/{interfaceClass.simpleName}
+* \{interfaceClass}/\{ejbName}
+
+Borderline optimistic:
+
+* \{moduleId}/\{interfaceClass}
+* \{interfaceClass}
+
+The above two settings would work if you the interface wasn't shared by other beans.
+
+
+=== Pragmatic settings
 
 A more middle ground setting such as
 "\{deploymentId}/{interfaceType.annotationName}" would guarantee that at
@@ -240,13 +310,14 @@ implementing all three business remote interfaces; one proxy implementing
 the two business local interfaces.
 
 Similarly pragmatic settings would be
-+++<pre>+++- \{moduleId}/\{ejbClass}/{interfaceType.annotationName}
- - \{ejbClass}/{interfaceType.xmlName}
- - {ejbClass.simpleName}/{interfaceType.xmlNameCc}
- - \{interfaceType}/\{ejbName}
- - \{interfaceType}/\{ejbClass}+++</pre>+++
-+++<a name="JNDINames-Optimisticsettings">++++++</a>+++
-### Optimistic settings
+
+* \{moduleId}/\{ejbClass}/{interfaceType.annotationName}
+* \{ejbClass}/{interfaceType.xmlName}
+* {ejbClass.simpleName}/{interfaceType.xmlNameCc}
+* \{interfaceType}/\{ejbName}
+* \{interfaceType}/\{ejbClass}
+
+=== Optimistic settings
 
 A very optimistic setting such as "\{deploymentId}" would guarantee only
 one proxy for the bean will be bound to JNDI.  This would be fine if you
@@ -264,13 +335,14 @@ cannot be bound to JNDI, tell you which ejb is using that name, and
 continue loading your app.
 
 Similarly optimistic settings would be:
-+++<pre>+++- \{ejbName}
- - \{ejbClass}
- - {ejbClass.simpleName}
- - \{moduleId}/{ejbClass.simpleName}
- - \{moduleId}/\{ejbName}+++</pre>+++
-+++<a name="JNDINames-AdvancedDetailsonEJB3.0BusinessProxies(thesimplepart)">++++++</a>+++
-### Advanced Details on EJB 3.0 Business Proxies (the simple part)
+
+* \{ejbName}
+* \{ejbClass}
+* {ejbClass.simpleName}
+* \{moduleId}/{ejbClass.simpleName}
+* \{moduleId}/\{ejbName}
+
+=== Advanced Details on EJB 3.0 Business Proxies (the simple part)
 
 If you implement your business interfaces, your life is simple as your
 proxies will also implement your business interfaces of the same type.
@@ -279,19 +351,19 @@ implement your other business local interfaces.  Similarly, any proxy
 OpenEJB creates for a business remote interface will also implement your
 other business remote interfaces.
 
-+++<a name="JNDINames-AdvancedDetailsonEJB3.0BusinessProxies(thecomplicatedpart)">++++++</a>+++
-### Advanced Details on EJB 3.0 Business Proxies (the complicated part)
+
+=== Advanced Details on EJB 3.0 Business Proxies (the complicated part)
 
 *Who should read?*
 Read this section of either of these two apply to you:
- - You do not implement your business interfaces in your bean class
- - One or more of your business remote interfaces extend from javax.rmi.Remote
+* You do not implement your business interfaces in your bean class
+* One or more of your business remote interfaces extend from javax.rmi.Remote
 
 If neither of these two items describe your apps, then there is no need to
 read further.  Go have fun.
 
-+++<a name="JNDINames-Notimplementingbusinessinterfaces">++++++</a>+++
-### Not implementing business interfaces
+
+=== Not implementing business interfaces
 
 If you do not implement your business interfaces it may not be possible for
 us to implement all your business interfaces in a single interface.
@@ -299,8 +371,8 @@ Conflicts in the throws clauses and the return values can occur as detailed [her
 .  When creating a proxy for an interface we will detect and remove any
 other business interfaces that would conflict with the main interface.
 
-+++<a name="JNDINames-Businessinterfacesextendingjavax.rmi.Remote">++++++</a>+++
-### Business interfaces extending javax.rmi.Remote
+
+=== Business interfaces extending javax.rmi.Remote
 
 Per spec rules many runtime exceptions (container or connection related)
 are thrown from javax.rmi.Remote proxies as java.rmi.RemoteException which
@@ -308,12 +380,14 @@ is not a runtime exception and must be throwable via the proxy as a checked
 exception. The issue is that conflicting throws clauses are actually
 removed for two interfaces sharing the same method signature.  For example
 two methods such as these:
- - InterfaceA: void doIt() throws Foo;
- - InterfaceB: void doIt() throws RemoteException;
+
+* InterfaceA: void doIt() throws Foo;
+* InterfaceB: void doIt() throws RemoteException;
 
 can be implemented by trimming out the conflicting throws clauses as
 follows:
-  - Implementation: void doIt(){}
+
+ * Implementation: void doIt(){}
 
 This is fine for a bean class as it does not need to throw the RMI required
 javax.rmi.RemoteException. However if we create a proxy from these two
@@ -324,6 +398,10 @@ for any container related issues or connection issues.	If the container
 attempts to throw a RemoteException from the proxies 'doIt(){}' method, it
 will result in an UndeclaredThrowableException thrown by the VM.
 
-The only way to guarantee the proxy has the 'doIt() throws RemoteException
-{}' method of InterfaceB is to cut out InterfaceA when we create the proxy
-dedicated to InterfaceB.+++</jndi>++++++</jndi>++++++</jndi>++++++</service-endpoint>++++++</business-local>++++++</business-remote>++++++</local-home>++++++</home>++++++</td>++++++</tr>++++++</ejb-jar>++++++</td>++++++</tr>++++++</table>+++
+The only way to guarantee the proxy has the
+
+`doIt() throws RemoteException{}`
+
+method of InterfaceB is to cut out InterfaceA when we create the proxy dedicated to InterfaceB.
+
+

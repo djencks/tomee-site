@@ -1,8 +1,8 @@
-= OpenEJB Eclipse Plugin +++<a name="OpenEJBEclipsePlugin-OpenEJBEclipsePlugin">++++++</a>+++
+= OpenEJB Eclipse Plugin
 
 = OpenEJB Eclipse Plugin
 
-+++<a name="OpenEJBEclipsePlugin-Overview">++++++</a>+++
+
 
 [discrete]
 === Overview

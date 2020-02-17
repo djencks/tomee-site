@@ -1,4 +1,4 @@
-= Injection of env-entry Example +++<a name="Injectionofenv-entryExample-Overview">++++++</a>+++
+= Injection of env-entry Example
 
 = Overview
 
@@ -23,11 +23,11 @@ See the xref:custom-injection.adoc[Custom Injection]  example for details.
 
 _The source for this example is the "injection-of-env-entry" directory located in the xref:openejb:download.adoc[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page]._
 
-+++<a name="Injectionofenv-entryExample-TheCode">++++++</a>+++
+
 
 = The Code
 
-+++<a name="Injectionofenv-entryExample-AnnotatedBeanClass">++++++</a>+++
+
 
 == Annotated Bean Class
 
@@ -44,7 +44,7 @@ For example, this annotation could have been used on the corresponding _field_ l
  @Resource
  private int maxLineItems;
 
-+++<a name="Injectionofenv-entryExample-ejb-jar.xml">++++++</a>+++
+
 
 == ejb-jar.xml
 
@@ -55,7 +55,7 @@ For example, this annotation could have been used on the corresponding _field_ l
 | lang=xml}
 |===
 
-+++<a name="Injectionofenv-entryExample-TestCase">++++++</a>+++
+
 
 = Test Case
 
@@ -66,7 +66,7 @@ For example, this annotation could have been used on the corresponding _field_ l
 | lang=java}
 |===
 
-+++<a name="Injectionofenv-entryExample-Runningit">++++++</a>+++
+
 
 = Running it
 

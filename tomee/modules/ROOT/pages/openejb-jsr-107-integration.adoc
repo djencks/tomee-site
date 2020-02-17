@@ -1,12 +1,12 @@
 = OpenEJB JSR-107 Integration
 
-+++<a name="OpenEJBJSR-107Integration-OpenEJBJSR-107(JCACHE)Integration">++++++</a>+++
+
 
 = OpenEJB JSR-107 (JCACHE) Integration
 
 This page is for the collaboration for those involved with the integration of JSR-107 into OpenEJB.
 
-+++<a name="OpenEJBJSR-107Integration-Overview">++++++</a>+++
+
 
 [discrete]
 === Overview
@@ -14,7 +14,7 @@ This page is for the collaboration for those involved with the integration of JS
 The idea here is to add a caching layer to OpenEJB.
 The overall objective is to improve performance in OpenEJB where applicable through caching EJBs.
 
-+++<a name="OpenEJBJSR-107Integration-Status">++++++</a>+++
+
 
 [discrete]
 === Status

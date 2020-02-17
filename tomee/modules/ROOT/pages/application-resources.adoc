@@ -1,4 +1,4 @@
-= Application Resources +++<a name="ApplicationResources">++++++</a>+++
+= Application Resources
 
 = Resources
 
@@ -37,7 +37,7 @@ Server-wide resources can be looked up in JNDI under the following name: openejb
 
 = Defining Resources
 
-+++<a name="DefiningResources">++++++</a>+++
+
 
 The `<Resource>` tag has a number of attributes, and a resource may also have a number of fields that can be configured by adding properties to the body of the `Resource` tag.
 

@@ -1,12 +1,12 @@
 = Local Server !http://www.openejb.org/images/diagram-local-server.gif|valign=top, align=right, hspace=15!
-+++<a name="LocalServer-AccessingEJBsLocally">++++++</a>+++
+
 
 = Accessing EJBs Locally
 
 When OpenEJB embedded in your app, server, IDE, or JUnit, you can use what we call the Local Server and avoid the network overhead and enjoy an easy way to embedd OpenEJB.
 Instead of putting the app in the server, put the server in the app!
 
-+++<a name="LocalServer-Saywhat?!Alocalserver?">++++++</a>+++
+
 
 = Say what?! A local server?
 
@@ -37,7 +37,7 @@ It doesn't open connections, launch threads for processing requests, introduce c
 All it does is dish out proxies to your app that can be used to shoot calls right into the EJB Container.
 Very light, very fast, very easy for testing, debugging, developing, etc.
 
-+++<a name="LocalServer-Embedding">++++++</a>+++
+
 
 = Embedding
 

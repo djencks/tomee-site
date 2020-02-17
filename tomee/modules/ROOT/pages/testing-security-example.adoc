@@ -1,6 +1,6 @@
 = Testing Security Example
 
-+++<a name="TestingSecurityExample-Overview">++++++</a>+++
+
 
 = Overview
 
@@ -15,7 +15,7 @@ See the xref:security-annotations.adoc[Security Annotations]  page for a full de
 
 _The source for this example is in the "testing-security" directory located in the xref:openejb:download.adoc[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page]._
 
-+++<a name="TestingSecurityExample-TheCode">++++++</a>+++
+
 
 = The Code
 

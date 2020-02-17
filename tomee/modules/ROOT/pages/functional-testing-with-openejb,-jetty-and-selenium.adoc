@@ -4,7 +4,7 @@ This however means you have to have your app running on your app server, and you
 Here's one approach that you could take to completely deploy your webapp within a test, and functionally test it with a tool like Selenium.
 There's also some sample code demonstrating this, available http://people.apache.org/~jgallimore/PersonApp.zip[here] .
 
-+++<a name="FunctionaltestingwithOpenEJB,JettyandSelenium-Creatinganembeddedserver">++++++</a>+++
+
 
 === Creating an embedded server
 
@@ -117,7 +117,7 @@ You'll notice the setupJndi() method.
 This looks through the ejb-ref entries in web.xml (which we deserialize using the openejb-jee library), and adds relevant LinkRefs to the JNDI tree, so you can lookup beans using the java:comp/env/bean format.
 I've added a main() method here for convenience, so you can run this straight from an IDE, and record tests using tools like the Selenium Firefox plugin.
 
-+++<a name="FunctionaltestingwithOpenEJB,JettyandSelenium-Supporting@EJBDependencyinjection">++++++</a>+++
+
 
 === Supporting @EJB Dependency injection
 
@@ -168,7 +168,7 @@ public class EmbeddedServerServletHandler extends ServletHandler {
 
 This looks up deployed beans that match the field type, and uses reflection to set the field.
 
-+++<a name="FunctionaltestingwithOpenEJB,JettyandSelenium-WritingaFunctionaltest">++++++</a>+++
+
 
 === Writing a Functional test
 
@@ -212,7 +212,7 @@ public class AddPersonTest extends FunctionalTestCase {
 }
 ....
 
-+++<a name="FunctionaltestingwithOpenEJB,JettyandSelenium-Samplecode">++++++</a>+++
+
 
 === Sample code
 

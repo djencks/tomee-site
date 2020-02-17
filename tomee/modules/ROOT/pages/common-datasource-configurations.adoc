@@ -2,7 +2,7 @@
 
 See the xref:datasource-config.adoc[DataSource Configuration] for details on all configuration options for DataSources.
 
-+++<a name="CommonDataSourceConfigurations-HSQLDB">++++++</a>+++
+
 
 == HSQLDB
 
@@ -15,7 +15,7 @@ The drivers are included with OpenEJB 3.0 and HSQLDB is the default database.
      Password
  </Resource>
 
-+++<a name="CommonDataSourceConfigurations-Derby(Embedded)">++++++</a>+++
+
 
 == Derby (Embedded)
 
@@ -30,7 +30,7 @@ The drivers are included with OpenEJB 3.0 and HSQLDB is the default database.
 </Resource>
 ....
 
-+++<a name="CommonDataSourceConfigurations-MySQL">++++++</a>+++
+
 
 == MySQL
 
@@ -47,7 +47,7 @@ The drivers are included with OpenEJB 3.0 and HSQLDB is the default database.
 </Resource>
 ....
 
-+++<a name="CommonDataSourceConfigurations-Oracle">++++++</a>+++
+
 
 == Oracle
 
@@ -62,7 +62,7 @@ The drivers are included with OpenEJB 3.0 and HSQLDB is the default database.
      Password	tiger
  </Resource>
 
-+++<a name="CommonDataSourceConfigurations-OracleXA">++++++</a>+++
+
 
 == OracleXA
 
@@ -77,7 +77,7 @@ The drivers are included with OpenEJB 3.0 and HSQLDB is the default database.
      Password	tiger
  </Resource>
 
-+++<a name="CommonDataSourceConfigurations-PosgreSQL">++++++</a>+++
+
 
 == PosgreSQL
 
@@ -92,7 +92,7 @@ The drivers are included with OpenEJB 3.0 and HSQLDB is the default database.
      Password	 pass
  </Resource>
 
-+++<a name="CommonDataSourceConfigurations-InstantDB">++++++</a>+++
+
 
 == InstantDB
 

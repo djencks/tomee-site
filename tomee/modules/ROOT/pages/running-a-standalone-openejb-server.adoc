@@ -1,6 +1,6 @@
 = Running a standalone OpenEJB server
 
-+++<a name="RunningastandaloneOpenEJBserver-ConfiguringtheOpenEJBRuntime">++++++</a>+++
+
 
 = Configuring the OpenEJB Runtime
 
@@ -22,7 +22,7 @@ image::http://people.apache.org/~jgallimore/images/server_step_5.jpg[http://peop
 Browse to, or enter the path to your copy of OpenEJB.
 Click on Finish.
 
-+++<a name="RunningastandaloneOpenEJBserver-ConfiguringtheOpenEJBServer">++++++</a>+++
+
 
 = Configuring the OpenEJB Server
 
@@ -38,7 +38,7 @@ Select the EJB port for the server, and select Finish.
 
 image::http://people.apache.org/~jgallimore/images/server_step_10.jpg[http://people.apache.org/~jgallimore/images/server_step_10.jpg]
 
-+++<a name="RunningastandaloneOpenEJBserver-Deployingaproject">++++++</a>+++
+
 
 = Deploying a project
 

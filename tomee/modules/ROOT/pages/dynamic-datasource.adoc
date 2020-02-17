@@ -1,8 +1,8 @@
-= Dynamic Datasource +++<a name="DynamicDatasource-OpenEJBdynamicdatasource">++++++</a>+++
+= Dynamic Datasource
 
 = OpenEJB dynamic datasource
 
-+++<a name="DynamicDatasource-Goal">++++++</a>+++
+
 
 == Goal
 
@@ -10,7 +10,7 @@ The openejb dynamic datasource api aims to allow to use multiple data sources as
 
 It can be useful for technical reasons (load balancing for example) or functionnal reasons (filtering, aggregation, enriching...).
 
-+++<a name="DynamicDatasource-TheAPI">++++++</a>+++
+
 
 == The API
 
@@ -25,7 +25,7 @@ You can implement all the policy you want in your Router implementation.
 
 A class called _org.apache.openejb.resource.jdbc.AbstractRouter_ is available to ease router development.
 
-+++<a name="DynamicDatasource-Knownlimitation(s)">++++++</a>+++
+
 
 == Known limitation(s)
 
@@ -34,24 +34,24 @@ You have to use the same kind of databases (same version, same configuration...)
 All database have to be created when you use the router.
 The way to do it automatically can depend of your JPA provider.
 
-+++<a name="DynamicDatasource-OpenJPA">++++++</a>+++
+
 
 === OpenJPA
 
 OpenJPA initializes its database when the entitymanager is called for the first time so you need to initialize all your proxied datasource before using the other one.
 It can be done using an Init EJB doing a find() on each proxied datasource.
 
-+++<a name="DynamicDatasource-Hibernate">++++++</a>+++
+
 
 === Hibernate
 
 Hibernate initializes the database when it starts so if you declare a persistence unit by database all databases will be initialized at the start up.
 
-+++<a name="DynamicDatasource-Example">++++++</a>+++
+
 
 == Example
 
-+++<a name="DynamicDatasource-Thestory(theunittestexample)">++++++</a>+++
+
 
 === The story (the unit test example)
 
@@ -76,7 +76,7 @@ public class RoutedEJBBean {
 }
 ....
 
-+++<a name="DynamicDatasource-Therouterimplementation">++++++</a>+++
+
 
 == The router implementation
 
@@ -162,7 +162,7 @@ public class DeterminedRouter implements Router {
 }
 ....
 
-+++<a name="DynamicDatasource-Creationoftheserviceproviderfortherouter">++++++</a>+++
+
 
 == Creation of the service provider for the router
 

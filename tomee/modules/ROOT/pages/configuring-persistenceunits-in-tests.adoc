@@ -1,10 +1,10 @@
-= Configuring PersistenceUnits in Tests +++<a name="ConfiguringPersistenceUnitsinTests-Overridingthepersistence.xml">++++++</a>+++
+= Configuring PersistenceUnits in Tests
 
 = Overriding the persistence.xml
 
 The most common situation in EJB related testing by far is the need to alter your persistence.xml for a test environment.
 
-+++<a name="ConfiguringPersistenceUnitsinTests-Overridingthe<jta-data-source>and<non-jta-data-source>">++++++</a>+++
+
 
 == Overriding the jta-data-source and non-jta-data-source
 
@@ -14,7 +14,7 @@ If there is only one DataSource configured, it's very easy for us to guess the D
 This allows you to keep your persistence.xml configured for your production environment and helps eliminate the need for a "test" persistence.xml (though we do have that functionality).
 A log line will be printed saying if we had to adjust the DataSources of your persistence.xml.
 
-+++<a name="ConfiguringPersistenceUnitsinTests-Overridingthepersistence-unit<properties>">++++++</a>+++
+
 
 == Overriding the persistence-unit properties
 

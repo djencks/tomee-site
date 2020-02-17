@@ -18,7 +18,7 @@ The AroundInvoke syntax for an EJB or Interceptor is the same:
 
 * @AroundInvoke <any-scope> Object <method-name>(InvocationContext) throws Exception
 
-+++<a name="Callbacks-Stateless">++++++</a>+++
+
 
 == Stateless
 
@@ -49,7 +49,7 @@ public class MyStatelessBean implements  MyBusinessInterface  {
 }
 ....
 
-+++<a name="Callbacks-Stateful">++++++</a>+++
+
 
 == Stateful
 
@@ -92,7 +92,7 @@ public class MyStatefulBean implements	MyBusinessInterface  {
 }
 ....
 
-+++<a name="Callbacks-MessageDriven">++++++</a>+++
+
 
 == MessageDriven
 
@@ -123,7 +123,7 @@ public class MyMessageDrivenBean implements  MyListenerInterface  {
 }
 ....
 
-+++<a name="Callbacks-Interceptor">++++++</a>+++
+
 
 == Interceptor
 

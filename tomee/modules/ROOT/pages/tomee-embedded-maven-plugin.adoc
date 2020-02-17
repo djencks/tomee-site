@@ -6,7 +6,7 @@ TomEE embedded maven plugin solves it directly allowing to directly deploy the w
 
 It also allows to use a flat classpath deployment which is often use with microservices.
 
-== +++<a name="tomee-embedded:run">++++++</a>+++tomee-embedded:run
+== tomee-embedded:run
 
 *Full name*:
 
@@ -20,317 +20,475 @@ Run an Embedded TomEE.
 
 * Requires a Maven project to be executed.
 * Requires dependency resolution of artifacts in scope: +++<tt>+++runtime+system+++</tt>+++.
-* Requires dependency collection of artifacts in scope: +++<tt>+++runtime+++</tt>+++.+++<div class="section">+++=== +++<a name="Optional_Parameters">++++++</a>+++Optional Parameters+++<table class="bodyTable" border="0">++++++<tr class="a">++++++<th>+++Name+++</th>+++
+* Requires dependency collection of artifacts in scope: +++<tt>+++runtime+++</tt>+++.+++<div class="section">+++=== Optional Parameters+++<table class="bodyTable" border="0">++++++<tr class="a">+++
+|Name
 
-+++<th>+++Type+++</th>+++
 
-+++<th>+++Since+++</th>+++
+|Type
 
-+++<th>+++Description+++</th>++++++</tr>+++
 
-+++<tr class="b">++++++<td>++++++<b>++++++<a href="#ajpPort">+++ajpPort+++</a>++++++</b>++++++</td>+++
+|Since
 
-+++<td>++++++<tt>+++int+++</tt>++++++</td>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
+|Description
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++8009+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.ajp+++</tt>+++.+++</td>++++++</tr>+++
++++<tr class="b">+++
+|+++<b>++++++<a href="#ajpPort">+++ajpPort+++</a>++++++</b>+++
 
-+++<tr class="a">++++++<td>++++++<b>++++++<a href="#applicationCopyFolder">+++applicationCopyFolder+++</a>++++++</b>++++++</td>+++
 
-+++<td>++++++<tt>+++File+++</tt>++++++</td>+++
+|+++<tt>+++int+++</tt>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.build.directory}/tomee-embedded/applications+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.application-copy+++</tt>+++.+++</td>++++++</tr>+++
+|+++<tt>+++-+++</tt>+++
 
-+++<tr class="b">++++++<td>++++++<b>++++++<a href="#applicationScopes">+++applicationScopes+++</a>++++++</b>++++++</td>+++
 
-+++<td>++++++<tt>+++List+++</tt>++++++</td>+++
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++8009+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.ajp+++</tt>+++.
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
++++<tr class="a">+++
+|+++<b>++++++<a href="#applicationCopyFolder">+++applicationCopyFolder+++</a>++++++</b>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++</td>++++++</tr>+++
 
-+++<tr class="a">++++++<td>++++++<b>++++++<a href="#applications">+++applications+++</a>++++++</b>++++++</td>+++
+|+++<tt>+++File+++</tt>+++
 
-+++<td>++++++<tt>+++List+++</tt>++++++</td>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
+|+++<tt>+++-+++</tt>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++</td>++++++</tr>+++
 
-+++<tr class="b">++++++<td>++++++<b>++++++<a href="#classpathAsWar">+++classpathAsWar+++</a>++++++</b>++++++</td>+++
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.build.directory}/tomee-embedded/applications+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.application-copy+++</tt>+++.
 
-+++<td>++++++<tt>+++boolean+++</tt>++++++</td>+++
++++<tr class="b">+++
+|+++<b>++++++<a href="#applicationScopes">+++applicationScopes+++</a>++++++</b>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.classpathAsWar+++</tt>+++.+++</td>++++++</tr>+++
+|+++<tt>+++List+++</tt>+++
 
-+++<tr class="a">++++++<td>++++++<b>++++++<a href="#clientAuth">+++clientAuth+++</a>++++++</b>++++++</td>+++
 
-+++<td>++++++<tt>+++String+++</tt>++++++</td>+++
+|+++<tt>+++-+++</tt>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.clientAuth+++</tt>+++.+++</td>++++++</tr>+++
+|(no description)+++<br>++++++</br>+++
 
-+++<tr class="b">++++++<td>++++++<b>++++++<a href="#containerProperties">+++containerProperties+++</a>++++++</b>++++++</td>+++
++++<tr class="a">+++
+|+++<b>++++++<a href="#applications">+++applications+++</a>++++++</b>+++
 
-+++<td>++++++<tt>+++Map+++</tt>++++++</td>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
+|+++<tt>+++List+++</tt>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++</td>++++++</tr>+++
 
-+++<tr class="a">++++++<td>++++++<b>++++++<a href="#context">+++context+++</a>++++++</b>++++++</td>+++
+|+++<tt>+++-+++</tt>+++
 
-+++<td>++++++<tt>+++String+++</tt>++++++</td>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
+|(no description)+++<br>++++++</br>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.context+++</tt>+++.+++</td>++++++</tr>+++
++++<tr class="b">+++
+|+++<b>++++++<a href="#classpathAsWar">+++classpathAsWar+++</a>++++++</b>+++
 
-+++<tr class="b">++++++<td>++++++<b>++++++<a href="#dir">+++dir+++</a>++++++</b>++++++</td>+++
 
-+++<td>++++++<tt>+++String+++</tt>++++++</td>+++
+|+++<tt>+++boolean+++</tt>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.build.directory}/apache-tomee-embedded+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.lib+++</tt>+++.+++</td>++++++</tr>+++
+|+++<tt>+++-+++</tt>+++
 
-+++<tr class="a">++++++<td>++++++<b>++++++<a href="#docBase">+++docBase+++</a>++++++</b>++++++</td>+++
 
-+++<td>++++++<tt>+++File+++</tt>++++++</td>+++
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.classpathAsWar+++</tt>+++.
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
++++<tr class="a">+++
+|+++<b>++++++<a href="#clientAuth">+++clientAuth+++</a>++++++</b>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.basedir}/src/main/webapp+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.docBase+++</tt>+++.+++</td>++++++</tr>+++
 
-+++<tr class="b">++++++<td>++++++<b>++++++<a href="#forceJspDevelopment">+++forceJspDevelopment+++</a>++++++</b>++++++</td>+++
+|+++<tt>+++String+++</tt>+++
 
-+++<td>++++++<tt>+++boolean+++</tt>++++++</td>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
+|+++<tt>+++-+++</tt>+++
 
-+++<td>+++force webapp to be reloadable+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++true+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.jsp-development+++</tt>+++.+++</td>++++++</tr>+++
 
-+++<tr class="a">++++++<td>++++++<b>++++++<a href="#host">+++host+++</a>++++++</b>++++++</td>+++
+|(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.clientAuth+++</tt>+++.
 
-+++<td>++++++<tt>+++String+++</tt>++++++</td>+++
++++<tr class="b">+++
+|+++<b>++++++<a href="#containerProperties">+++containerProperties+++</a>++++++</b>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++localhost+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.host+++</tt>+++.+++</td>++++++</tr>+++
+|+++<tt>+++Map+++</tt>+++
 
-+++<tr class="b">++++++<td>++++++<b>++++++<a href="#httpPort">+++httpPort+++</a>++++++</b>++++++</td>+++
 
-+++<td>++++++<tt>+++int+++</tt>++++++</td>+++
+|+++<tt>+++-+++</tt>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++8080+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.http+++</tt>+++.+++</td>++++++</tr>+++
+|(no description)+++<br>++++++</br>+++
 
-+++<tr class="a">++++++<td>++++++<b>++++++<a href="#httpsPort">+++httpsPort+++</a>++++++</b>++++++</td>+++
++++<tr class="a">+++
+|+++<b>++++++<a href="#context">+++context+++</a>++++++</b>+++
 
-+++<td>++++++<tt>+++int+++</tt>++++++</td>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
+|+++<tt>+++String+++</tt>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++8443+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.httpsPort+++</tt>+++.+++</td>++++++</tr>+++
 
-+++<tr class="b">++++++<td>++++++<b>++++++<a href="#inlinedServerXml">+++inlinedServerXml+++</a>++++++</b>++++++</td>+++
+|+++<tt>+++-+++</tt>+++
 
-+++<td>++++++<tt>+++PlexusConfiguration+++</tt>++++++</td>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
+|(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.context+++</tt>+++.
 
-+++<td>+++(no description)+++<br>++++++</br>++++++</td>++++++</tr>+++
++++<tr class="b">+++
+|+++<b>++++++<a href="#dir">+++dir+++</a>++++++</b>+++
 
-+++<tr class="a">++++++<td>++++++<b>++++++<a href="#inlinedTomEEXml">+++inlinedTomEEXml+++</a>++++++</b>++++++</td>+++
 
-+++<td>++++++<tt>+++PlexusConfiguration+++</tt>++++++</td>+++
+|+++<tt>+++String+++</tt>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++</td>++++++</tr>+++
+|+++<tt>+++-+++</tt>+++
 
-+++<tr class="b">++++++<td>++++++<b>++++++<a href="#keepServerXmlAsThis">+++keepServerXmlAsThis+++</a>++++++</b>++++++</td>+++
 
-+++<td>++++++<tt>+++boolean+++</tt>++++++</td>+++
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.build.directory}/apache-tomee-embedded+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.lib+++</tt>+++.
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
++++<tr class="a">+++
+|+++<b>++++++<a href="#docBase">+++docBase+++</a>++++++</b>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.keepServerXmlAsThis+++</tt>+++.+++</td>++++++</tr>+++
 
-+++<tr class="a">++++++<td>++++++<b>++++++<a href="#keyAlias">+++keyAlias+++</a>++++++</b>++++++</td>+++
+|+++<tt>+++File+++</tt>+++
 
-+++<td>++++++<tt>+++String+++</tt>++++++</td>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
+|+++<tt>+++-+++</tt>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.keyAlias+++</tt>+++.+++</td>++++++</tr>+++
 
-+++<tr class="b">++++++<td>++++++<b>++++++<a href="#keystoreFile">+++keystoreFile+++</a>++++++</b>++++++</td>+++
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.basedir}/src/main/webapp+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.docBase+++</tt>+++.
 
-+++<td>++++++<tt>+++String+++</tt>++++++</td>+++
++++<tr class="b">+++
+|+++<b>++++++<a href="#forceJspDevelopment">+++forceJspDevelopment+++</a>++++++</b>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.keystoreFile+++</tt>+++.+++</td>++++++</tr>+++
+|+++<tt>+++boolean+++</tt>+++
 
-+++<tr class="a">++++++<td>++++++<b>++++++<a href="#keystorePass">+++keystorePass+++</a>++++++</b>++++++</td>+++
 
-+++<td>++++++<tt>+++String+++</tt>++++++</td>+++
+|+++<tt>+++-+++</tt>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.keystorePass+++</tt>+++.+++</td>++++++</tr>+++
+|force webapp to be reloadable+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++true+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.jsp-development+++</tt>+++.
 
-+++<tr class="b">++++++<td>++++++<b>++++++<a href="#keystoreType">+++keystoreType+++</a>++++++</b>++++++</td>+++
++++<tr class="a">+++
+|+++<b>++++++<a href="#host">+++host+++</a>++++++</b>+++
 
-+++<td>++++++<tt>+++String+++</tt>++++++</td>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
+|+++<tt>+++String+++</tt>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++JKS+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.keystoreType+++</tt>+++.+++</td>++++++</tr>+++
 
-+++<tr class="a">++++++<td>++++++<b>++++++<a href="#mavenLog">+++mavenLog+++</a>++++++</b>++++++</td>+++
+|+++<tt>+++-+++</tt>+++
 
-+++<td>++++++<tt>+++boolean+++</tt>++++++</td>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++localhost+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.host+++</tt>+++.
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++true+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.mavenLog+++</tt>+++.+++</td>++++++</tr>+++
++++<tr class="b">+++
+|+++<b>++++++<a href="#httpPort">+++httpPort+++</a>++++++</b>+++
 
-+++<tr class="b">++++++<td>++++++<b>++++++<a href="#modules">+++modules+++</a>++++++</b>++++++</td>+++
 
-+++<td>++++++<tt>+++List+++</tt>++++++</td>+++
+|+++<tt>+++int+++</tt>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.build.outputDirectory}+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.modules+++</tt>+++.+++</td>++++++</tr>+++
+|+++<tt>+++-+++</tt>+++
 
-+++<tr class="a">++++++<td>++++++<b>++++++<a href="#packaging">+++packaging+++</a>++++++</b>++++++</td>+++
 
-+++<td>++++++<tt>+++String+++</tt>++++++</td>+++
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++8080+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.http+++</tt>+++.
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
++++<tr class="a">+++
+|+++<b>++++++<a href="#httpsPort">+++httpsPort+++</a>++++++</b>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.packaging}+++</tt>+++.+++<br>++++++</br>++++++</td>++++++</tr>+++
 
-+++<tr class="b">++++++<td>++++++<b>++++++<a href="#quickSession">+++quickSession+++</a>++++++</b>++++++</td>+++
+|+++<tt>+++int+++</tt>+++
 
-+++<td>++++++<tt>+++boolean+++</tt>++++++</td>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
+|+++<tt>+++-+++</tt>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++true+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.quickSession+++</tt>+++.+++</td>++++++</tr>+++
 
-+++<tr class="a">++++++<td>++++++<b>++++++<a href="#roles">+++roles+++</a>++++++</b>++++++</td>+++
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++8443+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.httpsPort+++</tt>+++.
 
-+++<td>++++++<tt>+++Map+++</tt>++++++</td>+++
++++<tr class="b">+++
+|+++<b>++++++<a href="#inlinedServerXml">+++inlinedServerXml+++</a>++++++</b>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++</td>++++++</tr>+++
+|+++<tt>+++PlexusConfiguration+++</tt>+++
 
-+++<tr class="b">++++++<td>++++++<b>++++++<a href="#serverXml">+++serverXml+++</a>++++++</b>++++++</td>+++
 
-+++<td>++++++<tt>+++File+++</tt>++++++</td>+++
+|+++<tt>+++-+++</tt>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++</td>++++++</tr>+++
+|(no description)+++<br>++++++</br>+++
 
-+++<tr class="a">++++++<td>++++++<b>++++++<a href="#skipCurrentProject">+++skipCurrentProject+++</a>++++++</b>++++++</td>+++
++++<tr class="a">+++
+|+++<b>++++++<a href="#inlinedTomEEXml">+++inlinedTomEEXml+++</a>++++++</b>+++
 
-+++<td>++++++<tt>+++boolean+++</tt>++++++</td>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
+|+++<tt>+++PlexusConfiguration+++</tt>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.skip-current-project+++</tt>+++.+++</td>++++++</tr>+++
 
-+++<tr class="b">++++++<td>++++++<b>++++++<a href="#skipHttp">+++skipHttp+++</a>++++++</b>++++++</td>+++
+|+++<tt>+++-+++</tt>+++
 
-+++<td>++++++<tt>+++boolean+++</tt>++++++</td>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
+|(no description)+++<br>++++++</br>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.skipHttp+++</tt>+++.+++</td>++++++</tr>+++
++++<tr class="b">+++
+|+++<b>++++++<a href="#keepServerXmlAsThis">+++keepServerXmlAsThis+++</a>++++++</b>+++
 
-+++<tr class="a">++++++<td>++++++<b>++++++<a href="#ssl">+++ssl+++</a>++++++</b>++++++</td>+++
 
-+++<td>++++++<tt>+++boolean+++</tt>++++++</td>+++
+|+++<tt>+++boolean+++</tt>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.ssl+++</tt>+++.+++</td>++++++</tr>+++
+|+++<tt>+++-+++</tt>+++
 
-+++<tr class="b">++++++<td>++++++<b>++++++<a href="#sslProtocol">+++sslProtocol+++</a>++++++</b>++++++</td>+++
 
-+++<td>++++++<tt>+++String+++</tt>++++++</td>+++
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.keepServerXmlAsThis+++</tt>+++.
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
++++<tr class="a">+++
+|+++<b>++++++<a href="#keyAlias">+++keyAlias+++</a>++++++</b>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.sslProtocol+++</tt>+++.+++</td>++++++</tr>+++
 
-+++<tr class="a">++++++<td>++++++<b>++++++<a href="#stopPort">+++stopPort+++</a>++++++</b>++++++</td>+++
+|+++<tt>+++String+++</tt>+++
 
-+++<td>++++++<tt>+++int+++</tt>++++++</td>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
+|+++<tt>+++-+++</tt>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++8005+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.stop+++</tt>+++.+++</td>++++++</tr>+++
 
-+++<tr class="b">++++++<td>++++++<b>++++++<a href="#useProjectClasspath">+++useProjectClasspath+++</a>++++++</b>++++++</td>+++
+|(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.keyAlias+++</tt>+++.
 
-+++<td>++++++<tt>+++boolean+++</tt>++++++</td>+++
++++<tr class="b">+++
+|+++<b>++++++<a href="#keystoreFile">+++keystoreFile+++</a>++++++</b>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++true+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.useProjectClasspath+++</tt>+++.+++</td>++++++</tr>+++
+|+++<tt>+++String+++</tt>+++
 
-+++<tr class="a">++++++<td>++++++<b>++++++<a href="#users">+++users+++</a>++++++</b>++++++</td>+++
 
-+++<td>++++++<tt>+++Map+++</tt>++++++</td>+++
+|+++<tt>+++-+++</tt>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++</td>++++++</tr>+++
+|(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.keystoreFile+++</tt>+++.
 
-+++<tr class="b">++++++<td>++++++<b>++++++<a href="#warFile">+++warFile+++</a>++++++</b>++++++</td>+++
++++<tr class="a">+++
+|+++<b>++++++<a href="#keystorePass">+++keystorePass+++</a>++++++</b>+++
 
-+++<td>++++++<tt>+++File+++</tt>++++++</td>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
+|+++<tt>+++String+++</tt>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.build.directory}/${project.build.finalName}+++</tt>+++.+++<br>++++++</br>++++++</td>++++++</tr>+++
 
-+++<tr class="a">++++++<td>++++++<b>++++++<a href="#webResourceCached">+++webResourceCached+++</a>++++++</b>++++++</td>+++
+|+++<tt>+++-+++</tt>+++
 
-+++<td>++++++<tt>+++boolean+++</tt>++++++</td>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
+|(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.keystorePass+++</tt>+++.
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++true+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.webResourceCached+++</tt>+++.+++</td>++++++</tr>+++
++++<tr class="b">+++
+|+++<b>++++++<a href="#keystoreType">+++keystoreType+++</a>++++++</b>+++
 
-+++<tr class="b">++++++<td>++++++<b>++++++<a href="#withEjbRemote">+++withEjbRemote+++</a>++++++</b>++++++</td>+++
 
-+++<td>++++++<tt>+++boolean+++</tt>++++++</td>+++
+|+++<tt>+++String+++</tt>+++
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.withEjbRemote+++</tt>+++.+++</td>++++++</tr>+++
+|+++<tt>+++-+++</tt>+++
 
-+++<tr class="a">++++++<td>++++++<b>++++++<a href="#workDir">+++workDir+++</a>++++++</b>++++++</td>+++
 
-+++<td>++++++<tt>+++File+++</tt>++++++</td>+++
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++JKS+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.keystoreType+++</tt>+++.
 
-+++<td>++++++<tt>+++-+++</tt>++++++</td>+++
++++<tr class="a">+++
+|+++<b>++++++<a href="#mavenLog">+++mavenLog+++</a>++++++</b>+++
 
-+++<td>+++(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.build.directory}/tomee-embedded-work+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.work+++</tt>+++.+++</td>++++++</tr>++++++</table>++++++</div>++++++<div class="section">+++=== +++<a name="Parameter_Details">++++++</a>+++Parameter Details
+
+|+++<tt>+++boolean+++</tt>+++
+
+
+|+++<tt>+++-+++</tt>+++
+
+
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++true+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.mavenLog+++</tt>+++.
+
++++<tr class="b">+++
+|+++<b>++++++<a href="#modules">+++modules+++</a>++++++</b>+++
+
+
+|+++<tt>+++List+++</tt>+++
+
+
+|+++<tt>+++-+++</tt>+++
+
+
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.build.outputDirectory}+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.modules+++</tt>+++.
+
++++<tr class="a">+++
+|+++<b>++++++<a href="#packaging">+++packaging+++</a>++++++</b>+++
+
+
+|+++<tt>+++String+++</tt>+++
+
+
+|+++<tt>+++-+++</tt>+++
+
+
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.packaging}+++</tt>+++.+++<br>++++++</br>+++
+
++++<tr class="b">+++
+|+++<b>++++++<a href="#quickSession">+++quickSession+++</a>++++++</b>+++
+
+
+|+++<tt>+++boolean+++</tt>+++
+
+
+|+++<tt>+++-+++</tt>+++
+
+
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++true+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.quickSession+++</tt>+++.
+
++++<tr class="a">+++
+|+++<b>++++++<a href="#roles">+++roles+++</a>++++++</b>+++
+
+
+|+++<tt>+++Map+++</tt>+++
+
+
+|+++<tt>+++-+++</tt>+++
+
+
+|(no description)+++<br>++++++</br>+++
+
++++<tr class="b">+++
+|+++<b>++++++<a href="#serverXml">+++serverXml+++</a>++++++</b>+++
+
+
+|+++<tt>+++File+++</tt>+++
+
+
+|+++<tt>+++-+++</tt>+++
+
+
+|(no description)+++<br>++++++</br>+++
+
++++<tr class="a">+++
+|+++<b>++++++<a href="#skipCurrentProject">+++skipCurrentProject+++</a>++++++</b>+++
+
+
+|+++<tt>+++boolean+++</tt>+++
+
+
+|+++<tt>+++-+++</tt>+++
+
+
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.skip-current-project+++</tt>+++.
+
++++<tr class="b">+++
+|+++<b>++++++<a href="#skipHttp">+++skipHttp+++</a>++++++</b>+++
+
+
+|+++<tt>+++boolean+++</tt>+++
+
+
+|+++<tt>+++-+++</tt>+++
+
+
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.skipHttp+++</tt>+++.
+
++++<tr class="a">+++
+|+++<b>++++++<a href="#ssl">+++ssl+++</a>++++++</b>+++
+
+
+|+++<tt>+++boolean+++</tt>+++
+
+
+|+++<tt>+++-+++</tt>+++
+
+
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.ssl+++</tt>+++.
+
++++<tr class="b">+++
+|+++<b>++++++<a href="#sslProtocol">+++sslProtocol+++</a>++++++</b>+++
+
+
+|+++<tt>+++String+++</tt>+++
+
+
+|+++<tt>+++-+++</tt>+++
+
+
+|(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.sslProtocol+++</tt>+++.
+
++++<tr class="a">+++
+|+++<b>++++++<a href="#stopPort">+++stopPort+++</a>++++++</b>+++
+
+
+|+++<tt>+++int+++</tt>+++
+
+
+|+++<tt>+++-+++</tt>+++
+
+
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++8005+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.stop+++</tt>+++.
+
++++<tr class="b">+++
+|+++<b>++++++<a href="#useProjectClasspath">+++useProjectClasspath+++</a>++++++</b>+++
+
+
+|+++<tt>+++boolean+++</tt>+++
+
+
+|+++<tt>+++-+++</tt>+++
+
+
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++true+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.useProjectClasspath+++</tt>+++.
+
++++<tr class="a">+++
+|+++<b>++++++<a href="#users">+++users+++</a>++++++</b>+++
+
+
+|+++<tt>+++Map+++</tt>+++
+
+
+|+++<tt>+++-+++</tt>+++
+
+
+|(no description)+++<br>++++++</br>+++
+
++++<tr class="b">+++
+|+++<b>++++++<a href="#warFile">+++warFile+++</a>++++++</b>+++
+
+
+|+++<tt>+++File+++</tt>+++
+
+
+|+++<tt>+++-+++</tt>+++
+
+
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.build.directory}/${project.build.finalName}+++</tt>+++.+++<br>++++++</br>+++
+
++++<tr class="a">+++
+|+++<b>++++++<a href="#webResourceCached">+++webResourceCached+++</a>++++++</b>+++
+
+
+|+++<tt>+++boolean+++</tt>+++
+
+
+|+++<tt>+++-+++</tt>+++
+
+
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++true+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.webResourceCached+++</tt>+++.
+
++++<tr class="b">+++
+|+++<b>++++++<a href="#withEjbRemote">+++withEjbRemote+++</a>++++++</b>+++
+
+
+|+++<tt>+++boolean+++</tt>+++
+
+
+|+++<tt>+++-+++</tt>+++
+
+
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-embedded-plugin.withEjbRemote+++</tt>+++.
+
++++<tr class="a">+++
+|+++<b>++++++<a href="#workDir">+++workDir+++</a>++++++</b>+++
+
+
+|+++<tt>+++File+++</tt>+++
+
+
+|+++<tt>+++-+++</tt>+++
+
+
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.build.directory}/tomee-embedded-work+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.work+++</tt>+++.
+|===
++++</div>++++++<div class="section">+++=== Parameter Details
 
 *+++<a name="ajpPort">+++ajpPort+++</a>+++:*
 

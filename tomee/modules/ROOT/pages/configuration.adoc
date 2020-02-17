@@ -1,8 +1,8 @@
-= Configuration +++<a name="Configuration-ShortOverview">++++++</a>+++
+= Configuration
 
 = Short Overview
 
-+++<a name="Configuration-ConfigurationProperties">++++++</a>+++
+
 
 == Configuration Properties
 
@@ -25,7 +25,7 @@ implements the org.openejb.alt.assembler.classic.OpenEjbConfigurationFactory int
 | false - When set OpenEJB saves deployment descriptors - ejb-jar.xml and openejb-jar.xml
 |===
 
-+++<a name="Configuration-ConfigurationFile">++++++</a>+++
+
 
 == Configuration File
 
