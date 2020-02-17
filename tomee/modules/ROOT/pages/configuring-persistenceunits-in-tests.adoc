@@ -1,12 +1,16 @@
 = Configuring PersistenceUnits in Tests
+:index-group: Testing Techniques
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 
-= Overriding the persistence.xml
+== Overriding the persistence.xml
 
 The most common situation in EJB related testing by far is the need to alter your persistence.xml for a test environment.
 
 
 
-== Overriding the jta-data-source and non-jta-data-source
+=== Overriding the jta-data-source and non-jta-data-source
 
 OpenEJB will automatically use the DataSources you have setup in your test environment, we're pretty good at guessing the right DataSources you intend even if the names don't match exactly -- or in some cases at all.
 If there is only one DataSource configured, it's very easy for us to guess the DataSource to use.
@@ -16,7 +20,7 @@ A log line will be printed saying if we had to adjust the DataSources of your pe
 
 
 
-== Overriding the persistence-unit properties
+=== Overriding the persistence-unit properties
 
 You can override any property in your test setup via either system properties or the initial context properties.
 The format is:
@@ -25,6 +29,8 @@ The format is:
 
 So for example with the following persistence.xml:
 
+[source,xml]
+----
  <persistence>
    <persistence-unit name="movie-unit">
      <provider>org.hibernate.ejb.HibernatePersistence</provider>
@@ -36,11 +42,13 @@ So for example with the following persistence.xml:
      </properties>
    </persistence-unit>
  </persistence>
+----
 
 You can override and add persistence unit properties in your test case.
 There are currently no facilities for removing them (if you have a need for that let us know -- it hasn't really come up so far).
 
-....
+[source,java]
+----
 Properties p = new Properties();
 p.put(Context.INITIAL_CONTEXT_FACTORY,"org.apache.openejb.client.LocalInitialContextFactory");
 
@@ -48,7 +56,7 @@ p.put("movie-unit.hibernate.hbm2ddl.auto", "update");
 p.put("movie-unit.hibernate.dialect", "org.hibernate.dialect.HSQLDialect");
 
 context = new InitialContext(p);
-....
+----
 
 The overriding order is as follows: 1 = highest, 4 = lowest.
 
@@ -69,12 +77,13 @@ These properties would be passed by OpenEJB directly to the persistence provider
 With one exception OpenEJB does not understand or modify these properties.
 Details on that one exception below.
 
-=== Common mistakes
+==== Common mistakes
 
 Note that you *must* use the *unit name* as the prefix.
 This will not work:
 
-....
+[source,java]
+----
     Properties p = new Properties();
     p.put(Context.INITIAL_CONTEXT_FACTORY,"org.apache.openejb.client.LocalInitialContextFactory");
 
@@ -82,18 +91,18 @@ This will not work:
     p.put("hibernate.dialect", "org.hibernate.dialect.HSQLDialect");
 
     context = new InitialContext(p);
-....
+----
 
 Currently, only properties that start with the unit name are search and applied.
 
-=== No need to specify a "transaction lookup" property
+==== No need to specify a "transaction lookup" property
 
 All vendors have such a property for getting a reference to the container's TransactionManager and nothing works if this is not set correctly to the OpenEJB specific class.
 To make the lives of users easier, OpenEJB will take the liberty of setting it for you.
 
 Here are the persistence provider classes we understand and the defaults we will set for you:
 
-==== Provider org.hibernate.ejb.HibernatePersistence
+===== Provider org.hibernate.ejb.HibernatePersistence
 
 When using this provider, the _hibernate.transaction.manager_lookup_class_ will be automatically set by OpenEJB to _org.apache.openejb.hibernate.TransactionManagerLookup_.
 If the property is already set in the persistence unit it will be overwritten if it starts with the standard "org.hibernate.transaction." prefix.
@@ -118,7 +127,7 @@ If the property is already set in the persistence unit it will be overwritten if
 
 Custom transaction controller implementations will never be overwritten automatically.
 
-==== Provider org.apache.openjpa.persistence.PersistenceProviderImpl
+===== Provider org.apache.openjpa.persistence.PersistenceProviderImpl
 
 OpenJPA is capable of discovering the correct method for locating the TransactionManager without the need for users to specify the specific strategy.
 Therefore no specific "magic" is required.

@@ -5,12 +5,9 @@ Apache TomEE is assembled from a vanilla Apache Tomcat zip file.
 We start with Apache Tomcat, add our jars and zip up the rest.
 The result is Tomcat with added EE features - TomEE.
 
-xref:downloads.adoc[Download Apache TomEE Now &raquo;]&nbsp;
-and xref:documentation.adoc[get started today!]
+xref:downloads.adoc[Download Apache TomEE Now]and xref:documentation.adoc[get started today!]
 
 == TomEE
-
-{row {span6
 
 The Web Profile version of TomEE contains
 
@@ -34,21 +31,18 @@ The TomEE Plus distribution adds the following:
 * *JMS* - Apache ActiveMQ
 * *Connector* - Apache Geronimo Connector
 
-}
 
-image:resources/images/microprofile.png[Microprofile]
+image::microprofile.png[Microprofile]
 
-image:resources/images/Geek-Choice-Awards-App-Server-100x100-black.png[Geeks Choice Award]
+image::Geek-Choice-Awards-App-Server-100x100-black.png[Geeks Choice Award]
 
-{span10 {hero-unit+++<iframe width="460" height="264" src="http://www.youtube.com/embed/eCrtoSTZ2RE" frameborder="0" allowfullscreen="">++++++</iframe>+++
+video::eCrtoSTZ2RE[youtube]
 
-} } }
-
-= Our Goal
+== Our Goal
 
 Simple, get much more from Apache Tomcat, yet without giving anything up.
 
-= Principles
+== Principles
 
 Some core principles guide the integration:
 
@@ -59,7 +53,7 @@ Some core principles guide the integration:
 The desire to beef-up Tomcat installations has persisted despite the existence of full-profile application servers, many of which actually include Tomcat in some truncated or stripped-down form.
 TomEE strives to fill this gap.
 
-= Under the Covers
+== Under the Covers
 
 Apache TomEE is assembled from a vanilla Apache Tomcat official distribution.
 No picking and choosing individual parts of Tomcat and building a "new" server leveraging Tomcat.
@@ -73,7 +67,7 @@ The result is a whole lotta sharing!
 Servlets now get access to JPA and Transactions, EJBs get access to Tomcat provided Security.
 Any Tomcat provided resources, say from a context.xml, can be looked up or injected by _any_ managed component in the system.
 
-= Keep it Tight, Keep it Simple
+== Keep it Tight, Keep it Simple
 
 There's a definite "less is more" philosophy in Apache TomEE.
 It's too easy to go too far when developing an app server.
@@ -88,7 +82,7 @@ The result speaks for itself:
 * Compatible with most Tomcat-aware tools
 * Compatible with Tomcat-tested apps
 
-= History
+== History
 
 In Apache TomEE's previous life, it was simply known as the OpenEJB+Tomcat integration.
 That description was always quite misleading.

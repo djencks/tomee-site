@@ -1,7 +1,5 @@
 = Deploying An Application To TomEE Or OpenEJB
 
-= Deploying An Application To TomEE Or OpenEJB
-
 == How to deploy my application under TomEE
 
 === Description
@@ -64,5 +62,5 @@ So it means it is easy for you to get a host and a port...so it is easy to deplo
 
 If you are using a route to deploy/undeploy your applications you can have a look to the proposed camel-openejb component:
 
-* base code: http://svn.apache.org/repos/asf/tomee/sandbox/camel/camel-openejb/
-* proposed to be added to camel: https://issues.apache.org/jira/browse/CAMEL-4935
+* base code: link:http://svn.apache.org/repos/asf/tomee/sandbox/camel/camel-openejb/[]
+* proposed to be added to camel: link:https://issues.apache.org/jira/browse/CAMEL-4935[]

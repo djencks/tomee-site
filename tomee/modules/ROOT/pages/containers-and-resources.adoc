@@ -1,17 +1,26 @@
-= Containers and Resources+++<div id="PageContent">+++
+= Containers and Resources
+:name-description-table-layout: cols="2,7a",options="header"
 
+== Containers
 
+=== CMP_ENTITY
 
-== CMP_ENTITY
-
-Declarable in tomee.xml via+++<div style="border-width: 1px;" class="code panel">++++++<div class="codeContent panelContent">+++[source,]
+Declarable in tomee.xml via
+[source,xml]
+----
  <Container id="Foo" type="CMP_ENTITY">
- </Container>+++</div>++++++</div>+++
+ </Container>
+----
 
-Declarable in properties via+++<div style="border-width: 1px;" class="panel">++++++<div class="panelContent">+++Foo = new://Container?type=CMP_ENTITY+++</div>++++++</div>+++
 
-Supports the following properties+++<div class="table-wrap">++++++<table class="confluenceTable">++++++<tbody>+++
+Declarable in properties via
+`Foo = new://Container?type=CMP_ENTITY`
 
+
+
+Supports the following properties
+[{name-description-table-layout}]
+|===
 |Property Name
 
 |Description
@@ -19,20 +28,26 @@ Supports the following properties+++<div class="table-wrap">++++++<table class="
 
 |CmpEngineFactory
 
-|Default value is +++<em>+++org.apache.openejb.core.cmp.jpa.JpaCmpEngineFactory+++</em>+++.+++</tbody>+++
+|Default value is `org.apache.openejb.core.cmp.jpa.JpaCmpEngineFactory`.
 |===
-+++</div>+++
 
 
 
-== TransactionManager
 
-Declarable in tomee.xml via+++<div style="border-width: 1px;" class="code panel">++++++<div class="codeContent panelContent">+++[source,]
+
+=== TransactionManager
+
+Declarable in tomee.xml via
+[source,xml]
+----
  <TransactionManager type="javax.transaction.TransactionManager">
- </TransactionManager>+++</div>++++++</div>+++
+ </TransactionManager>
+----
 
-Supports the following properties+++<div class="table-wrap">++++++<table class="confluenceTable">++++++<tbody>+++
 
+Supports the following properties
+[{name-description-table-layout}]
+|===
 |Property Name
 
 |Description
@@ -40,22 +55,31 @@ Supports the following properties+++<div class="table-wrap">++++++<table class="
 
 |defaultTransactionTimeoutSeconds
 
-|Default value is +++<em>+++10 minutes+++</em>+++.+++</tbody>+++
+|Default value is `10 minutes`.
 |===
-+++</div>+++
 
 
 
-== BMP_ENTITY
 
-Declarable in tomee.xml via+++<div style="border-width: 1px;" class="code panel">++++++<div class="codeContent panelContent">+++[source,]
+
+=== BMP_ENTITY
+
+Declarable in tomee.xml via
+[source,xml]
+----
  <Container id="Foo" type="BMP_ENTITY">
- </Container>+++</div>++++++</div>+++
+ </Container>
+----
 
-Declarable in properties via+++<div style="border-width: 1px;" class="panel">++++++<div class="panelContent">+++Foo = new://Container?type=BMP_ENTITY+++</div>++++++</div>+++
 
-Supports the following properties+++<div class="table-wrap">++++++<table class="confluenceTable">++++++<tbody>+++
+Declarable in properties via
+`Foo = new://Container?type=BMP_ENTITY`
 
+
+
+Supports the following properties
+[{name-description-table-layout}]
+|===
 |Property Name
 
 |Description
@@ -63,22 +87,33 @@ Supports the following properties+++<div class="table-wrap">++++++<table class="
 
 |PoolSize
 
-|Specifies the size of the bean pools for this+++<br class="atl-forced-newline">++++++</br>+++ bmp entity container.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++10+++</em>+++.+++</tbody>+++
+|Specifies the size of the bean pools for this bmp entity container.
+
+Default value is `10`.
 |===
-+++</div>+++
 
 
 
-== STATELESS
 
-Declarable in tomee.xml via+++<div style="border-width: 1px;" class="code panel">++++++<div class="codeContent panelContent">+++[source,]
+
+=== STATELESS
+
+Declarable in tomee.xml via
+[source,xml]
+----
  <Container id="Foo" type="STATELESS">
- </Container>+++</div>++++++</div>+++
+ </Container>
+----
 
-Declarable in properties via+++<div style="border-width: 1px;" class="panel">++++++<div class="panelContent">+++Foo = new://Container?type=STATELESS+++</div>++++++</div>+++
 
-Supports the following properties+++<div class="table-wrap">++++++<table class="confluenceTable">++++++<tbody>+++
+Declarable in properties via
+`Foo = new://Container?type=STATELESS`
 
+
+
+Supports the following properties
+[{name-description-table-layout}]
+|===
 |Property Name
 
 |Description
@@ -86,32 +121,54 @@ Supports the following properties+++<div class="table-wrap">++++++<table class="
 
 |TimeOut
 
-|Specifies the time to wait between invocations. This+++<br class="atl-forced-newline">++++++</br>+++ value is measured in milliseconds. A value of 5 would+++<br class="atl-forced-newline">++++++</br>+++ result in a time-out of 5 milliseconds between invocations.+++<br class="atl-forced-newline">++++++</br>+++ A value of zero would mean no timeout.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++0+++</em>+++.
+|Specifies the time to wait between invocations.
+This value is measured in milliseconds.
+A value of 5 would result in a time-out of 5 milliseconds between invocations.
+A value of zero would mean no timeout.
+
+Default value is `0`.
 
 
 |PoolSize
 
-|Specifies the size of the bean pools for this+++<br class="atl-forced-newline">++++++</br>+++ stateless SessionBean container.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++10+++</em>+++.
+|Specifies the size of the bean pools for this stateless SessionBean container.
+
+Default value is `10`.
 
 
 |StrictPooling
 
-|StrictPooling tells the container what to do when the pool+++<br class="atl-forced-newline">++++++</br>+++ reaches it's maximum size and there are incoming requests+++<br class="atl-forced-newline">++++++</br>+++ that need instances.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ With strict pooling, requests will have to wait for instances+++<br class="atl-forced-newline">++++++</br>+++ to become available. The pool size will never grow beyond the+++<br class="atl-forced-newline">++++++</br>+++ the set PoolSize value.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Without strict pooling, the container will create temporary+++<br class="atl-forced-newline">++++++</br>+++ instances to meet demand. The instances will last for just one+++<br class="atl-forced-newline">++++++</br>+++ method invocation and then are removed.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++true+++</em>+++.+++</tbody>+++
+|StrictPooling tells the container what to do when the pool reaches it's maximum size and there are incoming requests that need instances.
+With strict pooling, requests will have to wait for instances to become available.
+The pool size will never grow beyond the the set PoolSize value.
+Without strict pooling, the container will create temporary instances to meet demand.
+The instances will last for just one method invocation and then are removed.
+
+Default value is `true`.
 |===
-+++</div>+++
 
 
 
-== STATEFUL
 
-Declarable in tomee.xml via+++<div style="border-width: 1px;" class="code panel">++++++<div class="codeContent panelContent">+++[source,]
+
+=== STATEFUL
+
+Declarable in tomee.xml via
+[source,xml]
+----
  <Container id="Foo" type="STATEFUL">
- </Container>+++</div>++++++</div>+++
+ </Container>
+----
 
-Declarable in properties via+++<div style="border-width: 1px;" class="panel">++++++<div class="panelContent">+++Foo = new://Container?type=STATEFUL+++</div>++++++</div>+++
 
-Supports the following properties+++<div class="table-wrap">++++++<table class="confluenceTable">++++++<tbody>+++
+Declarable in properties via
+`Foo = new://Container?type=STATEFUL`
 
+
+
+Supports the following properties
+[{name-description-table-layout}]
+|===
 |Property Name
 
 |Description
@@ -119,37 +176,66 @@ Supports the following properties+++<div class="table-wrap">++++++<table class="
 
 |Passivator
 
-|The passivator is responsible for writing beans to disk+++<br class="atl-forced-newline">++++++</br>+++ at passivation time. Different passivators can be used+++<br class="atl-forced-newline">++++++</br>+++ by setting this property to the fully qualified class name+++<br class="atl-forced-newline">++++++</br>+++ of the PassivationStrategy implementation. The passivator+++<br class="atl-forced-newline">++++++</br>+++ is not responsible for invoking any callbacks or other+++<br class="atl-forced-newline">++++++</br>+++ processing, its only responsibly is to write the bean state+++<br class="atl-forced-newline">++++++</br>+++ to disk.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Known implementations:+++<br class="atl-forced-newline">++++++</br>+++ org.apache.openejb.core.stateful.RAFPassivater+++<br class="atl-forced-newline">++++++</br>+++ org.apache.openejb.core.stateful.SimplePassivater+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++org.apache.openejb.core.stateful.SimplePassivater+++</em>+++.
+|The passivator is responsible for writing beans to disk at passivation time.
+Different passivators can be used by setting this property to the fully qualified class name of the PassivationStrategy implementation.
+The passivator is not responsible for invoking any callbacks or other processing, its only responsibly is to write the bean state to disk.
+Known implementations:
+
+* org.apache.openejb.core.stateful.RAFPassivater
+* org.apache.openejb.core.stateful.SimplePassivater
+
+Default value is `org.apache.openejb.core.stateful.SimplePassivater`.
 
 
 |TimeOut
 
-|Specifies the time to wait between invocations. This+++<br class="atl-forced-newline">++++++</br>+++ value is measured in minutes. A value of 5 would+++<br class="atl-forced-newline">++++++</br>+++ result in a time-out of 5 minutes between invocations.+++<br class="atl-forced-newline">++++++</br>+++ A value of zero would mean no timeout.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++20+++</em>+++.
+|Specifies the time to wait between invocations.
+
+This value is measured in minutes.
+
+A value of 5 would result in a time-out of 5 minutes between invocations.
+
+A value of zero would mean no timeout.
+
+Default value is `20`.
 
 
 |PoolSize
 
-|Specifies the size of the bean pools for this+++<br class="atl-forced-newline">++++++</br>+++ stateful SessionBean container.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++1000+++</em>+++.
+|Specifies the size of the bean pools for this stateful SessionBean container.
+
+ Default value is `1000`.
 
 
 |BulkPassivate
 
-|Property name that specifies the number of instances+++<br class="atl-forced-newline">++++++</br>+++ to passivate at one time when doing bulk passivation.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++100+++</em>+++.+++</tbody>+++
+|Property name that specifies the number of instances to passivate at one time when doing bulk passivation.
+
+ Default value is `100`.
 |===
-+++</div>+++
 
 
 
-== MESSAGE
 
-Declarable in tomee.xml via+++<div style="border-width: 1px;" class="code panel">++++++<div class="codeContent panelContent">+++[source,]
+
+=== MESSAGE
+
+Declarable in tomee.xml via
+[source,xml]
+----
  <Container id="Foo" type="MESSAGE">
- </Container>+++</div>++++++</div>+++
+ </Container>
+----
 
-Declarable in properties via+++<div style="border-width: 1px;" class="panel">++++++<div class="panelContent">+++Foo = new://Container?type=MESSAGE+++</div>++++++</div>+++
 
-Supports the following properties+++<div class="table-wrap">++++++<table class="confluenceTable">++++++<tbody>+++
+Declarable in properties via
+`Foo = new://Container?type=MESSAGE`
 
+
+
+Supports the following properties
+[{name-description-table-layout}]
+|===
 |Property Name
 
 |Description
@@ -157,41 +243,58 @@ Supports the following properties+++<div class="table-wrap">++++++<table class="
 
 |ResourceAdapter
 
-|The resource adapter delivers messages to the container+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++Default JMS Resource Adapter+++</em>+++.
+|The resource adapter delivers messages to the container.
+
+Default value is `Default JMS Resource Adapter`.
 
 
 |MessageListenerInterface
 
-|Specifies the message listener interface handled by this container+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++javax.jms.MessageListener+++</em>+++.
+|Specifies the message listener interface handled by this container.
+
+Default value is `javax.jms.MessageListener`.
 
 
 |ActivationSpecClass
 
-|Specifies the activation spec class+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++org.apache.activemq.ra.ActiveMQActivationSpec+++</em>+++.
+|Specifies the activation spec class.
+
+Default value is `org.apache.activemq.ra.ActiveMQActivationSpec`.
 
 
 |InstanceLimit
 
-|Specifies the maximum number of bean instances that are+++<br class="atl-forced-newline">++++++</br>+++ allowed to exist for each MDB deployment.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++10+++</em>+++.+++</tbody>+++
+|Specifies the maximum number of bean instances that are allowed to exist for each MDB deployment.
+
+Default value is `10`.
 |===
-+++</div>+++
 
 
 
-= Resources
+
+
+== Resources
 
 
 
-== javax.sql.DataSource
+=== javax.sql.DataSource
 
-Declarable in tomee.xml via+++<div style="border-width: 1px;" class="code panel">++++++<div class="codeContent panelContent">+++[source,]
+Declarable in tomee.xml via
+[source,xml]
+----
  <Resource id="Foo" type="javax.sql.DataSource">
- </Resource>+++</div>++++++</div>+++
+ </Resource>
+----
 
-Declarable in properties via+++<div style="border-width: 1px;" class="panel">++++++<div class="panelContent">+++Foo = new://Resource?type=javax.sql.DataSource+++</div>++++++</div>+++
 
-Supports the following properties+++<div class="table-wrap">++++++<table class="confluenceTable">++++++<tbody>+++
+Declarable in properties via
+`Foo = new://Resource?type=javax.sql.DataSource`
 
+
+
+Supports the following properties
+[{name-description-table-layout}]
+|===
 |Property Name
 
 |Description
@@ -199,22 +302,35 @@ Supports the following properties+++<div class="table-wrap">++++++<table class="
 
 |JtaManaged
 
-|Determines wether or not this data source should be JTA managed+++<br class="atl-forced-newline">++++++</br>+++ or user managed.&nbsp;&nbsp;If set to 'true' it will automatically be enrolled+++<br class="atl-forced-newline">++++++</br>+++ in any ongoing transactions.&nbsp;&nbsp;Calling begin/commit/rollback or setAutoCommit+++<br class="atl-forced-newline">++++++</br>+++ on the datasource or connection will not be allowed.&nbsp;&nbsp;If you need to perform+++<br class="atl-forced-newline">++++++</br>+++ these functions yourself, set JtaManaged to 'false'+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ In terms of JPA persistence.xml:+++<br class="atl-forced-newline">++++++</br>+++ "JtaManaged=true" can be used as a 'jta-data-source'+++<br class="atl-forced-newline">++++++</br>+++ "JtaManaged=false" can be used as a 'non-jta-data-source'+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++true+++</em>+++.
+|Determines wether or not this data source should be JTA managed or user managed.
+If set to 'true' it will automatically be enrolled in any ongoing transactions.
+Calling begin/commit/rollback or setAutoCommit on the datasource or connection will not be allowed.
+If you need to perform these functions yourself, set JtaManaged to 'false'.
+In terms of JPA persistence.xml:
+
+* "JtaManaged=true" can be used as a 'jta-data-source'
+* "JtaManaged=false" can be used as a 'non-jta-data-source'
+
+Default value is `true`.
 
 
 |JdbcDriver
 
-|Driver class name+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++org.hsqldb.jdbcDriver+++</em>+++.
+|Driver class name.
+
+Default value is `org.hsqldb.jdbcDriver`.
 
 
 |JdbcUrl
 
-|Url for creating connections+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++jdbc:hsqldb:file:data/hsqldb/hsqldb+++</em>+++.
+|Url for creating connections.
+
+Default value is `jdbc:hsqldb:file:data/hsqldb/hsqldb`.
 
 
 |UserName
 
-|Default user name+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++sa+++</em>+++.
+|Default user name  Default value is `sa`.
 
 
 |Password
@@ -224,112 +340,193 @@ Supports the following properties+++<div class="table-wrap">++++++<table class="
 
 |ConnectionProperties
 
-|The connection properties that will be sent to the JDBC+++<br class="atl-forced-newline">++++++</br>+++ driver when establishing new connections+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Format of the string must be [propertyName=property;]*+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ NOTE - The "user" and "password" properties will be passed+++<br class="atl-forced-newline">++++++</br>+++ explicitly, so they do not need to be included here.
+|The connection properties that will be sent to the JDBC driver when establishing new connections.
+Format of the string must be [propertyName=property;]
+
+NOTE: The "user" and "password" properties will be passed explicitly, so they do not need to be included here.
 
 
 |DefaultAutoCommit
 
-|The default auto-commit state of new connections+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++true+++</em>+++.
+|The default auto-commit state of new connections.
+
+Default value is `true`.
 
 
 |DefaultReadOnly
 
-|The default read-only state of new connections+++<br class="atl-forced-newline">++++++</br>+++ If not set then the setReadOnly method will not be called.+++<br class="atl-forced-newline">++++++</br>+++ (Some drivers don't support read only mode, ex: Informix)
+|The default read-only state of new connections.
+If not set then the setReadOnly method will not be called.
+(Some drivers don't support read only mode, ex: Informix)
 
 
 |DefaultTransactionIsolation
 
-|The default TransactionIsolation state of new connections+++<br class="atl-forced-newline">++++++</br>+++ If not set then the setTransactionIsolation method will not+++<br class="atl-forced-newline">++++++</br>+++ be called. The allowed values for this property are:+++<br class="atl-forced-newline">++++++</br>+++&nbsp;&nbsp;&nbsp;&nbsp; NONE+++<br class="atl-forced-newline">++++++</br>+++&nbsp;&nbsp;&nbsp;&nbsp; READ_COMMITTED+++<br class="atl-forced-newline">++++++</br>+++&nbsp;&nbsp;&nbsp;&nbsp; READ_UNCOMMITTED+++<br class="atl-forced-newline">++++++</br>+++&nbsp;&nbsp;&nbsp;&nbsp; REPEATABLE_READ+++<br class="atl-forced-newline">++++++</br>+++&nbsp;&nbsp;&nbsp;&nbsp; SERIALIZABLE+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Note: Most JDBC drivers do not support all isolation levels
+|The default TransactionIsolation state of new connections.
+If not set then the setTransactionIsolation method will not be called.
+The allowed values for this property are:
+
+* NONE READ_COMMITTED
+* READ_UNCOMMITTED
+* REPEATABLE_READ
+* SERIALIZABLE
+
+NOTE: Most JDBC drivers do not support all isolation levels.
 
 
 |InitialSize
 
-|The initial number of connections that are created when the+++<br class="atl-forced-newline">++++++</br>+++ pool is started+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++0+++</em>+++.
+|The initial number of connections that are created when the pool is started.
+
+Default value is `0`.
 
 
 |MaxActive
 
-|The maximum number of active connections that can be+++<br class="atl-forced-newline">++++++</br>+++ allocated from this pool at the same time, or a negative+++<br class="atl-forced-newline">++++++</br>+++ number for no limit.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++20+++</em>+++.
+|The maximum number of active connections that can be allocated from this pool at the same time, or a negative number for no limit.
+
+Default value is `20`.
 
 
 |MaxIdle
 
-|The maximum number of connections that can remain idle in+++<br class="atl-forced-newline">++++++</br>+++ the pool, without extra ones being released, or a negative+++<br class="atl-forced-newline">++++++</br>+++ number for no limit.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++20+++</em>+++.
+|The maximum number of connections that can remain idle in the pool, without extra ones being released, or a negative number for no limit.
+
+Default value is `20`.
 
 
 |MinIdle
 
-|The minimum number of connections that can remain idle in+++<br class="atl-forced-newline">++++++</br>+++ the pool, without extra ones being created, or zero to+++<br class="atl-forced-newline">++++++</br>+++ create none.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++0+++</em>+++.
+|The minimum number of connections that can remain idle in the pool, without extra ones being created, or zero to create none.
+
+Default value is `0`.
 
 
 |MaxWait
 
-|The maximum number of milliseconds that the pool will wait+++<br class="atl-forced-newline">++++++</br>+++ (when there are no available connections) for a connection+++<br class="atl-forced-newline">++++++</br>+++ to be returned before throwing an exception, or -1 to wait+++<br class="atl-forced-newline">++++++</br>+++ indefinitely.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++-1+++</em>+++.
+|The maximum number of milliseconds that the pool will wait (when there are no available connections) for a connection to be returned before throwing an exception, or -1 to wait indefinitely.
+
+Default value is `-1`.
 
 
 |ValidationQuery
 
-|The SQL query that will be used to validate connections from+++<br class="atl-forced-newline">++++++</br>+++ this pool before returning them to the caller. If specified,+++<br class="atl-forced-newline">++++++</br>+++ this query MUST be an SQL SELECT statement that returns at+++<br class="atl-forced-newline">++++++</br>+++ least one row.
+|The SQL query that will be used to validate connections from this pool before returning them to the caller.
+If specified, this query MUST be an SQL SELECT statement that returns at least one row.
 
 
 |TestOnBorrow
 
-|If true connections will be validated before being borrowed+++<br class="atl-forced-newline">++++++</br>+++ from the pool. If the validation fails, the connection is+++<br class="atl-forced-newline">++++++</br>+++ destroyed, and a new conection will be retrieved from the+++<br class="atl-forced-newline">++++++</br>+++ pool (and validated).+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ NOTE - for a true value to have any effect, the+++<br class="atl-forced-newline">++++++</br>+++ ValidationQuery parameter must be set.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++true+++</em>+++.
+|If true connections will be validated before being borrowed from the pool.
+If the validation fails, the connection is destroyed, and a new conection will be retrieved from the pool (and validated).
+
+NOTE: For a true value to have any effect, the ValidationQuery parameter must be set.
+
+Default value is `true`.
 
 
 |TestOnReturn
 
-|If true connections will be validated before being returned+++<br class="atl-forced-newline">++++++</br>+++ to the pool.&nbsp;&nbsp;If the validation fails, the connection is+++<br class="atl-forced-newline">++++++</br>+++ destroyed instead of being returned to the pool.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ NOTE - for a true value to have any effect, the+++<br class="atl-forced-newline">++++++</br>+++ ValidationQuery parameter must be set.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++false+++</em>+++.
+|If true connections will be validated before being returned to the pool.
+If the validation fails, the connection is destroyed instead of being returned to the pool.
+
+NOTE: For a true value to have any effect, the ValidationQuery parameter must be set.
+
+Default value is `false`.
 
 
 |TestWhileIdle
 
-|If true connections will be validated by the idle connection+++<br class="atl-forced-newline">++++++</br>+++ evictor (if any). If the validation fails, the connection is+++<br class="atl-forced-newline">++++++</br>+++ destroyed and removed from the pool+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ NOTE - for a true value to have any effect, the+++<br class="atl-forced-newline">++++++</br>+++ timeBetweenEvictionRunsMillis property must be a positive+++<br class="atl-forced-newline">++++++</br>+++ number and the ValidationQuery parameter must be set.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++false+++</em>+++.
+|If true connections will be validated by the idle connection evictor (if any).
+If the validation fails, the connection is destroyed and removed from the pool.
+
+NOTE: For a true value to have any effect, the timeBetweenEvictionRunsMillis property must be a positive number and the ValidationQuery parameter must be set.
+
+Default value is `false`.
 
 
 |TimeBetweenEvictionRunsMillis
 
-|The number of milliseconds to sleep between runs of the idle+++<br class="atl-forced-newline">++++++</br>+++ connection evictor thread. When set to a negative number, no+++<br class="atl-forced-newline">++++++</br>+++ idle connection evictor thread will be run.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++-1+++</em>+++.
+|The number of milliseconds to sleep between runs of the idle connection evictor thread.
+When set to a negative number, no idle connection evictor thread will be run.
+
+Default value is `-1`.
 
 
 |NumTestsPerEvictionRun
 
-|The number of connectionss to examine during each run of the+++<br class="atl-forced-newline">++++++</br>+++ idle connection evictor thread (if any).+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++3+++</em>+++.
+|The number of connections to examine during each run of the idle connection evictor thread (if any).
+
+Default value is `3`.
 
 
 |MinEvictableIdleTimeMillis
 
-|The minimum amount of time a connection may sit idle in the+++<br class="atl-forced-newline">++++++</br>+++ pool before it is eligable for eviction by the idle+++<br class="atl-forced-newline">++++++</br>+++ connection evictor (if any).+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++1800000+++</em>+++.
+|The minimum amount of time a connection may sit idle in the pool before it is eligible for eviction by the idle connection evictor (if any).
+
+Default value is `1800000`.
 
 
 |PoolPreparedStatements
 
-|If true, a statement pool is created for each Connection and+++<br class="atl-forced-newline">++++++</br>+++ PreparedStatements created by one of the following methods are+++<br class="atl-forced-newline">++++++</br>+++ pooled:+++<br class="atl-forced-newline">++++++</br>+++&nbsp;&nbsp;&nbsp;&nbsp;public PreparedStatement prepareStatement(String sql);+++<br class="atl-forced-newline">++++++</br>+++&nbsp;&nbsp;&nbsp;&nbsp;public PreparedStatement prepareStatement(String sql,+++<br class="atl-forced-newline">++++++</br>+++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int resultSetType,+++<br class="atl-forced-newline">++++++</br>+++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int resultSetConcurrency)+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++false+++</em>+++.
+|If true, a statement pool is created for each Connection and PreparedStatements created by one of the following methods are pooled:
+[source,java]
+----
+public PreparedStatement prepareStatement(String sql);
+public PreparedStatement prepareStatement(String sql, int resultSetType, int resultSetConcurrency)
+----
+
+Default value is `false`.
 
 
 |MaxOpenPreparedStatements
 
-|The maximum number of open statements that can be allocated+++<br class="atl-forced-newline">++++++</br>+++ from the statement pool at the same time, or zero for no+++<br class="atl-forced-newline">++++++</br>+++ limit.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ NOTE - Some drivers have limits on the number of open+++<br class="atl-forced-newline">++++++</br>+++ statements, so make sure there are some resources left+++<br class="atl-forced-newline">++++++</br>+++ for the other (non-prepared) statements.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++0+++</em>+++.
+|The maximum number of open statements that can be allocated from the statement pool at the same time, or zero for no limit.
+
+NOTE: Some drivers have limits on the number of open statements, so make sure there are some resources left for the other (non-prepared) statements.
+
+Default value is `0`.
 
 
 |AccessToUnderlyingConnectionAllowed
 
-|If true the raw physical connection to the database can be+++<br class="atl-forced-newline">++++++</br>+++ accessed using the following construct:+++<br class="atl-forced-newline">++++++</br>+++&nbsp;&nbsp;&nbsp;&nbsp; Connection conn = ds.getConnection();+++<br class="atl-forced-newline">++++++</br>+++&nbsp;&nbsp;&nbsp;&nbsp; Connection rawConn = ((DelegatingConnection) conn).getInnermostDelegate();+++<br class="atl-forced-newline">++++++</br>+++&nbsp;&nbsp;&nbsp;&nbsp; \...+++<br class="atl-forced-newline">++++++</br>+++&nbsp;&nbsp;&nbsp;&nbsp; conn.close()+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default is false, because misbehaving programs can do harmfull+++<br class="atl-forced-newline">++++++</br>+++ things to the raw connection shuch as closing the raw+++<br class="atl-forced-newline">++++++</br>+++ connection or continuing to use the raw connection after it+++<br class="atl-forced-newline">++++++</br>+++ has been assigned to another logical connection.&nbsp;&nbsp;Be carefull+++<br class="atl-forced-newline">++++++</br>+++ and only use when you need direct access to driver specific+++<br class="atl-forced-newline">++++++</br>+++ extentions.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ NOTE: Do NOT close the underlying connection, only the+++<br class="atl-forced-newline">++++++</br>+++ original logical connection wrapper.+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++false+++</em>+++.+++</tbody>+++
+|If true the raw physical connection to the database can be accessed using the following construct:
+[source,java]
+----
+Connection conn = ds.getConnection();
+Connection rawConn = ((DelegatingConnection) conn).getInnermostDelegate();
+\...
+conn.close()
+----
+Default is false, because misbehaving programs can do harmful things to the raw connection such as closing the raw connection or continuing to use the raw connection after it has been assigned to another logical connection.Be carefull and only use when you need direct access to driver specific extentions.
+
+NOTE: Do NOT close the underlying connection, only the original logical connection wrapper.
+
+Default value is `false`.
 |===
-+++</div>+++
 
 
 
-== ActiveMQResourceAdapter
 
-Declarable in tomee.xml via+++<div style="border-width: 1px;" class="code panel">++++++<div class="codeContent panelContent">+++[source,]
+
+=== ActiveMQResourceAdapter
+
+Declarable in tomee.xml via
+[source,xml]
+----
  <Resource id="Foo" type="ActiveMQResourceAdapter">
- </Resource>+++</div>++++++</div>+++
+ </Resource>
+----
 
-Declarable in properties via+++<div style="border-width: 1px;" class="panel">++++++<div class="panelContent">+++Foo = new://Resource?type=ActiveMQResourceAdapter+++</div>++++++</div>+++
 
-Supports the following properties+++<div class="table-wrap">++++++<table class="confluenceTable">++++++<tbody>+++
+Declarable in properties via
+`Foo = new://Resource?type=ActiveMQResourceAdapter`
 
+
+
+Supports the following properties
+[{name-description-table-layout}]
+|===
 |Property Name
 
 |Description
@@ -337,32 +534,45 @@ Supports the following properties+++<div class="table-wrap">++++++<table class="
 
 |BrokerXmlConfig
 
-|Broker configuration+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++broker:(tcp://localhost:61616)?useJmx=false+++</em>+++.
+|Broker configuration  Default value is `broker:(tcp://localhost:61616)?useJmx=false`.
 
 
 |ServerUrl
 
-|Broker address+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++vm://localhost?async=true+++</em>+++.
+|Broker address.
+
+Default value is `vm://localhost?async=true`.
 
 
 |DataSource
 
-|DataSource for persistence messages+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++Default Unmanaged JDBC Database+++</em>+++.+++</tbody>+++
+|DataSource for persistence messages.
+
+Default value is `Default Unmanaged JDBC Database`.
 |===
-+++</div>+++
 
 
 
-== javax.jms.ConnectionFactory
 
-Declarable in tomee.xml via+++<div style="border-width: 1px;" class="code panel">++++++<div class="codeContent panelContent">+++[source,]
+
+=== javax.jms.ConnectionFactory
+
+Declarable in tomee.xml via
+[source,xml]
+----
  <Resource id="Foo" type="javax.jms.ConnectionFactory">
- </Resource>+++</div>++++++</div>+++
+ </Resource>
+----
 
-Declarable in properties via+++<div style="border-width: 1px;" class="panel">++++++<div class="panelContent">+++Foo = new://Resource?type=javax.jms.ConnectionFactory+++</div>++++++</div>+++
 
-Supports the following properties+++<div class="table-wrap">++++++<table class="confluenceTable">++++++<tbody>+++
+Declarable in properties via
+`Foo = new://Resource?type=javax.jms.ConnectionFactory`
 
+
+
+Supports the following properties
+[{name-description-table-layout}]
+|===
 |Property Name
 
 |Description
@@ -370,47 +580,65 @@ Supports the following properties+++<div class="table-wrap">++++++<table class="
 
 |ResourceAdapter
 
-|Default value is +++<em>+++Default JMS Resource Adapter+++</em>+++.
+|Default value is `Default JMS Resource Adapter`.
 
 
 |TransactionSupport
 
-|Specifies if the connection is enrolled in global transaction+++<br class="atl-forced-newline">++++++</br>+++ allowed values: xa, local or none+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++xa+++</em>+++.
+|Specifies if the connection is enrolled in global transaction allowed values: xa, local or none.
+
+Default value is `xa`.
 
 
 |PoolMaxSize
 
-|Maximum number of physical connection to the ActiveMQ broker+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++10+++</em>+++.
+|Maximum number of physical connection to the ActiveMQ broker.
+
+Default value is `10`.
 
 
 |PoolMinSize
 
-|Minimum number of physical connection to the ActiveMQ broker+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++0+++</em>+++.
+|Minimum number of physical connection to the ActiveMQ broker.
+
+Default value is `0`.
 
 
 |ConnectionMaxWaitMilliseconds
 
-|Maximum amount of time to wait for a connection+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++5000+++</em>+++.
+|Maximum amount of time to wait for a connection.
+Default value is `5000`.
 
 
 |ConnectionMaxIdleMinutes
 
-|Maximum amount of time a connection can be idle before being reclaimed+++<br class="atl-forced-newline">++++++</br>+++ +++<br class="atl-forced-newline">++++++</br>+++ Default value is +++<em>+++15+++</em>+++.+++</tbody>+++
+|Maximum amount of time a connection can be idle before being reclaimed.
+
+Default value is `15`.
 |===
-+++</div>+++
 
 
 
-== javax.jms.Queue
 
-Declarable in tomee.xml via+++<div style="border-width: 1px;" class="code panel">++++++<div class="codeContent panelContent">+++[source,]
+
+=== javax.jms.Queue
+
+Declarable in tomee.xml via
+[source,xml]
+----
  <Resource id="Foo" type="javax.jms.Queue">
- </Resource>+++</div>++++++</div>+++
+ </Resource>
+----
 
-Declarable in properties via+++<div style="border-width: 1px;" class="panel">++++++<div class="panelContent">+++Foo = new://Resource?type=javax.jms.Queue+++</div>++++++</div>+++
 
-Supports the following properties+++<div class="table-wrap">++++++<table class="confluenceTable">++++++<tbody>+++
+Declarable in properties via
+`Foo = new://Resource?type=javax.jms.Queue`
 
+
+
+Supports the following properties
+[{name-description-table-layout}]
+|===
 |Property Name
 
 |Description
@@ -418,22 +646,31 @@ Supports the following properties+++<div class="table-wrap">++++++<table class="
 
 |destination
 
-|Specifies the name of the queue+++</tbody>+++
+|Specifies the name of the queue
 |===
-+++</div>+++
 
 
 
-== javax.jms.Topic
 
-Declarable in tomee.xml via+++<div style="border-width: 1px;" class="code panel">++++++<div class="codeContent panelContent">+++[source,]
+
+=== javax.jms.Topic
+
+Declarable in tomee.xml via
+[source,xml]
+----
  <Resource id="Foo" type="javax.jms.Topic">
- </Resource>+++</div>++++++</div>+++
+ </Resource>
+----
 
-Declarable in properties via+++<div style="border-width: 1px;" class="panel">++++++<div class="panelContent">+++Foo = new://Resource?type=javax.jms.Topic+++</div>++++++</div>+++
 
-Supports the following properties+++<div class="table-wrap">++++++<table class="confluenceTable">++++++<tbody>+++
+Declarable in properties via
+`Foo = new://Resource?type=javax.jms.Topic`
 
+
+
+Supports the following properties
+[{name-description-table-layout}]
+|===
 |Property Name
 
 |Description
@@ -441,30 +678,46 @@ Supports the following properties+++<div class="table-wrap">++++++<table class="
 
 |destination
 
-|Specifies the name of the topic+++</tbody>+++
+|Specifies the name of the topic
 |===
-+++</div>+++
 
 
 
-== org.omg.CORBA.ORB
 
-Declarable in tomee.xml via+++<div style="border-width: 1px;" class="code panel">++++++<div class="codeContent panelContent">+++[source,]
+
+=== org.omg.CORBA.ORB
+
+Declarable in tomee.xml via
+[source,xml]
+----
  <Resource id="Foo" type="org.omg.CORBA.ORB">
- </Resource>+++</div>++++++</div>+++
+ </Resource>
+----
 
-Declarable in properties via+++<div style="border-width: 1px;" class="panel">++++++<div class="panelContent">+++Foo = new://Resource?type=org.omg.CORBA.ORB+++</div>++++++</div>+++
+
+Declarable in properties via
+`Foo = new://Resource?type=org.omg.CORBA.ORB`
+
+
 
 No properties.
 
 
 
-== javax.mail.Session
+=== javax.mail.Session
 
-Declarable in tomee.xml via+++<div style="border-width: 1px;" class="code panel">++++++<div class="codeContent panelContent">+++[source,]
+Declarable in tomee.xml via
+[source,xml]
+----
  <Resource id="Foo" type="javax.mail.Session">
- </Resource>+++</div>++++++</div>+++
+ </Resource>
+----
 
-Declarable in properties via+++<div style="border-width: 1px;" class="panel">++++++<div class="panelContent">+++Foo = new://Resource?type=javax.mail.Session+++</div>++++++</div>+++
 
-No properties.+++</div>+++
+Declarable in properties via
+`Foo = new://Resource?type=javax.mail.Session`
+
+
+
+No properties.
+

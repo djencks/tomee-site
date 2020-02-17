@@ -1,31 +1,34 @@
 = Custom Injection
+:index-group: Unrevised
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 
-= Overview
+NOTE: TODO! This seems to be related to or another version of the example xref:{examples-vc}::custom-injection.adoc[]
+== Overview
 
-As noted in the xref:injection-of-env-entry-example.adoc[Injection of env-entry Example] , the EJB 3.0 supported env-entry types are fairly limited.
-Also the use of several +++<env-entry>+++tags in an ejb-jar.xml can get a bit verbose.+++</env-entry>+++
+As noted in the xref:{examples-vc}::injection-of-env-entry.adoc[Injection of env-entry Example] , the EJB 3.0 supported env-entry types are fairly limited.
+Also the use of several tags in an ejb-jar.xml can get a bit verbose.
 
 OpenEJB does not restrict you to just these data types or require you to use an ejb-jar.xml to declare them.
 
-* `@Resource` can be used on any type for which there is `java.beans.PropertyEditor`
+* `@Resource` can be used on any type for which there is`java.beans.PropertyEditor`
 * You may `install your own` PropertyEditors and package them with your app.
-* Java Generics are supported (e.g.
-List+++<URI>+++myURIs)+++</URI>+++
+* Java Generics are supported (e.g. List myURIs)
 * You may use a `META-INF/env-entries.properties` file as an alternative to an ejb-jar.xml
 
 See xref:built-in-type-converters.adoc[Built-in Type Converters] for a full list of supported env-entry types.
 
-The source for this example is the "custom-injection" directory located in the xref:downloads.adoc[openejb-examples.zip] available on the http://tomee.apache.org/downloads.html[download page].
+NOTE: unverified link
 
+The source for this example is the "custom-injection" directory located in the openejb-examples.zip available on the xref:{common-vc}::download-ng.adoc[download page].
 
+== The Code
 
-= The Code
+=== Bean Class
 
-
-
-== Bean Class
-
-....
+[source,java]
+----
 @Stateless
 public class Stratocaster {
 
@@ -71,26 +74,26 @@ public class Stratocaster {
         return certificateOfAuthenticity;
     }
 }
-....
+----
 
+=== The META-INF/env-entries.properties file
 
+[source,properties]
+----
+guitarStringGuages=E1=0.052\nA=0.042\nD=0.030\nG=0.017\nB=0.013\nE=0.010
+certificateOfAuthenticity=/tmp/strat-certificate.txt
+dateCreated=1962-03-01
+pickups=S,S,S
+style=VINTAGE
+----
 
-== The META-INF/env-entries.properties file
-
- guitarStringGuages=E1=0.052\nA=0.042\nD=0.030\nG=0.017\nB=0.013\nE=0.010
- certificateOfAuthenticity=/tmp/strat-certificate.txt
- dateCreated=1962-03-01
- pickups=S,S,S
- style=VINTAGE
-
-
-
-== The Custom Type and Editor
+=== The Custom Type and Editor
 
 Support for java.lang.Enum types is already built-in, but we've decided we'd like to allow abbreviated versions of the enum constants to be usable.
 We do this by creating a custom PropertyEditor for our Pickup enum like so:
 
-....
+[source,java]
+----
 public class PickupEditor extends java.beans.PropertyEditorSupport {
     public void setAsText(String text) throws IllegalArgumentException {
         text = text.trim();
@@ -100,11 +103,12 @@ public class PickupEditor extends java.beans.PropertyEditorSupport {
         else throw new IllegalStateException("H and S are the only supported Pickup aliases");
     }
 }
-....
+----
 
 We cleverly install this PropertyEditor in a static block in the Pickup class that will be executed should someone actually reference the Pickup type.
 
-....
+[source,java]
+----
 public enum Pickup {
 
     HUMBUCKER,
@@ -117,13 +121,12 @@ public enum Pickup {
         PropertyEditorManager.registerEditor(Pickup.class, PickupEditor.class);
     }
 }
-....
+----
 
+== Test Case
 
-
-= Test Case
-
-....
+[source,java]
+----
 public class StratocasterTest extends TestCase {
 
     @EJB
@@ -153,22 +156,21 @@ public class StratocasterTest extends TestCase {
 
     }
 }
-....
+----
 
-
-
-= Running it
+== Running it
 
 Running the example is fairly simple.
-In the "custom-injection" directory of the xref:openejb:download.adoc[examples zip], just run:
+In the "custom-injection" directory of the openejb:download.html[examples zip], just run:
 
-____
+___________________
 $ mvn clean install
-____
+___________________
 
-Which should create output like the following.
+Which should create output like the following:
 
-....
+[source,java]
+----
 -------------------------------------------------------
  T E S T S
 -------------------------------------------------------
@@ -194,4 +196,4 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.705 sec
 Results :
 
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
-....
+----

@@ -1,6 +1,10 @@
 = Collapsed EAR
+:index-group: Unrevised
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 
-= One archive
+== One archive
 
 The basic idea of this approach is that your Servlets and EJBs are together in your WAR file as one app.
 
@@ -11,7 +15,7 @@ The basic idea of this approach is that your Servlets and EJBs are together in y
 
 
 
-= Not quite J2EE (it is truly Java EE6)
+==Not quite J2EE (it is truly Java EE6)
 
 This is very different than J2EE or Java EE 5 as there aren't several levels of separation and classloader hierarchy.
 This is going to take some getting used to and it should be understood that this style of packaging isn't J2EE compliant.
@@ -35,6 +39,8 @@ Critically speaking, forcing more than one classloader on an application is wher
 
 
 
-= Example with Tomcat
+== Example with Tomcat
 
-If you want to try to work with Servlets/JSP and OpenEJB using Tomcat, see the xref:openejbx30:tomcat.adoc[setup page]  and the "/webapps/ejb-examples" section of the xref:downloads.adoc[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page].
+NOTE: out of date, links not on website.
+
+If you want to try to work with Servlets/JSP and OpenEJB using Tomcat, see the xref:openejbx30:tomcat.adoc[setup page] and the "/webapps/ejb-examples" section of the xref:{common-vc}::download-ng.adoc[download page].

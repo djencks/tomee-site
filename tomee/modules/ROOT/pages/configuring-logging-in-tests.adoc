@@ -1,6 +1,10 @@
 = Configuring Logging in Tests
+:index-group: Testing Techniques
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 
-= embedded.logging.properties
+== embedded.logging.properties
 
 When in embedded mode OpenEJB uses an embedded.logging.properties file packed in our openejb-core jar which use to configure the logging.
 This logging configuration is a bit lighter than the conf/logging.properties file created in a full standalone OpenEJB setup.
@@ -22,14 +26,15 @@ If you are not replacing the embedded.logging.properties you will pick these up 
 
 
 
-= Overriding (recommended)
+== Overriding (recommended)
 
 As mentioned in xref:embedded-configuration.adoc[Embedded Configuration]  much can be done with simple overriding.
 The default embedded.logging.properties is quite good and there is really no need to replace it completely if all you want to do is tweak a few values.
 
 You can also put logging tweaks right in your InitialContext properties like so:
 
-....
+[source,properties]
+----
 Properties p = new Properties();
 p.put(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.core.LocalInitialContextFactory");
 
@@ -50,7 +55,7 @@ p.put("log4j.appender.C", "org.apache.log4j.ConsoleAppender");
 p.put("log4j.appender.C.layout", "org.apache.log4j.SimpleLayout");
 
 Context context = new InitialContext(p);
-....
+----
 
 Essentially, everything starting with "log4j." gets applied as overrides on top of the embedded.logging.properties we find in the classpath.
 This makes it possible to easily tweak the log levels while debugging a particular test.
@@ -67,11 +72,12 @@ By default there are no logging settings in 1-3, so #4 is the only source of log
 
 
 
-= Default embedded.logging.properties contents
+== Default embedded.logging.properties contents
 
 For your purposes, here are the contents of the default embedded.logging.properties file contained in OpenEJB 3.1.1
 
-....
+[source,properties]
+----
 log4j.rootLogger		   = fatal,C
 log4j.category.OpenEJB		   = warn
 log4j.category.OpenEJB.server	   = info
@@ -87,7 +93,7 @@ log4j.category.openjpa		   = error
 
 log4j.appender.C		   = org.apache.log4j.ConsoleAppender
 log4j.appender.C.layout 	   = org.apache.log4j.SimpleLayout
-....
+----
 
 Here is that file's location in svn as well as all of the previous versions.
 Future versions will follow the same pattern.

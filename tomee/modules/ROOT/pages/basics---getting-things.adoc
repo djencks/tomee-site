@@ -1,8 +1,12 @@
 = Basics - Getting Things
+:index-group: Unrevised
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 
-= Getting Stuff from the Container
+== Getting Stuff from the Container
 
-Generally speaking the only way to get a xref:container-managed-resource.adoc[Container-Managed Resource]  is via _dependency injection_ or _lookup_ from within a [Container-Managed Component] .
+Generally speaking the only way to get a xref:container-managed-resource.adoc[Container-Managed Resource]  is via _dependency injection_ or _lookup_ from within a xref:container-managed-component.adoc[Container-Managed Component] .
 
 The _unbreakable rules_.
 Read these over and over again when things don't work.
@@ -11,7 +15,7 @@ Read these over and over again when things don't work.
 . java:comp/env is _empty_ by default
 . java:comp/env is _read-only_ at runtime
 . java:comp/env is populated by xref:declaring-references.adoc[Declaring References]  to [Container-Managed Resource]  via xml or annotation
-. only xref:container-managed-component.adoc[Container-Managed Component] s, _not_ their libraries, can [Declare References|Declaring References]  via xml or annotation
+. only xref:container-managed-component.adoc[Container-Managed Component] s, _not_ their libraries, can xref:declaring-references.adoc[Declare References]  via xml or annotation
 . only xref:container-managed-component.adoc[Container-Managed Component] s, _not_ their libraries, can get dependency injection of [Container-Managed Resource] s
 . only xref:container-managed-component.adoc[Container-Managed Component] s, _and_ their libraries, may lookup from java:comp/env
 . you _must_ use the _no-arg_ 'new InitialContext()' constructor to lookup something from java:comp/env
