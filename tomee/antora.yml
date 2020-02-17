@@ -1,6 +1,2 @@
 name: common
-title: TomEE Common Information
-version: "0.0"
-start_page: ROOT:documentation.adoc
-nav:
-- modules/ROOT/nav.adoc
+version: master
