@@ -1,4 +1,4 @@
-Title: Security alerts
+= Security alerts
 
 == Security updates
 

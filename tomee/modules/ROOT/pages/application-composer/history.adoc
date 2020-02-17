@@ -35,5 +35,5 @@ API was greatly simplified and it allows you pretty easily to deploy with a simp
 
 If you want to go further you can browse:
 
-* link:getting-started.html[Getting Started]
-* link:advanced.html[Advanced]
+* xref:application-composer/getting-started.adoc[Getting Started]
+* xref:application-composer/advanced.adoc[Advanced]

@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Testing Transactions Example
+= Testing Transactions Example
 
 +++<a name="TestingTransactionsExample-Overview">++++++</a>+++
 

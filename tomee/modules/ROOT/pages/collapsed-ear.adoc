@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Collapsed EAR +++<a name="CollapsedEAR-Onearchive">++++++</a>+++
+= Collapsed EAR +++<a name="CollapsedEAR-Onearchive">++++++</a>+++
 
 = One archive
 

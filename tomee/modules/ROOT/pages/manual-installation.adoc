@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Manual Installation
+= Manual Installation
 
 = Overview
 

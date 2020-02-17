@@ -1,4 +1,4 @@
-Title: DataSource Creator
+= DataSource Creator
 
 TomEE uses  `creator` to create the connection pool factory.
 In other terms it means you can use any pool you want for DataSource in TomEE.

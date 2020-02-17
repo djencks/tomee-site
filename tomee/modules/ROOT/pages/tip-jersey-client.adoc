@@ -1,4 +1,4 @@
-Title: Jersey Client
+= Jersey Client
 
 If you have an application that uses jersey-client in any way then it may fail with an error along the lines of:
 

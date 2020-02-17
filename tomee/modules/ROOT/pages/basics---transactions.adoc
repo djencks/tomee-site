@@ -1,4 +1,4 @@
-Title: Basics - Transactions One of the many benefits of EJB, is that transactions within the EJB container are generally managed entirely automatically.
+= Basics - Transactions One of the many benefits of EJB, is that transactions within the EJB container are generally managed entirely automatically.
 Any EJB component will, by default, partake in that transaction.
 
 Here are some basic rules to understand about transactions.

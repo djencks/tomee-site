@@ -1,4 +1,4 @@
-Title: Legal
+= Legal
 
 == Legal Stuff They Make Us Say
 

@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Hibernate +++<a name="Hibernate-Samplepersistence.xml">++++++</a>+++
+= Hibernate +++<a name="Hibernate-Samplepersistence.xml">++++++</a>+++
 
 = Sample persistence.xml
 

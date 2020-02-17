@@ -1,4 +1,4 @@
-Title: How to use JULI for TomEE in WTP?
+= How to use JULI for TomEE in WTP?
 
 It seems that WTP doesn't manage correctly Tomcat logging configuration (which needs to be done through system properties).
 A quick workaround is to add these properties manually:

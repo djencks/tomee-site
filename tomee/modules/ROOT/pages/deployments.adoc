@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Deployments
+= Deployments
 
 +++<a name="Deployments-The'Deployments'elementinopenejb.xml">++++++</a>+++
 

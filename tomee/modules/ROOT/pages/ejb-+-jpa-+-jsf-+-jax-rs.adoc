@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: EJB + JPA + JSF + JAX-RS +++<a name="EJB+JPA+JSF+JAX-RS-BusinessCase">++++++</a>+++
+= EJB + JPA + JSF + JAX-RS +++<a name="EJB+JPA+JSF+JAX-RS-BusinessCase">++++++</a>+++
 
 = Business Case
 

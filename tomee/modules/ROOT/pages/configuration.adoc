@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Configuration +++<a name="Configuration-ShortOverview">++++++</a>+++
+= Configuration +++<a name="Configuration-ShortOverview">++++++</a>+++
 
 = Short Overview
 

@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Telnet Console \{note} Availability: Since OpenEJB 0.9\{note}
+= Telnet Console \{note} Availability: Since OpenEJB 0.9\{note}
 
 +++<a name="TelnetConsole-BasicUsage">++++++</a>+++
 

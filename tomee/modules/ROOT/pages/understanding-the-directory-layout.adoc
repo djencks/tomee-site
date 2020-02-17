@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Understanding the Directory Layout
+= Understanding the Directory Layout
 
 Unpacking the standalone OpenEJB will result in the following directory layout:
 

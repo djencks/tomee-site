@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Eclipse Plugin +++<a name="EclipsePlugin-Whatisit?">++++++</a>+++
+= Eclipse Plugin +++<a name="EclipsePlugin-Whatisit?">++++++</a>+++
 
 = What is it?
 

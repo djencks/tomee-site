@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Deploy Tool
+= Deploy Tool
 
 +++<a name="DeployTool-NAME">++++++</a>+++
 

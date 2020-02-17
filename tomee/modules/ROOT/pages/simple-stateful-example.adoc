@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Simple Stateful Example +++<a name="SimpleStatefulExample-Overview">++++++</a>+++
+= Simple Stateful Example +++<a name="SimpleStatefulExample-Overview">++++++</a>+++
 
 = Overview
 

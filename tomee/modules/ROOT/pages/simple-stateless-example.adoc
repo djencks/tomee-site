@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Simple Stateless Example
+= Simple Stateless Example
 
 +++<a name="SimpleStatelessExample-Overview">++++++</a>+++
 

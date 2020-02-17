@@ -1,4 +1,4 @@
-Title: EJB Servlet
+= EJB Servlet
 
 ....
 package org.superbiz;

@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Startup +++<a name="Startup-NAME">++++++</a>+++
+= Startup +++<a name="Startup-NAME">++++++</a>+++
 
 = NAME
 

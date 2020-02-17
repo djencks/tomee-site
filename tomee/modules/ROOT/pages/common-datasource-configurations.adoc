@@ -1,4 +1,4 @@
-Title: Common DataSource Configurations
+= Common DataSource Configurations
 
 See the xref:datasource-config.adoc[DataSource Configuration] for details on all configuration options for DataSources.
 

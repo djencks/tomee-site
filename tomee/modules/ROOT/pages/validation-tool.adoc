@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Validation Tool
+= Validation Tool
 
 +++<a name="ValidationTool-NAME">++++++</a>+++
 

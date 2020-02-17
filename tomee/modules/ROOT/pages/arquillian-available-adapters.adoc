@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: TomEE and Arquillian
+= TomEE and Arquillian
 
 Check out the xref:arquillian-getting-started.adoc[Getting started] page if you are not at all familiar with Arquillian.
 

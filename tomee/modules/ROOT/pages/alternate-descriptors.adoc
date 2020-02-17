@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Alternate Descriptors As of OpenEJB 3.1.1, you have the ability to specify an alternate set of deployment descriptors to use for a given environment.
+= Alternate Descriptors As of OpenEJB 3.1.1, you have the ability to specify an alternate set of deployment descriptors to use for a given environment.
 This is focused mostly on testing where it is often desirable to use a slightly different configuration for a set of tests or even a specific test.
 
 = When nothing else does the trick

@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: TomEE and Hibernate
+= TomEE and Hibernate
 
 Apache TomEE ships with OpenJPA as the default JPA provider, however any valid JPA 2.0 provider can be used.
 
@@ -114,12 +112,12 @@ Also, be sure to put your Database JDBC driver in `<tomee-home>/lib`.
 
 The actual Maven dependencies for your project can be added in the usual way:
 
- 	<!-- Hibernate -->		
+ 	<!-- Hibernate -->
  	<dependency>
  		<groupId>antlr</groupId>
  		<artifactId>antlr</artifactId>
  		<version>2.7.7</version>
- 	</dependency>		
+ 	</dependency>
  	<dependency>
  		<groupId>dom4j</groupId>
  		<artifactId>dom4j</artifactId>

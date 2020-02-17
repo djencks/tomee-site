@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: EJB 3 RoadMap \{swizzlejira}
+= EJB 3 RoadMap \{swizzlejira}
 
 . set( $jira = $rss.fetch("http://issues.apache.org/jira/sr/jira.issueviews:searchrequest-xml/temp/SearchRequest.xml?&pid=12310530&component=12311366") )
 . set( $axis = $rss.fetch("http://issues.apache.org/jira/si/jira.issueviews:issue-xml/OPENEJB-114/OPENEJB-114.xml") )

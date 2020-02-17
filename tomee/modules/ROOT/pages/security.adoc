@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Security +++<a name="Security-Security-HowTo.">++++++</a>+++
+= Security +++<a name="Security-Security-HowTo.">++++++</a>+++
 
 = Security - How To.
 

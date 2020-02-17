@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Singleton Beans +++<a name="SingletonBeans-SingletonOverview">++++++</a>+++
+= Singleton Beans +++<a name="SingletonBeans-SingletonOverview">++++++</a>+++
 
 = Singleton Overview
 

@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: OpenEJB 0.9.2
+= OpenEJB 0.9.2
 
 {excerpt:hidden=true} xref:download/openejb-0.9.2.adoc[OpenEJB 0.9.2]
 
@@ -11,16 +9,16 @@ Title: OpenEJB 0.9.2
  ** http://dist.codehaus.org/openejb/distributions/openejb-0.9.2-src.tar.gz[openejb-0.9.2-src.tar.gz]
  ** xref:openejb-0.9.2.adoc[Release Notes] \{excerpt}
 
-+++<a name="OpenEJB0.9.2-Download">++++++</a>+++
 
-= Download
+
+== Download
 
 * Binary: openejb-0.9.2 {http://openejb.codehaus.org/dist/openejb-0.9.2.zip[zip]  , [tar.gz|http://openejb.codehaus.org/dist/openejb-0.9.2.tar.gz] }
 * Source: openejb-0.9.2-src {http://openejb.codehaus.org/dist/openejb-0.9.2-src.zip[zip]  , [tar.gz|http://openejb.codehaus.org/dist/openejb-0.9.2-src.tar.gz] }
 
-+++<a name="OpenEJB0.9.2-Changelog">++++++</a>+++
 
-= Changelog
+
+== Changelog
 
 Enhancements:
 

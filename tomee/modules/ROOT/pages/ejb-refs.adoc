@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: EJB Refs
+= EJB Refs
 
 TomEE complains it doesn't know the container type, so I added type="javax.naming.InitialContext" and it worked (mostly).
 +++<a name="EJBRefs-Referencingabeaninanotherjar(withannotations)">++++++</a>+++

@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: persistence-context +++<a name="persistence-context-Viaannotation">++++++</a>+++
+= persistence-context +++<a name="persistence-context-Viaannotation">++++++</a>+++
 
 = Via annotation
 

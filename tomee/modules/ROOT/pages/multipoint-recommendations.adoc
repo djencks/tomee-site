@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Multipoint Recommendations
+= Multipoint Recommendations
 
 As mentioned the `initialServers` is only used for bootstrapping the multipoint network.
 Once running, all servers will dynamically establish direct connections with each other and there is no single point of failure.

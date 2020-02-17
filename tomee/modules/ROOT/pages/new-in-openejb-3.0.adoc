@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: New in OpenEJB 3.0 +++<a name="NewinOpenEJB3.0-EJB3.0">++++++</a>+++
+= New in OpenEJB 3.0 +++<a name="NewinOpenEJB3.0-EJB3.0">++++++</a>+++
 
 = EJB 3.0
 

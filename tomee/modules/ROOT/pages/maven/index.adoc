@@ -1,4 +1,4 @@
-Title: TomEE Maven Plugin
+= TomEE Maven Plugin
 
 Inspired by the Jetty Maven Plugin, the TomEE Maven Plugin is a feature-rich plugin that allows for:
 

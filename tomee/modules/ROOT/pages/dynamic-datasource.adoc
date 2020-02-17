@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Dynamic Datasource +++<a name="DynamicDatasource-OpenEJBdynamicdatasource">++++++</a>+++
+= Dynamic Datasource +++<a name="DynamicDatasource-OpenEJBdynamicdatasource">++++++</a>+++
 
 = OpenEJB dynamic datasource
 

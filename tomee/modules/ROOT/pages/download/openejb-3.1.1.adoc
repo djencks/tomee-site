@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: OpenEJB 3.1.1
+= OpenEJB 3.1.1
 
 * Release Date: June 2nd, 2009
 * Partial EJB 3.1 support
@@ -9,29 +7,29 @@ Title: OpenEJB 3.1.1
 * EJB 2.0 support
 * EJB 1.1 support
 
-+++<a name="OpenEJB3.1.1-Download">++++++</a>+++
 
-= Download
 
-+++<a name="OpenEJB3.1.1-OpenEJBStandloneServer">++++++</a>+++
+== Download
 
-[discrete]
-==== OpenEJB Standlone Server
+
+
+
+=== OpenEJB Standlone Server
 
 * http://archive.apache.org/dist/openejb/3.1.1/openejb-3.1.1.zip[openejb-3.1.1.zip]  ([pgp|http://www.apache.org/dist/openejb/3.1.1/openejb-3.1.1.zip.asc], [md5|http://www.apache.org/dist/openejb/3.1.1/openejb-3.1.1.zip.md5] )
 * http://archive.apache.org/dist/openejb/3.1.1/openejb-3.1.1.tar.gz[openejb-3.1.1.tar.gz]  ([pgp|http://www.apache.org/dist/openejb/3.1.1/openejb-3.1.1.tar.gz.asc], [md5|http://www.apache.org/dist/openejb/3.1.1/openejb-3.1.1.tar.gz.md5] )
 
-+++<a name="OpenEJB3.1.1-OpenEJBforTomcat">++++++</a>+++
 
-[discrete]
-==== OpenEJB for Tomcat
+
+
+=== OpenEJB for Tomcat
 
 * http://archive.apache.org/dist/openejb/3.1.1/openejb.war[openejb.war]  ([pgp|http://www.apache.org/dist/openejb/3.1.1/openejb.war.asc], [md5|http://www.apache.org/dist/openejb/3.1.1/openejb.war.md5] )
 
-+++<a name="OpenEJB3.1.1-EJB3.1andotherexamples(sourceincluded)">++++++</a>+++
 
-[discrete]
-==== EJB 3.1 and other examples (source included)
+
+
+=== EJB 3.1 and other examples (source included)
 
 * http://archive.apache.org/dist/openejb/3.1.1/openejb-examples-3.1.1.tar.gz[openejb-examples-3.1.1.tar.gz]
 
@@ -41,26 +39,28 @@ Title: OpenEJB 3.1.1
 
 ([pgp|http://www.apache.org/dist/openejb/3.1.1/openejb-examples-3.1.1.zip.asc], [md5|http://www.apache.org/dist/openejb/3.1.1/openejb-examples-3.1.1.zip.md5] )
 
-+++<a name="OpenEJB3.1.1-SourceCode">++++++</a>+++
 
-[discrete]
-==== Source Code
+
+
+=== Source Code
 
 * http://archive.apache.org/dist/openejb/3.1.1/openejb-3.1.1-src.zip[openejb-3.1.1-src.zip]  ([pgp|http://www.apache.org/dist/openejb/3.1.1/openejb-3.1.1-src.zip.asc], [md5|http://www.apache.org/dist/openejb/3.1.1/openejb-3.1.1-src.zip.md5] )
 * http://archive.apache.org/dist/openejb/3.1.1/openejb-3.1.1-src.tar.gz[openejb-3.1.1-src.tar.gz]
 
 ([pgp|http://www.apache.org/dist/openejb/3.1.1/openejb-3.1.1-src.tar.gz.asc], [md5|http://www.apache.org/dist/openejb/3.1.1/openejb-3.1.1-src.tar.gz.md5] )
 
-+++<a name="OpenEJB3.1.1-ReleaseNotes">++++++</a>+++
 
-[discrete]
-==== Release Notes
+
+
+=== Release Notes
 
 * http://www.apache.org/dist/openejb/3.1.1/RELEASE-NOTES.txt[RELEASE-NOTES.txt]
 
-+++<a name="OpenEJB3.1.1-TestedOn">++++++</a>+++
 
-= Tested On+++<table>++++++<tr>++++++<th>++++++</th>++++++<th>+++Windows XP (JDK 1.5)+++</th>++++++<th>+++Windows XP (JDK 1.6)+++</th>++++++<th>+++Linux (JDK 1.5)+++</th>++++++<th>+++Linux (JDK 1.6)+++</th>++++++<th>+++Mac OSX (JDK 1.5)+++</th>++++++<th>+++Mac OSX (JDK 1.6)+++</th>++++++</tr>+++
+
+== Tested On
+
++++<table>++++++<tr>++++++<th>++++++</th>++++++<th>+++Windows XP (JDK 1.5)+++</th>++++++<th>+++Windows XP (JDK 1.6)+++</th>++++++<th>+++Linux (JDK 1.5)+++</th>++++++<th>+++Linux (JDK 1.6)+++</th>++++++<th>+++Mac OSX (JDK 1.5)+++</th>++++++<th>+++Mac OSX (JDK 1.6)+++</th>++++++</tr>+++
 +++<tr>++++++<td>+++Embedded+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
 +++<tr>++++++<td>+++Standalone+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
 +++<tr>++++++<td>+++Tomcat 6.0.14+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
@@ -70,11 +70,7 @@ Title: OpenEJB 3.1.1
 +++<tr>++++++<td>+++Tomcat 5.5.26+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
 +++<tr>++++++<td>+++Tomcat 5.5.25+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
 +++<tr>++++++<td>+++Tomcat 5.5.23+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++Tomcat 5.5.20+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>++++++</table>+++
-
-+++<a name="OpenEJB3.1.1-ChangeSummary">++++++</a>+++
-
-= Change Summary
++++<tr>++++++<td>+++Tomcat 5.5.20+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>++++++</table>+++= = Change Summary
 
 Major new features:
 
@@ -90,13 +86,13 @@ Significant Improvements:
 * @EjbDeployment annotation as alternative to +++<ejb-deployment>+++in openejb-jar.xml+++</ejb-deployment>+++
 * All openejb.* options and values logged on debug
 
-+++<a name="OpenEJB3.1.1-EJB3.1Features">++++++</a>+++
 
-= EJB 3.1 Features
 
-+++<a name="OpenEJB3.1.1-EJB3.1Singletons">++++++</a>+++
+== EJB 3.1 Features
 
-== EJB 3.1 Singletons
+
+
+=== EJB 3.1 Singletons
 
 Singletons are a new type of Session bean being added to the EJB 3.1 specification.
 As the name implies a javax.ejb.Singleton is a session bean with a guarantee that there is at most one instance in the application.
@@ -107,16 +103,17 @@ Additionally, Singleton beans have multi-threaded capabilities allowing them to 
 
 See the xref:openejbx30:singleton-beans.adoc[Singleton API]  and [Singleton Example]  pages.
 
-+++<a name="OpenEJB3.1.1-EmbeddableforTestingandJavaSEusage(proposedEJB3.1feature)">++++++</a>+++
 
-== Embeddable for Testing and Java SE usage (proposed EJB 3.1 feature)
+
+=== Embeddable for Testing and Java SE usage (proposed EJB 3.1 feature)
 
 Over the years, OpenEJB has innovated the art of the embedded/Java SE EJB container usable as a plain library much the way an embedded databases work.
 In a simple 1, 2, 3 step of 1) add OpenEJB to your classpath, 2) add a META-INF/ejb-jar.xml containing at minimum "+++<ejb-jar>++++++</ejb-jar>+++", then 3) use the org.apache.openejb.client.LocalInitialContextFactory when creating your client InitialContext, you've got a Java SE EJB container that can be used in unit tests, your IDE, or anywhere you'd like to drop in EJB functionality.
 Configuration can be done through an openejb.xml file or can be encapsulated 100% in the test case through the parameters passed to the InitialContext.
 For example, to create a JTA DataSource for JPA usage, you can simply:
 
-....
+[source,java]
+----
 Properties p = new Properties();
 p.put(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.LocalInitialContextFactory");
 p.put("movieDatabase", "new://Resource?type=DataSource");
@@ -124,28 +121,29 @@ p.put("movieDatabase.JdbcDriver", "org.hsqldb.jdbcDriver");
 p.put("movieDatabase.JdbcUrl", "jdbc:hsqldb:mem:moviedb");
 
 Context context = new InitialContext(p);
-....
+----
 
 See the examples zip for a dozen embedded testing examples that range from simple @Stateless beans to advanced transaction and security testing.
 
-+++<a name="OpenEJB3.1.1-CollapsedEAR(EJBsin.WARs)(proposedEJB3.1feature)">++++++</a>+++
 
-== Collapsed EAR (EJBs in .WARs) (proposed EJB 3.1 feature)
+
+=== Collapsed EAR (EJBs in .WARs) (proposed EJB 3.1 feature)
 
 Along the lines of the Tomcat integration where OpenEJB can be plugged into Tomcat, we've expanded the idea to also allow your EJBs to be plugged into your webapp.
 We call this innovative feature xref:collapsed-ear.adoc[Collapsed EAR] .  In this style 100% of your classes, including your EJBs, can be packed into your WEB-INF/classes and WEB-INF/lib directories.
 The result is that your WAR file becomes a replacement for an EAR.
 Unlike an EAR, all multi-packaging and multi-classloader requirements are stripped away and collapsed down to one archive and one classloader all your components, EJBs or otherwise, can share.
 
-+++<a name="OpenEJB3.1.1-ConstructorInjection(proposedEJB3.1feature)">++++++</a>+++
 
-== Constructor Injection (proposed EJB 3.1 feature)
+
+=== Constructor Injection (proposed EJB 3.1 feature)
 
 For those of you who would like to use final fields, wish to avoid numerous setters, or dislike private field injection and would like nothing more than to just use plan old java constructors, your wish has come true.
 This is a feature we intended to add to OpenEJB 3.0 but didn't have time for.
 We're happy to bring it to the OpenEJB 3.1.1 release and with a bit of luck and support from people like yourself, we'll see this as an EJB 3.1 feature as well.
 
-....
+[source,java]
+----
 @Stateless
 public class WidgetBean implements Widget {
 
@@ -172,15 +170,15 @@ public class WidgetBean implements Widget {
 	      return foo;
     }
 }
-....
+----
 
-+++<a name="OpenEJB3.1.1-GeneralFeatures">++++++</a>+++
 
-= General Features
 
-+++<a name="OpenEJB3.1.1-EJB3.0Support">++++++</a>+++
+== General Features
 
-== EJB 3.0 Support
+
+
+=== EJB 3.0 Support
 
 OpenEJB 3.1.1 supports the EJB 3.0 specification as well as the prior EJB 2.1, EJB 2.0, and EJB 1.1.
 New features in EJB 3.0 include:
@@ -209,9 +207,9 @@ The two aspects of EJB that OpenEJB does not yet support are:
 CORBA support will be added in future releases.
 Support for the JAX-RPC API is not a planned feature.
 
-+++<a name="OpenEJB3.1.1-EJBPluginforTomcat6and5.5">++++++</a>+++
 
-== EJB Plugin for Tomcat 6 and 5.5
+
+=== EJB Plugin for Tomcat 6 and 5.5
 
 OpenEJB 3.1.1 can be xref:openejbx30:tomcat.adoc[plugged into]  any Tomcat 6 or Tomcat 5.5 server, adding support for EJBs in Web Apps.
 War files themselves can contain EJBs and the Servlets can use new JavaEE 5 annotations, XA transactions, JPA, and JMS.
@@ -222,45 +220,47 @@ Don't use EJBs?
 No matter, adding OpenEJB to Tomcat gives Servlets several new Java EE 5 capabilities such as JPA, JAX-WS, JMS, J2EE Connectors, transactions, and more as well as enhancing the injection features of Tomcat 6 to now support injection of JavaEE objects like Topics, Queues, EntityManagers, JMS ConnectionFactories, JavaMail Sessions, as well as simpler data types such as Dates, Classes, URI, URL, List, Map, Set, Properties, and more.
 In the case of Tomcat 5.5 which doesn't support dependency injection at all, even more is gained.
 
-+++<a name="OpenEJB3.1.1-SpringIntegration">++++++</a>+++
 
-== Spring Integration
+
+=== Spring Integration
 
 Add OpenEJB 3.1.1 to your Spring application to gain the ability for EJBs to be easily injected into Spring beans (and vice versa) and add Java EE 5 capabilities such as JPA, JAX-WS, JMS, J2EE Connectors, transactions, and security.
 
 See the xref:openejbx30:spring.adoc[Spring]  page and [Spring Example|OPENEJBx30:Spring EJB and JPA]  for an example.
 
-+++<a name="OpenEJB3.1.1-MulticastDiscovery">++++++</a>+++
 
-== Multicast Discovery
+
+=== Multicast Discovery
 
 Add the http://people.apache.org/repo/m2-ibiblio-rsync-repository/org/apache/openejb/openejb-multicast/3.1/openejb-multicast-3.1.jar[openejb-multicast.jar]  to your OpenEJB distributions lib/ directory and gain the ability to use multicast discovery between clients and serves as well as between servers allowing for request failover to other discovered servers.
 Clients can discover and access servers with a new "multicast://239.255.3.2:6142" url as follows:
 
+[source,java]
+----
  Properties p = new Properties();
  p.put("java.naming.factory.initial", "org.apache.openejb.client.RemoteInitialContextFactory");
  p.put("java.naming.provider.url", "multicast://239.255.3.2:6142");
  InitialContext ctx = new InitialContext(p);
+----
 
-+++<a name="OpenEJB3.1.1-RunsonOSGi">++++++</a>+++
 
-== Runs on OSGi
+=== Runs on OSGi
 
 All OpenEJB 3.1.1 binaries come with complete OSGi metadata and are usable as a bundle in any OSGi platform.
 Look for OpenEJB in the upcoming, OSGi-based ServiceMix 4 which is built on Apache Felix.
 
-+++<a name="OpenEJB3.1.1-CMPviaJPA">++++++</a>+++
 
-== CMP via JPA
+
+=== CMP via JPA
 
 Our CMP implementation is a thin layer over the new Java Persistence API (JPA).
 This means when you deploy an old style CMP 1.1 or CMP 2.1 bean it is internally converted and ran as a JPA bean.
 This makes it possible to use both CMP and JPA in the same application without any coherence issues that can come from using two competing persistence technologies against the same data.
 Everything is ultimately JPA in the end.
 
-+++<a name="OpenEJB3.1.1-DependencyInjection--Enums,Classes,Dates,Files,ohmy.">++++++</a>+++
 
-== Dependency Injection -- Enums, Classes, Dates, Files, oh my.
+
+=== Dependency Injection -- Enums, Classes, Dates, Files, oh my.
 
 Dependency Injection in EJB 3.0 via @Resource is largely limited to objects provided by the container, such as DataSources, JMS Topics and Queues.
 It is possible for you to supply your own configuration information for injection, but standard rules allow for only data of type String, Character, Boolean, Integer, Short, Long, Double, Float and Byte.
@@ -270,7 +270,8 @@ This is just plain silly as the conversion of Strings to other basic data types 
 OpenEJB 3.1.1 supports injection of any data type for which you can supply a JavaBeans PropertyEditor.
 We include several built-in PropertyEditors already such as Date, InetAddress, Class, File, URL, URI, Map, List, any java.lang.Enum and more.
 
-....
+[source,java]
+----
 import java.net.URI;
 import java.io.File;
 import java.util.Date;
@@ -281,17 +282,18 @@ public class MyBean {
     @Resource Date birthday;
     @Resource File homeDirectory;
 }
-....
 
-+++<a name="OpenEJB3.1.1-DependencyInjection--GenericCollectionsandMaps">++++++</a>+++
 
-== Dependency Injection -- Generic Collections and Maps
+
+
+=== Dependency Injection -- Generic Collections and Maps
 
 Support for Java Generics makes the dependency injection that much more powerful.
 Declare an injectable field that leverages Java Generics and we will use that information to boost your injection to the next level.
 For example:
 
-....
+[source,java]
+----
 import java.net.URI;
 import java.io.File;
 
@@ -300,16 +302,17 @@ public class MyBean {
     @Resource List<Class> factories;
     @Resource Map<URI, File> locations;
 }
-....
 
-+++<a name="OpenEJB3.1.1-DependencyInjection--CustomTypes">++++++</a>+++
 
-== Dependency Injection -- Custom Types
+
+
+=== Dependency Injection -- Custom Types
 
 You can easily add your own types or override the way built-in types are handled and claim dependency injection as your own making it a critical part of your architecture.
 For example, let's register a custom editor for our Pickup enum.
 
-....
+[source,java]
+----
 import java.beans.PropertyEditorManager;
 
 public enum Pickup {
@@ -324,22 +327,23 @@ public enum Pickup {
 	      PropertyEditorManager.registerEditor(Pickup.class, PickupEditor.class);
     }
 }
-....
+----
 
 And referenced as follows
 
-....
+[source,java]
+----
 @Stateful
 public class StratocasterImpl implements Stratocaster {
 
     @Resource(name = "pickups")
     private List<Pickup> pickups;
 }
-....
+----
 
-+++<a name="OpenEJB3.1.1-TheMETA-INF/env-entries.properties">++++++</a>+++
 
-== The META-INF/env-entries.properties
+
+=== The META-INF/env-entries.properties
 
 Along the lines of injection, one of the last remaining things in EJB 3 that people need an ejb-jar.xml file for is to supply the value of env-entries.
 Env Entries are the source of data for all user supplied data injected into your bean;
@@ -357,26 +361,26 @@ META-INF/env-entries.properties
  birthday = 1954-03-01
  homeDirectory = /home/esmith/
 
-+++<a name="OpenEJB3.1.1-SupportforGlassFishdescriptors">++++++</a>+++
 
-== Support for GlassFish descriptors
+
+=== Support for GlassFish descriptors
 
 Unit testing EJBs with OpenEJB is a major feature and draw for people, even for people who may still use other app servers for final deployment such as Geronimo or GlassFish.
 The descriptor format for Geronimo is natively understood by OpenEJB as OpenEJB is the EJB Container provider for Geronimo.
 However, OpenEJB also supports the GlassFish descriptors so people using GlassFish as their final server can still use OpenEJB for testing EJBs via plain JUnit tests in their build and only have one set of vendor descriptors to maintain.
 
-+++<a name="OpenEJB3.1.1-JavaEE5EARandApplicationClientsupport">++++++</a>+++
 
-== JavaEE 5 EAR and Application Client support
+
+=== JavaEE 5 EAR and Application Client support
 
 JavaEE 5 EARs, RARs, and Application Clients can be deployed in addition to ejb jars.
 EAR support is limited to ejbs, application clients, RARs, and libraries;
 WAR files will be ignored unless embedded in Tomcat.
 Per the JavaEE 5 spec, the META-INF/application.xml and META-INF/application-client.xml files are optional.
 
-+++<a name="OpenEJB3.1.1-ApplicationValidationforEJB3.0">++++++</a>+++
 
-== Application Validation for EJB 3.0
+
+=== Application Validation for EJB 3.0
 
 Incorrect usage of various new aspects of EJB 3.0 are checked for and reported during the deployment process preventing strange errors and failures.
 
@@ -402,29 +406,29 @@ Here we illegally add some annotations to the "Movies" bean's interface as well 
  WARN ... Movies:  Ignoring @TransactionAttribute used on interface org.superbiz.injection.jpa.Movies method addMovie.
                    Annotation only usable on the bean class.
 
-== JNDI Name Formatting
+=== JNDI Name Formatting
 
 A complication when using EJB is that plain client applications are at the mercy of vendor's chosen methodology for how JNDI names should be constructed.
 OpenEJB breaks the mold by allowing you to [specify the exact format|OPENEJBx30:JNDI Names] you'd like OpenEJB to use for your server or any individual application.
 Supply us with a formatting string, such as "ejb/\{ejbName}/{interfaceClass.simpleName}", to get a JNDI layout that best matches your needs.
 
-= Changelog
+== Changelog
 
  {swizzlejira}
  #set ( $jira = $rss.fetch("http://issues.apache.org/jira/secure/IssueNavigator.jspa?view=rss&&pid=12310530&status=5&status=6&fixfor=12313484&tempMax=1000&reset=true&decorator=none") )
  #set( $issues = $jira.issues )
 
-[discrete]
+
 === New Features:
 
  {swizzlejiraissues:issues=$as.param($issues.equals("type", "New Feature").descending("id"))|columns=key;summary}
 
-[discrete]
+
 === Improvements:
 
  {swizzlejiraissues:issues=$as.param($issues.equals("type", "Improvement"))|columns=key;summary}
 
-[discrete]
+
 === Tasks & Sub-Tasks:
 
 ....

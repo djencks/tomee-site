@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Generating EJB 3 annotations +++<a name="GeneratingEJB3annotations-GeneratingEJB3annotations">++++++</a>+++
+= Generating EJB 3 annotations +++<a name="GeneratingEJB3annotations-GeneratingEJB3annotations">++++++</a>+++
 
 = Generating EJB 3 annotations
 

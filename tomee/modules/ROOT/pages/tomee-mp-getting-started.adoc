@@ -1,4 +1,4 @@
-Title: TomEE Maven Plugin
+= TomEE Maven Plugin
 
 ###Add The TomEE Maven Plugin To An Existing Project
 

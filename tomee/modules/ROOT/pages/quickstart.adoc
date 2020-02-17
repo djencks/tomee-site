@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Quickstart +++<a name="Quickstart-Installation">++++++</a>+++
+= Quickstart +++<a name="Quickstart-Installation">++++++</a>+++
 
 = Installation
 

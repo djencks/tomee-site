@@ -1,4 +1,4 @@
-Title: Getting started with Arquillian and TomEE
+= Getting started with Arquillian and TomEE
 
 Arquillian is a testing framework on top of JUnit (or TestNG if you prefer).
 It makes it easier to do integration tests in a managed environment (JEE environment here after).

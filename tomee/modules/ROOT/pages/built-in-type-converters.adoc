@@ -1,4 +1,4 @@
-Title: Built-in Type Converters The following built-in types are supported for @Resource injection in EJBs via +++<env-entry>+++elements in a META-INF/ejb-jar.xml or via plain properties in a META-INF/env-entries.properties file.+++</env-entry>+++
+= Built-in Type Converters The following built-in types are supported for @Resource injection in EJBs via +++<env-entry>+++elements in a META-INF/ejb-jar.xml or via plain properties in a META-INF/env-entries.properties file.+++</env-entry>+++
 
 EJB 3.0 required types:
 

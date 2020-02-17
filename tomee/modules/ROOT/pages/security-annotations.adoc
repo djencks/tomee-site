@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Security Annotations This page shows the correct usage of the security related annotations:
+= Security Annotations This page shows the correct usage of the security related annotations:
 
 * javax.annotation.security.RolesAllowed
 * javax.annotation.security.PermitAll

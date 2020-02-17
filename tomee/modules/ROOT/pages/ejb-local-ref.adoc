@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: ejb-local-ref +++<a name="ejb-local-ref-Viaannotation">++++++</a>+++
+= ejb-local-ref +++<a name="ejb-local-ref-Viaannotation">++++++</a>+++
 
 = Via annotation
 

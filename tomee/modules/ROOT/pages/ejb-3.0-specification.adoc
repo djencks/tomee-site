@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: EJB 3.0 Specification +++<a name="EJB3.0Specification-Specification">++++++</a>+++
+= EJB 3.0 Specification +++<a name="EJB3.0Specification-Specification">++++++</a>+++
 
 = Specification
 

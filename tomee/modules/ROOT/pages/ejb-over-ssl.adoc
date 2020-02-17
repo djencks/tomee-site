@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: EJB over SSL
+= EJB over SSL
 
 It is possible to setup client/server requests over SSL.
 EJB requests from a remote client can happen two different ways:

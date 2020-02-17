@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: openejb.xml
+= openejb.xml
 
 +++<a name="openejb.xml-Overview">++++++</a>+++
 

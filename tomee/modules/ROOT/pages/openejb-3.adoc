@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: OpenEJB 3
+= OpenEJB 3
 
 +++<a name="OpenEJB3-Past,Present,andFuture">++++++</a>+++
 

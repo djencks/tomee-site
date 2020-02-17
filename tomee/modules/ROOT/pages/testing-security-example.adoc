@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Testing Security Example
+= Testing Security Example
 
 +++<a name="TestingSecurityExample-Overview">++++++</a>+++
 

@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: SSH
+= SSH
 
 = Connecting To OpenEJB or TomEE Through SSH
 

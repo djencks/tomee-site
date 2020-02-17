@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: System Properties Files
+= System Properties Files
 
 = OpenEJB System Properties File
 

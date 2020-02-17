@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Application Resources +++<a name="ApplicationResources">++++++</a>+++
+= Application Resources +++<a name="ApplicationResources">++++++</a>+++
 
 = Resources
 
@@ -130,11 +128,11 @@ So as an alternative to the above code, you could do:
 public class Configuration {
 
     private Properties properties;
-	
+
 	public Properties getProperties() {
 	    return properties;
 	}
-	
+
 	public void setProperties(final Properties properties) {
 	    this.properties = properties;
 	}
@@ -224,17 +222,17 @@ public class Factory {
     private Properties properties;
 
     public Object create() {
-	
+
 	     MyResource resource = new MyResource();
 		 // some custom logic here, maybe using this.properties
-		
+
 		 return resource;
 	}
-	
+
 	public Properties getProperties() {
 	    return properties;
 	}
-	
+
 	public void setProperties(final Properties properties) {
 	    this.properties = properties;
 	}
@@ -258,15 +256,15 @@ Using @PostConstruct will effectively force a lazily loaded resource to be insta
 public class MyClass {
 
     private Properties properties;
-	
+
 	public Properties getProperties() {
 	    return properties;
 	}
-	
+
 	public void setProperties(final Properties properties) {
 	    this.properties = properties;
 	}
-	
+
 	@PostConstruct
 	    public void postConstruct() throws MBeanRegistrationException {
 	        // some custom initialization

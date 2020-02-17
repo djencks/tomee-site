@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Injection of DataSource Example +++<a name="InjectionofDataSourceExample-Overview">++++++</a>+++
+= Injection of DataSource Example +++<a name="InjectionofDataSourceExample-Overview">++++++</a>+++
 
 = Overview
 

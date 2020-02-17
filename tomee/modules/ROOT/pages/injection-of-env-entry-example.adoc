@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Injection of env-entry Example +++<a name="Injectionofenv-entryExample-Overview">++++++</a>+++
+= Injection of env-entry Example +++<a name="Injectionofenv-entryExample-Overview">++++++</a>+++
 
 = Overview
 

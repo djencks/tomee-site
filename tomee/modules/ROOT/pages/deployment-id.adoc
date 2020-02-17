@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Deployment ID
+= Deployment ID
 
 +++<a name="DeploymentID-WhatisaDeploymentID?">++++++</a>+++
 

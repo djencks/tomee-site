@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Basics - Getting Things +++<a name="Basics-GettingThings-GettingStufffromtheContainer">++++++</a>+++
+= Basics - Getting Things +++<a name="Basics-GettingThings-GettingStufffromtheContainer">++++++</a>+++
 
 = Getting Stuff from the Container
 

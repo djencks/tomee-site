@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Injection of EntityManager Example
+= Injection of EntityManager Example
 
 +++<a name="InjectionofEntityManagerExample-Overview">++++++</a>+++
 

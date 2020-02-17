@@ -1,4 +1,4 @@
-Title: Configuring DataSources in tomee.xml
+= Configuring DataSources in tomee.xml
 
 +++<a name="ConfiguringDataSources-ConfiguringDataSourcesinopenejb.xml">++++++</a>+++
 
@@ -41,7 +41,7 @@ See xref:datasource-password-encryption.adoc[DataSource Password Encryption]  fo
 
 See xref:common-datasource-configurations.adoc[Common DataSource Configurations]  for a list of the commonly used databases and their driver configurations.
 
-See 
+See
 //FIXME CHOOSE ONE
 xref:7.0@tomee::datasource-configuration-by-creator.adoc[]
 xref:7.1@tomee::datasource-configuration-by-creator.adoc[]

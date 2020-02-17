@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: JPA Usage +++<a name="JPAUsage-Thingstowatchoutfor">++++++</a>+++
+= JPA Usage +++<a name="JPAUsage-Thingstowatchoutfor">++++++</a>+++
 
 = Things to watch out for
 

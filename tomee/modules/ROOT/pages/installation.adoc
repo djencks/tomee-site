@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Installation +++<a name="Installation-Installation">++++++</a>+++
+= Installation +++<a name="Installation-Installation">++++++</a>+++
 
 = Installation
 

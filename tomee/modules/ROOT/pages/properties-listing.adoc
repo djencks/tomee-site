@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: System Properties Listing
+= System Properties Listing
 
 = OpenEJB system properties+++<table>++++++<tr>++++++<td>++++++<b>+++Name+++</b>++++++</td>++++++<td>++++++<b>+++Value+++</b>++++++</td>++++++<td>++++++<b>+++Description+++</b>++++++</td>++++++</tr>+++
 +++<tr>++++++<td>+++openejb.embedded.remotable+++</td>++++++<td>+++bool+++</td>++++++<td>+++activate or not the remote services when available+++</td>++++++</tr>+++

@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Deploying An Application To TomEE Or OpenEJB
+= Deploying An Application To TomEE Or OpenEJB
 
 = Deploying An Application To TomEE Or OpenEJB
 

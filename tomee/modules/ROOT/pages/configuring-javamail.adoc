@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Configuring JavaMail +++<a name="ConfiguringJavaMail-DeclaringaJavaMailResource">++++++</a>+++
+= Configuring JavaMail +++<a name="ConfiguringJavaMail-DeclaringaJavaMailResource">++++++</a>+++
 
 = Declaring a JavaMail Resource
 

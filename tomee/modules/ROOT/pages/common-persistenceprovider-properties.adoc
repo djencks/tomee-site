@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Common PersistenceProvider properties While not a definitive list, it does help to show a side-by-side view of common properties used by the various persistence providers out there.
+= Common PersistenceProvider properties While not a definitive list, it does help to show a side-by-side view of common properties used by the various persistence providers out there.
 
 +++<a name="CommonPersistenceProviderproperties-TopLink">++++++</a>+++
 

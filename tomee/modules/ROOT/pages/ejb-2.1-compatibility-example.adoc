@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: EJB 2.1 Compatibility Example
+= EJB 2.1 Compatibility Example
 
 +++<a name="EJB2.1CompatibilityExample-Overview">++++++</a>+++
 

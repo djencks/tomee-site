@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Running a standalone OpenEJB server
+= Running a standalone OpenEJB server
 
 +++<a name="RunningastandaloneOpenEJBserver-ConfiguringtheOpenEJBRuntime">++++++</a>+++
 

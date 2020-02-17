@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: OpenJPA OpenJPA is bundled with OpenEJB as the default persistence provider.
+= OpenJPA OpenJPA is bundled with OpenEJB as the default persistence provider.
 
 An example of working `persistence.xml` for OpenJPA:
 

@@ -1,4 +1,4 @@
-Title: Configuring Durations The time based configuration properties of containers and beans support plain english, such as:
+= Configuring Durations The time based configuration properties of containers and beans support plain english, such as:
 
 * "1 hour"
 * "27 minutes"

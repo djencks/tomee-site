@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: EJB Client/Server Failover
+= EJB Client/Server Failover
 
 OpenEJB supports stateless failover.
 Specifically, the ability for an EJB client to failover from one server to the next if a request cannot be completed.

@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Custom Injection
+= Custom Injection
 
 = Overview
 

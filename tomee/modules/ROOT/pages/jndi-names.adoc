@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: JNDI Names
+= JNDI Names
 
 +++<a name="JNDINames-What'sMyBean'sJNDIName?">++++++</a>+++
 

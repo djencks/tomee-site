@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: OpenEJB 3.1.2
+= OpenEJB 3.1.2
 
 * Release Date: October 14th, 2009
 * Partial EJB 3.1 support
@@ -9,29 +7,29 @@ Title: OpenEJB 3.1.2
 * EJB 2.0 support
 * EJB 1.1 support
 
-+++<a name="OpenEJB3.1.2-Download">++++++</a>+++
 
-= Download
 
-+++<a name="OpenEJB3.1.2-OpenEJBStandaloneServer">++++++</a>+++
+== Download
 
-[discrete]
-==== OpenEJB Standalone Server
+
+
+
+=== OpenEJB Standalone Server
 
 * http://archive.apache.org/dist/openejb/3.1.2/openejb-3.1.2.zip[openejb-3.1.2.zip]  ([pgp|http://www.apache.org/dist/openejb/3.1.2/openejb-3.1.2.zip.asc], [md5|http://www.apache.org/dist/openejb/3.1.2/openejb-3.1.2.zip.md5] )
 * http://archive.apache.org/dist/openejb/3.1.2/openejb-3.1.2.tar.gz[openejb-3.1.2.tar.gz]  ([pgp|http://www.apache.org/dist/openejb/3.1.2/openejb-3.1.2.tar.gz.asc], [md5|http://www.apache.org/dist/openejb/3.1.2/openejb-3.1.2.tar.gz.md5] )
 
-+++<a name="OpenEJB3.1.2-OpenEJBforTomcat">++++++</a>+++
 
-[discrete]
-==== OpenEJB for Tomcat
+
+
+=== OpenEJB for Tomcat
 
 * http://archive.apache.org/dist/openejb/3.1.2/openejb.war[openejb.war]  ([pgp|http://www.apache.org/dist/openejb/3.1.2/openejb.war.asc], [md5|http://www.apache.org/dist/openejb/3.1.2/openejb.war.md5] )
 
-+++<a name="OpenEJB3.1.2-EJB3.1andotherexamples(sourceincluded)">++++++</a>+++
 
-[discrete]
-==== EJB 3.1 and other examples (source included)
+
+
+=== EJB 3.1 and other examples (source included)
 
 * http://archive.apache.org/dist/openejb/3.1.2/openejb-examples-3.1.2.tar.gz[openejb-examples-3.1.2.tar.gz]
 
@@ -41,26 +39,26 @@ Title: OpenEJB 3.1.2
 
 ([pgp|http://www.apache.org/dist/openejb/3.1.2/openejb-examples-3.1.2.zip.asc], [md5|http://www.apache.org/dist/openejb/3.1.2/openejb-examples-3.1.2.zip.md5] )
 
-+++<a name="OpenEJB3.1.2-SourceCode">++++++</a>+++
 
-[discrete]
-==== Source Code
+
+
+=== Source Code
 
 * http://archive.apache.org/dist/openejb/3.1.2/openejb-3.1.2-src.zip[openejb-3.1.2-src.zip]  ([pgp|http://www.apache.org/dist/openejb/3.1.2/openejb-3.1.2-src.zip.asc], [md5|http://www.apache.org/dist/openejb/3.1.2/openejb-3.1.2-src.zip.md5] )
 * http://archive.apache.org/dist/openejb/3.1.2/openejb-3.1.2-src.tar.gz[openejb-3.1.2-src.tar.gz]
 
 ([pgp|http://www.apache.org/dist/openejb/3.1.2/openejb-3.1.2-src.tar.gz.asc], [md5|http://www.apache.org/dist/openejb/3.1.2/openejb-3.1.2-src.tar.gz.md5] )
 
-+++<a name="OpenEJB3.1.2-ReleaseNotes">++++++</a>+++
 
-[discrete]
-==== Release Notes
+
+
+=== Release Notes
 
 * http://www.apache.org/dist/openejb/3.1.2/RELEASE-NOTES.txt[RELEASE-NOTES.txt]
 
-+++<a name="OpenEJB3.1.2-TestedOn">++++++</a>+++
 
-= Tested On+++<table>++++++<tr>++++++<th>++++++</th>++++++<th>+++Windows XP (JDK 1.5)+++</th>++++++<th>+++Windows XP (JDK 1.6)+++</th>++++++<th>+++Linux (JDK 1.5)+++</th>++++++<th>+++Linux (JDK 1.6)+++</th>++++++<th>+++Mac OSX (JDK 1.5)+++</th>++++++<th>+++Mac OSX (JDK 1.6)+++</th>++++++</tr>+++
+
+== Tested On+++<table>++++++<tr>++++++<th>++++++</th>++++++<th>+++Windows XP (JDK 1.5)+++</th>++++++<th>+++Windows XP (JDK 1.6)+++</th>++++++<th>+++Linux (JDK 1.5)+++</th>++++++<th>+++Linux (JDK 1.6)+++</th>++++++<th>+++Mac OSX (JDK 1.5)+++</th>++++++<th>+++Mac OSX (JDK 1.6)+++</th>++++++</tr>+++
 +++<tr>++++++<td>+++Embedded+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
 +++<tr>++++++<td>+++Standalone+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
 +++<tr>++++++<td>+++Tomcat 6.0.14+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
@@ -72,18 +70,18 @@ Title: OpenEJB 3.1.2
 +++<tr>++++++<td>+++Tomcat 5.5.23+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
 +++<tr>++++++<td>+++Tomcat 5.5.20+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>++++++</table>+++
 
-+++<a name="OpenEJB3.1.2-ChangeSummary">++++++</a>+++
 
-= Change Summary
+
+== Change Summary
 
 This release is largely focused on bug fixes and small improvements with a couple new features.
 Scanning support for JSF 2.0 ManagedBeans allows for a nice OpenEJB/Tomcat/Mojarra stack.
 xref:openejbx30:datasource-password-encryption.adoc[Database passwords]  listed in the openejb.xml can now be encrypted using our new 'cipher' command line tool.
 Focus areas of improvements/fixes include @LocalClient support, remote client disconnections and connection caching, AltDD support, Stateful bean caching, and additional JNDI name formatting options.
 
-+++<a name="OpenEJB3.1.2-Changelog">++++++</a>+++
 
-= Changelog
+
+== Changelog
 
 _New Features:_
 

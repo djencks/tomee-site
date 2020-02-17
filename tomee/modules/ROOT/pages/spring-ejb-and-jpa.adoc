@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Spring EJB and JPA \{note}OpenEJB 3.1 or later required\{note} This example shows how to combine Spring, OpenEJB and Hibernate using the integration code provided by OpenEJB.
+= Spring EJB and JPA \{note}OpenEJB 3.1 or later required\{note} This example shows how to combine Spring, OpenEJB and Hibernate using the integration code provided by OpenEJB.
 Here, OpenEJB is used as an embeddable EJB container inside of Spring.
 See the xref:spring.adoc[Spring]  page for details.
 

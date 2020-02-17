@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Containers and Resources+++<div id="PageContent">++++++<a name="ContainersandResources-containers">++++++</a>+++
+= Containers and Resources+++<div id="PageContent">++++++<a name="ContainersandResources-containers">++++++</a>+++
 
 +++<a name="ContainersandResources-DefaultCMPContainercontainer">++++++</a>+++
 

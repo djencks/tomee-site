@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Configuring DataSources in Tests +++<a name="ConfiguringDataSourcesinTests-InitialContextproperties">++++++</a>+++
+= Configuring DataSources in Tests +++<a name="ConfiguringDataSourcesinTests-InitialContextproperties">++++++</a>+++
 
 = InitialContext properties
 

@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: JPA Concepts +++<a name="JPAConcepts-JPA101">++++++</a>+++
+= JPA Concepts +++<a name="JPAConcepts-JPA101">++++++</a>+++
 
 = JPA 101
 
@@ -149,7 +147,7 @@ EJBs can use JTA persistence units through the EntityManager as follows:
     <non-jta-data-source>myNonJtaDataSource</non-jta-data-source>
     <class>org.superbiz.jpa.Account</class>
   </persistence-unit>
-	
+
 </persistence>
 ....
 

@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Common Errors
+= Common Errors
 
 <a name="CommonErrors-Cannotfindcontainer"FOO"forbean"BAR""></a>
 

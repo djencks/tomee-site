@@ -1,8 +1,8 @@
-Title: Downloads
+= Released
 
-== Released
+In order to guard against corrupted downloads/installations, it is highly recommended to http://www.apache.org/dev/release-signing#verifying-signature[verify the signature] of the release bundles against the public http://www.apache.org/dist/tomee/KEYS[KEYS] used by the Apache TomEE developers.
 
-In order to guard against corrupted downloads/installations, it is highly recommended to http://www.apache.org/dev/release-signing#verifying-signature[verify the signature] of the release bundles against the public http://www.apache.org/dist/tomee/KEYS[KEYS] used by the Apache TomEE developers.+++<table class="table table-striped">++++++<tr>++++++<th>+++Version+++</th>++++++<th>+++Target+++</th>++++++<th>+++Date+++</th>++++++</tr>+++
++++<table class="table table-striped">++++++<tr>++++++<th>+++Version+++</th>++++++<th>+++Target+++</th>++++++<th>+++Date+++</th>++++++</tr>+++
 +++<tr>++++++<td>++++++<a href="tomee-7.0.0.html">+++7.0.0+++</a>++++++</td>+++  +++<td>+++Java EE 7 (not certified)+++</td>+++ +++<td>+++2016-05+++</td>++++++</tr>+++
 +++<tr>++++++<td>++++++<a href="tomee-7.0.0-M3.html">+++7.0.0-M3+++</a>++++++</td>+++  +++<td>+++Java EE 7 (not certified)+++</td>+++ +++<td>+++2015-12+++</td>++++++</tr>+++
 +++<tr>++++++<td>++++++<a href="tomee-7.0.0-M1.html">+++7.0.0-M1+++</a>++++++</td>+++  +++<td>+++Java EE 7 (not certified)+++</td>+++ +++<td>+++2015-12+++</td>++++++</tr>+++

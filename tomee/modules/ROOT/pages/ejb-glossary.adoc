@@ -1,4 +1,4 @@
-Title: EJB Glossary
+= EJB Glossary
 
 * _JPA_ - javax.persistence API
 * _component interface_ - refers to the legacy interfaces that extend either javax.ejb.EJBObject or javax.ejb.EJBLocalObject

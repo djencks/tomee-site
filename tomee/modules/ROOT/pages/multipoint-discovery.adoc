@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Multipoint (TCP) Discovery
+= Multipoint (TCP) Discovery
 
 As TCP has no real broadcast functionality to speak of, communication of who is in the network is achieved by each server having a physical connection to each other server in the network.
 

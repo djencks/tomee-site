@@ -1,4 +1,4 @@
-Title: Examples Table {span:class=ExamplesTable}+++<table>++++++<tr>++++++<th>+++title+++</th>++++++<th>+++description+++</th>++++++<th>+++APIs used+++</th>++++++</tr>+++
+= Examples Table {span:class=ExamplesTable}+++<table>++++++<tr>++++++<th>+++title+++</th>++++++<th>+++description+++</th>++++++<th>+++APIs used+++</th>++++++</tr>+++
 +++<tr>++++++<td>+++{div:class=Cel1}*[Simple Stateless](simple-stateless-example.html)
 *\{div}+++</td>++++++<td>+++Simple EJB3 *@Stateless* bean with local and remote business
 interfaces and unit test.+++</td>++++++<td>+++- javax.ejb.Remote

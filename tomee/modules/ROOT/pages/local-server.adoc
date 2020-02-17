@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Local Server !http://www.openejb.org/images/diagram-local-server.gif|valign=top, align=right, hspace=15!
+= Local Server !http://www.openejb.org/images/diagram-local-server.gif|valign=top, align=right, hspace=15!
 +++<a name="LocalServer-AccessingEJBsLocally">++++++</a>+++
 
 = Accessing EJBs Locally

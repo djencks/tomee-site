@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Securing a Web Service
+= Securing a Web Service
 
 Web Services are a very common way to implement a Service Oriented Architecture (SOA).
 

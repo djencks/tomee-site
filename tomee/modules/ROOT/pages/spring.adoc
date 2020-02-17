@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Spring \{note} This document and the related feature is considered a prototype and will change based on user feedback.
+= Spring \{note} This document and the related feature is considered a prototype and will change based on user feedback.
 All comments suggestions welcome.
 \{note}
 

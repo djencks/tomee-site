@@ -1,4 +1,4 @@
-Title: Callbacks Correct usage of PostConstruct, PreDestroy, PrePassivate, PostActivate, and AroundInvoke for EJBs and Interceptors.
+= Callbacks Correct usage of PostConstruct, PreDestroy, PrePassivate, PostActivate, and AroundInvoke for EJBs and Interceptors.
 
 For Stateful, Stateless, and MessageDriven, the syntax is as follows:
 

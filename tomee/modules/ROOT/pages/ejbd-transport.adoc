@@ -1,4 +1,4 @@
-Title: Ejbd Transport
+= Ejbd Transport
 
 The Ejbd Transport allows to remotely access EJBs that have a remote interface.
 Nevertheless it is not based on IIOP.

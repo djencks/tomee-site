@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: persistence-unit-ref Both lookup and injection of an EntityManagerFactory can be configured via the @PersistenceUnit annotation or +++<persistence-unit-ref>+++in xml.
+= persistence-unit-ref Both lookup and injection of an EntityManagerFactory can be configured via the @PersistenceUnit annotation or +++<persistence-unit-ref>+++in xml.
 Annotations and xml have equal function in both lookup and injection.+++</persistence-unit-ref>+++
 
 +++<a name="persistence-unit-ref-InjectionandLookup">++++++</a>+++

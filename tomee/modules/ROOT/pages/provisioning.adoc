@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: TomEE/OpenEJB provisioning
+= TomEE/OpenEJB provisioning
 
 = Summary
 

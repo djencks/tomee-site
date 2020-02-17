@@ -1,3 +1,3 @@
-Title: Resources
+= Resources
 
 == Todo

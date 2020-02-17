@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: OpenEJB JSR-107 Integration
+= OpenEJB JSR-107 Integration
 
 +++<a name="OpenEJBJSR-107Integration-OpenEJBJSR-107(JCACHE)Integration">++++++</a>+++
 

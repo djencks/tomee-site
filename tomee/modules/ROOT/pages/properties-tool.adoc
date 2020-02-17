@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Properties Tool +++<a name="PropertiesTool-PropertiesCommandlineTool">++++++</a>+++
+= Properties Tool +++<a name="PropertiesTool-PropertiesCommandlineTool">++++++</a>+++
 
 = Properties Command line Tool
 

@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Multicast (UDP) Discovery
+= Multicast (UDP) Discovery
 
 Multicast is the preferred way to broadcast the heartbeat on the network.
 The simple technique of broadcasting a non-changing service URI on the network has specific advantages to multicast.

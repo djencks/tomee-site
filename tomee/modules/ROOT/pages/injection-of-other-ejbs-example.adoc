@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Injection of other EJBs Example +++<a name="InjectionofotherEJBsExample-Overview">++++++</a>+++
+= Injection of other EJBs Example +++<a name="InjectionofotherEJBsExample-Overview">++++++</a>+++
 
 = Overview
 

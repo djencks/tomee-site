@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: JAAS and TomEE
+= JAAS and TomEE
 
 = Purpose
 

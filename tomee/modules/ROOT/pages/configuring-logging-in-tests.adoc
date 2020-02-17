@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Configuring Logging in Tests +++<a name="ConfiguringLogginginTests-embedded.logging.properties">++++++</a>+++
+= Configuring Logging in Tests +++<a name="ConfiguringLogginginTests-embedded.logging.properties">++++++</a>+++
 
 = embedded.logging.properties
 

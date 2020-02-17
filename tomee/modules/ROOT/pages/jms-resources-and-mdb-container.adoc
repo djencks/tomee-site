@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: JMS Resources and MDB Container
+= JMS Resources and MDB Container
 
 = External ActiveMQ Broker
 

@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Examples
+= Examples
 
 = EJB3 Examples
 

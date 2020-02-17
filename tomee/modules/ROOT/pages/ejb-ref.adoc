@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: ejb-ref +++<a name="ejb-ref-Viaannotation">++++++</a>+++
+= ejb-ref +++<a name="ejb-ref-Viaannotation">++++++</a>+++
 
 = Via annotation
 

@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Multiple Business Interface Hazzards +++<a name="MultipleBusinessInterfaceHazzards-UndeclaredThrowableException">++++++</a>+++
+= Multiple Business Interface Hazzards +++<a name="MultipleBusinessInterfaceHazzards-UndeclaredThrowableException">++++++</a>+++
 
 = UndeclaredThrowableException
 

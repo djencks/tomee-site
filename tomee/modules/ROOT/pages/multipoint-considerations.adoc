@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Multipoint Considerations
+= Multipoint Considerations
 
 = Network size
 

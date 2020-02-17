@@ -1,4 +1,4 @@
-Title: App Clients and JNDI There are some slight differences between the way OpenEJB does app clients and the way Geronimo does app clients
+= App Clients and JNDI There are some slight differences between the way OpenEJB does app clients and the way Geronimo does app clients
 
 Neither uses the names created via the openejb.jndiname.format.
 &nbsp;So changing that will (should) have no affect.

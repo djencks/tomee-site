@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: System Properties
+= System Properties
 
 +++<a name="SystemProperties-Overridingopenejb.xml">++++++</a>+++
 

@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Lookup of other EJBs Example +++<a name="LookupofotherEJBsExample-Overview">++++++</a>+++
+= Lookup of other EJBs Example +++<a name="LookupofotherEJBsExample-Overview">++++++</a>+++
 
 = Overview
 

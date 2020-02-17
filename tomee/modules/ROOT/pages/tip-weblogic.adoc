@@ -1,4 +1,4 @@
-Title: WebLogic Lookup
+= WebLogic Lookup
 
 How to lookup WebLogic Objects from within a TomEE context:
 

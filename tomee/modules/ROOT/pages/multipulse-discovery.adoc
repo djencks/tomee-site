@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: MultiPulse (UDP) Discovery
+= MultiPulse (UDP) Discovery
 
 MultiPulse is an alternative multicast lookup that does not use a regular heartbeat.
 Instead, servers listen for a multicast request packet (a pulse) to which a response is then sent.

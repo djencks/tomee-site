@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Details on openejb-jar
+= Details on openejb-jar
 
 +++<a name="Detailsonopenejb-jar-Whatisanopenejb-jar.xml?">++++++</a>+++
 

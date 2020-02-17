@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Unix Daemon
+= Unix Daemon
 
 Apache TomEE can be run as a daemon using the http://commons.apache.org/daemon/jsvc.html[jsvc] tool from the http://commons.apache.org/daemon[Apache Commons Daemon] project.
 

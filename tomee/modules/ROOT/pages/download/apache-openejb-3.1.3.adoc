@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Apache OpenEJB 3.1.3
+= Apache OpenEJB 3.1.3
 
 * Release Date: October 20th, 2010
 * Partial EJB 3.1 support
@@ -9,14 +7,9 @@ Title: Apache OpenEJB 3.1.3
 * EJB 2.0 support
 * EJB 1.1 support
 
-+++<a name="ApacheOpenEJB3.1.3-Download">++++++</a>+++
+== Download
 
-= Download
-
-+++<a name="ApacheOpenEJB3.1.3-ApacheOpenEJBStandaloneServer">++++++</a>+++
-
-[discrete]
-==== Apache OpenEJB Standalone Server
+=== Apache OpenEJB Standalone Server
 
 * Apache OpenEJB 3.1.3
 * Apache ActiveMQ 5.3.1
@@ -26,13 +19,10 @@ Title: Apache OpenEJB 3.1.3
 
 _binaries_
 
-* http://archive.apache.org/dist/openejb/3.1.3/openejb-3.1.3.zip[openejb-3.1.3.zip]  (http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3.zip.asc, [md5](http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3.zip.md5)[pgp]
-* http://archive.apache.org/dist/openejb/3.1.3/openejb-3.1.3.tar.gz[openejb-3.1.3.tar.gz]  (http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3.tar.gz.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3.tar.gz.md5[md5] )
+* link:http://archive.apache.org/dist/openejb/3.1.3/openejb-3.1.3.zip[openejb-3.1.3.zip]  (http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3.zip.asc, [md5](http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3.zip.md5)[pgp]
+* link:http://archive.apache.org/dist/openejb/3.1.3/openejb-3.1.3.tar.gz[openejb-3.1.3.tar.gz]  (http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3.tar.gz.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3.tar.gz.md5[md5] )
 
-+++<a name="ApacheOpenEJB3.1.3-ApacheOpenEJBforTomcat">++++++</a>+++
-
-[discrete]
-==== Apache OpenEJB for Tomcat
+=== Apache OpenEJB for Tomcat
 
 * Apache OpenEJB 3.1.3
 * Apache ActiveMQ 5.3.1
@@ -42,12 +32,9 @@ _binaries_
 
 _binaries_
 
-* http://archive.apache.org/dist/openejb/3.1.3/openejb.war[openejb.war]  (http://www.apache.org/dist/openejb/3.1.3/openejb.war.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/openejb.war.md5[md5])
+* link:http://archive.apache.org/dist/openejb/3.1.3/openejb.war[openejb.war]  (http://www.apache.org/dist/openejb/3.1.3/openejb.war.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/openejb.war.md5[md5])
 
-+++<a name="ApacheOpenEJB3.1.3-ApacheTomtom-Pre-bundledTomcat">++++++</a>+++
-
-[discrete]
-==== Apache Tomtom - Pre-bundled Tomcat
+=== Apache Tomtom - Pre-bundled Tomcat
 
 * Apache Tomcat 6.0.29
 * Apache OpenEJB 3.1.3
@@ -58,53 +45,130 @@ _binaries_
 
 _binaries_
 
-* http://archive.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.zip[tomtom-6.0.29.313.zip]  (http://www.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.zip.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.zip.md5[md5] )
-* http://archive.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.tar.gz[tomtom-6.0.29.313.tar.gz] (http://www.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.tar.gz.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.tar.gz.md5[md5] )
+* link:http://archive.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.zip[tomtom-6.0.29.313.zip]  (http://www.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.zip.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.zip.md5[md5] )
+* link:http://archive.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.tar.gz[tomtom-6.0.29.313.tar.gz] (http://www.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.tar.gz.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/tomtom-6.0.29.313.tar.gz.md5[md5] )
 
-+++<a name="ApacheOpenEJB3.1.3-EJB3.1andotherexamples(sourceincluded)">++++++</a>+++
+=== EJB 3.1 and other examples (source included)
 
-[discrete]
-==== EJB 3.1 and other examples (source included)
+* link:http://archive.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.tar.gz[openejb-examples-3.1.3.tar.gz](http://www.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.tar.gz.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.tar.gz.md5[md5]
+* link:http://archive.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.zip[openejb-examples-3.1.3.zip] (http://www.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.zip.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.zip.md5[md5]
 
-* http://archive.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.tar.gz[openejb-examples-3.1.3.tar.gz](http://www.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.tar.gz.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.tar.gz.md5[md5]
-* http://archive.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.zip[openejb-examples-3.1.3.zip] (http://www.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.zip.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/openejb-examples-3.1.3.zip.md5[md5]
+=== Source Code
 
-+++<a name="ApacheOpenEJB3.1.3-SourceCode">++++++</a>+++
+* link:http://archive.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.zip[openejb-3.1.3-src.zip] (http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.zip.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.zip.md5[md5]
+* link:http://archive.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.tar.gz[openejb-3.1.3-src.tar.gz] (http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.tar.gz.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.tar.gz.md5[md5]
 
-[discrete]
-==== Source Code
-
-* http://archive.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.zip[openejb-3.1.3-src.zip] (http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.zip.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.zip.md5[md5]
-* http://archive.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.tar.gz[openejb-3.1.3-src.tar.gz] (http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.tar.gz.asc[pgp], http://www.apache.org/dist/openejb/3.1.3/openejb-3.1.3-src.tar.gz.md5[md5]
-
-+++<a name="ApacheOpenEJB3.1.3-ReleaseNotes">++++++</a>+++
-
-[discrete]
-==== Release Notes
+=== Release Notes
 
 * http://www.apache.org/dist/openejb/3.1.3/RELEASE-NOTES.txt[RELEASE-NOTES.txt]
 
-+++<a name="ApacheOpenEJB3.1.3-TestedOn">++++++</a>+++
 
-= Tested On+++<table>++++++<tr>++++++<th>++++++</th>++++++<th>+++Windows XP (JDK 1.5)+++</th>++++++<th>+++Windows XP (JDK 1.6)+++</th>++++++<th>+++Linux (JDK 1.5)+++</th>++++++<th>+++Linux (JDK 1.6)+++</th>++++++<th>+++Mac OSX (JDK 1.5)+++</th>++++++<th>+++Mac OSX (JDK 1.6)+++</th>++++++</tr>+++
-+++<tr>++++++<td>+++Embedded+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++Standalone+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++Tomcat 6.0.29+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++Tomcat 6.0.28+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++Tomcat 6.0.26+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++Tomcat 6.0.24+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++Tomcat 5.5.31+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++Tomcat 5.5.30+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++Tomcat 5.5.29+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>+++
-+++<tr>++++++<td>+++Tomcat 5.5.28+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++<td>+++(/)+++</td>++++++</tr>++++++</table>+++
+=== Tested On
+[cols="7*"]
+|===
+|
+|Windows XP (JDK 1.5)
+|Windows XP (JDK 1.6)
+|Linux (JDK 1.5)
+|Linux (JDK 1.6)
+|Mac OSX (JDK 1.5)
+|Mac OSX (JDK 1.6)
 
-+++<a name="ApacheOpenEJB3.1.3-Changelog">++++++</a>+++
 
-= Changelog
+|Embedded
+|(/)
+|(/)
+|(/)
+|(/)
+|(/)
+|(/)
 
-+++<a name="ApacheOpenEJB3.1.3-NewFeatures">++++++</a>+++
 
-[discrete]
+|Standalone
+|(/)
+|(/)
+|(/)
+|(/)
+|(/)
+|(/)
+
+
+|Tomcat 6.0.29
+|(/)
+|(/)
+|(/)
+|(/)
+|(/)
+|(/)
+
+
+|Tomcat 6.0.28
+|(/)
+|(/)
+|(/)
+|(/)
+|(/)
+|(/)
+
+
+|Tomcat 6.0.26
+|(/)
+|(/)
+|(/)
+|(/)
+|(/)
+|(/)
+
+
+|Tomcat 6.0.24
+|(/)
+|(/)
+|(/)
+|(/)
+|(/)
+|(/)
+
+
+|Tomcat 5.5.31
+|(/)
+|(/)
+|(/)
+|(/)
+|(/)
+|(/)
+
+
+|Tomcat 5.5.30
+|(/)
+|(/)
+|(/)
+|(/)
+|(/)
+|(/)
+
+
+|Tomcat 5.5.29
+|(/)
+|(/)
+|(/)
+|(/)
+|(/)
+|(/)
+
+
+|Tomcat 5.5.28
+|(/)
+|(/)
+|(/)
+|(/)
+|(/)
+|(/)
+|===
+
+
+== Changelog
+
+
 === New Features
 
 * https://issues.apache.org/jira/browse/OPENEJB-1283[OPENEJB-1283]  Apache TomTom: Pre-packaged OpenEJB/Tomcat bundle
@@ -115,18 +179,13 @@ _binaries_
 * https://issues.apache.org/jira/browse/OPENEJB-1115[OPENEJB-1115]  Quartz Resource Adapter
 * https://issues.apache.org/jira/browse/OPENEJB-1235[OPENEJB-1235]  New Stateless pool options: PoolMin, IdleTimeout, MaxAge, Flush and more
 
-+++<a name="ApacheOpenEJB3.1.3-Improvements">++++++</a>+++
-
-[discrete]
 === Improvements
 
-[discrete]
 ==== Upgrades
 
 * https://issues.apache.org/jira/browse/OPENEJB-1227[OPENEJB-1227]  Support for ActiveMQ 5
 * https://issues.apache.org/jira/browse/OPENEJB-977[OPENEJB-977]   Upgrade to CXF 2.2.10
 
-[discrete]
 ==== Client-Server & Failover
 
 * https://issues.apache.org/jira/browse/OPENEJB-1293[OPENEJB-1293]  Conditional Client Failover based on container or bean thrown Exception types
@@ -139,7 +198,6 @@ _binaries_
 * https://issues.apache.org/jira/browse/OPENEJB-1281[OPENEJB-1281]  Preconfigured failover with JNDI provider url such as "failover:ejbd://foo:4201,ejbd://bar:4201"
 * https://issues.apache.org/jira/browse/OPENEJB-1289[OPENEJB-1289]  Client connection pool timeouts events catchable as ConnectionPoolTimeoutException
 
-[discrete]
 ==== Testing
 
 * https://issues.apache.org/jira/browse/OPENEJB-1240[OPENEJB-1240]  @WebServiceRef support for @LocalClient
@@ -154,7 +212,6 @@ _binaries_
 * https://issues.apache.org/jira/browse/OPENEJB-1379[OPENEJB-1379]  Example: Transaction Rollback
 * https://issues.apache.org/jira/browse/OPENEJB-847[OPENEJB-847]  Validation: @Resource UserTransaction injection mistakenly used on bean with Container-Managed Transactions
 
-[discrete]
 ==== Misc
 
 * https://issues.apache.org/jira/browse/OPENEJB-1255[OPENEJB-1255]  Time-based configuration options can now be additive, as in "1 hour, 27 minutes and 34 seconds"
@@ -171,9 +228,6 @@ _binaries_
 * https://issues.apache.org/jira/browse/OPENEJB-1275[OPENEJB-1275]  JMX: EJB Method invocations
 * https://issues.apache.org/jira/browse/OPENEJB-1273[OPENEJB-1273]  JMX: Stateless Pool Stats
 
-+++<a name="ApacheOpenEJB3.1.3-Bugs">++++++</a>+++
-
-[discrete]
 === Bugs
 
 * https://issues.apache.org/jira/browse/OPENEJB-1282[OPENEJB-1282]  mappedName fails to work for @Singleton
@@ -192,4 +246,4 @@ _binaries_
 * https://issues.apache.org/jira/browse/OPENEJB-1261[OPENEJB-1261]  JSP Error on installer-view.jsp with Tomcat 6.0.26
 * https://issues.apache.org/jira/browse/OPENEJB-1053[OPENEJB-1053]  web.xml: unexpected element (uri:"http://java.sun.com/xml/ns/javaee", local:"taglib"
 * https://issues.apache.org/jira/browse/OPENEJB-1116[OPENEJB-1116]  CMP2 EntityBean conflict when a persistent property exists called "deleted"
-* https://issues.apache.org/jira/browse/OPENEJB-1114[OPENEJB-1114]+++<ejb-class>+++element should be optional for +++<session>+++and +++<message-driven>+++declarations * [OPENEJB-1315](https://issues.apache.org/jira/browse/OPENEJB-1315) NPE when deploying EJB modules. * [OPENEJB-1241](https://issues.apache.org/jira/browse/OPENEJB-1241) Using @WebServiceRef does not allow standard JAX-WS Api usage * [OPENEJB-1309](https://issues.apache.org/jira/browse/OPENEJB-1309) Make the DependOn sort algorithm stable * [OPENEJB-1244](https://issues.apache.org/jira/browse/OPENEJB-1244) upgrade legacy activemq 4 support to 4.1.2 * [OPENEJB-1245](https://issues.apache.org/jira/browse/OPENEJB-1245) Possible Stateful bean passivation/activation error: ClassNotFoundException * [OPENEJB-1129](https://issues.apache.org/jira/browse/OPENEJB-1129) Reverse lookup for logging may cause poor client/server performance * [OPENEJB-1239](https://issues.apache.org/jira/browse/OPENEJB-1239) Bad client connection is never getting discarded from pool * [OPENEJB-1286](https://issues.apache.org/jira/browse/OPENEJB-1286) Bug in reporting invalid @PostActivate/@PrePassivate usage in Stateful and Singleton beans * [OPENEJB-1131](https://issues.apache.org/jira/browse/OPENEJB-1131) JDK 1.6.0 u18 has a ClassCastException in ClassLoaderUtil.clearSunJarFileFactoryCache * [OPENEJB-1247](https://issues.apache.org/jira/browse/OPENEJB-1247) @Singleton @PreDestroy on container system shutdown+++</message-driven>++++++</session>++++++</ejb-class>+++
+* https://issues.apache.org/jira/browse/OPENEJB-1114[OPENEJB-1114]<ejb-class>element should be optional for <session>and <message-driven>declarations * [OPENEJB-1315](https://issues.apache.org/jira/browse/OPENEJB-1315) NPE when deploying EJB modules. * [OPENEJB-1241](https://issues.apache.org/jira/browse/OPENEJB-1241) Using @WebServiceRef does not allow standard JAX-WS Api usage * [OPENEJB-1309](https://issues.apache.org/jira/browse/OPENEJB-1309) Make the DependOn sort algorithm stable * [OPENEJB-1244](https://issues.apache.org/jira/browse/OPENEJB-1244) upgrade legacy activemq 4 support to 4.1.2 * [OPENEJB-1245](https://issues.apache.org/jira/browse/OPENEJB-1245) Possible Stateful bean passivation/activation error: ClassNotFoundException * [OPENEJB-1129](https://issues.apache.org/jira/browse/OPENEJB-1129) Reverse lookup for logging may cause poor client/server performance * [OPENEJB-1239](https://issues.apache.org/jira/browse/OPENEJB-1239) Bad client connection is never getting discarded from pool * [OPENEJB-1286](https://issues.apache.org/jira/browse/OPENEJB-1286) Bug in reporting invalid @PostActivate/@PrePassivate usage in Stateful and Singleton beans * [OPENEJB-1131](https://issues.apache.org/jira/browse/OPENEJB-1131) JDK 1.6.0 u18 has a ClassCastException in ClassLoaderUtil.clearSunJarFileFactoryCache * [OPENEJB-1247](https://issues.apache.org/jira/browse/OPENEJB-1247) @Singleton @PreDestroy on container system shutdown</message-driven></session></ejb-class>

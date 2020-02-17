@@ -1,4 +1,4 @@
-Title: Singleton Example
+= Singleton Example
 
 #Overview
 

@@ -1,13 +1,11 @@
-:doctype: book
+= Index
 
-Title: Index
-
-= Welcome to Apache OpenEJB!
+== Welcome to Apache OpenEJB!
 
 Apache OpenEJB is an embeddable and lightweight EJB 3.0 implementation that can be used as a standalone server or embedded into Tomcat, JUnit, TestNG, Eclipse, IntelliJ, Maven, Ant, and any IDE or application.
 OpenEJB is included in Apache Geronimo, IBM WebSphere Application Server CE, and Apple's WebObjects.
 
-== Major features
+=== Major features
 
 * Supports EJB 3.0, 2.1, 2.0, 1.1 in all modes;
 embedded, standalone or otherwise.
@@ -22,4 +20,4 @@ embedded, standalone or otherwise.
 * Usable in ordinary JUnit or other style test cases without complicated setup or external processes.
 * Validates applications entirely and reports all failures at once, with three selectable levels of detail, avoiding several hours worth of "fix, recompile, redeploy, fail, repeat" cycles.
 
-= News
+== News

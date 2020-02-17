@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Checking Your OpenEJB Version
+= Checking Your OpenEJB Version
 
 = Update checker
 

@@ -1,2 +1,4 @@
 name: common
-version: master
+version: "0.0"
+nav:
+- modules/ROOT/nav0.adoc

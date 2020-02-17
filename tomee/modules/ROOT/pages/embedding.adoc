@@ -1,4 +1,4 @@
-Title: Embedding The basic process for embedding OpenEJB:
+= Embedding The basic process for embedding OpenEJB:
 
 . Add the OpenEJB libraries to your classpath
 . Ensure your EJB modules are discoverable

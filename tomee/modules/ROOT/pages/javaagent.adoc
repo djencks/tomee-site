@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: JavaAgent
+= JavaAgent
 
 +++<a name="JavaAgent-AddingaJavaAgent">++++++</a>+++
 

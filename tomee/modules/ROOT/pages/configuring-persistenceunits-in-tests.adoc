@@ -1,6 +1,4 @@
-:doctype: book
-
-Title: Configuring PersistenceUnits in Tests +++<a name="ConfiguringPersistenceUnitsinTests-Overridingthepersistence.xml">++++++</a>+++
+= Configuring PersistenceUnits in Tests +++<a name="ConfiguringPersistenceUnitsinTests-Overridingthepersistence.xml">++++++</a>+++
 
 = Overriding the persistence.xml
 
