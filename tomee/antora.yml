@@ -1,7 +1,8 @@
 name: common
-version: "0.0"
-nav:
-- modules/ROOT/nav0.adoc
+version: master
+#version: "0.0"
+#nav:
+#- modules/ROOT/nav0.adoc
 asciidoc:
   attributes:
     supported-properties-table-layout: cols="2,1,3,5",options="header"
