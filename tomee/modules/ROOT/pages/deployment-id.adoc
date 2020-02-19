@@ -2,26 +2,26 @@
 
 
 
-= What is a Deployment ID?
+== What is a Deployment ID?
 
 Every bean deployed in OpenEJB has a unique deployment-id that identifies it within the scope of the entire container system.
 The server and container system refer beans at run-time using the bean's deployment id.
 
 
 
-== Like ejb-name
+=== Like ejb-name
 
-This deployment id is much like the +++<ejb-name>+++element of the ejb-jar.xml , with one very important difference.
-The +++<ejb-name>+++is only required to be unique within the scope of the ejb-jar.xml in the bean's jar.
+This deployment id is much like the <ejb-name> element of the ejb-jar.xml , with one very important difference.
+The <ejb-name> is only required to be unique within the scope of the ejb-jar.xml in the bean's jar.
 The deployment id is required to be unique across all beans and jars in OpenEJB.
-This is a subtle, but important, distinction.+++</ejb-name>++++++</ejb-name>+++
+This is a subtle, but important, distinction.
 
 Remember that the EJB specification was designed so that enterprise beans could be create, packaged, and sold by vendors (EJB Providers).
 Furthermore, users should be able to buy a packaged set of beans (a jar with an ejb-jar.xml in it) and deploy it into an EJB Container without modification.
 
 
 
-== The ejb-name is not unique
+=== The ejb-name is not unique
 
 Let's consider this, what happens if two vendors each sell a package (jar) that contains a bean with the +++<ejb-name>+++PurchaseOrder?
 Both are completely different in terms functionality and are different beans in every other respect.
@@ -32,7 +32,7 @@ This is all fine and dandy, but it still leaves it up to the EJB Container/Serve
 
 
 
-== The deployment-id is unique
+=== The deployment-id is unique
 
 OpenEJB solves this with the OpenEJB-specific deployment id.
 By requiring that each bean deployed into OpenEJB has a unique name, we can guarantee that we are always referring to the right bean at all times.
@@ -40,7 +40,7 @@ Furthermore, it allows you to deploy different versions of the same package seve
 
 
 
-== Using ejb-name as deployment-id anyway
+=== Using ejb-name as deployment-id anyway
 
 If you're lazy -- as any truly great programmer should be -- and don't want to type a deployment id for each bean every time you deploy a jar, you can use the -D option of the Deploy Tool.
 This will throw caution to the wind, and automatically assign the bean's ejb-name as the value of the bean's OpenEJB deployment id.
@@ -49,11 +49,11 @@ In other words, be very careful with the -D option!
 
 
 
-= How is it used?
+== How is it used?
 
 
 
-== In the container system
+=== In the container system
 
 In the container system, the deployment id is used to index the bean in a system-wide registry.
 This registry is refereed to on every call made in the container system.
@@ -62,7 +62,7 @@ This stresses the importance of unique ids for every bean deployed in OpenEJB.
 
 
 
-== In the Local Server
+=== In the Local Server
 
 The Local (IntraVM) Server is an integral part of the container system and the two are, in many ways, inseparable.
 The Local Server takes care of all bean to bean and client to bean invocations made inside the virtual machine.
