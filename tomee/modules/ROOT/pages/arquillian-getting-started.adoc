@@ -19,9 +19,9 @@ OpenEJB always fight against that idea and proved that it's really possible.
 As David Blevins said:
 
 [quote]
-----
+____
 "Do not blame EJBs (ie. Java EE) because your server is not testable."
-----
+____
 
 With latest Java EE specifications (5 and especially 6), it becomes a reality.
 Arquillian typically addresses that area.

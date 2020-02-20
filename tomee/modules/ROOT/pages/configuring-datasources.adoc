@@ -1,51 +1,67 @@
 = Configuring DataSources in tomee.xml
+:index-group: Configuration
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 
 
 
-The *+++<Resource>+++* element is used to configure a *javax.sql.DataSource*.
+The *<Resource>* element is used to configure a *javax.sql.DataSource*.
 It is also used to configure other resources like Timers, Topics, Queues.
-We will see some examples of using +++<Resource>+++to configure a DataSource.+++</Resource>++++++</Resource>+++
+We will see some examples of using <Resource> to configure a DataSource.
 
-The +++<Resource>+++element is designed after @Resource annotation and has similar attributes.+++</Resource>+++
+The <Resource> element is designed after @Resource annotation and has similar attributes.
 
 For example, this annotation in your bean:
 
- @Resource(name = "myDerbyDatasource", type = javax.sql.DataSource.class)
+[source,java]
+----
+@Resource(name = "myDerbyDatasource", type = javax.sql.DataSource.class)
+----
 
 Would map to a Resource declared in your openejb.xml as follows:
 
- <Resource id="myDerbyDatasource" type="javax.sql.DataSource">
-  . . . .
- <Resource>
+[source,xml]
+----
+<Resource id="myDerbyDatasource" type="javax.sql.DataSource">
+ . . . .
+<Resource>
+----
 
 Note that in the xml element, the _type_ value of _javax.sql.DataSource_ can abbreviated to just _DataSource_ as follows:
 
- <Resource id="myDerbyDatasource" type="DataSource">
-  . . . .
- <Resource>
+[source,xml]
+----
+<Resource id="myDerbyDatasource" type="DataSource">
+ . . . .
+<Resource>
+----
 
 It is also possible to specify the path to the driver jar file using a classpath attribute like so:
 
- <Resource id="myDerbyDatasource" type="DataSource" classpath="/path/to/driver.jar">
-  . . . .
- <Resource>
+[source,xml]
+----
+<Resource id="myDerbyDatasource" type="DataSource" classpath="/path/to/driver.jar">
+ . . . .
+<Resource>
+----
 
 ...Or in a http://maven.apache.org/[Maven] environment like so:
- <Resource id="myDerbyDatasource" type="DataSource" classpath="mvn:org.apache.derby:derby:10.10.1.1">
-  . . . .
- <Resource>
 
-See xref:containers-and-resources.adoc[Containers and Resources]  for a complete list of supported DataSource properties.
+[source,xml]
+----
+<Resource id="myDerbyDatasource" type="DataSource" classpath="mvn:org.apache.derby:derby:10.10.1.1">
+ . . . .
+<Resource>
+----
 
-See xref:datasource-password-encryption.adoc[DataSource Password Encryption]  for information on specifying non-plain-text database passwords in your openejb.xml file.
+See xref:containers-and-resources.adoc[Containers and Resources] for a complete list of supported DataSource properties.
 
-See xref:common-datasource-configurations.adoc[Common DataSource Configurations]  for a list of the commonly used databases and their driver configurations.
+See xref:datasource-password-encryption.adoc[DataSource Password Encryption] for information on specifying non-plain-text database passwords in your openejb.xml file.
 
-See
-//FIXME CHOOSE ONE
-xref:7.0@tomee::datasource-configuration-by-creator.adoc[]
-xref:7.1@tomee::datasource-configuration-by-creator.adoc[]
-xref:8.0@tomee::datasource-configuration-by-creator.adoc[DataSource Configuration by Creator]  for a list of the different properties supported for each data source creator.
+See xref:common-datasource-configurations.adoc[Common DataSource Configurations] for a list of the commonly used databases and their driver configurations.
+
+See xref:datasource-configuration-by-creator.adoc[DataSource Configuration by Creator] for a list of the different properties supported for each data source creator.
 
 You may also need data partitioning per customer or depending on any other business criteria.
 That's also an available feature.
@@ -55,27 +71,27 @@ See xref:dynamic-datasource.adoc[Dynamic Datasource] for more details.
 
 == JNDI names for configured DataSources
 
-
-
 === Example 1
 
- <Resource id="Default JDBC Database" type="DataSource">
-    . . . . .
- </Resource>
+[source,xml]
+----
+<Resource id="Default JDBC Database" type="DataSource">
+   . . . . .
+</Resource>
+----
 
 The global jndi name would be _java:openejb/Resource/Default JDBC Database_
 
-
-
 === Example 2
 
- <Resource id="Derby Database"  type="DataSource">
-   . . . . .
- </Resource>
+[source,xml]
+----
+<Resource id="Derby Database"  type="DataSource">
+  . . . . .
+</Resource>
+----
 
 The global jndi name would be _java:openejb/Resource/Derby Database_
-
-
 
 == Obtaining a DataSource
 
@@ -83,8 +99,8 @@ DataSource references in your ejb should get automatically mapped to the Resourc
 The shortest and easiest rule is that _if your reference name matches a Resource in your openejb.xml, that's the one you get_.&nbsp;
 Essentially, the rules for mapping are as follows.
 
-. Name Attribute Match - @Resource with a name attribute matching the resource name gets that resource injected
-. Injected Name Match - variable name matching the resource name gets that  resource injected
+. Name Attribute Match - `@Resource` with a name attribute matching the resource name gets that resource injected
+. Injected Name Match - variable name matching the resource name gets that resource injected
 . No Match - nothing matches a resource name, so the first resource available gets injected
 
 There are various ways one could obtain a DataSource now.
@@ -92,30 +108,40 @@ Lets take an example of Derby.
 
 With a Resource declaration in your openejb.xml like this:
 
- <Resource id="myDerbyDatabase"	type="DataSource">
-   . . . . .
- </Resource>
+[source,xml]
+----
+<Resource id="myDerbyDatabase"  type="DataSource">
+  . . . . .
+</Resource>
+----
 
 There are several possible ways to refer to it, as follows.
 
 _BY matching variable name to resource name_
 
- @Stateless
- public class FooBean {
-     @Resource DataSource myDerbyDatabase;
- }
+[source,java]
+----
+@Stateless
+public class FooBean {
+    @Resource DataSource myDerbyDatabase;
+}
+----
 
 _OR BY matching name_
 
- @Stateless
- public class FooBean {
-     @Resource(name="myDerbyDatabase")
-     DataSource dataSource;
- }
+[source,java]
+----
+@Stateless
+public class FooBean {
+    @Resource(name="myDerbyDatabase")
+    DataSource dataSource;
+}
+----
 
 _OR BY JNDI lookup_
 
-....
+[source,java]
+----
 @Resource(name="myDerbyDatabase", type=javax.sql.DataSource.class)
 @Stateless
 public class FooBean {
@@ -131,26 +157,35 @@ public class FooBean {
         initialContext.lookup("java:comp/env/myDerbyDatabase");
     }
 }
-....
+----
 
 _OR_
 
- <resource-ref>
-   <res-ref-name>myDerbyDatabase</res-ref-name>
+[source,xml]
+----
+<resource-ref>
+  <res-ref-name>myDerbyDatabase</res-ref-name>
+  <res-type>javax.sql.DataSource</res-type>
+</resource-ref>
+----
+
+_OR_
+
+[source,xml]
+----
+<resource-ref>
+   <res-ref-name>jdbc/myDerbyDatabase</res-ref-name>
    <res-type>javax.sql.DataSource</res-type>
- </resource-ref>
+</resource-ref>
+----
 
 _OR_
 
- <resource-ref>
-    <res-ref-name>jdbc/myDerbyDatabase</res-ref-name>
-    <res-type>javax.sql.DataSource</res-type>
- </resource-ref>
-
-_OR_
-
- <resource-ref>
-    <res-ref-name>someOtherName</res-ref-name>
-    <res-type>javax.sql.DataSource</res-type>
-    <mapped-name>myDerbyDatabase</mapped-name>
- </resource-ref>
+[source,xml]
+----
+<resource-ref>
+   <res-ref-name>someOtherName</res-ref-name>
+   <res-type>javax.sql.DataSource</res-type>
+   <mapped-name>myDerbyDatabase</mapped-name>
+</resource-ref>
+----

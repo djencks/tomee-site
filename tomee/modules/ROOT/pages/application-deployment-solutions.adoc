@@ -40,11 +40,17 @@ Once this plugin is added to your pom you have access to the following configura
 
 Then simply run
 
- mvn tomee:deploy <path>
+[source,bash]
+----
+mvn tomee:deploy <path>
+----
 
 or
 
- mvn tomee:undeploy <path>
+[source,bash]
+----
+mvn tomee:undeploy <path>
+----
 
 ==== The Deployer through TomEE Webapp
 

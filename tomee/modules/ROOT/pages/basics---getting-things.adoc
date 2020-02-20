@@ -6,18 +6,18 @@
 
 == Getting Stuff from the Container
 
-Generally speaking the only way to get a xref:container-managed-resource.adoc[Container-Managed Resource]  is via _dependency injection_ or _lookup_ from within a xref:container-managed-component.adoc[Container-Managed Component] .
+Generally speaking the only way to get a xref:containers-and-resources.adoc.adoc#_resources[Container-Managed Resource]  is via _dependency injection_ or _lookup_ from within a xref:containers-and-resources.adoc.adoc#_components[Container-Managed Component] .
 
 The _unbreakable rules_.
 Read these over and over again when things don't work.
 
-. java:comp/env is the spec defined namespace for lookup of any xref:container-managed-resource.adoc[Container-Managed Resource]
+. java:comp/env is the spec defined namespace for lookup of any xref:containers-and-resources.adoc.adoc#_containers[Container-Managed Resource]
 . java:comp/env is _empty_ by default
 . java:comp/env is _read-only_ at runtime
 . java:comp/env is populated by xref:declaring-references.adoc[Declaring References]  to [Container-Managed Resource]  via xml or annotation
-. only xref:container-managed-component.adoc[Container-Managed Component] s, _not_ their libraries, can xref:declaring-references.adoc[Declare References]  via xml or annotation
-. only xref:container-managed-component.adoc[Container-Managed Component] s, _not_ their libraries, can get dependency injection of [Container-Managed Resource] s
-. only xref:container-managed-component.adoc[Container-Managed Component] s, _and_ their libraries, may lookup from java:comp/env
+. only xref:containers-and-resources.adoc.adoc#_components[Container-Managed Components], _not_ their libraries, can xref:declaring-references.adoc[Declare References]  via xml or annotation
+. only xref:containers-and-resources.adoc.adoc#_components[Container-Managed Components], _not_ their libraries, can get dependency injection of [Container-Managed Resource] s
+. only xref:containers-and-resources.adoc.adoc#_components[Container-Managed Components], _and_ their libraries, may lookup from java:comp/env
 . you _must_ use the _no-arg_ 'new InitialContext()' constructor to lookup something from java:comp/env
 . the annotations and xml for xref:declaring-references.adoc[Declaring References]  are _identical_ in functionality, both _always_ configure lookup with _optional_ dependency injection
 
@@ -56,8 +56,8 @@ Java EE 6 does finally offer some new namesaces (java:global, java:app, and java
 
 See rule 2 and the above.
 Just creating an EJB doesn't cause it to be added to java:comp/env.
-If a xref:container-managed-component.adoc[Container-Managed Component]  wants to lookup the EJB they must [Declare a Reference|Declaring References]  to it via the @EJB annotionation or <ejb-local-ref> or <ejb-ref> in xml.
-In Java EE 6, however, EJBs will be automatically bound to "java:global[/<app-name>]/<module-name>/<bean-name>[!<fully-qualified-interface-name>]" and can be looked up without declaring a reference first.
+If a xref:containers-and-resources.adoc.adoc#_components[Container-Managed Component]  wants to lookup the EJB they must [Declare a Reference|Declaring References]  to it via the @EJB annotionation or <ejb-local-ref> or <ejb-ref> in xml.
+In Java EE 6, however, EJBs will be automatically bound to `java:global[/<app-name>]/<module-name>/<bean-name>[!<fully-qualified-interface-name>]` and can be looked up without declaring a reference first.
 
 * __"Which InitialContextFactory do I use for java:comp/env?"__
 
