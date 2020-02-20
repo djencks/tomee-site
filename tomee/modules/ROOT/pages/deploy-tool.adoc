@@ -1,18 +1,18 @@
 = Deploy Tool
-
-
-
+:index-group: OpenEJB Standalone Server
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
+:name-description-table-layout: cols="2,7a",options="header"
 == NAME
 
 openejb deploy - OpenEJB Deploy Tool
 
-
-
 == SYNOPSIS
 
-____
+----
 openejb deploy <<DeployTool-OPTIONS,options>> <file> [<file> ...]
-____
+----
 
 
 
@@ -28,28 +28,28 @@ For for the remainder of this document we will assume you unpacked OpenEJB into 
 
 In Windows, the deploy tool can be executed as follows:
 
-____
+----
 C:\openejb-3.0> bin\openejb deploy --help
-____
+----
 
 In UNIX, Linux, or Mac OS X, the deploy tool can be executed as follows:
 
-____
+----
 user@host== bin/openejb deploy --help
-____
+----
 
 Depending on your OpenEJB version, you may need to change execution bits to make the scripts executable.
 You can do this with the following command.
 
-____
+----
 user@host== chmod +x bin/openejb
-____
+----
 
 From here on out, it will be assumed that you know how to execute the right openejb script for your operating system and commands will appear in shorthand as show below.
 
-____
+----
 openejb deploy --help
-____
+----
 
 
 
@@ -71,13 +71,12 @@ EJB applications older that EJB 3.0 should contain a complete `META-INF/ejb-jar.
 
 == OPTIONS
 
-[cols="3,8",options="header"]
+[{name-description-table-layout}]
 |===
 
 |-d, --debug
 
-|Increases the level of detail on validation errors and
-deployment summary.
+|Increases the level of detail on validation errors and deployment summary.
 
 
 
@@ -103,24 +102,23 @@ Note when changing this setting make sure the directory is listed in the `openej
 
 |-o, --offline
 
-|Deploys the app to an offline server by copying the
-archive into the server's apps/ directory.  The app will be deployed when
-the server is started.	The default is online.
+|Deploys the app to an offline server by copying the archive into the server's apps/ directory.
+The app will be deployed when the server is started.
+The default is online.
 
 
 
 |-q, --quiet
 
-|Decreases the level of detail on validation and skips the
-deployment summary.
+|Decreases the level of detail on validation and skips the deployment summary.
 
 
 
 |-s, --server-url <url>
 
-|Sets the url of the OpenEJB server to which
-the app will be deployed.  The value should be the same as the JNDI
-Provider URL used to lookup EJBs.  The default is 'ejbd://localhost:4201'.
+|Sets the url of the OpenEJB server to which the app will be deployed.
+The value should be the same as the JNDI Provider URL used to lookup EJBs.
+The default is 'ejbd://localhost:4201'.
 
 
 
@@ -168,6 +166,10 @@ printed on the console
 
 
 Note: In the above case the command used is:
-> openejb deploy hello-addservice.jar
 
-The JAR file contains two EJBs: AddServiceBean and HelloBean.+++</OPENEJB_HOME>+++
+[source]
+----
+> openejb deploy hello-addservice.jar
+----
+
+The JAR file contains two EJBs: AddServiceBean and HelloBean.

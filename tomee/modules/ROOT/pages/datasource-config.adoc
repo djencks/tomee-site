@@ -1,72 +1,82 @@
 = DataSource Configuration
+:index-group: Datasource
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 :supported-properties-table-layout: cols="2,1,3,5",options="header"
 
 A DataSource can be declared via xml in the `<tomee-home>/conf/tomee.xml` file or in a `WEB-INF/resources.xml` file using a declaration like the following.
 All properties in the element body are optional.
 
- <Resource id="myDataSource" type="javax.sql.DataSource">
-     accessToUnderlyingConnectionAllowed = false
-     alternateUsernameAllowed = false
-     connectionProperties =
-     defaultAutoCommit = true
-     defaultReadOnly =
-     definition =
-     ignoreDefaultValues = false
-     initialSize = 0
-     jdbcDriver = org.hsqldb.jdbcDriver
-     jdbcUrl = jdbc:hsqldb:mem:hsqldb
-     jtaManaged = true
-     maxActive = 20
-     maxIdle = 20
-     maxOpenPreparedStatements = 0
-     maxWaitTime = -1 millisecond
-     minEvictableIdleTime = 30 minutes
-     minIdle = 0
-     numTestsPerEvictionRun = 3
-     password =
-     passwordCipher = PlainText
-     poolPreparedStatements = false
-     serviceId =
-     testOnBorrow = true
-     testOnReturn = false
-     testWhileIdle = false
-     timeBetweenEvictionRuns = -1 millisecond
-     userName = sa
-     validationQuery =
- </Resource>
+[source,xml]
+----
+<Resource id="myDataSource" type="javax.sql.DataSource">
+    accessToUnderlyingConnectionAllowed = false
+    alternateUsernameAllowed = false
+    connectionProperties =
+    defaultAutoCommit = true
+    defaultReadOnly =
+    definition =
+    ignoreDefaultValues = false
+    initialSize = 0
+    jdbcDriver = org.hsqldb.jdbcDriver
+    jdbcUrl = jdbc:hsqldb:mem:hsqldb
+    jtaManaged = true
+    maxActive = 20
+    maxIdle = 20
+    maxOpenPreparedStatements = 0
+    maxWaitTime = -1 millisecond
+    minEvictableIdleTime = 30 minutes
+    minIdle = 0
+    numTestsPerEvictionRun = 3
+    password =
+    passwordCipher = PlainText
+    poolPreparedStatements = false
+    serviceId =
+    testOnBorrow = true
+    testOnReturn = false
+    testWhileIdle = false
+    timeBetweenEvictionRuns = -1 millisecond
+    userName = sa
+    validationQuery =
+</Resource>
+----
 
 Alternatively, a DataSource can be declared via properties in the `<tomee-home>/conf/system.properties` file or via Java VirtualMachine `-D` properties.
 The properties can also be used when embedding TomEE via the `javax.ejb.embeddable.EJBContainer` API or `InitialContext`
 
- myDataSource = new://Resource?type=javax.sql.DataSource
- myDataSource.accessToUnderlyingConnectionAllowed = false
- myDataSource.alternateUsernameAllowed = false
- myDataSource.connectionProperties =
- myDataSource.defaultAutoCommit = true
- myDataSource.defaultReadOnly =
- myDataSource.definition =
- myDataSource.ignoreDefaultValues = false
- myDataSource.initialSize = 0
- myDataSource.jdbcDriver = org.hsqldb.jdbcDriver
- myDataSource.jdbcUrl = jdbc:hsqldb:mem:hsqldb
- myDataSource.jtaManaged = true
- myDataSource.maxActive = 20
- myDataSource.maxIdle = 20
- myDataSource.maxOpenPreparedStatements = 0
- myDataSource.maxWaitTime = -1 millisecond
- myDataSource.minEvictableIdleTime = 30 minutes
- myDataSource.minIdle = 0
- myDataSource.numTestsPerEvictionRun = 3
- myDataSource.password =
- myDataSource.passwordCipher = PlainText
- myDataSource.poolPreparedStatements = false
- myDataSource.serviceId =
- myDataSource.testOnBorrow = true
- myDataSource.testOnReturn = false
- myDataSource.testWhileIdle = false
- myDataSource.timeBetweenEvictionRuns = -1 millisecond
- myDataSource.userName = sa
- myDataSource.validationQuery =
+[source,properties]
+----
+myDataSource = new://Resource?type=javax.sql.DataSource
+myDataSource.accessToUnderlyingConnectionAllowed = false
+myDataSource.alternateUsernameAllowed = false
+myDataSource.connectionProperties =
+myDataSource.defaultAutoCommit = true
+myDataSource.defaultReadOnly =
+myDataSource.definition =
+myDataSource.ignoreDefaultValues = false
+myDataSource.initialSize = 0
+myDataSource.jdbcDriver = org.hsqldb.jdbcDriver
+myDataSource.jdbcUrl = jdbc:hsqldb:mem:hsqldb
+myDataSource.jtaManaged = true
+myDataSource.maxActive = 20
+myDataSource.maxIdle = 20
+myDataSource.maxOpenPreparedStatements = 0
+myDataSource.maxWaitTime = -1 millisecond
+myDataSource.minEvictableIdleTime = 30 minutes
+myDataSource.minIdle = 0
+myDataSource.numTestsPerEvictionRun = 3
+myDataSource.password =
+myDataSource.passwordCipher = PlainText
+myDataSource.poolPreparedStatements = false
+myDataSource.serviceId =
+myDataSource.testOnBorrow = true
+myDataSource.testOnReturn = false
+myDataSource.testWhileIdle = false
+myDataSource.timeBetweenEvictionRuns = -1 millisecond
+myDataSource.userName = sa
+myDataSource.validationQuery =
+----
 
 Properties and xml can be mixed.
 Properties will override the xml allowing for easy configuration change without the need for ${} style variable substitution.
@@ -83,60 +93,39 @@ See the xref:common-datasource-configurations.adoc[Common DataSource Configurati
 |===
 
 |Property
-
 |Type
-
 |Default
-
 |Description
 
 
 |accessToUnderlyingConnectionAllowed
-
 |boolean
-
 |false
-
-|If true the raw physical connection to the database can be
-accessed
-</tr>
+|If true the raw physical connection to the database can be accessed
 
 
-|<<alternateUsernameAllowed>>
-
+|alternateUsernameAllowed
 |boolean
-
 |false
-
 |If true allow an alternate username and password to be specified on the connection, rather than those specified in the DataSource definition..
 
 
-|<<connectionProperties>>
-
+|connectionProperties
 |String
-
 |
-
-|The connection properties that will be sent to the JDBC
-driver when establishing new connections
+|The connection properties that will be sent to the JDBC driver when establishing new connections
 
 
 |defaultAutoCommit
-
 |boolean
-
 |true
-
 |The default auto-commit state of new connections
 
 
 |defaultReadOnly
-
 |String
-
 |
-
-|The default read-only state of new connections
+|The default read-only state of new connections.
 If not set then the setReadOnly method will not be called.
 (Some drivers don't support read only mode, ex: Informix)
 
@@ -151,258 +140,162 @@ If not set then the setReadOnly method will not be called.
 
 
 |ignoreDefaultValues
-
 |boolean
-
 |false
+|Use only all set values in this config.
+Will need a lot of properties but allow to not set some values.
 
-|use only all set values in this config
-will need a lot of properties but allow to not set some values
 
-
-|<<initialSize>>
-
+|initialSize
 |int
-
 |0
-
 |The size to reach when creating the datasource.
 
 
 |jdbcDriver
-
 |String
-
 |org.hsqldb.jdbcDriver
-
 |Driver class name
 
 
 |jdbcUrl
-
 |java.net.URI
-
 |jdbc:hsqldb:mem:hsqldb
-
 |Url for creating connections
 
 
-|<<jtaManaged>>
-
+|jtaManaged
 |boolean
-
 |true
-
-|Determines wether or not this data source should be JTA managed
-or user managed.
+|Determines wether or not this data source should be JTA managed or user managed.
 
 
 |maxActive
-
 |int
-
 |20
-
-|The maximum number of active connections that can be
-allocated from this pool at the same time, or a negative
-number for no limit. N.B. When using dbcp2 with TomEE 7 ("DataSourceCreator dbcp"), "MaxTotal" should be used as opposed to "MaxActive".
+|The maximum number of active connections that can be allocated from this pool at the same time, or a negative number for no limit.
+N.B. When using dbcp2 with TomEE 7 ("DataSourceCreator dbcp"), "MaxTotal" should be used as opposed to "MaxActive".
 
 
 |maxIdle
-
 |int
-
 |20
-
-|The maximum number of connections that can remain idle in
-the pool, without extra ones being released, or a negative
-number for no limit.
+|The maximum number of connections that can remain idle in the pool, without extra ones being released, or a negative number for no limit.
 
 
-|<<maxOpenPreparedStatements>>
-
+|maxOpenPreparedStatements
 |int
-
 |0
-
-|The maximum number of open statements that can be allocated
-from the statement pool at the same time, or zero for no
-limit.
+|The maximum number of open statements that can be allocated from the statement pool at the same time, or zero for no limit.
 
 
 |maxWaitTime
-
 |xref:configuring-durations.adoc[time]
-|-1&nbsp;millisecond
-
-|The maximum number of time that the pool will wait
-(when there are no available connections) for a connection
-to be returned before throwing an exception, or -1 to wait
-indefinitely.
+|-1 millisecond
+|The maximum number of time that the pool will wait (when there are no available connections) for a connection to be returned before throwing an exception, or -1 to wait indefinitely.
 
 
 |minEvictableIdleTime
-
 |xref:configuring-durations.adoc[time]
-|30&nbsp;minutes
-
-|The minimum amount of time a connection may sit idle in the
-pool before it is eligable for eviction by the idle
-connection evictor (if any).
+|30 minutes
+|The minimum amount of time a connection may sit idle in the pool before it is eligable for eviction by the idle connection evictor (if any).
 
 
 |minIdle
-
 |int
-
 |0
-
-|The minimum number of connections that can remain idle in
-the pool, without extra ones being created, or zero to
-create none.
+|The minimum number of connections that can remain idle in the pool, without extra ones being created, or zero to create none.
 
 
 |numTestsPerEvictionRun
-
 |int
-
 |3
-
-|The number of connectionss to examine during each run of the
-idle connection evictor thread (if any).
+|The number of connectionss to examine during each run of the idle connection evictor thread (if any).
 
 
 |password
-
 |String
-
 |
-
 |Default password
 
 
 |passwordCipher
-
 |String
-
 |PlainText
-
 |
 
 
-|<<poolPreparedStatements>>
-
+|poolPreparedStatements
 |boolean
-
 |false
-
-|If true, a statement pool is created for each Connection and
-PreparedStatements created by one of the following methods are
-pooled:
+|If true, a statement pool is created for each Connection and PreparedStatements created by <<#_poolpreparedstatements,one of these:>>
 
 
 |serviceId
-
 |String
-
+|
 |
 
-|
 
-
-|<<testOnBorrow>>
-
+|testOnBorrow
 |boolean
-
 |true
-
-|If true connections will be validated before being returned
-from the pool. If the validation fails, the connection is
-destroyed, and a new conection will be retrieved from the
-pool (and validated).
+|If true connections will be validated before being returned from the pool.
+If the validation fails, the connection is destroyed, and a new conection will be retrieved from the pool (and validated).
 
 
-|<<testOnReturn>>
-
+|testOnReturn
 |boolean
-
 |false
-
-|If true connections will be validated before being returned
-to the pool.  If the validation fails, the connection is
-destroyed instead of being returned to the pool.
+|If true connections will be validated before being returnedt to the pool.
+If the validation fails, the connection is destroyed instead of being returned to the pool.
 
 
-|<<testWhileIdle>>
-
+|testWhileIdle
 |boolean
-
 |false
-
-|If true connections will be validated by the idle connection
-evictor (if any). If the validation fails, the connection is
-destroyed and removed from the pool
-
+|If true connections will be validated by the idle connection evictor (if any).
+If the validation fails, the connection is destroyed and removed from the pool
 
 |timeBetweenEvictionRuns
-
 |xref:configuring-durations.adoc[time]
-
 |-1 millisecond
-
-|The number of milliseconds to sleep between runs of the idle
-connection evictor thread. When set to a negative number, no
-idle connection evictor thread will be run.
-
+|The number of milliseconds to sleep between runs of the idle connection evictor thread.
+When set to a negative number, no idle connection evictor thread will be run.
 
 |userName
-
 |String
-
 |sa
-
 |Default user name
 
-
 |validationQuery
-
 |String
-
 |
-
-|The SQL query that will be used to validate connections from
-this pool before returning them to the caller. If specified,
-this query MUST be an SQL SELECT statement that returns at
-least one row.
-
+|The SQL query that will be used to validate connections from this pool before returning them to the caller.
+If specified, this query MUST be an SQL SELECT statement that returns at least one row.
 
 |LogSql
-
 |boolean
-
 |false
-
 |Whether SQL queries should be logged or not
 |===
-
-
-
 
 === accessToUnderlyingConnectionAllowed
 
 If true the raw physical connection to the database can be accessed using the following construct:
 
- Connection conn = ds.getConnection();
- Connection rawConn = ((DelegatingConnection) conn).getInnermostDelegate();
- ...
- conn.close()
+[source,java]
+----
+Connection conn = ds.getConnection();
+Connection rawConn = ((DelegatingConnection) conn).getInnermostDelegate();
+...
+conn.close()
+----
 
 Default is false, because misbehaving programs can do harmfull things to the raw connection shuch as closing the raw connection or continuing to use the raw connection after it has been assigned to another logical connection.
 Be careful and only use when you need direct access to driver specific extensions.
 
 NOTE: Do NOT close the underlying connection, only the original logical connection wrapper.
-
-
 
 === connectionProperties
 
@@ -411,8 +304,6 @@ The connection properties that will be sent to the JDBC driver when establishing
 Format of the string must be [propertyName=property;]*
 
 NOTE - The "user" and "password" properties will be passed explicitly, so they do not need to be included here.
-
-
 
 === TransactionIsolation
 
@@ -429,13 +320,9 @@ The allowed values for this property are:
 
 NOTE: Most JDBC drivers do not support all isolation levels DefaultTransactionIsolation
 
-
-
 === initialSize
 
 The initial size to initialize the pool of connections.
-
-
 
 === jtaManaged
 
@@ -450,8 +337,6 @@ In terms of JPA persistence.xml:
 * `JtaManaged=true` can be used as a 'jta-data-source'
 * `JtaManaged=false` can be used as a 'non-jta-data-source'
 
-
-
 === maxOpenPreparedStatements
 
 The maximum number of open statements that can be allocated from the statement pool at the same time, or zero for no limit.
@@ -462,8 +347,11 @@ NOTE - Some drivers have limits on the number of open statements, so make sure t
 
 If true, a statement pool is created for each Connection and PreparedStatements created by one of the following methods are pooled:
 
- public PreparedStatement prepareStatement(String sql);
- public PreparedStatement prepareStatement(String sql, int resultSetType, int resultSetConcurrency)
+[source,java]
+----
+public PreparedStatement prepareStatement(String sql);
+public PreparedStatement prepareStatement(String sql, int resultSetType, int resultSetConcurrency)
+----
 
 === testOnBorrow
 
@@ -497,7 +385,8 @@ This part deals with `JtaManaged` XaDataSource since a not managed XaDataSource 
 
 First solution is to define as `JdbcDriver` an XADataSource:
 
-....
+[source,xml]
+----
 <Resource id="myXaDs" type="DataSource">
     JdbcDriver = org.foo.MyXaDataSource
 
@@ -505,7 +394,7 @@ First solution is to define as `JdbcDriver` an XADataSource:
 
     myPoolProperty = 10
 </Resource>
-....
+----
 
 This solution merges properties for the XaDataSource and the pool (tomcat-jdbc for TomEE, dbcp for OpenEJB by default but still configurable with DataSourceCreator).
 
@@ -517,16 +406,22 @@ NOTE: this solution uses the same logic than @DataSourceDefinition factory mecan
 
 An alternative is to define a resource for the XaDataSource:
 
- <Resource id="myXa" class-name="org.foo.MyXaDataSource">
-     myXaProperty = value
- </Resource>
+[source,xml]
+----
+<Resource id="myXa" class-name="org.foo.MyXaDataSource">
+    myXaProperty = value
+</Resource>
+----
 
 And then wrap it in the pool:
 
- <Resource id="myXaDs" type="DataSource">
-     DataSourceCreator = [dbcp|dbcp-alternative]
-     myPoolProperty = 10
- </Resource>
+[source,xml]
+----
+<Resource id="myXaDs" type="DataSource">
+    DataSourceCreator = [dbcp|dbcp-alternative]
+    myPoolProperty = 10
+</Resource>
+----
 
 NOTE: `dbcp` is more adapted than `dbcp-alternative` in most of the case because it is reusing direct dbcp JTA management.
 
@@ -534,11 +429,13 @@ NOTE: `dbcp` is more adapted than `dbcp-alternative` in most of the case because
 
 For TomEE 1.7.0/1.7.1 you can need to add the property:
 
-  openejb.datasource.pool = true
+[source,properties]
+----
+ openejb.datasource.pool = true
+----
 
 in resource properties to ensure the resource is pooled.
 
 == Details about DataSource and their factories (advanced configuration)
-
 
 xref:{tomee-latest-vc}::datasource-configuration-by-creator.adoc[Configuration by creator]
