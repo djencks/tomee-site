@@ -1,6 +1,10 @@
 = Embedded and Remotable
+:index-group: OpenEJB Standalone Server
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 
-= Overview
+== Overview
 
 This example shows how to use OpenEJB3's remoting capabilities in an embedded scenario.
 By remoting we mean that you wish to allow _clients in other vms_ access your ejbs.
@@ -26,23 +30,19 @@ A number of ServerServices are available currently:
 * openejb-hsql
 * openejb-activemq
 
-_The source for this example is in the "telephone-stateful" directory located in the xref:openejb:download.adoc[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page]._
+_The source for this example is in the "telephone-stateful" directory located in the xref:{common-vc}:download.adoc[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page]._
 
-\{note} If your goal is simply to unit test beans with remote interfaces, this is _not_ the right example for you.
+NOTE: If your goal is simply to unit test beans with remote interfaces, this is _not_ the right example for you.
 The LocalInitialContextFactory completely supports remote interfaces and all spec required pass-by-value (serialization) semantics without the need for network sockets.
 This example shows the use of OpenEJB in an embedded environment where connection _outside_ the  vm is required.\{note}
 
-
-
-= The Code
+== The Code
 
 For this example we have a simple Stateful bean called TelephoneBean as defined below.
 As a simple way of demonstrating the state we have to methods: speak and listen.
 You call _speak_ and pass in some text, then you call _listen_ to get your answer.
 
-
-
-== bean
+=== bean
 
 [cols=3*]
 |===
@@ -53,7 +53,7 @@ You call _speak_ and pass in some text, then you call _listen_ to get your answe
 
 
 
-== business interface
+=== business interface
 
 [cols=3*]
 |===
@@ -62,16 +62,17 @@ You call _speak_ and pass in some text, then you call _listen_ to get your answe
 | lang=java}
 |===
 
-{tip:title=EJB3 Notes} The bean class uses the annotation _@Remote_ but does not specify a list of interfaces as is normally required.
+TIP: [EJB3 Notes]
+---
+The bean class uses the annotation _@Remote_ but does not specify a list of interfaces as is normally required.
 Per EJB3 rules, if the bean implements exactly _one business interface_ it may use @Remote with no other values and that business interface is then implied to be a remote business interface.
 The same rule applies to identical usage of @Local.
 
 The critical thing to know is that if you add another interface the rules change and require that you specify both interfaces in the @Remote annotation as in @Remote({Telephone.class, SecondInterface.class}).
-\{tip}
+---
 
 
-
-= Embedding
+== Embedding
 
 We're going to embed OpenEJB3 into a plain JUnit TestCase as a simple means of demonstrating the remote capabilities.
 We'll do the embedding in our test setUp method, then will make two test methods:
@@ -81,7 +82,7 @@ We'll do the embedding in our test setUp method, then will make two test methods
 
 
 
-== setUp
+=== setUp
 
 [cols=3*]
 |===
@@ -90,7 +91,7 @@ We'll do the embedding in our test setUp method, then will make two test methods
 | lang=java}
 |===
 
-== LocalInitialContextFactory: making in-vm calls to a remote business
+=== LocalInitialContextFactory: making in-vm calls to a remote business
 
 interface
 
@@ -101,7 +102,7 @@ interface
 | lang=java}
 |===
 
-== RemoteInitialContextFactory: making networked calls to a remote
+=== RemoteInitialContextFactory: making networked calls to a remote
 
 business interface
 
@@ -117,7 +118,7 @@ These "client" VMs need only have the the _openejb-client jar_ in their classpat
 
 
 
-= Maven setup
+== Maven setup
 
 [cols=2*]
 |===
@@ -134,7 +135,7 @@ These "client" VMs need only have the the _openejb-client jar_ in their classpat
 
 
 
-= Running
+== Running
 
 Running the example is fairly simple.
 In the "telephone-stateful" directory of the xref:openejb:download.adoc[examples zip] , just run:
@@ -143,7 +144,8 @@ $ mvn clean install
 
 Which should create output like the following.
 
-....
+[source]
+----
 -------------------------------------------------------
  T E S T S
 -------------------------------------------------------
@@ -168,11 +170,10 @@ INFO - Deployed Application(path=/Users/dblevins/work/openejb-3.0/examples/telep
   NAME		       IP	       PORT
   ejbd		       127.0.0.1       4201
   admin thread	       127.0.0.1       4200
--------
-Ready!
+------- Ready!
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.89 sec
 
 Results :
 
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
-....
+----

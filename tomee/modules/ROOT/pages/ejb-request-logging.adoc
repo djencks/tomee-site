@@ -1,9 +1,8 @@
-= EJB Request Logging Notice:    Licensed to the Apache Software Foundation (ASF) under one            or more contributor license agreements.
-See the NOTICE file            distributed with this work for additional information            regarding copyright ownership.
-The ASF licenses this file            to you under the Apache License, Version 2.0 (the            "License");
-you may not use this file except in compliance            with the License.
-You may obtain a copy of the License at            .              http://www.apache.org/licenses/LICENSE-2.0            .            Unless required by applicable law or agreed to in writing,            software distributed under the License is distributed on an            "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY            KIND, either express or implied.
-See the License for the            specific language governing permissions and limitations            under the License.
+= EJB Request Logging
+:index-group: EJB
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 
 Both client-side and server-side request logging is supported and includes various invocation times aimed at helping to identify where time is going in a request.
 
@@ -12,9 +11,12 @@ Both client-side and server-side request logging is supported and includes vario
 On the client requests/responses are logged on java.util.logging `FINEST` level in category `OpenEJB.client`.
 The code is similar to the following:
 
- final long time = System.nanoTime() - start;
- final String message = String.format("Invocation %sns - %s - Request(%s) - Response(%s)", time, conn.getURI(), req, res);
- logger.log(Level.FINEST, message);
+[source,java]
+----
+final long time = System.nanoTime() - start;
+final String message = String.format("Invocation %sns - %s - Request(%s) - Response(%s)", time, conn.getURI(), req, res);
+logger.log(Level.FINEST, message);
+----
 
 Note that the check to see if FINEST is enabled is cached for performance reasons, so it must be set at VM startup.
 
@@ -23,7 +25,10 @@ Note that the check to see if FINEST is enabled is cached for performance reason
 On the server requests/responses are logged in java.util.logging `FINE` in category``"OpenEJB.server.remote.ejb``.
 The code for that is similar to this:
 
- logger.fine("EJB REQUEST: " + req + " -- RESPONSE: " + res);
+[source,java]
+----
+logger.fine("EJB REQUEST: " + req + " -- RESPONSE: " + res);
+----
 
 == Request times
 
@@ -53,7 +58,10 @@ The time tracked is purely *bean time* which includes  interceptors, decorators 
 This information is available in JMX.
 A sample JMX ObjectName for a `CounterBean` will look like this:
 
- openejb.management:J2EEServer=openejb,J2EEApplication=null,EJBModule=StatsModule,StatelessSessionBean=CounterBean,j2eeType=Invocations,name=CounterBean
+[source,properties]
+----
+openejb.management:J2EEServer=openejb,J2EEApplication=null,EJBModule=StatsModule,StatelessSessionBean=CounterBean,j2eeType=Invocations,name=CounterBean
+----
 
 All beans have the following MBean attributes, listed here in shorthand:
 

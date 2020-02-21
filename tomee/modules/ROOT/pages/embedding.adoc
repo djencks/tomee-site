@@ -1,10 +1,14 @@
-= Embedding The basic process for embedding OpenEJB:
+= Embedding
+:index-group: OpenEJB Standalone Server
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
+
+The basic process for embedding OpenEJB:
 
 . Add the OpenEJB libraries to your classpath
 . Ensure your EJB modules are discoverable
 . Use the LocalInitialContextFactory to boot OpenEJB
-
-
 
 == Important docs
 
@@ -15,12 +19,12 @@
 * xref:configuring-containers-in-tests.adoc[Configuring Containers in Tests]
 * xref:configuring-logging-in-tests.adoc[Configuring Logging in Tests]
 * xref:alternate-descriptors.adoc[Alternate Descriptors]
-* xref:unit-testing-transactions.adoc[Unit Testing Transactions]
-* xref:testcase-with-testbean-inner-class.adoc[TestCase with TestBean inner-class]
+* xref:{common-vc}::unit-testing-transactions.adoc[Unit Testing Transactions]
+* xref:{common-vc}::testcase-with-testbean-inner-class.adoc[TestCase with TestBean inner-class]
 * xref:local-client-injection.adoc[TestCase Injection (@LocalClient)]
 
 
 
 == Examples
 
-{include:Examples Table}
+include::examples-table.adoc[Examples Table WHAT IS THIS REFERRING TO?]
