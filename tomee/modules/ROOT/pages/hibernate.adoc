@@ -1,10 +1,15 @@
 = Hibernate
+:index-group: Unrevised
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 
-= Sample persistence.xml
+== Sample persistence.xml
 
 For a unit called "movie-unit" using two datasources called "movieDatabase" and "movieDatabaseUnmanaged" the following persistence.xml would work.
 
-....
+[source,xml]
+----
 <persistence version="1.0"
        xmlns="http://java.sun.com/xml/ns/persistence"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -23,7 +28,7 @@ For a unit called "movie-unit" using two datasources called "movieDatabase" and 
     </properties>
   </persistence-unit>
 </persistence>
-....
+----
 
 Note that as of OpenEJB 3.1 you do not need to set the `hibernate.transaction.manager_lookup_class` as it will be set for you automatically and will overwrite any "org.hibernate.transaction." strategy class already set while leaving any custom strategy class you may have implemented untouched.
 
@@ -32,14 +37,15 @@ On the other hand if you have implemented a custom `org.hibernate.transaction.Tr
 
 Note that if you need more functionality in this area we are always happy to add it.
 
-= Not using OpenEJB in production?
+=== Not using OpenEJB in production?
 
 If you're using OpenEJB 3.0 which does not support the dynamic switching of the `hibernate.transaction.manager_lookup_class` this is one way to achieve it.
 
 A custom implementation of Hibernate's _TransactionManagerLookup_ strategy like the following will do the trick.
 This "DynamicTransactionManagerLookup" class can be packed in your jar and deployed with your app.
 
-....
+[source,java]
+----
 import org.hibernate.HibernateException;
 import org.hibernate.transaction.TransactionManagerLookup;
 import javax.transaction.TransactionManager;
@@ -75,6 +81,6 @@ public class DynamicTransactionManagerLookup implements TransactionManagerLookup
         return impl.getUserTransactionName();
     }
 }
-....
+----
 
 Then set the Hibernate specific configuration property _hibernate.transaction.manager_lookup_class_ to the name of the factory that you just created.
