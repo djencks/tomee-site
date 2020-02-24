@@ -1,9 +1,14 @@
 = JMS Resources and MDB Container
+:index-group: Configuration
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 :supported-properties-table-layout: cols="2,1,3,5",options="header"
 
 == External ActiveMQ Broker
 
-....
+[source,xml]
+----
 <tomee>
     <Resource id="MyJmsResourceAdapter" type="ActiveMQResourceAdapter">
         # Do not start the embedded ActiveMQ broker
@@ -22,14 +27,15 @@
     <Resource id="FooQueue" type="javax.jms.Queue"/>
     <Resource id="BarTopic" type="javax.jms.Topic"/>
 </tomee>
-....
+----
 
 The `ServerUrl` would be changed to point to the host and port of the ActiveMQ process.
 The various URL formats that ActiveMQ supports also work, such as 'failover:'.
 
 == Internal ActiveMQ Broker
 
-....
+[source,xml]
+----
 <tomee>
     <Resource id="MyJmsResourceAdapter" type="ActiveMQResourceAdapter">
         BrokerXmlConfig =  broker:(tcp://someHostName:61616)
@@ -47,7 +53,7 @@ The various URL formats that ActiveMQ supports also work, such as 'failover:'.
     <Resource id="FooQueue" type="javax.jms.Queue"/>
     <Resource id="BarTopic" type="javax.jms.Topic"/>
 </tomee>
-....
+----
 
 The `BrokerXmlConfig` tells ActiveMQ to start on the tcp host/port `someHostName` and `61616`
 
@@ -55,7 +61,8 @@ The `BrokerXmlConfig` tells ActiveMQ to start on the tcp host/port `someHostName
 
 Adding the `DataSource` property to your `ActiveMQResourceAdapter` config will automatically setup JDBC Persistence using the `org.apache.activemq.store.jdbc.JDBCPersistenceAdapter`
 
-....
+[source,xml]
+----
 <tomee>
     <Resource id="MyJmsResourceAdapter" type="ActiveMQResourceAdapter">
         BrokerXmlConfig =  broker:(tcp://someHostName:61616)
@@ -70,7 +77,7 @@ Adding the `DataSource` property to your `ActiveMQResourceAdapter` config will a
         Password    = foo
     </Resource>
 </tomee>
-....
+----
 
 === Internal ActiveMQ Broker with activemq.xml
 
@@ -94,7 +101,8 @@ Create an link:activemq.xml[activemq.xml file] a in `[tomee]/conf/activemq.xml`.
 
 Then use the `xbean:file:` url prefix in the `BrokerXmlConfig` as shown belog.
 
-....
+[source,xml]
+----
 <tomee>
     <Resource id="MyJmsResourceAdapter" type="ActiveMQResourceAdapter">
         BrokerXmlConfig =  xbean:file:conf/activemq.xml
@@ -112,7 +120,7 @@ Then use the `xbean:file:` url prefix in the `BrokerXmlConfig` as shown belog.
     <Resource id="FooQueue" type="javax.jms.Queue"/>
     <Resource id="BarTopic" type="javax.jms.Topic"/>
 </tomee>
-....
+----
 
 Finally, restart the server.
 
@@ -120,7 +128,8 @@ Finally, restart the server.
 
 The same can be done via properties in an embedded configuration, via the `conf/system.properties` file or on the command line via `-D` flags.
 
-....
+[source,java]
+----
 Properties p = new Properties();
 p.put(Context.INITIAL_CONTEXT_FACTORY, LocalInitialContextFactory.class.getName());
 
@@ -138,19 +147,20 @@ p.put("FooQueue", "new://Resource?type=javax.jms.Queue");
 p.put("BarTopic", "new://Resource?type=javax.jms.Topic");
 
 InitialContext context = new InitialContext(p);
-....
+----
 
 == Global lookup of JMS Resources
 
 From anywhere in the same VM as the EJB Container you could lookup the above resources like so:
 
-....
+[source,properties]
+----
 javax.jms.ConnectionFactory cf = (ConnectionFactory)
         context.lookup("openejb:Resource/MyJmsConnectionFactory");
 
 javax.jms.Queue queue = (Queue) context.lookup("openejb:Resource/FooQueue");
 javax.jms.Topic topic = (Topic) context.lookup("openejb:Resource/BarTopic");
-....
+----
 
 === MDB ActivationConfig
 
@@ -249,7 +259,7 @@ The Activation Spec properties that can be configured are:
 
 |null
 
-|Message Selector</A> to use on the subscription to perform content based routing filtering the messages
+|Message Selector to use on the subscription to perform content based routing filtering the messages
 
 
 |noLocal

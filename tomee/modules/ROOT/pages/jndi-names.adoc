@@ -1,13 +1,16 @@
 = JNDI Names
-
+:index-group: Configuration
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 
 
 == What's My Bean's JNDI Name?
 
 There are two things to keep in mind before you start reading:
 
-1   OpenEJB provides a default JNDI name to your EJB.
-+ 2   You can customize the JNDI name.
+. OpenEJB provides a default JNDI name to your EJB.
+. You can customize the JNDI name.
 
 
 
@@ -15,7 +18,10 @@ There are two things to keep in mind before you start reading:
 
 The default JNDI name is in the following format:
 
- {deploymentId}{interfaceType.annotationName}
+[source]
+----
+{deploymentId}{interfaceType.annotationName}
+----
 
 Lets try and understand the above format.
 Both _deploymentId_ and _interfaceType.annotationName_ are pre-defined variables.
@@ -136,77 +142,88 @@ or
 |for a class named `org.acme.superfun.WidgetRemote` results in `org.acme.superfun`
 |===
 
-==  Setting the JNDI name
+== Setting the JNDI name
 
-It's possible to set the desired jndi name format for the whole server
-level, an ejb-jar, an ejb, an ejb's "local" interface
-(local/remote/local-home/home), and for an individual interface the ejb
-implements.  More specific jndi name formats act as an override to any more
-general formats.  The most specific format dictates the jndi name that will
-be used for any given interface of an ejb.  It's possible to specify a
-general format for your server, override it at an ejb level and override
-that further for a specific interface of that ejb.
-
+It's possible to set the desired jndi name format for the whole server level, an ejb-jar, an ejb, an ejb's "local" interface (local/remote/local-home/home), and for an individual interface the ejb implements.
+More specific jndi name formats act as an override to any more general formats.
+The most specific format dictates the jndi name that will be used for any given interface of an ejb.
+It's possible to specify a general format for your server, override it at an ejb level and override that further for a specific interface of that ejb.
 
 === Via System property
 
-The jndi name format can be set on a server level via a _system property_,
-for example:
+The jndi name format can be set on a server level via a _system property_, for example:
 
+[source,shell]
+----
+$ ./bin/openejb start
+-Dopenejb.jndiname.format=\{ejbName}/\{interfaceClass}"
+----
 
-    $ ./bin/openejb start
-    -Dopenejb.jndiname.format=\\{ejbName}/\\{interfaceClass}"
-
-
-As usual, other ways of specifying system properties are via the
-conf/system.properties file in a standalone server, or via the
-InitialContext properties when embedded.
-
+As usual, other ways of specifying system properties are via the conf/system.properties file in a standalone server, or via the InitialContext properties when embedded.
 
 === Via properties in the openejb-jar.xml
 
-It's possible to set the openejb.jndiname.format for an ejb-jar jar in a
-META-INF/openejb-jar.xml file as follows:
+It's possible to set the openejb.jndiname.format for an ejb-jar jar in a META-INF/openejb-jar.xml file as follows:
 
+[source,xml]
+----
+<openejb-jar>
+  <properties>
+     openejb.deploymentId.format = {ejbName}
+     openejb.jndiname.format = {deploymentId}{interfaceType.annotationName}
+  </properties>
+</openejb-jar>
+----
 
-    +++<openejb-jar>++++++<properties>+++openejb.deploymentId.format = \{ejbName}
-         openejb.jndiname.format = \{deploymentId}{interfaceType.annotationName}+++</properties>++++++</openejb-jar>+++
+=== Via the tag for a specific ejb
 
+The following sets the name specifically for the interface org.superbiz.Foo.
 
+[source,xml]
+----
+<openejb-jar>
+  <ejb-deployment ejb-name="FooBean">
+    <jndi name="foo" interface="org.superbiz.Foo"/>
+  </ejb-deployment>
+</openejb-jar>
+----
 
-=== Via the +++<jndi>+++tag for a specific ejb
+Or more generally...
 
-The following sets the name specifically for the interface
-org.superbiz.Foo.
+[source,xml]
+----
+<openejb-jar>
+  <ejb-deployment ejb-name="FooBean">
+    <jndi name="foo" interface="Remote"/>
+  </ejb-deployment>
+</openejb-jar>
+----
 
+Or more generally still...
 
-    +++<openejb-jar>++++++<ejb-deployment ejb-name="FooBean">++++++<jndi name="foo" interface="org.superbiz.Foo">++++++</jndi>++++++</ejb-deployment>++++++</openejb-jar>+++
-
-
-Or more generally\...
-
-
-    +++<openejb-jar>++++++<ejb-deployment ejb-name="FooBean">++++++<jndi name="foo" interface="Remote">++++++</jndi>++++++</ejb-deployment>++++++</openejb-jar>+++
-
-
-Or more generally still\...
-
-
-    +++<openejb-jar>++++++<ejb-deployment ejb-name="FooBean">++++++<jndi name="foo">++++++</jndi>++++++</ejb-deployment>++++++</openejb-jar>+++
-
+[source,xml]
+----
+<openejb-jar>
+  <ejb-deployment ejb-name="FooBean">
+    <jndi name="foo"/>
+  </ejb-deployment>
+</openejb-jar>
+----
 
 The 'name' attribute can still use templates if it likes, such as:
 
-
-    +++<openejb-jar>++++++<ejb-deployment ejb-name="FooBean">++++++<jndi name="ejb/{interfaceClass.simpleName}" interface="org.superbiz.Foo">++++++</jndi>++++++</ejb-deployment>++++++</openejb-jar>+++
-
-
+[source,xml]
+----
+<openejb-jar>
+  <ejb-deployment ejb-name="FooBean">
+    <jndi name="ejb/{interfaceClass.simpleName}" interface="org.superbiz.Foo"/>
+  </ejb-deployment>
+</openejb-jar>
+----
 
 ===  Multiple tags
 
-Multiple +++<jndi>+++tags are allowed making it possible for you to be as
-specific as you need about the jndi name of each interface or each logical
-group of iterfaces (Local, Remote, LocalHome, RemoteHome).
+Multiple `<jndi>` tags are allowed making it possible for you to be as specific as you need about the jndi name of each interface or each logical group of interfaces (Local, Remote, LocalHome, RemoteHome).
 
 Given an ejb, FooBean, with the following interfaces:
 
@@ -217,54 +234,71 @@ Given an ejb, FooBean, with the following interfaces:
 * home: org.superbiz.FooHome
 * local-home: org.superbiz.FooLocalHome
 
-The following four examples would yield the same jndi names.  The intention
-with these examples is to show the various ways you can isolate specific
-interfaces or types of interfaces to gain more specific control on how they
-are named.
+The following four examples would yield the same jndi names.
+The intention with these examples is to show the various ways you can isolate specific interfaces or types of interfaces to gain more specific control on how they are named.
 
-    +++<openejb-jar>++++++<ejb-deployment ejb-name="FooBean">++++++<jndi name="LocalOne" interface="org.superbiz.LocalOne">++++++</jndi>+++
-        +++<jndi name="LocalTwo" interface="org.superbiz.LocalTwo">++++++</jndi>+++
-        +++<jndi name="RemoteOne" interface="org.superbiz.RemoteOne">++++++</jndi>+++
-        +++<jndi name="RemoteTwo" interface="org.superbiz.RemoteTwo">++++++</jndi>+++
-        +++<jndi name="FooHome" interface="org.superbiz.FooHome">++++++</jndi>+++
-        +++<jndi name="FooLocalHome" interface="org.superbiz.FooLocalHome">++++++</jndi>++++++</ejb-deployment>++++++</openejb-jar>+++
-
-Or
-
-    +++<openejb-jar>++++++<ejb-deployment ejb-name="FooBean">+++// applies to LocalOne and LocalTwo
-        +++<jndi name="{interfaceClass.simpleName}" interface="Local">++++++</jndi>+++
-
-
-
-// applies to RemoteOne and RemoteTwo
-        +++<jndi name="{interfaceClass.simpleName}" interface="Remote">++++++</jndi>+++
-
-
-
-// applies to FooHome
-        +++<jndi name="{interfaceClass.simpleName}" interface="RemoteHome">++++++</jndi>+++
-
-
-
-// applies to FooLocalHome
-        +++<jndi name="{interfaceClass.simpleName}" interface="LocalHome">++++++</jndi>++++++</ejb-deployment>++++++</openejb-jar>+++
+[source,xml]
+----
+<openejb-jar>
+  <ejb-deployment ejb-name="FooBean">
+    <jndi name="LocalOne" interface="org.superbiz.LocalOne"/>
+    <jndi name="LocalTwo" interface="org.superbiz.LocalTwo"/>
+    <jndi name="RemoteOne" interface="org.superbiz.RemoteOne"/>
+    <jndi name="RemoteTwo" interface="org.superbiz.RemoteTwo"/>
+    <jndi name="FooHome" interface="org.superbiz.FooHome"/>
+    <jndi name="FooLocalHome" interface="org.superbiz.FooLocalHome"/>
+  </ejb-deployment>
+</openejb-jar>
+----
 
 Or
 
-    +++<openejb-jar>++++++<ejb-deployment ejb-name="FooBean">+++// applies to RemoteOne, RemoteTwo, FooHome, and FooLocalHome
-        +++<jndi name="{interfaceClass.simpleName}">++++++</jndi>+++
+[source,xml]
+----
+<openejb-jar>
+  <ejb-deployment ejb-name="FooBean">
+    <!-- applies to LocalOne and LocalTwo -->
+    <jndi name="{interfaceClass.simpleName}" interface="Local"/>
 
+    <!-- applies to RemoteOne and RemoteTwo -->
+    <jndi name="{interfaceClass.simpleName}" interface="Remote"/>
 
+    <!-- applies to FooHome -->
+    <jndi name="{interfaceClass.simpleName}" interface="RemoteHome"/>
 
-// these two would count as an override on the above format
-        +++<jndi name="LocalOne" interface="org.superbiz.LocalOne">++++++</jndi>+++
-        +++<jndi name="LocalTwo" interface="org.superbiz.LocalTwo">++++++</jndi>++++++</ejb-deployment>++++++</openejb-jar>+++
+    <!-- applies to FooLocalHome -->
+    <jndi name="{interfaceClass.simpleName}" interface="LocalHome"/>
+  </ejb-deployment>
+</openejb-jar>
+----
+
+Or
+
+[source,xml]
+----
+<openejb-jar>
+  <ejb-deployment ejb-name="FooBean">
+    <!-- applies to RemoteOne, RemoteTwo, FooHome, and FooLocalHome -->
+    <jndi name="{interfaceClass.simpleName}"/>
+
+    <!-- these two would count as an override on the above format -->
+    <jndi name="LocalOne" interface="org.superbiz.LocalOne"/>
+    <jndi name="LocalTwo" interface="org.superbiz.LocalTwo"/>
+  </ejb-deployment>
+</openejb-jar>
+----
 
 or
 
-    +++<openejb-jar>++++++<ejb-deployment ejb-name="FooBean">+++// applies to LocalOne, LocalTwo, RemoteOne, RemoteTwo, FooHome, and FooLocalHome
-        +++<jndi name="{interfaceClass.simpleName}">++++++</jndi>++++++</ejb-deployment>++++++</openejb-jar>+++
-
+[source,xml]
+----
+<openejb-jar>
+  <ejb-deployment ejb-name="FooBean">
+    <!-- applies to LocalOne, LocalTwo, RemoteOne, RemoteTwo, FooHome, and FooLocalHome -->
+    <jndi name="{interfaceClass.simpleName}"/>
+  </ejb-deployment>
+</openejb-jar>
+----
 
 
 == Changing the Default Setting
@@ -319,20 +353,12 @@ Similarly pragmatic settings would be
 
 === Optimistic settings
 
-A very optimistic setting such as "\{deploymentId}" would guarantee only
-one proxy for the bean will be bound to JNDI.  This would be fine if you
-knew you only had one type of interface in your beans.	For example, only
-business remote interfaces, or only business local interfaces, or only an
-EJBObject interface, or only an EJBLocalObject interface.
+A very optimistic setting such as "\{deploymentId}" would guarantee only one proxy for the bean will be bound to JNDI. This would be fine if you knew you only had one type of interface in your beans.
+For example, only business remote interfaces, or only business local interfaces, or only an EJBObject interface, or only an EJBLocalObject interface.
 
-If a bean in the app did have more than one interface type, one business
-local and one business remote for example, by default OpenEJB will reject
-the app when it detects that it cannot bind the second interface.  This
-strict behavior can be disabled by setting the
-*openejb.jndiname.failoncollision* system property to _false_.	When this
-property is set to false, we will simply log an error that the second proxy
-cannot be bound to JNDI, tell you which ejb is using that name, and
-continue loading your app.
+If a bean in the app did have more than one interface type, one business local and one business remote for example, by default OpenEJB will reject the app when it detects that it cannot bind the second interface.
+This strict behavior can be disabled by setting the *openejb.jndiname.failoncollision* system property to _false_.
+When this property is set to false, we will simply log an error that the second proxy cannot be bound to JNDI, tell you which ejb is using that name, and continue loading your app.
 
 Similarly optimistic settings would be:
 
@@ -344,13 +370,9 @@ Similarly optimistic settings would be:
 
 === Advanced Details on EJB 3.0 Business Proxies (the simple part)
 
-If you implement your business interfaces, your life is simple as your
-proxies will also implement your business interfaces of the same type.
-Meaning any proxy OpenEJB creates for a business local interface will also
-implement your other business local interfaces.  Similarly, any proxy
-OpenEJB creates for a business remote interface will also implement your
-other business remote interfaces.
-
+If you implement your business interfaces, your life is simple as your proxies will also implement your business interfaces of the same type.
+Meaning any proxy OpenEJB creates for a business local interface will also implement your other business local interfaces.
+Similarly, any proxy OpenEJB creates for a business remote interface will also implement your other business remote interfaces.
 
 === Advanced Details on EJB 3.0 Business Proxies (the complicated part)
 
@@ -359,44 +381,32 @@ Read this section of either of these two apply to you:
 * You do not implement your business interfaces in your bean class
 * One or more of your business remote interfaces extend from javax.rmi.Remote
 
-If neither of these two items describe your apps, then there is no need to
-read further.  Go have fun.
-
+If neither of these two items describe your apps, then there is no need to read further.
+Go have fun.
 
 === Not implementing business interfaces
 
-If you do not implement your business interfaces it may not be possible for
-us to implement all your business interfaces in a single interface.
-Conflicts in the throws clauses and the return values can occur as detailed [here](multiple-business-interface-hazzards.html)
-.  When creating a proxy for an interface we will detect and remove any
-other business interfaces that would conflict with the main interface.
-
+If you do not implement your business interfaces it may not be possible for us to implement all your business interfaces in a single interface.
+Conflicts in the throws clauses and the return values can occur as detailed xref:multiple-business-interface-hazzards.adoc[here].
+When creating a proxy for an interface we will detect and remove any other business interfaces that would conflict with the main interface.
 
 === Business interfaces extending javax.rmi.Remote
 
-Per spec rules many runtime exceptions (container or connection related)
-are thrown from javax.rmi.Remote proxies as java.rmi.RemoteException which
-is not a runtime exception and must be throwable via the proxy as a checked
-exception. The issue is that conflicting throws clauses are actually
-removed for two interfaces sharing the same method signature.  For example
-two methods such as these:
+Per spec rules many runtime exceptions (container or connection related) are thrown from javax.rmi.Remote proxies as java.rmi.RemoteException which is not a runtime exception and must be throwable via the proxy as a checked exception.
+The issue is that conflicting throws clauses are actually removed for two interfaces sharing the same method signature.
+For example two methods such as these:
 
 * InterfaceA: void doIt() throws Foo;
 * InterfaceB: void doIt() throws RemoteException;
 
-can be implemented by trimming out the conflicting throws clauses as
-follows:
+can be implemented by trimming out the conflicting throws clauses as follows:
 
- * Implementation: void doIt(){}
+* Implementation: void doIt(){}
 
-This is fine for a bean class as it does not need to throw the RMI required
-javax.rmi.RemoteException. However if we create a proxy from these two
-interfaces it will also wind up with a 'doIt(){}' method that cannot throw
-javax.rmi.RemoteException.  This is very bad as the container does need to
-throw RemoteException to any business interfaces extending java.rmi.Remote
-for any container related issues or connection issues.	If the container
-attempts to throw a RemoteException from the proxies 'doIt(){}' method, it
-will result in an UndeclaredThrowableException thrown by the VM.
+This is fine for a bean class as it does not need to throw the RMI required javax.rmi.RemoteException.
+However if we create a proxy from these two interfaces it will also wind up with a 'doIt(){}' method that cannot throw javax.rmi.RemoteException.
+This is very bad as the container does need to throw RemoteException to any business interfaces extending java.rmi.Remote for any container related issues or connection issues.
+If the container attempts to throw a RemoteException from the proxies 'doIt(){}' method, it will result in an UndeclaredThrowableException thrown by the VM.
 
 The only way to guarantee the proxy has the
 

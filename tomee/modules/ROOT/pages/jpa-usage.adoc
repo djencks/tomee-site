@@ -1,10 +1,12 @@
 = JPA Usage
+:index-group: JPA
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 
-= Things to watch out for
+== Things to watch out for
 
-
-
-== Critical: Always set jta-data-source and non-jta-data-source
+=== Critical: Always set jta-data-source and non-jta-data-source
 
 Always set the value of jta-data-source and non-jta-data-source in your persistence.xml file.
 Regardless if targeting your EntityManager usage for transaction-type="RESOURCE_LOCAL" or transaction-type="TRANSACTION", it's very difficult to guarantee one or the other will be the only one needed.
@@ -16,8 +18,7 @@ Often times the JPA Provider itself will require both internally to do various o
 See xref:containers-and-resources.adoc[Containers and Resources]  for how to configure 'JtaManaged' and a full list of +++<Resource>+++properties for DataSources.+++</Resource>+++
 
 
-
-== Be detach aware
+=== Be detach aware
 
 A warning for any new JPA user is by default all objects will detach at the end of a transaction.
 People typically discover this when the go to remove or update an object they fetched previously and get an exception like "You cannot perform operation delete on detached object".

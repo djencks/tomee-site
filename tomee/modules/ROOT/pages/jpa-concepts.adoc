@@ -1,6 +1,10 @@
 = JPA Concepts
+:index-group: JPA
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 
-= JPA 101
+== JPA 101
 
 If there's one thing you have to understand to successfully use JPA (Java Persistence API) it's the concept of a _Cache_.
 Almost everything boils down to the Cache at one point or another.
@@ -21,7 +25,7 @@ With <persistence-unit transaction-type="*RESOURCE_LOCAL*"> *you* are responsibl
 
 * You *must* use the *EntityManagerFactory* to get an EntityManager
 * The resulting *EntityManager* instance *is* a PersistenceContext/Cache
-* An *EntityManagerFactory* can be injected via the *@PersistenceUnit* annotation only (not @PersistenceContext)
+* An *EntityManagerFactory* can be injected via the *@PersistenceUnit* annotation only (not `@PersistenceContext`)
 * You are *not* allowed to use @PersistenceContext to refer to a unit of type RESOURCE_LOCAL
 * You *must* use the *EntityTransaction* API to begin/commit around *every* call to your EntityManger
 * Calling entityManagerFactory.createEntityManager() twice results in *two* separate EntityManager instances and therefor *two* separate PersistenceContexts/Caches.
@@ -31,20 +35,17 @@ With <persistence-unit transaction-type="*JTA*"> the *container* will do EntityM
 
 * You *cannot* use the *EntityManagerFactory* to get an EntityManager
 * You can only get an *EntityManager* supplied by the *container*
-* An *EntityManager* can be injected via the *@PersistenceContext* annotation only (not @PersistenceUnit)
+* An *EntityManager* can be injected via the *@PersistenceContext* annotation only (not `@PersistenceUnit`)
 * You are *not* allowed to use @PersistenceUnit to refer to a unit of type JTA
 * The *EntityManager* given by the container is a *reference* to the PersistenceContext/Cache associated with a JTA Transaction.
 * If no JTA transaction is in progress, the EntityManager *cannot be used* because there is no PersistenceContext/Cache.
 * Everyone with an EntityManager reference to the *same unit* in the *same transaction* will automatically have a reference to the *same PersistenceContext/Cache*
 * The PersistenceContext/Cache is *flushed* and cleared at JTA *commit* time
 
-
-
-= Cache == PersistenceContext
+== Cache == PersistenceContext
 
 The concept of a database cache is an extremely important concept to be aware of.
-Without a copy of the data in memory (i.e.
-a cache) when you call account.getBalance() the persistence provider would have to go read the value from the database.
+Without a copy of the data in memory (i.e. a cache) when you call account.getBalance() the persistence provider would have to go read the value from the database.
 Calling account.getBalance() several times would cause several trips to the database.
 This would obviously be a big waste of resources.
 The other side of having a cache is that when you call account.setBalance(5000) it also doesn't hit the database (usually).
@@ -57,9 +58,7 @@ In any given transaction you want exactly one PersistenceContext/Cache for a giv
 Using a JTA unit with an EntityManager created by the container will always guarantee that this is the case.
 With a RESOURCE_LOCAL unit and an EntityManagerFactory you should create and use exactly one EntityManager instance in your transaction to ensure there is only one active PersistenceContext/Cache for the given set of data active against the current transaction.
 
-
-
-= Caches and Detaching
+== Caches and Detaching
 
 Detaching is the concept of a persistent object *leaving* the PersistenceContext/Cache.
 Leaving means that any updates made to the object are *not* reflected in the PersistenceContext/Cache.
@@ -82,13 +81,12 @@ You *cannot* call EntityManager.persist() or EntityManager.remove() on a Detache
 
 Calling EntityManager.merge() will re-attach a Detached object.
 
-
-
-= Valid RESOURCE_LOCAL Unit usage
+== Valid RESOURCE_LOCAL Unit usage
 
 Servlets and EJBs can use RESOURCE_LOCAL persistence units through the EntityManagerFactory as follows:
 
-....
+[source,xml]
+----
 <?xml version="1.0" encoding="UTF-8" ?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
 
@@ -99,11 +97,12 @@ Servlets and EJBs can use RESOURCE_LOCAL persistence units through the EntityMan
   </persistence-unit>
 
 </persistence>
-....
+----
 
 And referenced as follows
 
-....
+[source,java]
+----
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -131,13 +130,14 @@ public class MyEjbOrServlet ... {
 
     ...
 }
-....
+----
 
-= Valid JTA Unit usage
+=== Valid JTA Unit usage
 
 EJBs can use JTA persistence units through the EntityManager as follows:
 
-....
+[source,xml]
+----
 <?xml version="1.0" encoding="UTF-8" ?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
 
@@ -149,11 +149,12 @@ EJBs can use JTA persistence units through the EntityManager as follows:
   </persistence-unit>
 
 </persistence>
-....
+----
 
 And referenced as follows
 
-....
+[source,java]
+----
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
@@ -176,4 +177,4 @@ public class MyEjb implements MyEjbInterface {
 
     }
 }
-....
+----
