@@ -14,7 +14,7 @@ Instead of putting the app in the server, put the server in the app!
 
 
 
-= =Say what?! A local server?
+== Say what?! A local server?
 
 Yes, you read correctly.
 OpenEJB can be embedded and treated as your very own personal EJB container.

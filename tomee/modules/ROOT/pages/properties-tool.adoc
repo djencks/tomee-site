@@ -4,9 +4,9 @@
 
 To see all configurable properties in use by OpenEJB, using the following tool against a running server:
 
-____
+----
 ./bin/openejb properties
-____
+----
 
 The output of this tool takes all overrideable components OpenEJB sees and outputs their properties along with the current value.
 This allows you to easily see what is running in your system, what properties are available for overriding, and what exact values are for each component.
