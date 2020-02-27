@@ -34,22 +34,16 @@ This approach can only be made faster by helping us trim down or pinpoint the pa
 The value of this property is a regular expression and therefore can be absolute or relative.
 For example the path "/Users/dblevins/work/swizzle/swizzle-stream/target/classes" which contains the class files of an application you wish to test could be included in any of the following values to the "openejb.deployments.classpath.include" property:
 
-----
 * "file:///Users/dblevins/work/swizzle/swizzle-stream/target/classes/" _(an absolute path)_
 * "file:///Users/dblevins/work/swizzle/.*" _(relative)_
 * ".*swizzle-stream.*" _(very relative)_
-----
-----
-| ".*(swizzle-stream
-| swizzle-jira
-| acme-rocket-app).*" _(including several paths)_
-----
+* ".*(swizzle-stream|swizzle-jira|acme-rocket-app).*" _(including
+several paths)_
+* ".*(swizzle-stream^|swizzle-jira^|acme-rocket-app).*" _(including
+several paths with Win specific escapes)_
 
-----
-| ".*(swizzle-stream{caret}
-| swizzle-jira{caret}
-| acme-rocket-app).*" _(including several paths with Win specific escapes)_
-----
+Note the filtering is done on URLs in the classpath, so forward slashes
+should always be used even on OSs using backslash ("").
 
 Note the filtering is done on URLs in the classpath, so forward slashes should always be used even on OSs using backslash ("").
 
