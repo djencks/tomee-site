@@ -1,8 +1,12 @@
 = Quickstart
+:index-group: OpenEJB Standalone Server
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 
-= Installation
+== Installation
 
-To install OpenEJB, simply xref:downloads.adoc[download the latest binary]  and unpack your zip or tar.gz into the directory where you want OpenEJB to live.
+To install OpenEJB, simply xref:{common-vc}::download-ng.adoc[download the latest binary] and unpack your zip or tar.gz into the directory where you want OpenEJB to live.
 
 Windows users can download the zip and unpack it with the WinZip program.
 
@@ -15,9 +19,7 @@ Congratulations, you've installed OpenEJB.
 If you've unpacked OpenEJB into the directory C:\openejb-3.0, for example, then this directory is your OPENEJB_HOME directory.
 The OPENEJB_HOME directory is referred to in various parts of the documentation, so it's good to remember where it is.
 
-
-
-= Using OpenEJB
+== Using OpenEJB
 
 Now all you need to do is move to the bin directory in OPENEJB_HOME, the directory where OpenEJB was unpacked, and type:
 
@@ -25,35 +27,41 @@ _openejb_
 
 For Windows users, that looks like this:
 
-_C:\openejb-3.0> bin\openejb_
+[source,shell]
+----
+C:\openejb-3.0> bin\openejb
+----
 
 For UNIX/Linux/Mac OS X users, that looks like this:
 
-`xref:user@host-openejb-3.0.adoc[user@host openejb-3.0]
+[source,shell]
+----
+user@host openejb-3.0 # ./bin/openejb
+----
 
-= ./bin/openejb`
-
-You really only need to know two commands to use OpenEJB, xref:openejbx30:deploy-tool.adoc[deploy]  and [start|OPENEJBx30:Startup] . Both are completely documented and have examples.
+You really only need to know two commands to use OpenEJB, xref:openejbx30:deploy-tool.adoc[deploy]  and [start|OPENEJBx30:Startup].
+Both are completely documented and have examples.
 
 For help information and command options, try this:
 
-____
+[source,shell]
+----
 openejb deploy --help openejb start --help
-____
+----
 
 For examples on using the start command and options, try this:
 
-____
+[source,shell]
+----
 openejb start --examples
-____
+----
 
 That's it!
 
-If you don't have any EJBs or clients to run, try the ubiquitous xref:openejbx30:hello-world.adoc[Hello World]  example.
+If you don't have any EJBs or clients to run, try the ubiquitous xref:{examples-vc}:hello-world.adoc[Hello World]  example.
 
 
-
-= Join the mailing list
+== Join the mailing list
 
 The OpenEJB User list is where the general OpenEJB community goes to ask questions, make suggestions, chat with other users, and keep a finger on the pulse of the project.
-More information about the user list and dev list can be found xref:mailing-lists.adoc[here]
+More information about the user list and dev list can be found xref:{common-vc}::mailing-lists.adoc[here]

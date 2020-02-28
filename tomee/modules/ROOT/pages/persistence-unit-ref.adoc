@@ -1,15 +1,18 @@
-= persistence-unit-ref Both lookup and injection of an EntityManagerFactory can be configured via the @PersistenceUnit annotation or +++<persistence-unit-ref>+++in xml.
-Annotations and xml have equal function in both lookup and injection.+++</persistence-unit-ref>+++
+= persistence-unit-ref
+:index-group: JPA
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 
+Both lookup and injection of an EntityManagerFactory can be configured via the @PersistenceUnit annotation or <persistence-unit-ref> in xml.
+Annotations and xml have equal function in both lookup and injection.
 
+== Injection and Lookup
 
-= Injection and Lookup
+=== Via annotation
 
-
-
-== Via annotation
-
-....
+[source,java]
+----
 package org.superbiz;
 
 import javax.persistence.PersistenceUnit;
@@ -31,29 +34,31 @@ public class MyBean implements MyInterface {
         EntityManagerFactory barEntityManagerFactory = (EntityManagerFactory) context.lookup("java:comp/env/org.superbiz.MyBean/myBarEntityManagerFactory");
     }
 }
-....
+----
 
+=== Via xml
 
+The above `@PersistenceUnit` annotation usage is 100% equivalent to the following xml.
 
-== Via xml
+[source,xml]
+----
+<persistence-unit-ref>
+    <persistence-unit-ref-name>org.superbiz.calculator.MyBean/myBarEntityManagerFactory</persistence-unit-ref-name>
+    <persistence-unit-name>bar-unit</persistence-unit-name>
+    <persistence-unit-type>Transaction</persistence-unit-type>
+    <injection-target>
+        <injection-target-class>org.superbiz.calculator.MyBean</injection-target-class>
+        <injection-target-name>myBarEntityManagerFactory</injection-target-name>
+    </injection-target>
+</persistence-unit-ref>
+----
 
-The above @PersistenceUnit annotation usage is 100% equivalent to the following xml.
+=== Lookup only
 
- <persistence-unit-ref>
-     <persistence-unit-ref-name>org.superbiz.calculator.MyBean/myBarEntityManagerFactory</persistence-unit-ref-name>
-     <persistence-unit-name>bar-unit</persistence-unit-name>
-     <persistence-unit-type>Transaction</persistence-unit-type>
-     <injection-target>
-         <injection-target-class>org.superbiz.calculator.MyBean</injection-target-class>
-         <injection-target-name>myBarEntityManagerFactory</injection-target-name>
-     </injection-target>
- </persistence-unit-ref>
+==== Via annotation
 
-= Lookup only
-
-== Via annotation
-
-....
+[source,java]
+----
 package org.superbiz;
 
 import javax.persistence.PersistenceUnit;
@@ -70,16 +75,17 @@ public class MyBean implements MyInterface {
         EntityManagerFactory fooEntityManagerFactory = (EntityManagerFactory) context.lookup("java:comp/env/myFooEntityManagerFactory");
     }
 }
-....
+----
 
+== Via xml
 
+The above `@PersistenceUnit` annotation usage is 100% equivalent to the following xml.
 
-= Via xml
-
-The above @PersistenceUnit annotation usage is 100% equivalent to the following xml.
-
- <persistence-unit-ref>
-     <persistence-unit-ref-name>myFooEntityManagerFactory</persistence-unit-ref-name>
-     <persistence-unit-name>foo-unit</persistence-unit-name>
-     <persistence-unit-type>Transaction</persistence-unit-type>
- </persistence-unit-ref>
+[source,xml]
+----
+<persistence-unit-ref>
+    <persistence-unit-ref-name>myFooEntityManagerFactory</persistence-unit-ref-name>
+    <persistence-unit-name>foo-unit</persistence-unit-name>
+    <persistence-unit-type>Transaction</persistence-unit-type>
+</persistence-unit-ref>
+----
