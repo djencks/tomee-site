@@ -1,48 +1,28 @@
-= Notice:    Licensed to the Apache Software Foundation (ASF) under one            or more contributor license agreements.
-See the NOTICE file            distributed with this work for additional information            regarding copyright ownership.
-The ASF licenses this file            to you under the Apache License, Version 2.0 (the            "License");
-you may not use this file except in compliance            with the License.
-You may obtain a copy of the License at            .              http://www.apache.org/licenses/LICENSE-2.0            .            Unless required by applicable law or agreed to in writing,            software distributed under the License is distributed on an            "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY            KIND, either express or implied.
-See the License for the            specific language governing permissions and limitations            under the License.
+= JavaEE Doc Index
 
-{row
-
-{span-one-third
-
-=== Java EE Basics
+== Java EE Basics
 
 * xref:basics---getting-things.adoc[Getting Things]
 * xref:basics---security.adoc[Security]
-* xref:basics---transactions.adoc[Transactions] }
+* xref:basics---transactions.adoc[Transactions]
 
-{span-one-third
-
-=== Applications
+== Applications
 
 * xref:callbacks.adoc[Callbacks]
 * xref:understanding-callbacks.adoc[Understanding Callbacks]
 * xref:ejb-refs.adoc[EJB Refs]
-* xref:annotations,-xml-and-defaults.adoc[XML Overrides] }
+* xref:annotations,-xml-and-defaults.adoc[XML Overrides]
 
-{span-one-third
-
-=== Java Persistence Architecture
+== Java Persistence Architecture
 
 * xref:jpa-concepts.adoc[JPA Concepts]
 * xref:jpa-usage.adoc[General]
 * xref:openjpa.adoc[OpenJPA]
-* link:hibernate.html[Hibernate] }
+* link:hibernate.html[Hibernate]
 
-}
-
-{row
-
-{span-one-third
-
-=== Enterprise JavaBeans
+== Enterprise JavaBeans
 
 * xref:singleton-beans.adoc[Singleton Beans]
 * xref:security-annotations.adoc[Security Annotations]
-* xref:transaction-annotations.adoc[Transaction Annotations] }
+* xref:transaction-annotations.adoc[Transaction Annotations]
 
-}

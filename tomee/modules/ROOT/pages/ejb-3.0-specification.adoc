@@ -1,13 +1,13 @@
 = EJB 3.0 Specification
 
-= Specification
+==  Specification
 
-The EJB 3.0 specification can be downloaded from the http://www.jcp.org/en/jsr/detail?id=220[JSR 220]  at the JCP (Java Community Process) website after clicking through the JCP's online agreement.
+The EJB 3.0 specification can be downloaded from the link:http://www.jcp.org/en/jsr/detail?id=220[JSR 220]  at the JCP (Java Community Process) website after clicking through the JCP's online agreement.
 The specification is very large, but there's a download named _'ejb-3_0-fr-spec-simplified.pdf'_ that is very short and highly recommended as an introduction to EJB 3.0.
 
 
 
-= Documentation
+== Documentation
 
 . xref:annotations,-xml-and-defaults.adoc[Annotations, XML and Defaults]
 . xref:security-annotations.adoc[Security Annotations]

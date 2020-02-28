@@ -1,16 +1,17 @@
 = EJB + JPA + JSF + JAX-RS
 
-= Business Case
+== Business Case
 
 The example explains how a real-life business problem is solved using OpenEJB in a combination with other open-source frameworks and tools.
 The example covers the entire technical solution, including architecture, design, build automation, unit testing, implementation, and deployment.
 
-The product is hosted at http://oss.rempl.com  with its source code available at [http://svn.rempl.com/trunk/rempl/rempl-oss] . The purpose of the system is to collect UML meta information from open source products and make it visible for end-users in form of diagrams and texts.
-More information about the product and its documentation you can get at [http://www.rempl.com/rempl-oss/] .
+The product is hosted at link:http://oss.rempl.com[]  with its source code available at link:http://svn.rempl.com/trunk/rempl/rempl-oss[].
+The purpose of the system is to collect UML meta information from open source products and make it visible for end-users in form of diagrams and texts.
+More information about the product and its documentation you can get at link:http://www.rempl.com/rempl-oss/[] .
 
 
 
-= Architecture and Design
+== Architecture and Design
 
 The following Java-stack technologies are used in the system:
 
@@ -21,22 +22,22 @@ The following Java-stack technologies are used in the system:
 
 There are three layers in the system (Presentation, Business, and Persistence) and a number of components in each of them:
 
-!http://www.rempl.com/rempl-oss/tikz/architecture-components.png!
+image::http://www.rempl.com/rempl-oss/tikz/architecture-components.png[]
 
 Presentation Layer includes JSF (Mojarra), JAX-RS (Jersey), and Java EE container (Tomcat).
-In other words, everything on top of "http://www.rempl.com/rempl-oss/apidocs/com/rempl/oss/delegates/package-summary.html[Delegates] " in the diagram.
-Package [com.rempl.oss.delegates|http://www.rempl.com/rempl-oss/apidocs/com/rempl/oss/delegates/package-summary.html]  with its classes realize [Business Delegate|http://java.sun.com/blueprints/corej2eepatterns/Patterns/BusinessDelegate.html]  and [Service Locator|http://java.sun.com/blueprints/corej2eepatterns/Patterns/ServiceLocator.html]  Java EE design patterns.
+In other words, everything on top of "link:http://www.rempl.com/rempl-oss/apidocs/com/rempl/oss/delegates/package-summary.html[Delegates] " in the diagram.
+Package link:http://www.rempl.com/rempl-oss/apidocs/com/rempl/oss/delegates/package-summary.html[com.rempl.oss.delegates]  with its classes realize link:http://java.sun.com/blueprints/corej2eepatterns/Patterns/BusinessDelegate.html[Business Delegate]  and link:http://java.sun.com/blueprints/corej2eepatterns/Patterns/ServiceLocator.html[Service Locator]  Java EE design patterns.
 _More about it later..._
 
-Business Layer includes EJB (OpenEJB), http://www.rempl.com/rempl-oss/apidocs/com/rempl/oss/brokers/package-summary.html[Brokers]  (Stateless Session Beans), and JPA entities.
+Business Layer includes EJB (OpenEJB), link:http://www.rempl.com/rempl-oss/apidocs/com/rempl/oss/brokers/package-summary.html[Brokers]  (Stateless Session Beans), and JPA entities.
 
 Persistence Layer includes JPA (OpenJPA), JDBC (MySQL JDBC Driver) and the MySQL server.
 
 
 
-= Build Automation and Tests
+== Build Automation and Tests
 
-Build automation is managed by http://maven.apache.org/ref/3.0/[Maven 3] , see our [pom.xml|http://trac.fazend.com/rempl/browser/rempl/trunk/rempl/rempl-oss/pom.xml] .
+Build automation is managed by link:http://maven.apache.org/ref/3.0/[Maven 3], see our link:http://trac.fazend.com/rempl/browser/rempl/trunk/rempl/rempl-oss/pom.xml[pom.xml] .
 
 There are four levels of testing in the product:
 
@@ -45,10 +46,19 @@ There are four levels of testing in the product:
 . In-container functional testing
 . On-location testing
 
-During static analysis we are using http://maven.apache.org/plugins/maven-checkstyle-plugin/[Checkstyle] , [PMD|http://maven.apache.org/plugins/maven-pmd-plugin/] , [FindBugs|http://mojo.codehaus.org/findbugs-maven-plugin/] , [Cobertura|http://mojo.codehaus.org/cobertura-maven-plugin/] , [maven-dependency-plugin|http://maven.apache.org/plugins/maven-dependency-plugin/analyze-only-mojo.html] , [xml-maven-plugin|http://mojo.codehaus.org/xml-maven-plugin/] . Important to note that all these tools are used as gate condition checkers, not as post-factum analyzers.&nbsp;
+During static analysis we are using
+
+* link:http://maven.apache.org/plugins/maven-checkstyle-plugin/[Checkstyle],
+* link:http://maven.apache.org/plugins/maven-pmd-plugin/[PMD],
+* link:http://mojo.codehaus.org/findbugs-maven-plugin/[FindBugs],
+* link:http://mojo.codehaus.org/cobertura-maven-plugin/[Cobertura],
+* link:http://maven.apache.org/plugins/maven-dependency-plugin/analyze-only-mojo.html[maven-dependency-plugin],
+* link:http://mojo.codehaus.org/xml-maven-plugin/[xml-maven-plugin].
+
+Important to note that all these tools are used as gate condition checkers, not as post-factum analyzers.
 
 Out-of-container tests are automated with JUnit.
-Good example of a Stateless Session Bean out-of-container testing: http://trac.fazend.com/rempl/browser/rempl/trunk/rempl/rempl-oss/src/test/java/com/rempl/oss/brokers/UserMgrBeanTest.java[UserMgrBeanTest.java] .
+Good example of a Stateless Session Bean out-of-container testing: link:http://trac.fazend.com/rempl/browser/rempl/trunk/rempl/rempl-oss/src/test/java/com/rempl/oss/brokers/UserMgrBeanTest.java[UserMgrBeanTest.java] .
 
 In-containter functional testing is automated with JSFUnit and embedded Tomcat container.
 _more later..._
@@ -58,12 +68,12 @@ working on it..._
 
 
 
-= Configuration and Plumbing
+== Configuration and Plumbing
 
 TBD...
 
 
 
-= Implementation
+== Implementation
 
 TBD...
