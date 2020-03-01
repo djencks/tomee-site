@@ -140,11 +140,14 @@ These "client" VMs need only have the the _openejb-client jar_ in their classpat
 Running the example is fairly simple.
 In the "telephone-stateful" directory of the xref:openejb:download.adoc[examples zip] , just run:
 
+[source,console]
+----
 $ mvn clean install
+----
 
 Which should create output like the following.
 
-[source]
+[source,console]
 ----
 -------------------------------------------------------
  T E S T S

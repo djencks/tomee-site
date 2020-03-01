@@ -77,7 +77,7 @@ The default for `tomee.serialization.class.whitelist` is empty, the default for 
 
 If an EJB request fails because a class is not whitelisted you will find this log entry:
 
-[source,properties]
+[source,console]
 ----
 WARN - "null OEJP/4.7" FAIL "Security error - foo.Bar is not whitelisted as deserializable, prevented before loading it." - Debug for StackTrace
 ----

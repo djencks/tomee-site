@@ -21,7 +21,7 @@ Here they are in order of preference;
 . jndi.properties from the classpath
 . System properties
 . openejb.xml declarations/properties
-. service-jar.xml declarations/properties (internal concept) }
+. service-jar.xml declarations/properties (internal concept)
 
 *EJBContainer API*
 

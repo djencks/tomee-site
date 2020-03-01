@@ -1,7 +1,13 @@
-= Via annotation
-:doctype: book
+= Configuring a resource-ref for a datasource
+:index-group: Unrevised
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 
-....
+== Via annotation
+
+[source,java]
+----
 package org.superbiz.refs;
 
 import javax.annotation.Resource;
@@ -25,21 +31,24 @@ public class MyDataSourceRefBean implements MyBeanInterface {
         DataSource barDataSource = (DataSource) context.lookup("java:comp/env/org.superbiz.refs.MyDataSourceRefBean/myBarDataSource");
     }
 }
-....
+----
 
-= Via xml
+== Via xml
 
-The above @Resource annotation usage is 100% equivalent to the following xml.
+The above `@Resource` annotation usage is 100% equivalent to the following xml.
 
- <resource-ref>
-     <res-ref-name>myFooDataSource</res-ref-name>
-     <res-type>javax.sql.DataSource</res-type>
- </resource-ref>
- <resource-ref>
-     <res-ref-name>org.superbiz.refs.MyDataSourceRefBean/myBarDataSource</res-ref-name>
-     <res-type>javax.sql.DataSource</res-type>
-     <injection-target>
-         <injection-target-class>org.superbiz.refs.MyDataSourceRefBean</injection-target-class>
-         <injection-target-name>myBarDataSource</injection-target-name>
-     </injection-target>
- </resource-ref>
+[source,xml]
+----
+<resource-ref>
+    <res-ref-name>myFooDataSource</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+</resource-ref>
+<resource-ref>
+    <res-ref-name>org.superbiz.refs.MyDataSourceRefBean/myBarDataSource</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <injection-target>
+        <injection-target-class>org.superbiz.refs.MyDataSourceRefBean</injection-target-class>
+        <injection-target-name>myBarDataSource</injection-target-name>
+    </injection-target>
+</resource-ref>
+----

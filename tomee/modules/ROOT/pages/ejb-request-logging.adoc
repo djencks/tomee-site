@@ -58,7 +58,7 @@ The time tracked is purely *bean time* which includes  interceptors, decorators 
 This information is available in JMX.
 A sample JMX ObjectName for a `CounterBean` will look like this:
 
-[source,properties]
+[source,java]
 ----
 openejb.management:J2EEServer=openejb,J2EEApplication=null,EJBModule=StatsModule,StatelessSessionBean=CounterBean,j2eeType=Invocations,name=CounterBean
 ----
