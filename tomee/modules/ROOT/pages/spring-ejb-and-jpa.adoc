@@ -1,4 +1,8 @@
 = Spring EJB and JPA
+:index-group: Spring
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 :properties-table-layout: cols="3a,2a,5a",options="header"
 
 NOTE: OpenEJB 3.1 or later required
@@ -118,18 +122,13 @@ The JUnit TestCase uses a ClassPathXmlApplicationContext to load the Spring Appl
 Anything that loads your Spring xml file should work fine.
 The following code would work a plain java app as well.
 
-----
-| {snippet:id=code
-| url=openejb3/examples/spring-integration/src/test/java/org/superbiz/spring/MoviesTest.java
-| lang=java}
-----
-
-
+\{snippet:id=code|url=openejb3/examples/spring-integration/src/test/java/org/superbiz/spring/MoviesTest.java|lang=java}
 
 == Running
 
 The source for this example can be downloaded from svn via:
 
+[source,console]
 ----
 $ svn co http://svn.apache.org/repos/asf/tomee/tomee/trunk/examples/spring-integration
 ----
@@ -140,7 +139,8 @@ $ mvn clean install
 
 Which should create output like the following.
 
-....
+[source,console]
+----
 -------------------------------------------------------
  T E S T S
 -------------------------------------------------------
@@ -178,4 +178,4 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.141 sec
 Results :
 
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
-....
+----

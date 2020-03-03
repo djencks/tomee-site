@@ -1,4 +1,8 @@
 = Security
+:index-group: Configuration
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 :properties-table-layout: cols="3a,2a,5a",options="header"
 
 == Security - How To.
@@ -133,48 +137,33 @@ passwords
 
 == PLUG POINTS
 
-There are four-five different plug points where you could customize the
-functionality.	From largest to smallest:
+There are four-five different plug points where you could customize the functionality.
+From largest to smallest:
 
-* *The SecurityService interface*:  As before all security work
-(authentication and authorization) is behind this interface, only the
-methods on it have been updated.  If you want to do something really "out
-there" or need total control, this is where you go. Plugging in your own
-SecurityService should really be a last resort. We still have our "do
-nothing" SecurityService implementation just as before, but it is no longer
-the default. +You can add a new SecurityService impl by creating a
-service-jar.xml and packing it in your jar+.  You can configure OpenEJB to
-use a different SecurityService via the openejb.xml.
+* *The SecurityService interface*: As before all security work (authentication and authorization) is behind this interface, only the methods on it have been updated.
+If you want to do something really "out there" or need total control, this is where you go.
+Plugging in your own SecurityService should really be a last resort.
+We still have our "do nothing" SecurityService implementation just as before, but it is no longer the default.
++You can add a new SecurityService impl by creating a service-jar.xml and packing it in your jar+.
+You can configure OpenEJB to use a different SecurityService via the openejb.xml.
 
-* *JaccProvider super class*:  If you want to plug in your own JACC
-implementation to perform custom authorization (maybe do some fancy
-auditing), this is one way to do it without really having to understand
-JACC too much.	We will plug your provider in to all the places required by
-JACC if you simply set the system property `org.apache.openejb.core.security.JaccProvider` with the name of your
-JaccProvider impl.
+* *JaccProvider super class*: If you want to plug in your own JACC implementation to perform custom authorization (maybe do some fancy auditing), this is one way to do it without really having to understand JACC too much.
+We will plug your provider in to all the places required by JACC if you simply set the system property `org.apache.openejb.core.security.JaccProvider` with the name of your JaccProvider impl.
 
-* *Regular JACC*.  The JaccProvider is simply a wrapper around the many
-things you have to do to create and plugin a JACC provider, but you can
-still plugin a JACC provider in the standard ways.  Read the JACC spec for
-that info.
+* *Regular JACC*.
+The JaccProvider is simply a wrapper around the many things you have to do to create and plugin a JACC provider, but you can still plugin a JACC provider in the standard ways.
+Read the JACC spec for that info.
 
-* *JAAS LoginModule*.  You can setup a different JAAS LoginModule to do all
-your authentication by simply editing the conf/login.config file which is a
-plain JAAS config file.  At the moment we only support username/password
-based login modules.  At some point it would be nice to support any kind of
-input for a JAAS LoginModule, but username/password at least covers the
-majority.  It actually *is* possible to support any LoginModule, but you
-would have to supply your clients with your own way to authenticate to it
-and write a strategy for telling the OpenEJB client what data to send to
-the server with each invocation request. See the [JAAS LoginModule Developer's Guide](http://java.sun.com/javase/6/docs/technotes/guides/security/jaas/JAASLMDevGuide.html)
- for more information.
+* *JAAS LoginModule*.
+You can setup a different JAAS LoginModule to do all your authentication by simply editing the conf/login.config file which is a plain JAAS config file.
+At the moment we only support username/password based login modules.
+At some point it would be nice to support any kind of input for a JAAS LoginModule, but username/password at least covers the majority.
+It actually *is* possible to support any LoginModule, but you would have to supply your clients with your own way to authenticate to it and write a strategy for telling the OpenEJB client what data to send to the server with each invocation request.
+See the [JAAS LoginModule Developer's Guide](http://java.sun.com/javase/6/docs/technotes/guides/security/jaas/JAASLMDevGuide.html) for more information.
 
-* *Client IdentityResolver*.  This is the just mentioned interface you
-would have to implement to supply the OpenEJB client with alternate data to
-send to the server with each invocation request. If you're plugging in a
-new version of this it is likely that you may also want to plugin in your
-own SecurityService implementation. Reason being, the object returned from
-IdentiyResolve.getIdentity() is sent across the wire and straight in to the
-SecurityService.associate(Object) method.
+* *Client IdentityResolver*.
+This is the just mentioned interface you would have to implement to supply the OpenEJB client with alternate data to send to the server with each invocation request.
+If you're plugging in a new version of this it is likely that you may also want to plugin in your own SecurityService implementation.
+Reason being, the object returned from IdentiyResolve.getIdentity() is sent across the wire and straight in to the SecurityService.associate(Object) method.
 
 

@@ -1,9 +1,11 @@
 = Spring
+:index-group: Spring
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 
 NOTE: This document and the related feature is considered a prototype and will change based on user feedback.
 All comments suggestions welcome.
-
-
 
 == Introduction
 
@@ -119,33 +121,24 @@ Has the following properties:
 
 == Examples
 
-See the xref:spring-ejb-and-jpa.adoc[Spring EJB and JPA]
- page for example code and a working Spring xml file.
+See the xref:spring-ejb-and-jpa.adoc[Spring EJB and JPA] page for example code and a working Spring xml file.
 
 
 == Problems?
 
-If you are having problems with the installation, please send a message to
-the OpenEJB users [mailing list](mailing-lists.html)
- containing any error message(s) and the following information:
+If you are having problems with the installation, please send a message to the OpenEJB users xref:{common-vc}::mailing-lists.adoc[mailing list] containing any error message(s) and the following information:
 
 * OpenEJB Version
 * Spring Version
 * Java Version (execute java -version)
 * Operating System Type and Version
 
-
 == Limitations
 
-* *JavaAgent* - OpenEJB uses OpenJPA to provide JPA and CMP persistence, and
-OpenJPA currently requires a JavaAgent to function properly in a Java 1.5
-environment.  OpenJPA does not require a JavaAgent in Java 1.6.  Use
-Hibernate as your the provider in your persistence.xml files if you wish to
-avoid this requirement.
+* *JavaAgent* - OpenEJB uses OpenJPA to provide JPA and CMP persistence, and OpenJPA currently requires a JavaAgent to function properly in a Java 1.5 environment.
+OpenJPA does not require a JavaAgent in Java 1.6. Use Hibernate as your the provider in your persistence.xml files if you wish to avoid this requirement.
 
-* *EntityManager* - Having an OpenEJB created EntityManager or
-EntityManagerFactory injected into Spring beans is currently not supported.
- This will be added to the next release.  A small workaround for this is to
-use an EJB as a factory by adding a 'getEntityManager' method an using it
-as a link:http://static.springframework.org/spring/docs/2.5.x/reference/beans.html#beans-factory-class-instance-factory-method[Spring instance factory method].
+* *EntityManager* - Having an OpenEJB created EntityManager or EntityManagerFactory injected into Spring beans is currently not supported.
+This will be added to the next release.
+A small workaround for this is to use an EJB as a factory by adding a 'getEntityManager' method an using it as a link:http://static.springframework.org/spring/docs/2.5.x/reference/beans.html#beans-factory-class-instance-factory-method[Spring instance factory method].
 

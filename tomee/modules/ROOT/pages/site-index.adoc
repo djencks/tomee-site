@@ -81,7 +81,7 @@
 * xref:functional-testing-with-openejb,-jetty-and-selenium.adoc[functional-testing-with-openejb,-jetty-and-selenium]
 * xref:generating-ejb-3-annotations.adoc[generating-ejb-3-annotations]
 * xref:geronimo.adoc[geronimo]
-* 
+*
 //FIXME CHOOSE ONE
 xref:7.0@tomee::application-composer/getting-started.adoc[]
 xref:7.0@tomee::getting-started.adoc[]
@@ -96,7 +96,7 @@ xref:8.0@tomee::getting-started.adoc[getting-started]
 * xref:injection-of-env-entry-example.adoc[injection-of-env-entry-example]
 * xref:injection-of-other-ejbs-example.adoc[injection-of-other-ejbs-example]
 * xref:installation.adoc[installation]
-* 
+*
 //FIXME CHOOSE ONE
 xref:7.0@tomee::javaagent-with-maven-surefire.adoc[]
 xref:7.1@tomee::javaagent-with-maven-surefire.adoc[]
@@ -148,7 +148,6 @@ xref:8.0@tomee::javaagent-with-maven-surefire.adoc[javaagent-with-maven-surefire
 * xref:simple-stateful-example.adoc[simple-stateful-example]
 * xref:simple-stateless-example.adoc[simple-stateless-example]
 * xref:singleton-beans.adoc[singleton-beans]
-* xref:singleton-ejb.adoc[singleton-ejb]
 * xref:singleton-example.adoc[singleton-example]
 * xref:site-index.adoc[site-index]
 * xref:spring-and-openejb-3.0.adoc[spring-and-openejb-3.0]

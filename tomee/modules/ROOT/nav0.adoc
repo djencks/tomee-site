@@ -279,7 +279,6 @@
 * xref:simple-stateful-example.adoc[]
 * xref:simple-stateless-example.adoc[]
 * xref:singleton-beans.adoc[]
-* xref:singleton-ejb.adoc[]
 * xref:singleton-example.adoc[]
 * xref:singletoncontainer-config.adoc[]
 * xref:site-index.adoc[]
