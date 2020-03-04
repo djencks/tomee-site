@@ -2,7 +2,7 @@
 
 
 
-= Overview
+== Overview
 
 Builds upon the xref:injection-of-entitymanager-example.adoc[Injection of EntityManager Example]  but adds the use of _@RolesAllowed_ and _@PermitAll_ in the @Stateful bean to restrict who can perform create, persist and remove operations on the EntityManager.
 Shows a TestCase using the _@RunAs_ annotation to execute and test the bean code as various users.
@@ -17,7 +17,7 @@ _The source for this example is in the "testing-security" directory located in t
 
 
 
-= The Code
+== The Code
 
 Just as with the xref:testing-transactions-example.adoc[Testing Transactions Example]  the magic of this unit test is in the _ManagerBean_ and _EmployeeBean_ @Stateless beans that we've tucked into our TestCase as inner classes.
 These beans allow us to execute our test code as either a Manager or as an Employee and test that Movies @Stateful bean is setup to restrict and permit calls according to our intended design.
@@ -25,7 +25,7 @@ These beans allow us to execute our test code as either a Manager or as an Emplo
 _Curious on the InitialContext parameters used?
 See the xref:injection-of-datasource-example.adoc[Injection of DataSource Example]  for an explanation of how any Resource can be configured via properties in the TestCase itself or via an openejb.xml file._
 
-== Movie
+===  Movie
 
 ....
 package org.superbiz.injection.secure;
@@ -75,7 +75,7 @@ public class Movie {
 }
 ....
 
-== Movies
+=== Movies
 
 ....
 package org.superbiz.injection.secure;
@@ -118,7 +118,7 @@ public class Movies {
 }
 ....
 
-== persistence.xml
+=== persistence.xml
 
 ....
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
@@ -135,7 +135,7 @@ public class Movies {
 </persistence>
 ....
 
-== MovieTest
+=== MovieTest
 
 ....
 package org.superbiz.injection.secure;
@@ -275,7 +275,7 @@ public class MovieTest extends TestCase {
 }
 ....
 
-= Running
+== Running
 
 ....
 -------------------------------------------------------

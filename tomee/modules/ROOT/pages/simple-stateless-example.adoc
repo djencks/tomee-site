@@ -2,7 +2,9 @@
 
 
 
-= Overview+++<object width="400" height="250">++++++<param name="movie" value="http://www.youtube.com/v/aLx2jta96xU?fs=1&amp;hl=en_US">++++++</param>+++</param>+++<param name="allowFullScreen" value="true">++++++</param>+++</param>+++<param name="allowscriptaccess" value="always">++++++</param>+++</param>+++<embed src="http://www.youtube.com/v/aLx2jta96xU?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="400" height="250">++++++</embed>+++</embed>+++</object>+++
+== Overview
+
++++<object width="400" height="250">++++++<param name="movie" value="http://www.youtube.com/v/aLx2jta96xU?fs=1&amp;hl=en_US">++++++</param>+++</param>+++<param name="allowFullScreen" value="true">++++++</param>+++</param>+++<param name="allowscriptaccess" value="always">++++++</param>+++</param>+++<embed src="http://www.youtube.com/v/aLx2jta96xU?fs=1&amp;hl=en_US" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="400" height="250">++++++</embed>+++</embed>+++</object>+++
 
 This example shows how to create a Stateless session EJB using annotations.
 As stated in the "JSR 220: Enterprise JavaBeansTM,Version 3.0 - EJB Core Contracts and Requirements",
@@ -24,7 +26,7 @@ you basically have to write just a remote or local business interface, which is 
 
 
 
-= The Code
+== The Code
 
 In this example we develop a simple EJB 3 Stateless session EJB.
 Every stateless session bean implementation must be annotated using the annotation _@Stateless_ or marked that way in the ejb-jar.xml file.
@@ -34,7 +36,7 @@ A minimum of one business interface is required.
 
 
 
-== Bean
+=== Bean
 
 In EJB 3.0 session beans do not need to implement the javax.ejb.SessionBean interface.
 You can simply annotate it as @Stateless if you want it to be a stateless session bean.
@@ -45,7 +47,7 @@ Now there is no javax.ejb.EJBObject requirement, so implementing the business in
 
 
 
-== Local business interface
+=== Local business interface
 
 Local interfaces in EJB are _pass-by-reference_ interfaces.
 Meaning that _normal java semantics_ are used for passing arguments, return values and exceptions.
@@ -60,7 +62,7 @@ Per the vocabulary of the EJB spec, interfaces that implement javax.ejb.EJBLocal
 
 
 
-== Remote business interface
+=== Remote business interface
 
 Remote interfaces are _pass-by-value_ interfaces.
 Meaning that all method parameters, return values, and exceptions are _serialized_ on every call.
@@ -77,22 +79,22 @@ At minimum the interface must be annotated with _@Remote_ either in the interfac
 
 
 
-= Writing a unit test for the example
+== Writing a unit test for the example
 
 Writing an unit test for the stateless session EJb is quite simple.
 We need just to write a setup method to create and initialize the InitialContext, and then write our test methods
 
 
 
-== setUp
+=== setUp
 
 
 
-== Test the local business interface
+=== Test the local business interface
 
 
 
-== Test the remote business interface
+=== Test the remote business interface
 
 Note that JNDI names for Java SE clients are not standardized by the EJB spec.
 This is unfortunate and something being addressed in EJB 3.1.
@@ -100,7 +102,7 @@ The default schema that OpenEJB uses is ejbName + interfaceType (i.e.
 Local, Remote, LocalHome, RemoteHome), so in our example "CalculatorImpl" + "Local" and "CalculatorImpl" + "Remote".
 You can in fact change this default to be absolutely xref:jndi-names.adoc[anything you want]  including interface class name, ejb class name, and more.
 
-== CalculatorBean
+=== CalculatorBean
 
 ....
 package org.superbiz.stateless.basic;
@@ -132,7 +134,7 @@ public class CalculatorBean {
 }
 ....
 
-== CalculatorTest
+=== CalculatorTest
 
 Our `CalculatorBean` can be easily tested using the `EJBContainer` API in EJB 3.1
 
@@ -205,7 +207,7 @@ public class CalculatorTest extends TestCase {
 }
 ....
 
-= Running
+== Running
 
 Running the example should generate output similar to the following
 

@@ -2,7 +2,7 @@
 
 
 
-= Overview
+== Overview
 
 Testing an EntityManager that uses the default, PersistenceContextType.TRANSACTION, can be challenging due to Entities detaching around transaction boundaries.
 If you were to take the xref:injection-of-entitymanager-example.adoc[Injection of EntityManager Example]  which uses an EXTENDED persistence context and switch it to a TRANSACTION persistence context making no other changes, you'd find that the test would fail.
@@ -18,7 +18,7 @@ _The source for this example is in the "testing-transactions" directory located 
 
 
 
-= The Code
+== The Code
 
 In the code below we see that the transaction attribute for all method of the bean has been changed the default, which is TransactionAttributeType.REQUIRED, to TransactionAttributeType.MANDATORY.
 The MANDATORY transaction attribute is similar to REQUIRED in that the bean method is guaranteed to be executed in a transaction, but with the added restriction that if a transaction isn't started by the client before calling the method, an exception will be thrown.
@@ -30,7 +30,7 @@ See the xref:transaction-annotations.adoc[Transaction Annotations]  page for a f
 
 
 
-== Movie
+=== Movie
 
 ....
 package org.superbiz.injection.tx;
@@ -80,7 +80,7 @@ public class Movie {
 }
 ....
 
-== Movies
+=== Movies
 
 ....
 package org.superbiz.injection.tx;
@@ -118,7 +118,7 @@ public class Movies {
 }
 ....
 
-== persistence.xml
+=== persistence.xml
 
 ....
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
@@ -135,7 +135,7 @@ public class Movies {
 </persistence>
 ....
 
-= Writing a unit test for the example
+== Writing a unit test for the example
 
 The magic in the TestCase below is the _TransactionBean_ @Stateless bean which is tucked away as an inner class of the TestCase itself.
 With this bean, we can call our test code within the scope of a container controlled transaction.
@@ -151,7 +151,7 @@ This allows our test code to use the EntityManager and the Entities in the scope
 Curious on the InitialContext parameters used?
 See the xref:injection-of-datasource-example.adoc[Injection of DataSource Example]  for an explanation of how any Resource can be configured via properties in the TestCase itself or via an openejb.xml file.
 
-== MoviesTest
+=== MoviesTest
 
 ....
 package org.superbiz.injection.tx;
@@ -244,7 +244,7 @@ public class MoviesTest extends TestCase {
 }
 ....
 
-= Running
+== Running
 
 ....
 -------------------------------------------------------

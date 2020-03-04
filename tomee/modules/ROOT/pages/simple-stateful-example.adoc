@@ -1,6 +1,6 @@
-= Simple Stateful Example
+== Simple Stateful Example
 
-= Overview
+== Overview
 
 {span:style=float: right;
 margin-left: 20px;} \{html}+++<object width="400" height="250">++++++<param name="movie" value="http://www.youtube.com/v/9JqxbfzsWOQ?fs=1&amp;hl=en_US&amp;rel=0">++++++</param>+++</param>+++<param name="allowFullScreen" value="true">++++++</param>+++</param>+++<param name="allowscriptaccess" value="always">++++++</param>+++</param>+++<embed src="http://www.youtube.com/v/9JqxbfzsWOQ?fs=1&amp;hl=en_US&amp;rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="400" height="250">++++++</embed>+++</embed>+++</object>+++
@@ -26,14 +26,14 @@ _This example is the "simple-stateful" example located in the xref:openejb:downl
 
 
 
-= The Code
+== The Code
 
 In this example we develop a simple counter stateful session EJB.
 Every stateful session bean implementation must be annotated using the annotation _@Stateful_ or marked that way in the ejb-jar.xml file.
 
 
 
-== Bean
+=== Bean
 
 [cols=3*]
 |===
@@ -51,7 +51,7 @@ Now there is no javax.ejb.EJBObject requirement, so implementing the business in
 
 
 
-== Local business interface
+=== Local business interface
 
 [cols=3*]
 |===
@@ -73,7 +73,7 @@ Per the vocabulary of the EJB spec, interfaces that implement javax.ejb.EJBLocal
 
 
 
-== Remote business interface
+=== Remote business interface
 
 [cols=3*]
 |===
@@ -97,15 +97,14 @@ At minimum the interface must be annotated with _@Remote_ either in the interfac
 
 
 
-= Writing a unit test for the example
+== Writing a unit test for the example
 
 Writing an unit test for the stateful session EJB is quite simple.
 We need just to write a setup method to create and initialize the InitialContext, and then write our test methods
 
 
 
-[discrete]
-==== setUp
+=== setUp
 
 [cols=3*]
 |===
@@ -116,8 +115,7 @@ We need just to write a setup method to create and initialize the InitialContext
 
 
 
-[discrete]
-==== Test the local business interface
+=== Test the local business interface
 
 [cols=3*]
 |===
@@ -128,8 +126,7 @@ We need just to write a setup method to create and initialize the InitialContext
 
 
 
-[discrete]
-==== Test the remote business interface
+=== Test the remote business interface
 
 [cols=3*]
 |===
@@ -147,7 +144,7 @@ You can in fact change this default to be absolutely xref:jndi-names.adoc[anythi
 
 
 
-= Running
+== Running
 
 Running the example is fairly simple.
 In the "simple-stateful" directory of the xref:openejb:download.adoc[examples zip] , just run:
