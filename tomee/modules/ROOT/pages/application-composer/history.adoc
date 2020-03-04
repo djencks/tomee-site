@@ -10,7 +10,7 @@ However it is hard to write N test applications, in N modules to ensure it works
 In particular when you want to test a small part of the whole server.
 
 So you immediately think to mocking what is not needed.
-It works but has a big pitfall: test is often a noop or hide  a lot of issues.
+It works but has a big pitfall: test is often a noop or hide a lot of issues.
 
 So the idea came to be able to shortcut the part we don't care much about runtime: the application packaging.
 

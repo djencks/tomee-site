@@ -1,4 +1,8 @@
 = Debugging an Apache TomEE App in Intellij IDEA
+:index-group: IDE
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 
 Stepping through the xref:apache-tomee.adoc[TomEE] source code is a must-to-follow step if you want to understand how TomEE works and later contribute.
 This is a guide to quickly start your debugging session with TomEE as a TomEE developer.
@@ -22,6 +26,7 @@ http://www.apache.org/dyn/closer.cgi/tomee/tomee-1.7.1/openejb-4.7.1-source-rele
 First extract the zip file named *openejb-4.7.1-source-release.zip* to any location.
 Lets assume it is your home folder.
 
+[source,console]
 ----
 unzip openejb-4.7.1-source-release -d ~
 ----
@@ -30,6 +35,7 @@ The above command will create the *openejb-4.7.1* directory in your home directo
 
 Even though you can do a full build, We will run the following command to do a quick build so that you can have your meal before your hunger kills you.
 
+[source,console]
 ----
 mvn -Pquick -Dsurefire.useFile=false -DdisableXmlReport=true -DuniqueVersion=false -ff -Dassemble -DskipTests -DfailIfNoTests=false clean install
 ----
@@ -44,12 +50,14 @@ TomEE+ is the full feature packed distribution from TomEE.
 
 TomEE+ zip location:
 
+[source,console]
 ----
 ~/openejb-4.7.1/tomee/apache-tomee/target/apache-tomee-plus-1.7.1.zip
 ----
 
 Unzip the zip into your home directory (or any other location)
 
+[source,console]
 ----
 unzip ~/openejb-4.7.1/tomee/apache-tomee/target/apache-tomee-plus-1.7.1.zip -d ~
 ----
@@ -57,8 +65,10 @@ unzip ~/openejb-4.7.1/tomee/apache-tomee/target/apache-tomee-plus-1.7.1.zip -d ~
 You will find the directory *apache-tomee-plus-1.7.1* in your home folder.
 Lets run the TomEE.
 
+[source,console]
 ----
-cd ~/apache-tomee-plus-1.7.1/bin + ./catalina.sh run +
+cd ~/apache-tomee-plus-1.7.1/bin
+./catalina.sh run
 ----
 
 "INFO: Server startup in xxxx ms" is the Green light!
@@ -69,33 +79,33 @@ Lets prepare our IntelliJ IDEA for the debugging session.
 
 Start IntelliJ IDEA and Click the Import Project link
 
-image::debug/idea1.png[]
+image::{common-vc}::contrib/debug/idea1.png[]
 
 Select the ~/openejb-4.7.1 directory and press OK
 
 Select import project from external model & Maven as the external model.
 
-image::debug/idea3.png[]
+image::{common-vc}::contrib/debug/idea3.png[]
 
 Press Next on this screen.
 
-image::debug/idea4.png[]
+image::{common-vc}::contrib/debug/idea4.png[]
 
 Select the main profile.
 
-image::debug/idea6.png[]
+image::{common-vc}::contrib/debug/idea6.png[]
 
 Select the org.apache.openejb:openejb:4.7.1
 
-image::debug/idea7.png[]
+image::{common-vc}::contrib/debug/idea7.png[]
 
 Select the JDK you want to use with.
 
-image::debug/idea8.png[]
+image::{common-vc}::contrib/debug/idea8.png[]
 
 Give the project a name and press Finish.
 
-image::debug/idea9.png[]
+image::{common-vc}::contrib/debug/idea9.png[]
 
 Now your IDE will load the project.
 
@@ -123,12 +133,14 @@ This will tell the server "Do not proceed until the Debugger tool is attached to
 
 The convenient way of doing this is adding this line to catalina.sh file right after the #!/bin/sh line.
 
+[source,console]
 ----
 #!/bin/sh JPDA_SUSPEND="y"
 ----
 
 Now to time to run TomEE+ on debug mode.
 
+[source,console]
 ----
 ~/apache-tomee-plus-1.7.1/bin/catalina.sh jpda run
 ----
@@ -143,7 +155,7 @@ The terminal should hang with the message *"Listening for transport dt_socket at
 * Give a name (I gave "TomEE DEBUG") to this new configuration and set the Port to 8000
 * Click OK.
 
-image:idea10.png[]</div>
+image::{common-vc}::contrib/debug/idea10.png[]</div>
 
 To start debugging your TomEE+
 
