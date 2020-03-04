@@ -89,7 +89,8 @@ class-name="com.ibm.mq.connector.outbound.MQQueueProxy">
  </tomee>
 ----
 
-3. In web.xml add the below to access resources
+[start=3]
+. In web.xml add the below to access resources
 
 [source,xml]
 ----

@@ -43,7 +43,7 @@ If a property is specified that is not supported by the declared StatefulContain
 If a StatefulContainer is needed by the application and one is not declared, TomEE will create one dynamically using default settings.
 Multiple StatefulContainer declarations are allowed.
 
-=== Supported Properties
+== Supported Properties
 
 [{supported-properties-table-layout}]
 |===
@@ -127,7 +127,7 @@ The passivator is not responsible for invoking any callbacks or other processing
 
 
 
-== accessTimeout
+=== accessTimeout
 
 Specifies the maximum time an invocation could wait for the `@Stateful` bean instance to become available before giving up.
 
@@ -138,7 +138,7 @@ Or any combination such as "1 hour and 27 minutes and 10 seconds"
 
 Any usage of the `javax.ejb.AccessTimeout` annotation will override this setting for the bean or method where the annotation is used.
 
-== passivator
+=== passivator
 
 The passivator is responsible for writing beans to disk at passivation time.
 Different passivators can be used by setting this property to the fully qualified class name of the `PassivationStrategy` implementation.
@@ -149,7 +149,7 @@ Known implementations:
 * org.apache.openejb.core.stateful.RAFPassivater
 * org.apache.openejb.core.stateful.SimplePassivater
 
-== timeOut
+=== timeOut
 
 Specifies the time a bean can be idle before it is removed by the container.
 

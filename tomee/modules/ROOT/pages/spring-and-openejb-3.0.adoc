@@ -215,7 +215,7 @@ Spring bean definitions combined
 </bean>
 ----
 
-==== Some more useful info
+=== Some more useful info
 
 NOTE: Here is a bunch of links suggested by a user.
 If anybody has time to go through them and write a doc, that would be great.
