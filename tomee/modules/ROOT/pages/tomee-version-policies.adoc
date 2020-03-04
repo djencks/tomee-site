@@ -1,6 +1,8 @@
-:doctype: book
+:index-group: Unrevised
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 
-.
 
 = TomEE versioning policies
 
@@ -26,17 +28,17 @@ This donation hasn't been done to Apache for JavaEE 7 so TomEE is not able for n
 
 To make it more explicit here is a small table showing the targetted JavaEE version and the related certification state by version:
 
-[cols=3*]
+[cols="1,1,1",options="header"]
 |===
-| TomEE Version
-| JavaEE Version
-| Certified
+|TomEE Version
+|JavaEE Version
+|Certified
 
-| 1.x
-| 6
-| Yes
+|1.x
+|6
+|Yes
 
-| 7.x
-| 7
-| No
+|7.x
+|7
+|No
 |===

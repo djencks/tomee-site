@@ -1,20 +1,20 @@
 = Validation Tool
+:index-group: OpenEJB Standalone Server
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 
-
-
-= NAME
+== NAME
 
 openejb validate - OpenEJB Validation Tool
 
+== SYNOPSIS
 
-
-= SYNOPSIS
+NOTE: there are no pages in website source this 'options.adoc' could refer to.
 
 openejb validate xref:options.adoc[options]  jarfiles
 
-
-
-= NOTE
+== NOTE
 
 The OpenEJB Validation tool must be executed from the OPENEJB_HOME directory.
 This is the directory where OpenEJB was installed or unpacked.
@@ -24,31 +24,23 @@ In Windows, the validation tool can be executed as follows:
 
 _C:\openejb> openejb validate -help_
 
-\{warning} There is a bug in the openejb.bat script of OpenEJB 0.9.0 that doesn't allow you to execute the validate command as above.
+WARNING: There is a bug in the openejb.bat script of OpenEJB 0.9.0 that doesn't allow you to execute the validate command as above.
 For that release, Windows users can execute the following command: _C:\openejb> bin\validate.bat -help_
-
-\{warning}
 
 In UNIX, Linux, or Mac OS X, the deploy tool can be executed as follows:
 
-`xref:user@host-openejb.adoc[user@host openejb]
-
-= ./openejb.sh validate -help`
+`[user@host openejb](user@host-openejb.html) # ./openejb.sh validate -help`
 
 Depending on your OpenEJB version, you may need to change execution bits to make the scripts executable.
 You can do this with the following command.
 
-`xref:user@host-openejb.adoc[user@host openejb]
-
-= chmod 755 openejb.sh bin/*.sh`
+`[user@host openejb](user@host-openejb.html) # chmod 755 openejb.sh bin/*.sh`
 
 From here on out, it will be assumed that you know how to execute the right openejb script for your operating system and commands will appear in shorthand as show below.
 
 _openejb validate -help_
 
-
-
-= DESCRIPTION
+== DESCRIPTION
 
 The validation tool currently checks for the following things:
 
@@ -68,7 +60,7 @@ More checks will be added in the future.
 
 
 
-= OPTIONS
+== OPTIONS
 
 [cols=2*]
 |===
@@ -104,11 +96,9 @@ Outputs verbose details on each failure, usually with details on how to correct 
 
 
 
-= COMMON ISSUES
+== COMMON ISSUES
 
-
-
-== Misslocated class or NoClassDefFoundError
+=== Misslocated class or NoClassDefFoundError
 
 The short explanation is that the parent doesn't have all the classes it needs as some of them are only in the child classloader, where the parent can't see them.
 
@@ -116,13 +106,14 @@ This would occur, for example, if a class was loaded by the parent classloader, 
 
 Here is a more concrete example:
 
-....
+[source,java]
+----
 public interface Person extends EJBObject {
 }
 
 public interface Employee extends Person {
 }
-....
+----
 
 Ok, so when we build our ejb jar, we put both the Person and Employee interfaces in the jar, so everything should be good (so we think).
 But now let's say that for some reason the Employee interface is also in another jar and that jar was loaded into the system classpath.
@@ -135,5 +126,4 @@ Most people will look at their ejb-jar and think, "But all my classes are there!
 It really doesn't matter though, because one of those classes is also in the parent classloader.
 The first call to load that class will bypass your classloader completely and go to the parent.
 Once there, it is the parent's job to find _all_ the dependent classes.
-If it can't ...
-NoClassDefFoundError.
+If it can't ... `NoClassDefFoundError`.

@@ -1,15 +1,19 @@
-= TomEE and Eclipse Notice:    Licensed to the Apache Software Foundation (ASF) under one            or more contributor license agreements.
-See the NOTICE file            distributed with this work for additional information            regarding copyright ownership.
-The ASF licenses this file            to you under the Apache License, Version 2.0 (the            "License");
-you may not use this file except in compliance            with the License.
-You may obtain a copy of the License at            .              http://www.apache.org/licenses/LICENSE-2.0            .            Unless required by applicable law or agreed to in writing,            software distributed under the License is distributed on an            "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY            KIND, either express or implied.
-See the License for the            specific language governing permissions and limitations            under the License.
+= TomEE and Eclipse
+:index-group: IDE
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 
 Using TomEE in Eclipse is pretty simple since it uses the existing Tomcat 7 server adaptor that comes with Eclipse.
 
 == Quick Start
 
-An excellent instructional video with step-by-step instructions on how to install Eclipse, TomEE and create/deploy your first project is available on YouTube here: http://www.youtube.com/watch?v=Lr8pxEACVRI[Getting Started with Apache TomEE] (Remember to select the 'Generate web.xml descriptor' checkbox during project setup.
+An excellent instructional video with step-by-step instructions on how to install Eclipse, TomEE and create/deploy your first project is available on YouTube here:
+
+.Getting Started with Apache TomEE
+video::Lr8pxEACVRI[youtube]
+
+(Remember to select the 'Generate web.xml descriptor' checkbox during project setup.
 Otherwise the ejb does not get injected and you will get an error.).
 
 . Download and install both Apache TomEE and Eclipse.
@@ -73,23 +77,29 @@ To allow jsp hot deployment alter this value to true and restart Tomee.
 
 This is the relevant snippet of the web.xml file.
 
- <servlet>
-     <servlet-name>jsp</servlet-name>
-     <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
-     ....
-     <init-param>
-         <param-name>development</param-name>
-         <param-value>true</param-value>
-     </init-param>
-     ....
- </servlet>
+[source,xml]
+----
+<servlet>
+    <servlet-name>jsp</servlet-name>
+    <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+    ....
+    <init-param>
+        <param-name>development</param-name>
+        <param-value>true</param-value>
+    </init-param>
+    ....
+</servlet>
+----
 
 == How to use JULI for TomEE in WTP?
 
 It seems that WTP doesn't manage correctly Tomcat logging configuration (which needs to be done through system properties).
 A quick workaround is to add these properties manually:
 
- -Djava.util.logging.config.file="<tomee>/conf/logging.properties"
- -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+[source,console]
+----
+-Djava.util.logging.config.file="<tomee>/conf/logging.properties"
+-Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+----
 
-More information on: http://wiki.eclipse.org/WTP_Tomcat_FAQ#How_do_I_enable_the_JULI_logging_in_a_Tomcat_5.5_Server_instance.3F
+More information on: link:http://wiki.eclipse.org/WTP_Tomcat_FAQ#How_do_I_enable_the_JULI_logging_in_a_Tomcat_5.5_Server_instance.3F

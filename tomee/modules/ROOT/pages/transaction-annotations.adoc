@@ -1,4 +1,8 @@
 = Transaction Annotations
+:index-group: Unrevised
+:jbake-date: 2018-12-05
+:jbake-type: page
+:jbake-status: published
 
 _Also see xref:testing-transactions-example.adoc[Testing Transactions]  for an example of how to use and test EJB transaction attributes_
 
@@ -17,11 +21,10 @@ Per EJB 3.0 the default transaction attribute for all EJB 3.0 applications is _R
 The default transaction attribute for EJB 2.1, 2.0 and 1.1 applications is vendor specific.
 In OpenEJB EJB 2.1, 2.0 and 1.1 applications also use _REQUIRED_ as the default.
 
-
-
 == Attribute Types summary
 
 A simplistic way to visualize the transaction attributes is as follows.
+
 [cols="4*",options="header"]
 |===
 
@@ -43,72 +46,47 @@ A simplistic way to visualize the transaction attributes is as follows.
 |SUPPORTS
 |===
 
-The "*Transacted*" and "*Not Transacted*" categories represent the
-container guarantee, i.e. if the bean method will or will not be invoked in
-a transaction.	The "*Failing*", "*Correcting*", and "*No Change*"
-categories represent the action take by the container to achieve that
-guarantee.
+The "*Transacted*" and "*Not Transacted*" categories represent the container guarantee, i.e. if the bean method will or will not be invoked in a transaction.
+The "*Failing*", "*Correcting*", and "*No Change*" categories represent the action take by the container to achieve that guarantee.
 
-For example, *Never* and *Mandatory* are categorized as "*Failing*" and
-will cause the container to throw an exception to the caller if there is
-(Tx Never) or is not (Tx Mandatory) a transaction in progress when the
-method is called.  The attributes *Required*, *RequiresNew*, and
-*NotSupported* are categorized as "*Correcting*" as they will cause the
-container to adjust the transactional state automatically as needed to
-match the desired state, rather than blocking the invocation by throwing an
-exception.
-
+For example, *Never* and *Mandatory* are categorized as "*Failing*" and will cause the container to throw an exception to the caller if there is (Tx Never) or is not (Tx Mandatory) a transaction in progress when the method is called.
+The attributes *Required*, *RequiresNew*, and *NotSupported* are categorized as "*Correcting*" as they will cause the container to adjust the transactional state automatically as needed to match the desired state, rather than blocking the invocation by throwing an exception.
 
 == Detailed description of each Attribute
-
 
 === MANDATORY
 
 A _MANDATORY_ method is guaranteed to always be executed in a transaction.
 However, it's the caller's job to take care of suppling the transaction.
-If the caller attempts to invoke the method *outside* of a transaction,
-then the container will block the call and throw them an *exception*.
-
+If the caller attempts to invoke the method *outside* of a transaction, then the container will block the call and throw them an *exception*.
 
 === REQUIRED
 
 A _REQUIRED_ method is guaranteed to always be executed in a transaction.
-If the caller attempts to invoke the method *outside* of a transaction, the
-container will *start* a transaction, execute the method, then *commit* the
-transaction.
-
+If the caller attempts to invoke the method *outside* of a transaction, the container will *start* a transaction, execute the method, then *commit* the transaction.
 
 === REQUIRES_NEW
 
-A _REQUIRES_NEW_ method is guaranteed to always be executed in a
-transaction.  If the caller attempts to invoke the method *inside or
-outside* of a transaction, the container will still *start* a transaction,
-execute the method, then *commit* the transaction.  Any transaction the
-caller may have in progress will be *suspended* before the method execution
-then *resumed* afterward.
-
+A _REQUIRES_NEW_ method is guaranteed to always be executed in a transaction.
+If the caller attempts to invoke the method *inside or outside* of a transaction, the container will still *start* a transaction, execute the method, then *commit* the transaction.
+Any transaction the caller may have in progress will be *suspended* before the method execution then *resumed* afterward.
 
 === NEVER
 
 A _NEVER_ method is guaranteed to never be executed in a transaction.
-However, it's the caller's job to ensure there is no transaction.  If the
-caller attempts to invoke the method *inside* of a transaction, then the
-container will block the call and throw them an *exception*.
-
+However, it's the caller's job to ensure there is no transaction.
+If the caller attempts to invoke the method *inside* of a transaction, then the container will block the call and throw them an *exception*.
 
 === NOT_SUPPORTED
 
-A _NOT_SUPPORTED_ method is guaranteed to never be executed in a
-transaction.  If the caller attempts to invoke the method *inside* of a
-transaction, the container will *suspend* the caller's transaction, execute
-the method, then *resume* the caller's transaction.
-
+A _NOT_SUPPORTED_ method is guaranteed to never be executed in a transaction.
+If the caller attempts to invoke the method *inside* of a transaction, the container will *suspend* the caller's transaction, execute the method, then *resume* the caller's transaction.
 
 === SUPPORTS
 
-A _SUPPORTS_ method is guaranteed to adopt the exact transactional state of
-the caller.  These methods can be invoked by caller's *inside or outside*
-of a transaction.  The container will do nothing to change that state.
+A _SUPPORTS_ method is guaranteed to adopt the exact transactional state of the caller.
+These methods can be invoked by caller's *inside or outside* of a transaction.
+The container will do nothing to change that state.
 
 == Where may a transaction attribute be specified?
 
@@ -133,7 +111,6 @@ of a transaction.  The container will do nothing to change that state.
 * _codeRed_ will be invoked with the attribute of _MANDATORY_
 * _codeBlue_ will be invoked with the default attribute of _REQUIRED_
 
-
 === On Classes
 
 [source,java]
@@ -153,7 +130,6 @@ of a transaction.  The container will do nothing to change that state.
 ----
 
 * _codeRed_ and _codeBlue_ will be invoked with the attribute of _MANDATORY_
-
 
 === Mixed on classes and methods
 
@@ -183,11 +159,9 @@ of a transaction.  The container will do nothing to change that state.
 * _codeBlue_ will be invoked with the attribute of _SUPPORTS_
 * _codeGreen_ will be invoked with the attribute of _REQUIRED_
 
-
 ==  Illegal Usage
 
-Generally, transaction annotationss cannot be made on AroundInvoke methods
-and most callbacks.
+Generally, transaction annotationss cannot be made on AroundInvoke methods and most callbacks.
 
 The following usages of @TransactionAttribute have no effect.
 
@@ -227,4 +201,3 @@ The following usages of @TransactionAttribute have no effect.
         }
     }
 ----
-
