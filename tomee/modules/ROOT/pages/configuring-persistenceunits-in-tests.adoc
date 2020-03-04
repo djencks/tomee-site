@@ -127,7 +127,7 @@ If the property is already set in the persistence unit it will be overwritten if
 
 Custom transaction controller implementations will never be overwritten automatically.
 
-===== Provider org.apache.openjpa.persistence.PersistenceProviderImpl
+==== Provider org.apache.openjpa.persistence.PersistenceProviderImpl
 
 OpenJPA is capable of discovering the correct method for locating the TransactionManager without the need for users to specify the specific strategy.
 Therefore no specific "magic" is required.

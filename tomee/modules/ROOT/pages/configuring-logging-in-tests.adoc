@@ -33,7 +33,7 @@ The default embedded.logging.properties is quite good and there is really no nee
 
 You can also put logging tweaks right in your InitialContext properties like so:
 
-[source,properties]
+[source,java]
 ----
 Properties p = new Properties();
 p.put(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.core.LocalInitialContextFactory");

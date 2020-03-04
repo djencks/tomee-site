@@ -111,7 +111,7 @@ Once this file is packed in a jar and added to the `<tomee.home>/lib` or  `<open
 
 Or in properties like so:
 
-[source,java]
+[source,properties]
 ----
  myGenericAdapter = new://Resource?type=GenericJMSRA&provider=org.superbiz:genericra
  myGenericAdapter.AdapterProperty1 = PropertyValue1

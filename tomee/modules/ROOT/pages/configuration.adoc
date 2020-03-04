@@ -96,11 +96,15 @@ _OpenEJB libraries_
 
 A summary of the above in a different notation:
 
- openejb.home = user.dir (can be set explicitly)
- openejb.base = openejb.home (can be set explicitly)
- openejb.conf = openejb.base/conf/openejb.conf (can be set explicitly)
- logging.conf = openejb.base/conf/logging.conf (can be set explicitly)
- deployments  = paths listed in openejb.conf (relative paths resolved from openejb.base) Classpath includes openejb.home/lib and openejb.home/dist
+[source]
+----
+openejb.home = user.dir (can be set explicitly)
+openejb.base = openejb.home (can be set explicitly)
+openejb.conf = openejb.base/conf/openejb.conf (can be set explicitly)
+logging.conf = openejb.base/conf/logging.conf (can be set explicitly)
+deployments  = paths listed in openejb.conf (relative paths resolved from openejb.base)
+Classpath includes openejb.home/lib and openejb.home/dist
+----
 
 === Example layout
 
@@ -109,15 +113,18 @@ The openejb.conf file as been updated to point to the ejb jars by name (abc-ejbs
 
 An example layout:
 
- /usr/local/openejb  (openejb.home)
- /usr/local/openejb/lib	(in classpath)
- /usr/local/openejb/dist (in classpath)
- /home/jsmith/foo_app  (openejb.base)
- /home/jsmith/foo_app/conf/openejb.conf
- /home/jsmith/foo_app/conf/logging.conf
- /home/jsmith/foo_app/abc-ejbs.jar (Deployment entry in openejb.conf)
- /home/jsmith/foo_app/xyz-ejbs.jar (Deployment entry in openejb.conf)
- /home/jsmith/foo_app/logs/
+[source]
+----
+/usr/local/openejb  (openejb.home)
+/usr/local/openejb/lib  (in classpath)
+/usr/local/openejb/dist (in classpath)
+/home/jsmith/foo_app  (openejb.base)
+/home/jsmith/foo_app/conf/openejb.conf
+/home/jsmith/foo_app/conf/logging.conf
+/home/jsmith/foo_app/abc-ejbs.jar (Deployment entry in openejb.conf)
+/home/jsmith/foo_app/xyz-ejbs.jar (Deployment entry in openejb.conf)
+/home/jsmith/foo_app/logs/
+----
 
 === Another Example layout
 
@@ -125,12 +132,15 @@ In this example openejb.home and openejb.base are setup as well as the explicit 
 
 An example layout:
 
- /usr/local/openejb  (openejb.home)
- /usr/local/openejb/lib	(in classpath)
- /usr/local/openejb/dist (in classpath)
- /home/jsmith/foo_app  (openejb.base)
- /home/jsmith/foo_app/openejb.xml  (openejb.configuration)
- /home/jsmith/foo_app/abc-ejbs.jar (Deployment entry in openejb.xml)
- /home/jsmith/foo_app/xyz-ejbs.jar (Deployment entry in openejb.xml)
- /home/jsmith/foo_app/log4j.conf  (log4j.configuration)
- /home/jsmith/foo_app/mylogs/  (logging dir as defined in log4j.conf)
+[source]
+----
+/usr/local/openejb  (openejb.home)
+/usr/local/openejb/lib  (in classpath)
+/usr/local/openejb/dist (in classpath)
+/home/jsmith/foo_app  (openejb.base)
+/home/jsmith/foo_app/openejb.xml  (openejb.configuration)
+/home/jsmith/foo_app/abc-ejbs.jar (Deployment entry in openejb.xml)
+/home/jsmith/foo_app/xyz-ejbs.jar (Deployment entry in openejb.xml)
+/home/jsmith/foo_app/log4j.conf  (log4j.configuration)
+/home/jsmith/foo_app/mylogs/  (logging dir as defined in log4j.conf)
+----
