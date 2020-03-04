@@ -3,6 +3,7 @@
 :jbake-date: 2018-12-05
 :jbake-type: page
 :jbake-status: published
+:supported-properties-table-layout: cols="2,1,3,5",options="header"
 
 *Full name*:
 
@@ -15,8 +16,13 @@ Create but not run a TomEE.
 *Attributes*:
 
 * Requires a Maven project to be executed.
-* Requires dependency resolution of artifacts in scope: +++<tt>+++runtime+system+++</tt>+++.
-* Requires dependency collection of artifacts in scope: +++<tt>+++runtime+++</tt>+++.+++<div class="section">+++=== Optional Parameters+++<table class="bodyTable" border="0">++++++<tr class="a">+++
+* Requires dependency resolution of artifacts in scope: runtime+system.
+* Requires dependency collection of artifacts in scope: runtime.
+
+== Optional Parameters
+
+[{supported-properties-table-layout}]
+|===
 |Name
 
 
@@ -28,1292 +34,1423 @@ Create but not run a TomEE.
 
 |Description
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#apacheRepos">+++apacheRepos+++</a>++++++</b>+++
 
+|<<apacheRepos>>
 
-|+++<tt>+++String+++</tt>+++
 
+|String
 
-|+++<tt>+++-+++</tt>+++
 
+|-
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++snapshots+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.apache-repos+++</tt>+++.
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#appDir">+++appDir+++</a>++++++</b>+++
+|(no description)
+{blank}
+* Default value is: snapshots.
+* User property is: tomee-plugin.apache-repos.
 
 
-|+++<tt>+++String+++</tt>+++
+|<<appDir>>
 
 
-|+++<tt>+++-+++</tt>+++
+|String
 
 
-|relative to tomee.base.+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++apps+++</tt>+++.+++<br>++++++</br>+++
+|-
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#apps">+++apps+++</a>++++++</b>+++
 
+|relative to tomee.base.
+{blank}
+* Default value is: apps.
 
-|+++<tt>+++List+++</tt>+++
 
 
-|+++<tt>+++-+++</tt>+++
+|<<apps>>
 
 
-|(no description)+++<br>++++++</br>+++
+|List
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#args">+++args+++</a>++++++</b>+++
 
+|-
 
-|+++<tt>+++String+++</tt>+++
 
+|(no description)
 
-|+++<tt>+++-+++</tt>+++
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.args+++</tt>+++.
+|<<args>>
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#attach">+++attach+++</a>++++++</b>+++
 
+|String
 
-|+++<tt>+++boolean+++</tt>+++
 
+|-
 
-|+++<tt>+++-+++</tt>+++
 
+|(no description)
+{blank}
+* User property is: tomee-plugin.args.
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++true+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.attach+++</tt>+++.
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#bin">+++bin+++</a>++++++</b>+++
+|<<attach>>
 
 
-|+++<tt>+++File+++</tt>+++
+|boolean
 
 
-|+++<tt>+++-+++</tt>+++
+|-
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.basedir}/src/main/tomee/bin+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.bin+++</tt>+++.
+|(no description)
+{blank}
+* Default value is: true.
+* User property is: tomee-plugin.attach.
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#catalinaBase">+++catalinaBase+++</a>++++++</b>+++
 
+|<<bin>>
 
-|+++<tt>+++File+++</tt>+++
 
+|File
 
-|+++<tt>+++-+++</tt>+++
 
+|-
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.build.directory}/apache-tomee+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.catalina-base+++</tt>+++.
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#checkStarted">+++checkStarted+++</a>++++++</b>+++
+|(no description)
+{blank}
+* Default value is: ${project.basedir}/src/main/tomee/bin.
+* User property is: tomee-plugin.bin.
 
 
-|+++<tt>+++boolean+++</tt>+++
+|<<catalinaBase>>
 
 
-|+++<tt>+++-+++</tt>+++
+|File
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.check-started+++</tt>+++.
+|-
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#classifier">+++classifier+++</a>++++++</b>+++
 
+|(no description)
+{blank}
+* Default value is: ${project.build.directory}/apache-tomee.
+* User property is: tomee-plugin.catalina-base.
 
-|+++<tt>+++String+++</tt>+++
 
+|<<checkStarted>>
 
-|+++<tt>+++-+++</tt>+++
 
+|boolean
 
-|(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.classifier+++</tt>+++.
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#classpaths">+++classpaths+++</a>++++++</b>+++
+|-
 
 
-|+++<tt>+++List+++</tt>+++
+|(no description)
+{blank}
+* Default value is: false.
+* User property is: tomee-plugin.check-started.
 
 
-|+++<tt>+++-+++</tt>+++
+|<<classifier>>
 
 
-|(no description)+++<br>++++++</br>+++
+|String
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#config">+++config+++</a>++++++</b>+++
 
+|-
 
-|+++<tt>+++File+++</tt>+++
 
+|(no description)
+{blank}
+* User property is: tomee-plugin.classifier.
 
-|+++<tt>+++-+++</tt>+++
 
+|<<classpaths>>
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.basedir}/src/main/tomee/conf+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.conf+++</tt>+++.
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#context">+++context+++</a>++++++</b>+++
+|List
 
 
-|+++<tt>+++String+++</tt>+++
+|-
 
 
-|+++<tt>+++-+++</tt>+++
+|(no description)
 
 
-|rename the current artifact+++<br>++++++</br>+++
+|<<config>>
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#debug">+++debug+++</a>++++++</b>+++
 
+|File
 
-|+++<tt>+++boolean+++</tt>+++
 
+|-
 
-|+++<tt>+++-+++</tt>+++
 
+|(no description)
+{blank}
+* Default value is: ${project.basedir}/src/main/tomee/conf.
+* User property is: tomee-plugin.conf.
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.debug+++</tt>+++.
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#debugPort">+++debugPort+++</a>++++++</b>+++
+|<<context>>
 
 
-|+++<tt>+++int+++</tt>+++
+|String
 
 
-|+++<tt>+++-+++</tt>+++
+|-
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++5005+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.debugPort+++</tt>+++.
+|rename the current artifact
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#deployOpenEjbApplication">+++deployOpenEjbApplication+++</a>++++++</b>+++
 
+|<<debug>>
 
-|+++<tt>+++boolean+++</tt>+++
 
+|boolean
 
-|+++<tt>+++-+++</tt>+++
 
+|-
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.deploy-openejb-internal-application+++</tt>+++.
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#docBases">+++docBases+++</a>++++++</b>+++
+|(no description)
+{blank}
+* Default value is: false.
+* User property is: tomee-plugin.debug.
 
 
-|+++<tt>+++List+++</tt>+++
+|<<debugPort>>
 
 
-|+++<tt>+++-+++</tt>+++
+|int
 
 
-|for TomEE and wars only, which docBase to use for this war.+++<br>++++++</br>+++
+|-
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#ejbRemote">+++ejbRemote+++</a>++++++</b>+++
 
+|(no description)
+{blank}
+* Default value is: 5005.
+* User property is: tomee-plugin.debugPort.
 
-|+++<tt>+++boolean+++</tt>+++
 
+|<<deployOpenEjbApplication>>
 
-|+++<tt>+++-+++</tt>+++
 
+|boolean
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++true+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.ejb-remote+++</tt>+++.
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#externalRepositories">+++externalRepositories+++</a>++++++</b>+++
+|-
 
 
-|+++<tt>+++List+++</tt>+++
+|(no description)
+{blank}
+* Default value is: false.
+* User property is: tomee-plugin.deploy-openejb-internal-application.
 
 
-|+++<tt>+++-+++</tt>+++
+|<<docBases>>
 
 
-|for TomEE and wars only, add some external repositories to
-classloader.+++<br>++++++</br>+++
+|List
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#forceReloadable">+++forceReloadable+++</a>++++++</b>+++
 
+|-
 
-|+++<tt>+++boolean+++</tt>+++
 
+|for TomEE and wars only, which docBase to use for this war.
 
-|+++<tt>+++-+++</tt>+++
 
+|<<ejbRemote>>
 
-|force webapp to be reloadable+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.force-reloadable+++</tt>+++.
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#javaagents">+++javaagents+++</a>++++++</b>+++
+|boolean
 
 
-|+++<tt>+++List+++</tt>+++
+|-
 
 
-|+++<tt>+++-+++</tt>+++
+|(no description)
+{blank}
+* Default value is: true.
+* User property is: tomee-plugin.ejb-remote.
 
 
-|(no description)+++<br>++++++</br>+++
+|<<externalRepositories>>
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#keepServerXmlAsthis">+++keepServerXmlAsthis+++</a>++++++</b>+++
 
+|List
 
-|+++<tt>+++boolean+++</tt>+++
 
+|-
 
-|+++<tt>+++-+++</tt>+++
 
+|for TomEE and wars only, add some external repositories to classloader.
 
-|(Removed since 7.0.0)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.keep-server-xml+++</tt>+++.
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#lib">+++lib+++</a>++++++</b>+++
+|<<forceReloadable>>
 
 
-|+++<tt>+++File+++</tt>+++
+|boolean
 
 
-|+++<tt>+++-+++</tt>+++
+|-
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.basedir}/src/main/tomee/lib+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.lib+++</tt>+++.
+|force webapp to be reloadable
+{blank}
+* Default value is: false.
+* User property is: tomee-plugin.force-reloadable.
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#libDir">+++libDir+++</a>++++++</b>+++
 
+|<<javaagents>>
 
-|+++<tt>+++String+++</tt>+++
 
+|List
 
-|+++<tt>+++-+++</tt>+++
 
+|-
 
-|relative to tomee.base.+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++lib+++</tt>+++.+++<br>++++++</br>+++
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#libs">+++libs+++</a>++++++</b>+++
+|(no description)
+*
 
 
-|+++<tt>+++List+++</tt>+++
+|<<keepServerXmlAsthis>>
 
 
-|+++<tt>+++-+++</tt>+++
+|boolean
 
 
-|supported formats: --> groupId:artifactId:version\... -->
-unzip:groupId:artifactId:version\... --> remove:prefix (often
-prefix = artifactId)+++<br>++++++</br>+++
+|-
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#mainDir">+++mainDir+++</a>++++++</b>+++
 
+|(Removed since 7.0.0)
+{blank}
+* Default value is: false.
+* User property is: tomee-plugin.keep-server-xml.
 
-|+++<tt>+++File+++</tt>+++
 
+|<<lib>>
 
-|+++<tt>+++-+++</tt>+++
 
+|File
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.basedir}/src/main+++</tt>+++.+++<br>++++++</br>+++
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#password">+++password+++</a>++++++</b>+++
+|-
 
 
-|+++<tt>+++String+++</tt>+++
+|(no description)
+{blank}
+* Default value is: ${project.basedir}/src/main/tomee/lib.
+* User property is: tomee-plugin.lib.
 
 
-|+++<tt>+++-+++</tt>+++
+|<<libDir>>
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.pwd+++</tt>+++.
+|String
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#quickSession">+++quickSession+++</a>++++++</b>+++
 
+|-
 
-|+++<tt>+++boolean+++</tt>+++
 
+|relative to tomee.base.
+{blank}
+* Default value is: lib.
+*
 
-|+++<tt>+++-+++</tt>+++
 
+|<<libs>>
 
-|use a real random instead of secure random. saves few ms at
-startup.+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++true+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.quick-session+++</tt>+++.
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#realm">+++realm+++</a>++++++</b>+++
+|List
 
 
-|+++<tt>+++String+++</tt>+++
+|-
 
 
-|+++<tt>+++-+++</tt>+++
+|supported formats: --> groupId:artifactId:version\... --> unzip:groupId:artifactId:version\... --> remove:prefix (often prefix = artifactId)
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.realm+++</tt>+++.
+|<<mainDir>>
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#removeDefaultWebapps">+++removeDefaultWebapps+++</a>++++++</b>+++
 
+|File
 
-|+++<tt>+++boolean+++</tt>+++
 
+|-
 
-|+++<tt>+++-+++</tt>+++
 
+|(no description)
+{blank}
+* Default value is: ${project.basedir}/src/main.
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++true+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.remove-default-webapps+++</tt>+++.
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#removeTomeeWebapp">+++removeTomeeWebapp+++</a>++++++</b>+++
+|<<password>>
 
 
-|+++<tt>+++boolean+++</tt>+++
+|String
 
 
-|+++<tt>+++-+++</tt>+++
+|-
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++true+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.remove-tomee-webapps+++</tt>+++.
+|(no description)
+{blank}
+* User property is: tomee-plugin.pwd.
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#simpleLog">+++simpleLog+++</a>++++++</b>+++
 
+|<<quickSession>>
 
-|+++<tt>+++boolean+++</tt>+++
 
+|boolean
 
-|+++<tt>+++-+++</tt>+++
 
+|-
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.simple-log+++</tt>+++.
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#skipCurrentProject">+++skipCurrentProject+++</a>++++++</b>+++
+|use a real random instead of secure random. saves few ms at startup.
+{blank}
+* Default value is: true.
+* User property is: tomee-plugin.quick-session.
 
 
-|+++<tt>+++boolean+++</tt>+++
+|<<realm>>
 
 
-|+++<tt>+++-+++</tt>+++
+|String
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.skipCurrentProject+++</tt>+++.
+|-
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#skipWarResources">+++skipWarResources+++</a>++++++</b>+++
 
+|(no description)
+{blank}
+* User property is: tomee-plugin.realm.
 
-|+++<tt>+++boolean+++</tt>+++
 
+|<<removeDefaultWebapps>>
 
-|+++<tt>+++-+++</tt>+++
 
+|boolean
 
-|when you set docBases to src/main/webapp setting it to true will
-allow hot refresh.+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.skipWarResources+++</tt>+++.
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#systemVariables">+++systemVariables+++</a>++++++</b>+++
+|-
 
 
-|+++<tt>+++Map+++</tt>+++
+|(no description)
+{blank}
+* Default value is: true.
+* User property is: tomee-plugin.remove-default-webapps.
 
 
-|+++<tt>+++-+++</tt>+++
+|<<removeTomeeWebapp>>
 
 
-|(no description)+++<br>++++++</br>+++
+|boolean
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#target">+++target+++</a>++++++</b>+++
 
+|-
 
-|+++<tt>+++File+++</tt>+++
 
+|(no description)
+{blank}
+* Default value is: true.
+* User property is: tomee-plugin.remove-tomee-webapps.
 
-|+++<tt>+++-+++</tt>+++
 
+|<<simpleLog>>
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.build.directory}+++</tt>+++.+++<br>++++++</br>+++
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#tomeeAjpPort">+++tomeeAjpPort+++</a>++++++</b>+++
+|boolean
 
 
-|+++<tt>+++int+++</tt>+++
+|-
 
 
-|+++<tt>+++-+++</tt>+++
+|(no description)
+{blank}
+* Default value is: false.
+* User property is: tomee-plugin.simple-log.
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++8009+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.ajp+++</tt>+++.
+|<<skipCurrentProject>>
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#tomeeAlreadyInstalled">+++tomeeAlreadyInstalled+++</a>++++++</b>+++
 
+|boolean
 
-|+++<tt>+++boolean+++</tt>+++
 
+|-
 
-|+++<tt>+++-+++</tt>+++
 
+|(no description)
+{blank}
+* Default value is: false.
+* User property is: tomee-plugin.skipCurrentProject.
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.exiting+++</tt>+++.
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#tomeeArtifactId">+++tomeeArtifactId+++</a>++++++</b>+++
+|<<skipWarResources>>
 
 
-|+++<tt>+++String+++</tt>+++
+|boolean
 
 
-|+++<tt>+++-+++</tt>+++
+|-
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++apache-tomee+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.artifactId+++</tt>+++.
+|when you set docBases to src/main/webapp setting it to true will allow hot refresh.
+{blank}
+* Default value is: false.
+* User property is: tomee-plugin.skipWarResources.
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#tomeeClassifier">+++tomeeClassifier+++</a>++++++</b>+++
 
+|<<systemVariables>>
 
-|+++<tt>+++String+++</tt>+++
 
+|Map
 
-|+++<tt>+++-+++</tt>+++
 
+|-
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++webprofile+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.classifier+++</tt>+++.
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#tomeeGroupId">+++tomeeGroupId+++</a>++++++</b>+++
+|(no description)
 
 
-|+++<tt>+++String+++</tt>+++
+|<<target>>
 
 
-|+++<tt>+++-+++</tt>+++
+|File
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++org.apache.openejb+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.groupId+++</tt>+++.
+|-
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#tomeeHost">+++tomeeHost+++</a>++++++</b>+++
 
+|(no description)
+{blank}
+* Default value is: ${project.build.directory}.
 
-|+++<tt>+++String+++</tt>+++
 
+|<<tomeeAjpPort>>
 
-|+++<tt>+++-+++</tt>+++
 
+|int
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++localhost+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.host+++</tt>+++.
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#tomeeHttpPort">+++tomeeHttpPort+++</a>++++++</b>+++
+|-
 
 
-|+++<tt>+++int+++</tt>+++
+|(no description)
+{blank}
+* Default value is: 8009.
+* User property is: tomee-plugin.ajp.
 
 
-|+++<tt>+++-+++</tt>+++
+|<<tomeeAlreadyInstalled>>
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++8080+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.http+++</tt>+++.
+|boolean
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#tomeeHttpsPort">+++tomeeHttpsPort+++</a>++++++</b>+++
 
+|-
 
-|+++<tt>+++Integer+++</tt>+++
 
+|(no description)
+{blank}
+* Default value is: false.
+* User property is: tomee-plugin.exiting.
 
-|+++<tt>+++-+++</tt>+++
 
+|<<tomeeArtifactId>>
 
-|(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.https+++</tt>+++.
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#tomeeShutdownCommand">+++tomeeShutdownCommand+++</a>++++++</b>+++
+|String
 
 
-|+++<tt>+++String+++</tt>+++
+|-
 
 
-|+++<tt>+++-+++</tt>+++
+|(no description)
+{blank}
+* Default value is: apache-tomee.
+* User property is: tomee-plugin.artifactId.
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++SHUTDOWN+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.shutdown-command+++</tt>+++.
+|<<tomeeClassifier>>
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#tomeeShutdownPort">+++tomeeShutdownPort+++</a>++++++</b>+++
 
+|String
 
-|+++<tt>+++int+++</tt>+++
 
+|-
 
-|+++<tt>+++-+++</tt>+++
 
+|(no description)
+{blank}
+* Default value is: webprofile.
+* User property is: tomee-plugin.classifier.
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++8005+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.shutdown+++</tt>+++.
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#tomeeVersion">+++tomeeVersion+++</a>++++++</b>+++
+|<<tomeeGroupId>>
 
 
-|+++<tt>+++String+++</tt>+++
+|String
 
 
-|+++<tt>+++-+++</tt>+++
+|-
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++-1+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.version+++</tt>+++.
+|(no description)
+{blank}
+* Default value is: org.apache.openejb.
+* User property is: tomee-plugin.groupId.
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#useConsole">+++useConsole+++</a>++++++</b>+++
 
+|<<tomeeHost>>
 
-|+++<tt>+++boolean+++</tt>+++
 
+|String
 
-|+++<tt>+++-+++</tt>+++
 
+|-
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++true+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.use-console+++</tt>+++.
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#useOpenEJB">+++useOpenEJB+++</a>++++++</b>+++
+|(no description)
+{blank}
+* Default value is: localhost.
+* User property is: tomee-plugin.host.
 
 
-|+++<tt>+++boolean+++</tt>+++
+|<<tomeeHttpPort>>
 
 
-|+++<tt>+++-+++</tt>+++
+|int
 
 
-|use openejb-standalone automatically instead of TomEE+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.openejb+++</tt>+++.
+|-
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#user">+++user+++</a>++++++</b>+++
 
+|(no description)
+{blank}
+* Default value is: 8080.
+* User property is: tomee-plugin.http.
 
-|+++<tt>+++String+++</tt>+++
 
+|<<tomeeHttpsPort>>
 
-|+++<tt>+++-+++</tt>+++
 
+|Integer
 
-|(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.user+++</tt>+++.
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#warFile">+++warFile+++</a>++++++</b>+++
+|-
 
 
-|+++<tt>+++File+++</tt>+++
+|(no description)
+{blank}
+* User property is: tomee-plugin.https.
 
 
-|+++<tt>+++-+++</tt>+++
+|<<tomeeShutdownCommand>>
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.build.directory}/${project.build.finalName}.${project.packaging}+++</tt>+++.+++<br>++++++</br>+++
+|String
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#webappClasses">+++webappClasses+++</a>++++++</b>+++
 
+|-
 
-|+++<tt>+++File+++</tt>+++
 
+|(no description)
+{blank}
+* Default value is: SHUTDOWN.
+* User property is: tomee-plugin.shutdown-command.
 
-|+++<tt>+++-+++</tt>+++
 
+|<<tomeeShutdownPort>>
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.build.outputDirectory}+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.webappClasses+++</tt>+++.
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#webappDefaultConfig">+++webappDefaultConfig+++</a>++++++</b>+++
+|int
 
 
-|+++<tt>+++boolean+++</tt>+++
+|-
 
 
-|+++<tt>+++-+++</tt>+++
+|(no description)
+{blank}
+* Default value is: 8005.
+* User property is: tomee-plugin.shutdown.
 
 
-|forcing nice default for war development (WEB-INF/classes and web
-resources)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.webappDefaultConfig+++</tt>+++.
+|<<tomeeVersion>>
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#webappDir">+++webappDir+++</a>++++++</b>+++
 
+|String
 
-|+++<tt>+++String+++</tt>+++
 
+|-
 
-|+++<tt>+++-+++</tt>+++
 
+|(no description)
+{blank}
+* Default value is: -1.
+* User property is: tomee-plugin.version.
 
-|relative to tomee.base.+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++webapps+++</tt>+++.+++<br>++++++</br>+++
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#webappResources">+++webappResources+++</a>++++++</b>+++
+|<<useConsole>>
 
 
-|+++<tt>+++File+++</tt>+++
+|boolean
 
 
-|+++<tt>+++-+++</tt>+++
+|-
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.basedir}/src/main/webapp+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.webappResources+++</tt>+++.
+|(no description)
+{blank}
+* Default value is: true.
+* User property is: tomee-plugin.use-console.
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#webapps">+++webapps+++</a>++++++</b>+++
 
+|<<useOpenEJB>>
 
-|+++<tt>+++List+++</tt>+++
 
+|boolean
 
-|+++<tt>+++-+++</tt>+++
 
+|-
 
-|(no description)+++<br>++++++</br>+++
 
-+++<tr class="a">+++
-|+++<b>++++++<a href="#zip">+++zip+++</a>++++++</b>+++
+|use openejb-standalone automatically instead of TomEE
+{blank}
+* Default value is: false.
+* User property is: tomee-plugin.openejb.
 
 
-|+++<tt>+++boolean+++</tt>+++
+|<<user>>
 
 
-|+++<tt>+++-+++</tt>+++
+|String
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++true+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.zip+++</tt>+++.
+|-
 
-+++<tr class="b">+++
-|+++<b>++++++<a href="#zipFile">+++zipFile+++</a>++++++</b>+++
 
+|(no description)
+{blank}
+* User property is: tomee-plugin.user.
 
-|+++<tt>+++File+++</tt>+++
 
+|<<warFile>>
 
-|+++<tt>+++-+++</tt>+++
 
+|File
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++${project.build.directory}/${project.build.finalName}.zip+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.zip-file+++</tt>+++.
+
+|-
+
+
+|(no description)
+{blank}
+* Default value is: ${project.build.directory}/${project.build.finalName}.${project.packaging}.
+
+
+|<<webappClasses>>
+
+
+|File
+
+
+|-
+
+
+|(no description)
+{blank}
+* Default value is: ${project.build.outputDirectory}.
+* User property is: tomee-plugin.webappClasses.
+
+
+|<<webappDefaultConfig>>
+
+
+|boolean
+
+
+|-
+
+
+|forcing nice default for war development (WEB-INF/classes and web resources)
+{blank}
+* Default value is: false.
+* User property is: tomee-plugin.webappDefaultConfig.
+
+
+|<<webappDir>>
+
+
+|String
+
+
+|-
+
+
+|relative to tomee.base.
+{blank}
+* Default value is: webapps.
+
+
+|<<webappResources>>
+
+
+|File
+
+
+|-
+
+
+|(no description)
+{blank}
+* Default value is: ${project.basedir}/src/main/webapp.
+* User property is: tomee-plugin.webappResources.
+
+
+|<<webapps>>
+
+
+|List
+
+
+|-
+
+
+|(no description)
+
+
+|<<zip>>
+
+
+|boolean
+
+
+|-
+
+
+|(no description)
+{blank}
+* Default value is: true.
+* User property is: tomee-plugin.zip.
+
+
+|<<zipFile>>
+
+
+|File
+
+
+|-
+
+
+|(no description)
+{blank}
+* Default value is: ${project.build.directory}/${project.build.finalName}.zip.
+* User property is: tomee-plugin.zip-file.
 |===
-+++</div>++++++<div class="section">+++=== Parameter Details
 
-*+++<a name="apacheRepos">+++apacheRepos+++</a>+++:*
+== Parameter Details
+
+=== apacheRepos
 
 (no description)
 
-* *Type*: +++<tt>+++java.lang.String+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.apache-repos+++</tt>+++
-* *Default*: +++<tt>+++snapshots+++</tt>+++
+* *Type*: java.lang.String
+* *Required*: No
+* *User Property*: tomee-plugin.apache-repos
+* *Default*: snapshots
 
 '''
 
-*+++<a name="appDir">+++appDir+++</a>+++:*
+=== appDir
 
 relative to tomee.base.
 
-* *Type*: +++<tt>+++java.lang.String+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *Default*: +++<tt>+++apps+++</tt>+++
+* *Type*: java.lang.String
+* *Required*: No
+* *Default*: apps
 
 '''
 
-*+++<a name="apps">+++apps+++</a>+++:*
+=== apps
 
 (no description)
 
-* *Type*: +++<tt>+++java.util.List+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
+* *Type*: java.util.List
+* *Required*: No
 
 '''
 
-*+++<a name="args">+++args+++</a>+++:*
+=== args
 
 (no description)
 
-* *Type*: +++<tt>+++java.lang.String+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.args+++</tt>+++
+* *Type*: java.lang.String
+* *Required*: No
+* *User Property*: tomee-plugin.args
 
 '''
 
-*+++<a name="attach">+++attach+++</a>+++:*
+=== attach
 
 (no description)
 
-* *Type*: +++<tt>+++boolean+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.attach+++</tt>+++
-* *Default*: +++<tt>+++true+++</tt>+++
+* *Type*: boolean
+* *Required*: No
+* *User Property*: tomee-plugin.attach
+* *Default*: true
 
 '''
 
-*+++<a name="bin">+++bin+++</a>+++:*
+=== bin
 
 (no description)
 
-* *Type*: +++<tt>+++java.io.File+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.bin+++</tt>+++
-* *Default*: +++<tt>+++${project.basedir}/src/main/tomee/bin+++</tt>+++
+* *Type*: java.io.File
+* *Required*: No
+* *User Property*: tomee-plugin.bin
+* *Default*: ${project.basedir}/src/main/tomee/bin
 
 '''
 
-*+++<a name="catalinaBase">+++catalinaBase+++</a>+++:*
+=== catalinaBase
 
 (no description)
 
-* *Type*: +++<tt>+++java.io.File+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.catalina-base+++</tt>+++
-* *Default*: +++<tt>+++${project.build.directory}/apache-tomee+++</tt>+++
+* *Type*: java.io.File
+* *Required*: No
+* *User Property*: tomee-plugin.catalina-base
+* *Default*: ${project.build.directory}/apache-tomee
 
 '''
 
-*+++<a name="checkStarted">+++checkStarted+++</a>+++:*
+=== checkStarted
 
 (no description)
 
-* *Type*: +++<tt>+++boolean+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.check-started+++</tt>+++
-* *Default*: +++<tt>+++false+++</tt>+++
+* *Type*: boolean
+* *Required*: No
+* *User Property*: tomee-plugin.check-started
+* *Default*: false
 
 '''
 
-*+++<a name="classifier">+++classifier+++</a>+++:*
+=== classifier
 
 (no description)
 
-* *Type*: +++<tt>+++java.lang.String+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.classifier+++</tt>+++
+* *Type*: java.lang.String
+* *Required*: No
+* *User Property*: tomee-plugin.classifier
 
 '''
 
-*+++<a name="classpaths">+++classpaths+++</a>+++:*
+=== classpaths
 
 (no description)
 
-* *Type*: +++<tt>+++java.util.List+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
+* *Type*: java.util.List
+* *Required*: No
 
 '''
 
-*+++<a name="config">+++config+++</a>+++:*
+=== config
 
 (no description)
 
-* *Type*: +++<tt>+++java.io.File+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.conf+++</tt>+++
-* *Default*: +++<tt>+++${project.basedir}/src/main/tomee/conf+++</tt>+++
+* *Type*: java.io.File
+* *Required*: No
+* *User Property*: tomee-plugin.conf
+* *Default*: ${project.basedir}/src/main/tomee/conf
 
 '''
 
-*+++<a name="context">+++context+++</a>+++:*
+=== context
 
 rename the current artifact
 
-* *Type*: +++<tt>+++java.lang.String+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
+* *Type*: java.lang.String
+* *Required*: No
 
 '''
 
-*+++<a name="debug">+++debug+++</a>+++:*
+=== debug
 
 (no description)
 
-* *Type*: +++<tt>+++boolean+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.debug+++</tt>+++
-* *Default*: +++<tt>+++false+++</tt>+++
+* *Type*: boolean
+* *Required*: No
+* *User Property*: tomee-plugin.debug
+* *Default*: false
 
 '''
 
-*+++<a name="debugPort">+++debugPort+++</a>+++:*
+=== debugPort
 
 (no description)
 
-* *Type*: +++<tt>+++int+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.debugPort+++</tt>+++
-* *Default*: +++<tt>+++5005+++</tt>+++
+* *Type*: int
+* *Required*: No
+* *User Property*: tomee-plugin.debugPort
+* *Default*: 5005
 
 '''
 
-*+++<a name="deployOpenEjbApplication">+++deployOpenEjbApplication+++</a>+++:*
+=== deployOpenEjbApplication
 
 (no description)
 
-* *Type*: +++<tt>+++boolean+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.deploy-openejb-internal-application+++</tt>+++
-* *Default*: +++<tt>+++false+++</tt>+++
+* *Type*: boolean
+* *Required*: No
+* *User Property*: tomee-plugin.deploy-openejb-internal-application
+* *Default*: false
 
 '''
 
-*+++<a name="docBases">+++docBases+++</a>+++:*
+=== docBases
 
 for TomEE and wars only, which docBase to use for this war.
 
-* *Type*: +++<tt>+++java.util.List+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
+* *Type*: java.util.List
+* *Required*: No
 
 '''
 
-*+++<a name="ejbRemote">+++ejbRemote+++</a>+++:*
+=== ejbRemote
 
 (no description)
 
-* *Type*: +++<tt>+++boolean+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.ejb-remote+++</tt>+++
-* *Default*: +++<tt>+++true+++</tt>+++
+* *Type*: boolean
+* *Required*: No
+* *User Property*: tomee-plugin.ejb-remote
+* *Default*: true
 
 '''
 
-*+++<a name="externalRepositories">+++externalRepositories+++</a>+++:*
+=== externalRepositories
 
 for TomEE and wars only, add some external repositories to classloader.
 
-* *Type*: +++<tt>+++java.util.List+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
+* *Type*: java.util.List
+* *Required*: No
 
 '''
 
-*+++<a name="forceReloadable">+++forceReloadable+++</a>+++:*
+=== forceReloadable
 
 force webapp to be reloadable
 
-* *Type*: +++<tt>+++boolean+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.force-reloadable+++</tt>+++
-* *Default*: +++<tt>+++false+++</tt>+++
+* *Type*: boolean
+* *Required*: No
+* *User Property*: tomee-plugin.force-reloadable
+* *Default*: false
 
 '''
 
-*+++<a name="javaagents">+++javaagents+++</a>+++:*
+=== javaagents
 
 (no description)
 
-* *Type*: +++<tt>+++java.util.List+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
+* *Type*: java.util.List
+* *Required*: No
 
 '''
 
-*+++<a name="keepServerXmlAsthis">+++keepServerXmlAsthis+++</a>+++:*
+=== keepServerXmlAsthis
 
 (no description)
 
-* *Type*: +++<tt>+++boolean+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.keep-server-xml+++</tt>+++
-* *Default*: +++<tt>+++false+++</tt>+++
+* *Type*: boolean
+* *Required*: No
+* *User Property*: tomee-plugin.keep-server-xml
+* *Default*: false
 
 '''
 
-*+++<a name="lib">+++lib+++</a>+++:*
+=== lib
 
 (no description)
 
-* *Type*: +++<tt>+++java.io.File+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.lib+++</tt>+++
-* *Default*: +++<tt>+++${project.basedir}/src/main/tomee/lib+++</tt>+++
+* *Type*: java.io.File
+* *Required*: No
+* *User Property*: tomee-plugin.lib
+* *Default*: ${project.basedir}/src/main/tomee/lib
 
 '''
 
-*+++<a name="libDir">+++libDir+++</a>+++:*
+=== libDir
 
 relative to tomee.base.
 
-* *Type*: +++<tt>+++java.lang.String+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *Default*: +++<tt>+++lib+++</tt>+++
+* *Type*: java.lang.String
+* *Required*: No
+* *Default*: lib
 
 '''
 
-*+++<a name="libs">+++libs+++</a>+++:*
+=== libs
 
 supported formats: --> groupId:artifactId:version\...
 --> unzip:groupId:artifactId:version\...
 --> remove:prefix (often prefix = artifactId)
 
-* *Type*: +++<tt>+++java.util.List+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
+* *Type*: java.util.List
+* *Required*: No
 
 '''
 
-*+++<a name="mainDir">+++mainDir+++</a>+++:*
+=== mainDir
 
 (no description)
 
-* *Type*: +++<tt>+++java.io.File+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *Default*: +++<tt>+++${project.basedir}/src/main+++</tt>+++
+* *Type*: java.io.File
+* *Required*: No
+* *Default*: ${project.basedir}/src/main
 
 '''
 
-*+++<a name="password">+++password+++</a>+++:*
+=== password
 
 (no description)
 
-* *Type*: +++<tt>+++java.lang.String+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.pwd+++</tt>+++
+* *Type*: java.lang.String
+* *Required*: No
+* *User Property*: tomee-plugin.pwd
 
 '''
 
-*+++<a name="quickSession">+++quickSession+++</a>+++:*
+=== quickSession
 
 use a real random instead of secure random.
 saves few ms at startup.
 
-* *Type*: +++<tt>+++boolean+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.quick-session+++</tt>+++
-* *Default*: +++<tt>+++true+++</tt>+++
+* *Type*: boolean
+* *Required*: No
+* *User Property*: tomee-plugin.quick-session
+* *Default*: true
 
 '''
 
-*+++<a name="realm">+++realm+++</a>+++:*
+=== realm
 
 (no description)
 
-* *Type*: +++<tt>+++java.lang.String+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.realm+++</tt>+++
+* *Type*: java.lang.String
+* *Required*: No
+* *User Property*: tomee-plugin.realm
 
 '''
 
-*+++<a name="removeDefaultWebapps">+++removeDefaultWebapps+++</a>+++:*
+=== removeDefaultWebapps
 
 (no description)
 
-* *Type*: +++<tt>+++boolean+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.remove-default-webapps+++</tt>+++
-* *Default*: +++<tt>+++true+++</tt>+++
+* *Type*: boolean
+* *Required*: No
+* *User Property*: tomee-plugin.remove-default-webapps
+* *Default*: true
 
 '''
 
-*+++<a name="removeTomeeWebapp">+++removeTomeeWebapp+++</a>+++:*
+=== removeTomeeWebapp
 
 (no description)
 
-* *Type*: +++<tt>+++boolean+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.remove-tomee-webapps+++</tt>+++
-* *Default*: +++<tt>+++true+++</tt>+++
+* *Type*: boolean
+* *Required*: No
+* *User Property*: tomee-plugin.remove-tomee-webapps
+* *Default*: true
 
 '''
 
-*+++<a name="simpleLog">+++simpleLog+++</a>+++:*
+=== simpleLog
 
 (no description)
 
-* *Type*: +++<tt>+++boolean+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.simple-log+++</tt>+++
-* *Default*: +++<tt>+++false+++</tt>+++
+* *Type*: boolean
+* *Required*: No
+* *User Property*: tomee-plugin.simple-log
+* *Default*: false
 
 '''
 
-*+++<a name="skipCurrentProject">+++skipCurrentProject+++</a>+++:*
+=== skipCurrentProject
 
 (no description)
 
-* *Type*: +++<tt>+++boolean+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.skipCurrentProject+++</tt>+++
-* *Default*: +++<tt>+++false+++</tt>+++
+* *Type*: boolean
+* *Required*: No
+* *User Property*: tomee-plugin.skipCurrentProject
+* *Default*: false
 
 '''
 
-*+++<a name="skipWarResources">+++skipWarResources+++</a>+++:*
+=== skipWarResources
 
 when you set docBases to src/main/webapp setting it to true will allow hot refresh.
 
-* *Type*: +++<tt>+++boolean+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.skipWarResources+++</tt>+++
-* *Default*: +++<tt>+++false+++</tt>+++
+* *Type*: boolean
+* *Required*: No
+* *User Property*: tomee-plugin.skipWarResources
+* *Default*: false
 
 '''
 
-*+++<a name="systemVariables">+++systemVariables+++</a>+++:*
+=== systemVariables
 
 (no description)
 
-* *Type*: +++<tt>+++java.util.Map+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
+* *Type*: java.util.Map
+* *Required*: No
 
 '''
 
-*+++<a name="target">+++target+++</a>+++:*
+=== target
 
 (no description)
 
-* *Type*: +++<tt>+++java.io.File+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *Default*: +++<tt>+++${project.build.directory}+++</tt>+++
+* *Type*: java.io.File
+* *Required*: No
+* *Default*: ${project.build.directory}
 
 '''
 
-*+++<a name="tomeeAjpPort">+++tomeeAjpPort+++</a>+++:*
+=== tomeeAjpPort
 
 (no description)
 
-* *Type*: +++<tt>+++int+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.ajp+++</tt>+++
-* *Default*: +++<tt>+++8009+++</tt>+++
+* *Type*: int
+* *Required*: No
+* *User Property*: tomee-plugin.ajp
+* *Default*: 8009
 
 '''
 
-*+++<a name="tomeeAlreadyInstalled">+++tomeeAlreadyInstalled+++</a>+++:*
+=== tomeeAlreadyInstalled
 
 (no description)
 
-* *Type*: +++<tt>+++boolean+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.exiting+++</tt>+++
-* *Default*: +++<tt>+++false+++</tt>+++
+* *Type*: boolean
+* *Required*: No
+* *User Property*: tomee-plugin.exiting
+* *Default*: false
 
 '''
 
-*+++<a name="tomeeArtifactId">+++tomeeArtifactId+++</a>+++:*
+=== tomeeArtifactId
 
 (no description)
 
-* *Type*: +++<tt>+++java.lang.String+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.artifactId+++</tt>+++
-* *Default*: +++<tt>+++apache-tomee+++</tt>+++
+* *Type*: java.lang.String
+* *Required*: No
+* *User Property*: tomee-plugin.artifactId
+* *Default*: apache-tomee
 
 '''
 
-*+++<a name="tomeeClassifier">+++tomeeClassifier+++</a>+++:*
+=== tomeeClassifier
 
 (no description)
 
-* *Type*: +++<tt>+++java.lang.String+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.classifier+++</tt>+++
-* *Default*: +++<tt>+++webprofile+++</tt>+++
+* *Type*: java.lang.String
+* *Required*: No
+* *User Property*: tomee-plugin.classifier
+* *Default*: webprofile
 
 '''
 
-*+++<a name="tomeeGroupId">+++tomeeGroupId+++</a>+++:*
+=== tomeeGroupId
 
 (no description)
 
-* *Type*: +++<tt>+++java.lang.String+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.groupId+++</tt>+++
-* *Default*: +++<tt>+++org.apache.openejb+++</tt>+++
+* *Type*: java.lang.String
+* *Required*: No
+* *User Property*: tomee-plugin.groupId
+* *Default*: org.apache.openejb
 
 '''
 
-*+++<a name="tomeeHost">+++tomeeHost+++</a>+++:*
+=== tomeeHost
 
 (no description)
 
-* *Type*: +++<tt>+++java.lang.String+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.host+++</tt>+++
-* *Default*: +++<tt>+++localhost+++</tt>+++
+* *Type*: java.lang.String
+* *Required*: No
+* *User Property*: tomee-plugin.host
+* *Default*: localhost
 
 '''
 
-*+++<a name="tomeeHttpPort">+++tomeeHttpPort+++</a>+++:*
+=== tomeeHttpPort
 
 (no description)
 
-* *Type*: +++<tt>+++int+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.http+++</tt>+++
-* *Default*: +++<tt>+++8080+++</tt>+++
+* *Type*: int
+* *Required*: No
+* *User Property*: tomee-plugin.http
+* *Default*: 8080
 
 '''
 
-*+++<a name="tomeeHttpsPort">+++tomeeHttpsPort+++</a>+++:*
+=== tomeeHttpsPort
 
 (no description)
 
-* *Type*: +++<tt>+++java.lang.Integer+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.https+++</tt>+++
+* *Type*: java.lang.Integer
+* *Required*: No
+* *User Property*: tomee-plugin.https
 
 '''
 
-*+++<a name="tomeeShutdownCommand">+++tomeeShutdownCommand+++</a>+++:*
+=== tomeeShutdownCommand
 
 (no description)
 
-* *Type*: +++<tt>+++java.lang.String+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.shutdown-command+++</tt>+++
-* *Default*: +++<tt>+++SHUTDOWN+++</tt>+++
+* *Type*: java.lang.String
+* *Required*: No
+* *User Property*: tomee-plugin.shutdown-command
+* *Default*: SHUTDOWN
 
 '''
 
-*+++<a name="tomeeShutdownPort">+++tomeeShutdownPort+++</a>+++:*
+=== tomeeShutdownPort
 
 (no description)
 
-* *Type*: +++<tt>+++int+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.shutdown+++</tt>+++
-* *Default*: +++<tt>+++8005+++</tt>+++
+* *Type*: int
+* *Required*: No
+* *User Property*: tomee-plugin.shutdown
+* *Default*: 8005
 
 '''
 
-*+++<a name="tomeeVersion">+++tomeeVersion+++</a>+++:*
+=== tomeeVersion
 
 (no description)
 
-* *Type*: +++<tt>+++java.lang.String+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.version+++</tt>+++
-* *Default*: +++<tt>+++-1+++</tt>+++
+* *Type*: java.lang.String
+* *Required*: No
+* *User Property*: tomee-plugin.version
+* *Default*: -1
 
 '''
 
-*+++<a name="useConsole">+++useConsole+++</a>+++:*
+=== useConsole
 
 (no description)
 
-* *Type*: +++<tt>+++boolean+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.use-console+++</tt>+++
-* *Default*: +++<tt>+++true+++</tt>+++
+* *Type*: boolean
+* *Required*: No
+* *User Property*: tomee-plugin.use-console
+* *Default*: true
 
 '''
 
-*+++<a name="useOpenEJB">+++useOpenEJB+++</a>+++:*
+=== useOpenEJB
 
 use openejb-standalone automatically instead of TomEE
 
-* *Type*: +++<tt>+++boolean+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.openejb+++</tt>+++
-* *Default*: +++<tt>+++false+++</tt>+++
+* *Type*: boolean
+* *Required*: No
+* *User Property*: tomee-plugin.openejb
+* *Default*: false
 
 '''
 
-*+++<a name="user">+++user+++</a>+++:*
+=== user
 
 (no description)
 
-* *Type*: +++<tt>+++java.lang.String+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.user+++</tt>+++
+* *Type*: java.lang.String
+* *Required*: No
+* *User Property*: tomee-plugin.user
 
 '''
 
-*+++<a name="warFile">+++warFile+++</a>+++:*
+=== warFile
 
 (no description)
 
-* *Type*: +++<tt>+++java.io.File+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *Default*: +++<tt>+++${project.build.directory}/${project.build.finalName}.${project.packaging}+++</tt>+++
+* *Type*: java.io.File
+* *Required*: No
+* *Default*: ${project.build.directory}/${project.build.finalName}.${project.packaging}
 
 '''
 
-*+++<a name="webappClasses">+++webappClasses+++</a>+++:*
+=== webappClasses
 
 (no description)
 
-* *Type*: +++<tt>+++java.io.File+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.webappClasses+++</tt>+++
-* *Default*: +++<tt>+++${project.build.outputDirectory}+++</tt>+++
+* *Type*: java.io.File
+* *Required*: No
+* *User Property*: tomee-plugin.webappClasses
+* *Default*: ${project.build.outputDirectory}
 
 '''
 
-*+++<a name="webappDefaultConfig">+++webappDefaultConfig+++</a>+++:*
+=== webappDefaultConfig
 
 forcing nice default for war development (WEB-INF/classes and web resources)
 
-* *Type*: +++<tt>+++boolean+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.webappDefaultConfig+++</tt>+++
-* *Default*: +++<tt>+++false+++</tt>+++
+* *Type*: boolean
+* *Required*: No
+* *User Property*: tomee-plugin.webappDefaultConfig
+* *Default*: false
 
 '''
 
-*+++<a name="webappDir">+++webappDir+++</a>+++:*
+=== webappDir
 
 relative to tomee.base.
 
-* *Type*: +++<tt>+++java.lang.String+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *Default*: +++<tt>+++webapps+++</tt>+++
+* *Type*: java.lang.String
+* *Required*: No
+* *Default*: webapps
 
 '''
 
-*+++<a name="webappResources">+++webappResources+++</a>+++:*
+=== webappResources
 
 (no description)
 
-* *Type*: +++<tt>+++java.io.File+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.webappResources+++</tt>+++
-* *Default*: +++<tt>+++${project.basedir}/src/main/webapp+++</tt>+++
+* *Type*: java.io.File
+* *Required*: No
+* *User Property*: tomee-plugin.webappResources
+* *Default*: ${project.basedir}/src/main/webapp
 
 '''
 
-*+++<a name="webapps">+++webapps+++</a>+++:*
+=== webapps
 
 (no description)
 
-* *Type*: +++<tt>+++java.util.List+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
+* *Type*: java.util.List
+* *Required*: No
 
 '''
 
-*+++<a name="zip">+++zip+++</a>+++:*
+=== zip
 
 (no description)
 
-* *Type*: +++<tt>+++boolean+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.zip+++</tt>+++
-* *Default*: +++<tt>+++true+++</tt>+++
+* *Type*: boolean
+* *Required*: No
+* *User Property*: tomee-plugin.zip
+* *Default*: true
 
 '''
 
-*+++<a name="zipFile">+++zipFile+++</a>+++:*
+=== zipFile
 
 (no description)
 
-* *Type*: +++<tt>+++java.io.File+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.zip-file+++</tt>+++
-* *Default*: +++<tt>+++${project.build.directory}/${project.build.finalName}.zip+++</tt>++++++</div>++++++</div>+++
+* *Type*: java.io.File
+* *Required*: No
+* *User Property*: tomee-plugin.zip-file
+* *Default*: ${project.build.directory}/${project.build.finalName}.zip+++</div>++++++</div>+++
