@@ -34,7 +34,7 @@ Start and forget TomEE.
 
 |Description
 
-+++<tr class="b">+++
+
 |<<apacheRepos>>
 
 
@@ -49,7 +49,7 @@ Start and forget TomEE.
 * Default value is: snapshots.
 * User property is: tomee-plugin.apache-repos.
 
-+++<tr class="a">+++
+
 |<<appDir>>
 
 
@@ -63,7 +63,7 @@ Start and forget TomEE.
 
 * Default value is: apps.
 
-+++<tr class="b">+++
+
 |<<apps>>
 
 
@@ -76,7 +76,7 @@ Start and forget TomEE.
 |(no description)
 
 
-+++<tr class="a">+++
+
 |<<args>>
 
 
@@ -90,7 +90,7 @@ Start and forget TomEE.
 
 * User property is: tomee-plugin.args.
 
-+++<tr class="b">+++
+
 |<<bin>>
 
 
@@ -105,7 +105,7 @@ Start and forget TomEE.
 * Default value is: ${project.basedir}/src/main/tomee/bin.
 * User property is: tomee-plugin.bin.
 
-+++<tr class="a">+++
+
 |<<catalinaBase>>
 
 
@@ -120,7 +120,7 @@ Start and forget TomEE.
 * Default value is: ${project.build.directory}/apache-tomee.
 * User property is: tomee-plugin.catalina-base.
 
-+++<tr class="b">+++
+
 |<<checkStarted>>
 
 
@@ -135,7 +135,7 @@ Start and forget TomEE.
 * Default value is: false.
 * User property is: tomee-plugin.check-started.
 
-+++<tr class="a">+++
+
 |<<classpaths>>
 
 
@@ -148,7 +148,7 @@ Start and forget TomEE.
 |(no description)
 
 
-+++<tr class="b">+++
+
 |<<config>>
 
 
@@ -163,7 +163,7 @@ Start and forget TomEE.
 * Default value is: ${project.basedir}/src/main/tomee/conf.
 * User property is: tomee-plugin.conf.
 
-+++<tr class="a">+++
+
 |<<context>>
 
 
@@ -176,7 +176,7 @@ Start and forget TomEE.
 |rename the current artifact
 
 
-+++<tr class="b">+++
+
 |<<debug>>
 
 
@@ -191,7 +191,7 @@ Start and forget TomEE.
 * Default value is: false.
 * User property is: tomee-plugin.debug.
 
-+++<tr class="a">+++
+
 |<<debugPort>>
 
 
@@ -206,7 +206,7 @@ Start and forget TomEE.
 * Default value is: 5005.
 * User property is: tomee-plugin.debugPort.
 
-+++<tr class="b">+++
+
 |<<deployOpenEjbApplication>>
 
 
@@ -221,7 +221,7 @@ Start and forget TomEE.
 * Default value is: false.
 * User property is: tomee-plugin.deploy-openejb-internal-application.
 
-+++<tr class="a">+++
+
 |<<docBases>>
 
 
@@ -234,7 +234,7 @@ Start and forget TomEE.
 |for TomEE and wars only, which docBase to use for this war.
 
 
-+++<tr class="b">+++
+
 |<<ejbRemote>>
 
 
@@ -249,7 +249,7 @@ Start and forget TomEE.
 * Default value is: true.
 * User property is: tomee-plugin.ejb-remote.
 
-+++<tr class="a">+++
+
 |<<externalRepositories>>
 
 
@@ -263,7 +263,7 @@ Start and forget TomEE.
 classloader.
 
 
-+++<tr class="b">+++
+
 |<<forceReloadable>>
 
 
@@ -278,7 +278,7 @@ classloader.
 * Default value is: false.
 * User property is: tomee-plugin.force-reloadable.
 
-+++<tr class="a">+++
+
 |<<javaagents>>
 
 
@@ -291,7 +291,7 @@ classloader.
 |(no description)
 
 
-+++<tr class="b">+++
+
 |<<keepServerXmlAsthis>>
 
 
@@ -306,7 +306,7 @@ classloader.
 * Default value is: false.
 * User property is: tomee-plugin.keep-server-xml.
 
-+++<tr class="a">+++
+
 |<<lib>>
 
 
@@ -321,7 +321,7 @@ classloader.
 * Default value is: ${project.basedir}/src/main/tomee/lib.
 * User property is: tomee-plugin.lib.
 
-+++<tr class="b">+++
+
 |<<libDir>>
 
 
@@ -335,7 +335,7 @@ classloader.
 
 * Default value is: lib.
 
-+++<tr class="a">+++
+
 |<<libs>>
 
 
@@ -350,7 +350,7 @@ unzip:groupId:artifactId:version\... --> remove:prefix (often
 prefix = artifactId)
 
 
-+++<tr class="b">+++
+
 |<<mainDir>>
 
 
@@ -364,7 +364,7 @@ prefix = artifactId)
 
 * Default value is: ${project.basedir}/src/main.
 
-+++<tr class="a">+++
+
 |<<password>>
 
 
@@ -378,7 +378,7 @@ prefix = artifactId)
 
 * User property is: tomee-plugin.pwd.
 
-+++<tr class="b">+++
+
 |<<quickSession>>
 
 
@@ -394,7 +394,7 @@ startup.
 * Default value is: true.
 * User property is: tomee-plugin.quick-session.
 
-+++<tr class="a">+++
+
 |<<realm>>
 
 
@@ -408,7 +408,7 @@ startup.
 
 * User property is: tomee-plugin.realm.
 
-+++<tr class="b">+++
+
 |<<reloadOnUpdate>>
 
 
@@ -423,7 +423,7 @@ startup.
 * Default value is: false.
 * User property is: tomee-plugin.reload-on-update.
 
-+++<tr class="a">+++
+
 |<<removeDefaultWebapps>>
 
 
@@ -438,7 +438,7 @@ startup.
 * Default value is: true.
 * User property is: tomee-plugin.remove-default-webapps.
 
-+++<tr class="b">+++
+
 |<<removeTomeeWebapp>>
 
 
@@ -453,7 +453,7 @@ startup.
 * Default value is: true.
 * User property is: tomee-plugin.remove-tomee-webapps.
 
-+++<tr class="a">+++
+
 |<<simpleLog>>
 
 
@@ -468,7 +468,7 @@ startup.
 * Default value is: false.
 * User property is: tomee-plugin.simple-log.
 
-+++<tr class="b">+++
+
 |<<skipCurrentProject>>
 
 
@@ -483,7 +483,7 @@ startup.
 * Default value is: false.
 * User property is: tomee-plugin.skipCurrentProject.
 
-+++<tr class="a">+++
+
 |<<skipWarResources>>
 
 
@@ -499,7 +499,7 @@ allow hot refresh.
 * Default value is: false.
 * User property is: tomee-plugin.skipWarResources.
 
-+++<tr class="b">+++
+
 |<<synchronization>>
 
 
@@ -512,7 +512,7 @@ allow hot refresh.
 |(no description)
 
 
-+++<tr class="a">+++
+
 |<<synchronizations>>
 
 
@@ -525,7 +525,7 @@ allow hot refresh.
 |(no description)
 
 
-+++<tr class="b">+++
+
 |<<systemVariables>>
 
 
@@ -538,7 +538,7 @@ allow hot refresh.
 |(no description)
 
 
-+++<tr class="a">+++
+
 |<<target>>
 
 
@@ -552,7 +552,7 @@ allow hot refresh.
 
 * Default value is: ${project.build.directory}.
 
-+++<tr class="b">+++
+
 |<<tomeeAjpPort>>
 
 
@@ -567,7 +567,7 @@ allow hot refresh.
 * Default value is: 8009.
 * User property is: tomee-plugin.ajp.
 
-+++<tr class="a">+++
+
 |<<tomeeAlreadyInstalled>>
 
 
@@ -582,7 +582,7 @@ allow hot refresh.
 * Default value is: false.
 * User property is: tomee-plugin.exiting.
 
-+++<tr class="b">+++
+
 |<<tomeeArtifactId>>
 
 
@@ -597,7 +597,7 @@ allow hot refresh.
 * Default value is: apache-tomee.
 * User property is: tomee-plugin.artifactId.
 
-+++<tr class="a">+++
+
 |<<tomeeClassifier>>
 
 
@@ -612,7 +612,7 @@ allow hot refresh.
 * Default value is: webprofile.
 * User property is: tomee-plugin.classifier.
 
-+++<tr class="b">+++
+
 |<<tomeeGroupId>>
 
 
@@ -627,7 +627,7 @@ allow hot refresh.
 * Default value is: org.apache.openejb.
 * User property is: tomee-plugin.groupId.
 
-+++<tr class="a">+++
+
 |<<tomeeHost>>
 
 
@@ -642,7 +642,7 @@ allow hot refresh.
 * Default value is: localhost.
 * User property is: tomee-plugin.host.
 
-+++<tr class="b">+++
+
 |<<tomeeHttpPort>>
 
 
@@ -657,7 +657,7 @@ allow hot refresh.
 * Default value is: 8080.
 * User property is: tomee-plugin.http.
 
-+++<tr class="a">+++
+
 |<<tomeeHttpsPort>>
 
 
@@ -671,7 +671,7 @@ allow hot refresh.
 
 * User property is: tomee-plugin.https.
 
-+++<tr class="b">+++
+
 |<<tomeeShutdownCommand>>
 
 
@@ -686,7 +686,7 @@ allow hot refresh.
 * Default value is: SHUTDOWN.
 * User property is: tomee-plugin.shutdown-command.
 
-+++<tr class="a">+++
+
 |<<tomeeShutdownPort>>
 
 
@@ -701,7 +701,7 @@ allow hot refresh.
 * Default value is: 8005.
 * User property is: tomee-plugin.shutdown.
 
-+++<tr class="b">+++
+
 |<<tomeeVersion>>
 
 
@@ -716,7 +716,7 @@ allow hot refresh.
 * Default value is: -1.
 * User property is: tomee-plugin.version.
 
-+++<tr class="a">+++
+
 |<<useConsole>>
 
 
@@ -731,7 +731,7 @@ allow hot refresh.
 * Default value is: true.
 * User property is: tomee-plugin.use-console.
 
-+++<tr class="b">+++
+
 |<<useOpenEJB>>
 
 
@@ -746,7 +746,7 @@ allow hot refresh.
 * Default value is: false.
 * User property is: tomee-plugin.openejb.
 
-+++<tr class="a">+++
+
 |<<user>>
 
 
@@ -760,7 +760,7 @@ allow hot refresh.
 
 * User property is: tomee-plugin.user.
 
-+++<tr class="b">+++
+
 |<<warFile>>
 
 
@@ -774,7 +774,7 @@ allow hot refresh.
 
 * Default value is: ${project.build.directory}/${project.build.finalName}.${project.packaging}.
 
-+++<tr class="a">+++
+
 |<<webappClasses>>
 
 
@@ -789,7 +789,7 @@ allow hot refresh.
 * Default value is: ${project.build.outputDirectory}.
 * User property is: tomee-plugin.webappClasses.
 
-+++<tr class="b">+++
+
 |<<webappDefaultConfig>>
 
 
@@ -805,7 +805,7 @@ resources)
 * Default value is: false.
 * User property is: tomee-plugin.webappDefaultConfig.
 
-+++<tr class="a">+++
+
 |<<webappDir>>
 
 
@@ -819,7 +819,7 @@ resources)
 
 * Default value is: webapps.
 
-+++<tr class="b">+++
+
 |<<webappResources>>
 
 
@@ -834,7 +834,7 @@ resources)
 * Default value is: ${project.basedir}/src/main/webapp.
 * User property is: tomee-plugin.webappResources.
 
-+++<tr class="a">+++
+
 |<<webapps>>
 
 

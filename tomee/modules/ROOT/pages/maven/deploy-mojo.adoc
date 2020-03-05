@@ -34,7 +34,7 @@ Simply deploy an application in a running TomEE
 
 |Description
 
-+++<tr class="b">+++
+
 |<<path>>
 
 
@@ -64,7 +64,7 @@ Simply deploy an application in a running TomEE
 
 |Description
 
-+++<tr class="b">+++
+
 |<<password>>
 
 
@@ -78,7 +78,7 @@ Simply deploy an application in a running TomEE
 
 * User property is: tomee-plugin.pwd.
 
-+++<tr class="a">+++
+
 |<<realm>>
 
 
@@ -92,7 +92,7 @@ Simply deploy an application in a running TomEE
 
 * User property is: tomee-plugin.realm.
 
-+++<tr class="b">+++
+
 |<<systemVariables>>
 
 
@@ -105,7 +105,7 @@ Simply deploy an application in a running TomEE
 |(no description)
 
 
-+++<tr class="a">+++
+
 |<<tomeeHost>>
 
 
@@ -120,7 +120,7 @@ Simply deploy an application in a running TomEE
 * Default value is: localhost.
 * User property is: tomee-plugin.host.
 
-+++<tr class="b">+++
+
 |<<tomeeHttpPort>>
 
 
@@ -135,7 +135,7 @@ Simply deploy an application in a running TomEE
 * Default value is: 8080.
 * User property is: tomee-plugin.http.
 
-+++<tr class="a">+++
+
 |<<useBinaries>>
 
 
@@ -150,7 +150,7 @@ Simply deploy an application in a running TomEE
 * Default value is: false.
 * User property is: tomee-plugin.binary.
 
-+++<tr class="b">+++
+
 |<<user>>
 
 

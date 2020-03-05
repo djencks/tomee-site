@@ -34,7 +34,7 @@ Simply undeploy an application in a running TomEE
 
 |Description
 
-+++<tr class="b">+++
+
 |<<path>>
 
 
@@ -64,7 +64,7 @@ Simply undeploy an application in a running TomEE
 
 |Description
 
-+++<tr class="b">+++
+
 |<<password>>
 
 
@@ -78,7 +78,7 @@ Simply undeploy an application in a running TomEE
 
 * User property is: tomee-plugin.pwd.
 
-+++<tr class="a">+++
+
 |<<realm>>
 
 
@@ -92,7 +92,7 @@ Simply undeploy an application in a running TomEE
 
 * User property is: tomee-plugin.realm.
 
-+++<tr class="b">+++
+
 |<<tomeeHost>>
 
 
@@ -107,7 +107,7 @@ Simply undeploy an application in a running TomEE
 * Default value is: localhost.
 * User property is: tomee-plugin.host.
 
-+++<tr class="a">+++
+
 |<<tomeeHttpPort>>
 
 
@@ -122,7 +122,7 @@ Simply undeploy an application in a running TomEE
 * Default value is: 8080.
 * User property is: tomee-plugin.http.
 
-+++<tr class="b">+++
+
 |<<user>>
 
 

@@ -33,7 +33,7 @@ Display help information on tomee-maven-plugin.
 
 |Description
 
-+++<tr class="b">+++
+
 |<<detail>>
 
 
@@ -49,7 +49,7 @@ goal.
 * Default value is: false.
 * User property is: detail.
 
-+++<tr class="a">+++
+
 |<<goal>>
 
 
@@ -64,7 +64,7 @@ goals will be displayed.
 
 * User property is: goal.
 
-+++<tr class="b">+++
+
 |<<indentSize>>
 
 
@@ -79,7 +79,7 @@ goals will be displayed.
 * Default value is: 2.
 * User property is: indentSize.
 
-+++<tr class="a">+++
+
 |<<lineLength>>
 
 

@@ -35,7 +35,7 @@ List deployed EJB in a running TomEE.
 
 |Description
 
-+++<tr class="b">+++
+
 |<<password>>
 
 
@@ -49,7 +49,7 @@ List deployed EJB in a running TomEE.
 
 * User property is: tomee-plugin.pwd.
 
-+++<tr class="a">+++
+
 |<<realm>>
 
 
@@ -63,7 +63,7 @@ List deployed EJB in a running TomEE.
 
 * User property is: tomee-plugin.realm.
 
-+++<tr class="b">+++
+
 |<<tomeeHost>>
 
 
@@ -78,7 +78,7 @@ List deployed EJB in a running TomEE.
 * Default value is: localhost.
 * User property is: tomee-plugin.host.
 
-+++<tr class="a">+++
+
 |<<tomeeHttpPort>>
 
 
@@ -93,7 +93,7 @@ List deployed EJB in a running TomEE.
 * Default value is: 8080.
 * User property is: tomee-plugin.http.
 
-+++<tr class="b">+++
+
 |<<user>>
 
 
