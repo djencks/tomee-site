@@ -144,7 +144,7 @@ Support for the JAX-RPC API is not a planned feature.
 
 === EJB Plugin for Tomcat 6
 
-OpenEJB 3.0 can be xref:openejbx30:tomcat.adoc[plugged into]  any Tomcat 6 server, adding support for EJBs in Web Apps.
+OpenEJB 3.0 can be xref:tomcat.adoc[plugged into]  any Tomcat 6 server, adding support for EJBs in Web Apps.
 War files themselves can contain EJBs and the Servlets can use new JavaEE 5 annotations, XA transactions, JPA, and JMS.
 Webapps can even support fat java clients connecting over HTTP.
 

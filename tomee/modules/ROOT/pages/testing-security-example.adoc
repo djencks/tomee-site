@@ -13,7 +13,7 @@ And delete operations are only allowed by a _Manager_.
 
 See the xref:security-annotations.adoc[Security Annotations]  page for a full description of how the security annotations work.
 
-_The source for this example is in the "testing-security" directory located in the xref:openejb:download.adoc[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page]._
+_The source for this example is in the "testing-security" directory located in the xref:download-ng.adoc[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page]._
 
 
 
@@ -277,7 +277,8 @@ public class MovieTest extends TestCase {
 
 == Running
 
-....
+[source,console]
+----
 -------------------------------------------------------
  T E S T S
 -------------------------------------------------------
@@ -332,4 +333,4 @@ Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.574 sec
 Results :
 
 Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
-....
+----

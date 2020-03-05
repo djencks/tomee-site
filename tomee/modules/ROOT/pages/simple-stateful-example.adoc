@@ -20,7 +20,7 @@ The instance will last until you remove it or until it times-out and is removed 
 With EJB 3.0, it's now possible to write stateful session bean without specifying a deployment descriptor;
 you basically have to write just a remote or local business interface, which is a plain-old-java-interface, annotated with the @Remote or @Local annotation the stateful session bean implementation, a plain-old-java-object which implements the remote or the local business interface and is annotated with the @Stateful annotation
 
-_This example is the "simple-stateful" example located in the xref:openejb:download.adoc[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page]._
+_This example is the "simple-stateful" example located in the xref:download-ng.adoc[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page]._
 
 \{div} {div:style=clear:both;}\{div}
 
@@ -147,13 +147,14 @@ You can in fact change this default to be absolutely xref:jndi-names.adoc[anythi
 == Running
 
 Running the example is fairly simple.
-In the "simple-stateful" directory of the xref:openejb:download.adoc[examples zip] , just run:
+In the "simple-stateful" directory of the xref:download-ng.adoc[examples zip] , just run:
 
 $ mvn clean install
 
 Which should create output like the following.
 
-....
+[source,console]
+----
 -------------------------------------------------------
  T E S T S
 -------------------------------------------------------
@@ -180,4 +181,4 @@ Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.698 sec
 Results :
 
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
-....
+----

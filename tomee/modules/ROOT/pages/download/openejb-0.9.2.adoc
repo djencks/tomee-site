@@ -1,13 +1,13 @@
-= OpenEJB 0.9.2
+= OpenEJB 0.9.2 Release Notes
 
-{excerpt:hidden=true} xref:download/openejb-0.9.2.adoc[OpenEJB 0.9.2]
+xref:download/openejb-0.9.2.adoc[OpenEJB 0.9.2]
 
 * June 5th, 2003
  ** http://dist.codehaus.org/openejb/distributions/openejb-0.9.2.zip[openejb-0.9.2.zip]
  ** http://dist.codehaus.org/openejb/distributions/openejb-0.9.2.tar.gz[openejb-0.9.2.tar.gz]
  ** http://dist.codehaus.org/openejb/distributions/openejb-0.9.2-src.zip[openejb-0.9.2-src.zip]
  ** http://dist.codehaus.org/openejb/distributions/openejb-0.9.2-src.tar.gz[openejb-0.9.2-src.tar.gz]
- ** xref:openejb-0.9.2.adoc[Release Notes] \{excerpt}
+// ** xref:download/openejb-0.9.2.adoc[Release Notes]
 
 
 

@@ -8,7 +8,7 @@ You can also find us on IRC freenode.org #openejb and #tomee
 * xref:tomee-and-intellij.adoc[Get started with Intellij]
 * xref:contrib/debug/debug-intellij.adoc[Debugging in Intellij]
 * xref:tomee-and-eclipse.adoc[Get started with Eclipse (WTP)]
-* xref:getting-started-with-eclipse-and-webby.adoc[Get started with Eclipse (m2e-Webby)]
+* xref:{common-vc}::getting-started-with-eclipse-and-webby.adoc[Get started with Eclipse (m2e-Webby)]
 * xref:tomee-and-netbeans.adoc[Get started with Netbeans]
 
 == General Information
@@ -17,7 +17,7 @@ You can also find us on IRC freenode.org #openejb and #tomee
 * xref:tomee-directory-structure.adoc[TomEE Directory structure]
 * xref:deploying-in-tomee.adoc[Deploying in TomEE]
 * xref:tomee-webapp.adoc[The 'tomee' webapp]
-* xref:refcard/refcard.adoc[TomEE Reference Card]
+* xref:{tomee-latest-vc}::refcard/refcard.adoc[TomEE Reference Card]
 * xref:application-composer/index.adoc[ApplicationComposer]
 
 == Configuration

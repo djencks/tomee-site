@@ -195,7 +195,7 @@ Singletons gives you some important things that are missing in EJB 3.0 and prior
 Singletons also give provide a great place to hold data that pertains to the entire application and all users using it, without the need for a static.
 Additionally, Singleton beans have multi-threaded capabilities allowing them to be invoked by several threads at one time similar to a Servlet.
 
-See the xref:openejbx30:singleton-beans.adoc[Singleton API]  and [Singleton Example]  pages.
+See the xref:singleton-beans.adoc[Singleton API]  and [Singleton Example]  pages.
 
 
 
@@ -305,7 +305,7 @@ Support for the JAX-RPC API is not a planned feature.
 
 === EJB Plugin for Tomcat 6 and 5.5
 
-OpenEJB 3.1.1 can be xref:openejbx30:tomcat.adoc[plugged into]  any Tomcat 6 or Tomcat 5.5 server, adding support for EJBs in Web Apps.
+OpenEJB 3.1.1 can be xref:tomcat.adoc[plugged into]  any Tomcat 6 or Tomcat 5.5 server, adding support for EJBs in Web Apps.
 War files themselves can contain EJBs and the Servlets can use new JavaEE 5 annotations, XA transactions, JPA, and JMS.
 Webapps can even support fat java clients connecting over HTTP.
 
@@ -320,7 +320,7 @@ In the case of Tomcat 5.5 which doesn't support dependency injection at all, eve
 
 Add OpenEJB 3.1.1 to your Spring application to gain the ability for EJBs to be easily injected into Spring beans (and vice versa) and add Java EE 5 capabilities such as JPA, JAX-WS, JMS, J2EE Connectors, transactions, and security.
 
-See the xref:openejbx30:spring.adoc[Spring]  page and [Spring Example|OPENEJBx30:Spring EJB and JPA]  for an example.
+See the xref:spring.adoc[Spring]  page and [Spring Example|OPENEJBx30:Spring EJB and JPA]  for an example.
 
 
 
