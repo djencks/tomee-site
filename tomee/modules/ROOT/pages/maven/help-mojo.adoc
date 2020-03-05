@@ -3,6 +3,7 @@
 :jbake-date: 2018-12-05
 :jbake-type: page
 :jbake-status: published
+:supported-properties-table-layout: cols="2,1,3,5",options="header"
 
 *Full name*:
 
@@ -15,7 +16,12 @@ Display help information on tomee-maven-plugin.
 
 *Attributes*:
 
-* The goal is thread-safe and supports parallel builds.+++<div class="section">+++=== Optional Parameters+++<table class="bodyTable" border="0">++++++<tr class="a">+++
+* The goal is thread-safe and supports parallel builds.
+
+== Optional Parameters
+
+[{supported-properties-table-layout}]
+|===
 |Name
 
 

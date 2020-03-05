@@ -5,6 +5,8 @@
 :jbake-status: published
 :name-description-table-layout: cols="2,7a",options="header"
 
+NOTE:  This is the same as pages/maven/index.adoc.
+Double aliases don't work so leaving this copy here until location decided.
 
 Inspired by the Jetty Maven Plugin, the TomEE Maven Plugin is a feature-rich plugin that allows for:
 
@@ -12,7 +14,7 @@ Inspired by the Jetty Maven Plugin, the TomEE Maven Plugin is a feature-rich plu
 * Server start and stop
 * Application deployment and undeployment
 
-Simply add the following to the +++<plugins>+++, and optionally the +++<pluginManagement>+++), section of your `pom.xml`
+Simply add the following to the <plugins>, and optionally the <pluginManagement>), section of your `pom.xml`
 
  <plugins>
      <plugin>
@@ -81,8 +83,8 @@ Call `mvn tomee:help -Ddetail=true -Dgoal=<goal-name>` to display parameter deta
 |===
 
 
-Note that for the tomee:deploy and tomee:undeploy goals, the path can either be specified within the +++<configuration>++++++</configuration>+++ section of the `pom.xml` using the +++<path>+++parameter, or it can be passed via the user property tomee-plugin.archive.
-If a relative path is passed for the deploy path archive, this must be relative to the TomEE server.+++</path>+++
+Note that for the tomee:deploy and tomee:undeploy goals, the path can either be specified within the <configuration> section of the `pom.xml` using the <path> parameter, or it can be passed via the user property tomee-plugin.archive.
+If a relative path is passed for the deploy path archive, this must be relative to the TomEE server.
 
 Note 2: running tomee maven plugin you can type 'quit' directly in the console to shutdown correctly the server.
 'reload' is also available when internal openejb application is deployed.
