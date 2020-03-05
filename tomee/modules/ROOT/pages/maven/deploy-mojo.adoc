@@ -117,7 +117,8 @@ Simply deploy an application in a running TomEE
 
 |(no description)
 
-* Default value is: localhost.+++<br>++++++</br>+++User property is: tomee-plugin.host.
+* Default value is: localhost.
+* User property is: tomee-plugin.host.
 
 +++<tr class="b">+++
 |<<tomeeHttpPort>>
@@ -131,7 +132,8 @@ Simply deploy an application in a running TomEE
 
 |(no description)
 
-* Default value is: 8080.+++<br>++++++</br>+++User property is: tomee-plugin.http.
+* Default value is: 8080.
+* User property is: tomee-plugin.http.
 
 +++<tr class="a">+++
 |<<useBinaries>>
@@ -145,7 +147,8 @@ Simply deploy an application in a running TomEE
 
 |(no description)
 
-* Default value is: false.+++<br>++++++</br>+++User property is: tomee-plugin.binary.
+* Default value is: false.
+* User property is: tomee-plugin.binary.
 
 +++<tr class="b">+++
 |<<user>>
