@@ -44,7 +44,9 @@ Simply deploy an application in a running TomEE
 |-
 
 
-|(no description)+++<br>++++++</br>+++User property is: tomee-plugin.archive.
+|(no description)
+
+* User property is: tomee-plugin.archive.
 |===
 
 == Optional Parameters
@@ -72,7 +74,9 @@ Simply deploy an application in a running TomEE
 |-
 
 
-|(no description)+++<br>++++++</br>+++User property is: tomee-plugin.pwd.
+|(no description)
+
+* User property is: tomee-plugin.pwd.
 
 +++<tr class="a">+++
 |<<realm>>
@@ -84,7 +88,9 @@ Simply deploy an application in a running TomEE
 |-
 
 
-|(no description)+++<br>++++++</br>+++User property is: tomee-plugin.realm.
+|(no description)
+
+* User property is: tomee-plugin.realm.
 
 +++<tr class="b">+++
 |<<systemVariables>>
@@ -96,7 +102,8 @@ Simply deploy an application in a running TomEE
 |-
 
 
-|(no description)+++<br>++++++</br>+++
+|(no description)
+
 
 +++<tr class="a">+++
 |<<tomeeHost>>
@@ -108,7 +115,9 @@ Simply deploy an application in a running TomEE
 |-
 
 
-|(no description)+++<br>++++++</br>+++Default value is: localhost.+++<br>++++++</br>+++User property is: tomee-plugin.host.
+|(no description)
+
+* Default value is: localhost.+++<br>++++++</br>+++User property is: tomee-plugin.host.
 
 +++<tr class="b">+++
 |<<tomeeHttpPort>>
@@ -120,7 +129,9 @@ Simply deploy an application in a running TomEE
 |-
 
 
-|(no description)+++<br>++++++</br>+++Default value is: 8080.+++<br>++++++</br>+++User property is: tomee-plugin.http.
+|(no description)
+
+* Default value is: 8080.+++<br>++++++</br>+++User property is: tomee-plugin.http.
 
 +++<tr class="a">+++
 |<<useBinaries>>
@@ -132,7 +143,9 @@ Simply deploy an application in a running TomEE
 |-
 
 
-|(no description)+++<br>++++++</br>+++Default value is: false.+++<br>++++++</br>+++User property is: tomee-plugin.binary.
+|(no description)
+
+* Default value is: false.+++<br>++++++</br>+++User property is: tomee-plugin.binary.
 
 +++<tr class="b">+++
 |<<user>>
@@ -144,7 +157,9 @@ Simply deploy an application in a running TomEE
 |-
 
 
-|(no description)+++<br>++++++</br>+++User property is: tomee-plugin.user.
+|(no description)
+
+* User property is: tomee-plugin.user.
 |===
 +++</div>++++++<div class="section">+++=== Parameter Details
 

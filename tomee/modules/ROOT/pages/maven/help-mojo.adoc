@@ -44,7 +44,9 @@ Display help information on tomee-maven-plugin.
 
 
 |If true, display all settable properties for each
-goal.+++<br>++++++</br>+++Default value is: false.+++<br>++++++</br>+++User property is: detail.
+goal.
+
+* Default value is: false.+++<br>++++++</br>+++User property is: detail.
 
 +++<tr class="a">+++
 |<<goal>>
@@ -57,7 +59,9 @@ goal.+++<br>++++++</br>+++Default value is: false.+++<br>++++++</br>+++User prop
 
 
 |The name of the goal for which to show help. If unspecified, all
-goals will be displayed.+++<br>++++++</br>+++User property is: goal.
+goals will be displayed.
+
+* User property is: goal.
 
 +++<tr class="b">+++
 |<<indentSize>>
@@ -69,7 +73,9 @@ goals will be displayed.+++<br>++++++</br>+++User property is: goal.
 |-
 
 
-|The number of spaces per indentation level, should be positive.+++<br>++++++</br>+++Default value is: 2.+++<br>++++++</br>+++User property is: indentSize.
+|The number of spaces per indentation level, should be positive.
+
+* Default value is: 2.+++<br>++++++</br>+++User property is: indentSize.
 
 +++<tr class="a">+++
 |<<lineLength>>
@@ -81,7 +87,9 @@ goals will be displayed.+++<br>++++++</br>+++User property is: goal.
 |-
 
 
-|The maximum length of a display line, should be positive.+++<br>++++++</br>+++Default value is: 80.+++<br>++++++</br>+++User property is: lineLength.
+|The maximum length of a display line, should be positive.
+
+* Default value is: 80.+++<br>++++++</br>+++User property is: lineLength.
 |===
 +++</div>++++++<div class="section">+++=== Parameter Details
 

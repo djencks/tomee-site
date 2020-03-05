@@ -45,7 +45,9 @@ List deployed EJB in a running TomEE.
 |-
 
 
-|(no description)+++<br>++++++</br>+++User property is: tomee-plugin.pwd.
+|(no description)
+
+* User property is: tomee-plugin.pwd.
 
 +++<tr class="a">+++
 |<<realm>>
@@ -57,7 +59,9 @@ List deployed EJB in a running TomEE.
 |-
 
 
-|(no description)+++<br>++++++</br>+++User property is: tomee-plugin.realm.
+|(no description)
+
+* User property is: tomee-plugin.realm.
 
 +++<tr class="b">+++
 |<<tomeeHost>>
@@ -69,7 +73,9 @@ List deployed EJB in a running TomEE.
 |-
 
 
-|(no description)+++<br>++++++</br>+++Default value is: localhost.+++<br>++++++</br>+++User property is: tomee-plugin.host.
+|(no description)
+
+* Default value is: localhost.+++<br>++++++</br>+++User property is: tomee-plugin.host.
 
 +++<tr class="a">+++
 |<<tomeeHttpPort>>
@@ -81,7 +87,9 @@ List deployed EJB in a running TomEE.
 |-
 
 
-|(no description)+++<br>++++++</br>+++Default value is: 8080.+++<br>++++++</br>+++User property is: tomee-plugin.http.
+|(no description)
+
+* Default value is: 8080.+++<br>++++++</br>+++User property is: tomee-plugin.http.
 
 +++<tr class="b">+++
 |<<user>>
@@ -93,7 +101,9 @@ List deployed EJB in a running TomEE.
 |-
 
 
-|(no description)+++<br>++++++</br>+++User property is: tomee-plugin.user.
+|(no description)
+
+* User property is: tomee-plugin.user.
 |===
 +++</div>++++++<div class="section">+++=== Parameter Details
 

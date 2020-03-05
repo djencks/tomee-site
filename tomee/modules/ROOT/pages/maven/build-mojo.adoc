@@ -45,7 +45,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: snapshots.
 * User property is: tomee-plugin.apache-repos.
 
@@ -60,7 +60,7 @@ Create but not run a TomEE.
 
 
 |relative to tomee.base.
-{blank}
+
 * Default value is: apps.
 
 
@@ -88,7 +88,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * User property is: tomee-plugin.args.
 
 
@@ -102,7 +102,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: true.
 * User property is: tomee-plugin.attach.
 
@@ -117,7 +117,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: ${project.basedir}/src/main/tomee/bin.
 * User property is: tomee-plugin.bin.
 
@@ -132,7 +132,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: ${project.build.directory}/apache-tomee.
 * User property is: tomee-plugin.catalina-base.
 
@@ -147,7 +147,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: false.
 * User property is: tomee-plugin.check-started.
 
@@ -162,7 +162,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * User property is: tomee-plugin.classifier.
 
 
@@ -188,7 +188,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: ${project.basedir}/src/main/tomee/conf.
 * User property is: tomee-plugin.conf.
 
@@ -215,7 +215,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: false.
 * User property is: tomee-plugin.debug.
 
@@ -230,7 +230,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: 5005.
 * User property is: tomee-plugin.debugPort.
 
@@ -245,7 +245,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: false.
 * User property is: tomee-plugin.deploy-openejb-internal-application.
 
@@ -272,7 +272,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: true.
 * User property is: tomee-plugin.ejb-remote.
 
@@ -299,7 +299,7 @@ Create but not run a TomEE.
 
 
 |force webapp to be reloadable
-{blank}
+
 * Default value is: false.
 * User property is: tomee-plugin.force-reloadable.
 
@@ -327,7 +327,7 @@ Create but not run a TomEE.
 
 
 |(Removed since 7.0.0)
-{blank}
+
 * Default value is: false.
 * User property is: tomee-plugin.keep-server-xml.
 
@@ -342,7 +342,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: ${project.basedir}/src/main/tomee/lib.
 * User property is: tomee-plugin.lib.
 
@@ -357,7 +357,7 @@ Create but not run a TomEE.
 
 
 |relative to tomee.base.
-{blank}
+
 * Default value is: lib.
 *
 
@@ -384,7 +384,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: ${project.basedir}/src/main.
 
 
@@ -398,7 +398,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * User property is: tomee-plugin.pwd.
 
 
@@ -412,7 +412,7 @@ Create but not run a TomEE.
 
 
 |use a real random instead of secure random. saves few ms at startup.
-{blank}
+
 * Default value is: true.
 * User property is: tomee-plugin.quick-session.
 
@@ -427,7 +427,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * User property is: tomee-plugin.realm.
 
 
@@ -441,7 +441,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: true.
 * User property is: tomee-plugin.remove-default-webapps.
 
@@ -456,7 +456,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: true.
 * User property is: tomee-plugin.remove-tomee-webapps.
 
@@ -471,7 +471,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: false.
 * User property is: tomee-plugin.simple-log.
 
@@ -486,7 +486,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: false.
 * User property is: tomee-plugin.skipCurrentProject.
 
@@ -501,7 +501,7 @@ Create but not run a TomEE.
 
 
 |when you set docBases to src/main/webapp setting it to true will allow hot refresh.
-{blank}
+
 * Default value is: false.
 * User property is: tomee-plugin.skipWarResources.
 
@@ -528,7 +528,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: ${project.build.directory}.
 
 
@@ -542,7 +542,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: 8009.
 * User property is: tomee-plugin.ajp.
 
@@ -557,7 +557,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: false.
 * User property is: tomee-plugin.exiting.
 
@@ -572,7 +572,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: apache-tomee.
 * User property is: tomee-plugin.artifactId.
 
@@ -587,7 +587,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: webprofile.
 * User property is: tomee-plugin.classifier.
 
@@ -602,7 +602,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: org.apache.openejb.
 * User property is: tomee-plugin.groupId.
 
@@ -617,7 +617,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: localhost.
 * User property is: tomee-plugin.host.
 
@@ -632,7 +632,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: 8080.
 * User property is: tomee-plugin.http.
 
@@ -647,7 +647,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * User property is: tomee-plugin.https.
 
 
@@ -661,7 +661,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: SHUTDOWN.
 * User property is: tomee-plugin.shutdown-command.
 
@@ -676,7 +676,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: 8005.
 * User property is: tomee-plugin.shutdown.
 
@@ -691,7 +691,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: -1.
 * User property is: tomee-plugin.version.
 
@@ -706,7 +706,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: true.
 * User property is: tomee-plugin.use-console.
 
@@ -721,7 +721,7 @@ Create but not run a TomEE.
 
 
 |use openejb-standalone automatically instead of TomEE
-{blank}
+
 * Default value is: false.
 * User property is: tomee-plugin.openejb.
 
@@ -736,7 +736,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * User property is: tomee-plugin.user.
 
 
@@ -750,7 +750,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: ${project.build.directory}/${project.build.finalName}.${project.packaging}.
 
 
@@ -764,7 +764,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: ${project.build.outputDirectory}.
 * User property is: tomee-plugin.webappClasses.
 
@@ -779,7 +779,7 @@ Create but not run a TomEE.
 
 
 |forcing nice default for war development (WEB-INF/classes and web resources)
-{blank}
+
 * Default value is: false.
 * User property is: tomee-plugin.webappDefaultConfig.
 
@@ -794,7 +794,7 @@ Create but not run a TomEE.
 
 
 |relative to tomee.base.
-{blank}
+
 * Default value is: webapps.
 
 
@@ -808,7 +808,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: ${project.basedir}/src/main/webapp.
 * User property is: tomee-plugin.webappResources.
 
@@ -835,7 +835,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: true.
 * User property is: tomee-plugin.zip.
 
@@ -850,7 +850,7 @@ Create but not run a TomEE.
 
 
 |(no description)
-{blank}
+
 * Default value is: ${project.build.directory}/${project.build.finalName}.zip.
 * User property is: tomee-plugin.zip-file.
 |===
