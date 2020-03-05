@@ -6,7 +6,7 @@
 
 == Client/Server transports
 
-cols="2,3",options="header"]
+[{name-description-table-layout}]
 |===
 
 |jar
