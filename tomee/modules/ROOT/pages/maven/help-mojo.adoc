@@ -34,7 +34,7 @@ Display help information on tomee-maven-plugin.
 |Description
 
 +++<tr class="b">+++
-|+++<b>++++++<a href="#detail">+++detail+++</a>++++++</b>+++
+|<<detail>>
 
 
 |boolean
@@ -47,7 +47,7 @@ Display help information on tomee-maven-plugin.
 goal.+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: false.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: detail.
 
 +++<tr class="a">+++
-|+++<b>++++++<a href="#goal">+++goal+++</a>++++++</b>+++
+|<<goal>>
 
 
 |String
@@ -60,7 +60,7 @@ goal.+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: false.+++<br>++++
 goals will be displayed.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: goal.
 
 +++<tr class="b">+++
-|+++<b>++++++<a href="#indentSize">+++indentSize+++</a>++++++</b>+++
+|<<indentSize>>
 
 
 |int
@@ -72,7 +72,7 @@ goals will be displayed.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++
 |The number of spaces per indentation level, should be positive.+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: 2.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: indentSize.
 
 +++<tr class="a">+++
-|+++<b>++++++<a href="#lineLength">+++lineLength+++</a>++++++</b>+++
+|<<lineLength>>
 
 
 |int
