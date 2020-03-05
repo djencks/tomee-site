@@ -97,7 +97,7 @@ goals will be displayed.
 
 == Parameter Details
 
-*+++<a name="detail">+++detail+++</a>+++:*
+=== detail+++</a>+++:*
 
 If true, display all settable properties for each goal.
 
@@ -108,7 +108,7 @@ If true, display all settable properties for each goal.
 
 '''
 
-*+++<a name="goal">+++goal+++</a>+++:*
+=== goal+++</a>+++:*
 
 The name of the goal for which to show help.
 If unspecified, all goals will be displayed.
@@ -119,7 +119,7 @@ If unspecified, all goals will be displayed.
 
 '''
 
-*+++<a name="indentSize">+++indentSize+++</a>+++:*
+=== indentSize+++</a>+++:*
 
 The number of spaces per indentation level, should be positive.
 
@@ -130,7 +130,7 @@ The number of spaces per indentation level, should be positive.
 
 '''
 
-*+++<a name="lineLength">+++lineLength+++</a>+++:*
+=== lineLength+++</a>+++:*
 
 The maximum length of a display line, should be positive.
 
