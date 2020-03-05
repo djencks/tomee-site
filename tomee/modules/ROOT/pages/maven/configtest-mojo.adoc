@@ -807,7 +807,8 @@ resources)
 |(no description)
 
 |===
-+++</div>++++++<div class="section">+++=== Parameter Details
+
+== Parameter Details
 
 *+++<a name="apacheRepos">+++apacheRepos+++</a>+++:*
 
