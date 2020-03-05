@@ -163,7 +163,8 @@
 |(/)
 |(/)
 |===
-= = Change Summary
+
+== Change Summary
 
 Major new features:
 
@@ -488,6 +489,8 @@ Very ideal for beginners and people using OpenEJB in a classroom setting.
 Some example output might look like the following.
 Here we illegally add some annotations to the "Movies" bean's interface as well as use the wrong annotations for various types of injection:
 
+[source,console]
+----
  FAIL ... Movies:  @Stateful cannot be applied to an interface: org.superbiz.injection.jpa.Movies
  FAIL ... Movies:  Missing required "type" attribute on class-level @Resource usage
  FAIL ... Movies:  Mistaken use of @Resource on an EntityManagerFactory reference.
@@ -498,6 +501,7 @@ Here we illegally add some annotations to the "Movies" bean's interface as well 
                    Annotation only usable on the bean class.
  WARN ... Movies:  Ignoring @TransactionAttribute used on interface org.superbiz.injection.jpa.Movies method addMovie.
                    Annotation only usable on the bean class.
+----
 
 === JNDI Name Formatting
 
