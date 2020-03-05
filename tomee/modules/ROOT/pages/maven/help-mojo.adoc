@@ -12,7 +12,7 @@ org.apache.openejb.maven:tomee-maven-plugin[:Current Version]:help
 *Description*:
 
 Display help information on tomee-maven-plugin.
-+ Call +++<tt>+++mvn tomee:help -Ddetail=true -Dgoal=<goal-name>+++</tt>+++ to display parameter details.
++ Call mvn tomee:help -Ddetail=true -Dgoal=<goal-name> to display parameter details.
 
 *Attributes*:
 
@@ -37,62 +37,62 @@ Display help information on tomee-maven-plugin.
 |+++<b>++++++<a href="#detail">+++detail+++</a>++++++</b>+++
 
 
-|+++<tt>+++boolean+++</tt>+++
+|boolean
 
 
-|+++<tt>+++-+++</tt>+++
+|-
 
 
-|If +++<tt>+++true+++</tt>+++, display all settable properties for each
-goal.+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++detail+++</tt>+++.
+|If true, display all settable properties for each
+goal.+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: false.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: detail.
 
 +++<tr class="a">+++
 |+++<b>++++++<a href="#goal">+++goal+++</a>++++++</b>+++
 
 
-|+++<tt>+++String+++</tt>+++
+|String
 
 
-|+++<tt>+++-+++</tt>+++
+|-
 
 
 |The name of the goal for which to show help. If unspecified, all
-goals will be displayed.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++goal+++</tt>+++.
+goals will be displayed.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: goal.
 
 +++<tr class="b">+++
 |+++<b>++++++<a href="#indentSize">+++indentSize+++</a>++++++</b>+++
 
 
-|+++<tt>+++int+++</tt>+++
+|int
 
 
-|+++<tt>+++-+++</tt>+++
+|-
 
 
-|The number of spaces per indentation level, should be positive.+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++2+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++indentSize+++</tt>+++.
+|The number of spaces per indentation level, should be positive.+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: 2.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: indentSize.
 
 +++<tr class="a">+++
 |+++<b>++++++<a href="#lineLength">+++lineLength+++</a>++++++</b>+++
 
 
-|+++<tt>+++int+++</tt>+++
+|int
 
 
-|+++<tt>+++-+++</tt>+++
+|-
 
 
-|The maximum length of a display line, should be positive.+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++80+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++lineLength+++</tt>+++.
+|The maximum length of a display line, should be positive.+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: 80.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: lineLength.
 |===
 +++</div>++++++<div class="section">+++=== Parameter Details
 
 *+++<a name="detail">+++detail+++</a>+++:*
 
-If +++<tt>+++true+++</tt>+++, display all settable properties for each goal.
+If true, display all settable properties for each goal.
 
-* *Type*: +++<tt>+++boolean+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++detail+++</tt>+++
-* *Default*: +++<tt>+++false+++</tt>+++
+* *Type*: boolean
+* *Required*: No
+* *User Property*: detail
+* *Default*: false
 
 '''
 
@@ -101,9 +101,9 @@ If +++<tt>+++true+++</tt>+++, display all settable properties for each goal.
 The name of the goal for which to show help.
 If unspecified, all goals will be displayed.
 
-* *Type*: +++<tt>+++java.lang.String+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++goal+++</tt>+++
+* *Type*: java.lang.String
+* *Required*: No
+* *User Property*: goal
 
 '''
 
@@ -111,10 +111,10 @@ If unspecified, all goals will be displayed.
 
 The number of spaces per indentation level, should be positive.
 
-* *Type*: +++<tt>+++int+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++indentSize+++</tt>+++
-* *Default*: +++<tt>+++2+++</tt>+++
+* *Type*: int
+* *Required*: No
+* *User Property*: indentSize
+* *Default*: 2
 
 '''
 
@@ -122,7 +122,7 @@ The number of spaces per indentation level, should be positive.
 
 The maximum length of a display line, should be positive.
 
-* *Type*: +++<tt>+++int+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++lineLength+++</tt>+++
-* *Default*: +++<tt>+++80+++</tt>++++++</div>++++++</div>+++
+* *Type*: int
+* *Required*: No
+* *User Property*: lineLength
+* *Default*: 80+++</div>++++++</div>+++

@@ -38,13 +38,13 @@ Simply deploy an application in a running TomEE
 |+++<b>++++++<a href="#path">+++path+++</a>++++++</b>+++
 
 
-|+++<tt>+++String+++</tt>+++
+|String
 
 
-|+++<tt>+++-+++</tt>+++
+|-
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.archive+++</tt>+++.
+|(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: tomee-plugin.archive.
 |===
 +++</div>++++++<div class="section">+++=== Optional Parameters+++<table class="bodyTable" border="0">++++++<tr class="a">+++
 |Name
@@ -62,34 +62,34 @@ Simply deploy an application in a running TomEE
 |+++<b>++++++<a href="#password">+++password+++</a>++++++</b>+++
 
 
-|+++<tt>+++String+++</tt>+++
+|String
 
 
-|+++<tt>+++-+++</tt>+++
+|-
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.pwd+++</tt>+++.
+|(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: tomee-plugin.pwd.
 
 +++<tr class="a">+++
 |+++<b>++++++<a href="#realm">+++realm+++</a>++++++</b>+++
 
 
-|+++<tt>+++String+++</tt>+++
+|String
 
 
-|+++<tt>+++-+++</tt>+++
+|-
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.realm+++</tt>+++.
+|(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: tomee-plugin.realm.
 
 +++<tr class="b">+++
 |+++<b>++++++<a href="#systemVariables">+++systemVariables+++</a>++++++</b>+++
 
 
-|+++<tt>+++Map+++</tt>+++
+|Map
 
 
-|+++<tt>+++-+++</tt>+++
+|-
 
 
 |(no description)+++<br>++++++</br>+++
@@ -98,49 +98,49 @@ Simply deploy an application in a running TomEE
 |+++<b>++++++<a href="#tomeeHost">+++tomeeHost+++</a>++++++</b>+++
 
 
-|+++<tt>+++String+++</tt>+++
+|String
 
 
-|+++<tt>+++-+++</tt>+++
+|-
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++localhost+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.host+++</tt>+++.
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: localhost.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: tomee-plugin.host.
 
 +++<tr class="b">+++
 |+++<b>++++++<a href="#tomeeHttpPort">+++tomeeHttpPort+++</a>++++++</b>+++
 
 
-|+++<tt>+++int+++</tt>+++
+|int
 
 
-|+++<tt>+++-+++</tt>+++
+|-
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++8080+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.http+++</tt>+++.
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: 8080.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: tomee-plugin.http.
 
 +++<tr class="a">+++
 |+++<b>++++++<a href="#useBinaries">+++useBinaries+++</a>++++++</b>+++
 
 
-|+++<tt>+++boolean+++</tt>+++
+|boolean
 
 
-|+++<tt>+++-+++</tt>+++
+|-
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: +++<tt>+++false+++</tt>+++.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.binary+++</tt>+++.
+|(no description)+++<br>++++++</br>++++++<b>+++Default value is+++</b>+++: false.+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: tomee-plugin.binary.
 
 +++<tr class="b">+++
 |+++<b>++++++<a href="#user">+++user+++</a>++++++</b>+++
 
 
-|+++<tt>+++String+++</tt>+++
+|String
 
 
-|+++<tt>+++-+++</tt>+++
+|-
 
 
-|(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: +++<tt>+++tomee-plugin.user+++</tt>+++.
+|(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: tomee-plugin.user.
 |===
 +++</div>++++++<div class="section">+++=== Parameter Details
 
@@ -148,9 +148,9 @@ Simply deploy an application in a running TomEE
 
 (no description)
 
-* *Type*: +++<tt>+++java.lang.String+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.pwd+++</tt>+++
+* *Type*: java.lang.String
+* *Required*: No
+* *User Property*: tomee-plugin.pwd
 
 '''
 
@@ -158,9 +158,9 @@ Simply deploy an application in a running TomEE
 
 (no description)
 
-* *Type*: +++<tt>+++java.lang.String+++</tt>+++
-* *Required*: +++<tt>+++Yes+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.archive+++</tt>+++
+* *Type*: java.lang.String
+* *Required*: Yes
+* *User Property*: tomee-plugin.archive
 
 '''
 
@@ -168,9 +168,9 @@ Simply deploy an application in a running TomEE
 
 (no description)
 
-* *Type*: +++<tt>+++java.lang.String+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.realm+++</tt>+++
+* *Type*: java.lang.String
+* *Required*: No
+* *User Property*: tomee-plugin.realm
 
 '''
 
@@ -178,8 +178,8 @@ Simply deploy an application in a running TomEE
 
 (no description)
 
-* *Type*: +++<tt>+++java.util.Map+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
+* *Type*: java.util.Map
+* *Required*: No
 
 '''
 
@@ -187,10 +187,10 @@ Simply deploy an application in a running TomEE
 
 (no description)
 
-* *Type*: +++<tt>+++java.lang.String+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.host+++</tt>+++
-* *Default*: +++<tt>+++localhost+++</tt>+++
+* *Type*: java.lang.String
+* *Required*: No
+* *User Property*: tomee-plugin.host
+* *Default*: localhost
 
 '''
 
@@ -198,10 +198,10 @@ Simply deploy an application in a running TomEE
 
 (no description)
 
-* *Type*: +++<tt>+++int+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.http+++</tt>+++
-* *Default*: +++<tt>+++8080+++</tt>+++
+* *Type*: int
+* *Required*: No
+* *User Property*: tomee-plugin.http
+* *Default*: 8080
 
 '''
 
@@ -209,10 +209,10 @@ Simply deploy an application in a running TomEE
 
 (no description)
 
-* *Type*: +++<tt>+++boolean+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.binary+++</tt>+++
-* *Default*: +++<tt>+++false+++</tt>+++
+* *Type*: boolean
+* *Required*: No
+* *User Property*: tomee-plugin.binary
+* *Default*: false
 
 '''
 
@@ -220,6 +220,6 @@ Simply deploy an application in a running TomEE
 
 (no description)
 
-* *Type*: +++<tt>+++java.lang.String+++</tt>+++
-* *Required*: +++<tt>+++No+++</tt>+++
-* *User Property*: +++<tt>+++tomee-plugin.user+++</tt>++++++</div>++++++</div>+++
+* *Type*: java.lang.String
+* *Required*: No
+* *User Property*: tomee-plugin.user+++</div>++++++</div>+++
