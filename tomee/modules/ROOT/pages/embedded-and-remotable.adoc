@@ -30,7 +30,7 @@ A number of ServerServices are available currently:
 * openejb-hsql
 * openejb-activemq
 
-_The source for this example is in the "telephone-stateful" directory located in the xref:{common-vc}:download.adoc[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page]._
+_The source for this example is in the "telephone-stateful" directory located in the xref:{common-vc}::download-ng.adoc[openejb-examples.zip]  available on the http://tomee.apache.org/downloads.html[download page]._
 
 NOTE: If your goal is simply to unit test beans with remote interfaces, this is _not_ the right example for you.
 The LocalInitialContextFactory completely supports remote interfaces and all spec required pass-by-value (serialization) semantics without the need for network sockets.
@@ -138,7 +138,7 @@ These "client" VMs need only have the the _openejb-client jar_ in their classpat
 == Running
 
 Running the example is fairly simple.
-In the "telephone-stateful" directory of the xref:openejb:download.adoc[examples zip] , just run:
+In the "telephone-stateful" directory of the xref:{common-vc}::download-ng.adoc[examples zip] , just run:
 
 [source,console]
 ----

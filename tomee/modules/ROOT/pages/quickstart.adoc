@@ -39,7 +39,7 @@ For UNIX/Linux/Mac OS X users, that looks like this:
 user@host openejb-3.0 # ./bin/openejb
 ----
 
-You really only need to know two commands to use OpenEJB, xref:openejbx30:deploy-tool.adoc[deploy]  and [start|OPENEJBx30:Startup].
+You really only need to know two commands to use OpenEJB, xref:deploy-tool.adoc[deploy]  and [start|OPENEJBx30:Startup].
 Both are completely documented and have examples.
 
 For help information and command options, try this:
@@ -58,7 +58,7 @@ openejb start --examples
 
 That's it!
 
-If you don't have any EJBs or clients to run, try the ubiquitous xref:{examples-vc}:hello-world.adoc[Hello World]  example.
+If you don't have any EJBs or clients to run, try the ubiquitous xref:hello-world.adoc[Hello World]  example.
 
 
 == Join the mailing list

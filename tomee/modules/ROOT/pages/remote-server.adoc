@@ -31,7 +31,7 @@ Deploy your bean with the Deploy Tool:
 c:\openejb> openejb.bat deploy beans\myBean.jar
 ----
 
-See the xref:openejbx30:deploy-tool.adoc[OPENEJBx30:Deploy Tool]  documentation for more details on deploying beans.
+See the xref:deploy-tool.adoc[Deploy Tool]  documentation for more details on deploying beans.
 
 Start the server:
 
@@ -55,7 +55,7 @@ p.put("java.naming.security.credentials", "mypass");
 InitialContext ctx = new InitialContext(p);
 ----
 
-If you don't have any EJBs or clients to run, try the ubiquitous xref:openejbx30:hello-world.adoc[Hello World]  example.
+If you don't have any EJBs or clients to run, try the ubiquitous xref:hello-world.adoc[Hello World]  example.
 Add the following library to your clients classpath:
 
 * openejb-client-x.x.x.jar

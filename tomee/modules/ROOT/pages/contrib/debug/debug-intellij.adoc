@@ -4,7 +4,7 @@
 :jbake-type: page
 :jbake-status: published
 
-Stepping through the xref:apache-tomee.adoc[TomEE] source code is a must-to-follow step if you want to understand how TomEE works and later contribute.
+Stepping through the xref:{common-vc}::apache-tomee.adoc[TomEE] source code is a must-to-follow step if you want to understand how TomEE works and later contribute.
 This is a guide to quickly start your debugging session with TomEE as a TomEE developer.
 
 This guide assumes that:

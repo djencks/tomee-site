@@ -10,9 +10,7 @@ openejb validate - OpenEJB Validation Tool
 
 == SYNOPSIS
 
-NOTE: there are no pages in website source this 'options.adoc' could refer to.
-
-openejb validate xref:options.adoc[options]  jarfiles
+openejb validate <<Options,options>>  jarfiles
 
 == NOTE
 
@@ -60,7 +58,7 @@ More checks will be added in the future.
 
 
 
-== OPTIONS
+== Options
 
 [cols=2*]
 |===

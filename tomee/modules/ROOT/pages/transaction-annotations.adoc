@@ -4,7 +4,7 @@
 :jbake-type: page
 :jbake-status: published
 
-_Also see xref:testing-transactions-example.adoc[Testing Transactions]  for an example of how to use and test EJB transaction attributes_
+_Also see xref:{common-vc}::testing-transactions-example.adoc[Testing Transactions]  for an example of how to use and test EJB transaction attributes_
 
 The _javax.ejb.TransactionAttribute_ annotation (@TransactionAttribute) can be applied to a bean class or it's methods.
 

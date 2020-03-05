@@ -46,8 +46,8 @@ You can also find us on IRC freenode.org #openejb and #tomee
 * xref:configuring-containers-in-tests.adoc[Configuring Containers in Tests]
 * xref:configuring-logging-in-tests.adoc[Configuring Logging in Tests]
 * xref:alternate-descriptors.adoc[Alternate Descriptors]
-* xref:unit-testing-transactions.adoc[Unit Testing Transactions]
-* xref:testcase-with-testbean-inner-class.adoc[TestCase with TestBean inner-class]
+* xref:{common-vc}::unit-testing-transactions.adoc[Unit Testing Transactions]
+* xref:{common-vc}::testcase-with-testbean-inner-class.adoc[TestCase with TestBean inner-class]
 * xref:local-client-injection.adoc[TestCase Injection (@LocalClient)]
 
 == Discovery and Failover

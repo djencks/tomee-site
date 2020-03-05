@@ -13,7 +13,7 @@ See the License for the specific language governing permissions and limitations 
 
 == Downloading a Distribution Archive
 
-Download a distribution archive of the latest TomEE release from the xref:downloads.adoc[Downloads] page.
+Download a distribution archive of the latest TomEE release from the xref:{common-vc}::download-ng.adoc[Downloads] page.
 If you are not sure which one to use, take apache-tomee-webprofile-x.y.z.zip.
 
 If you want to try out the latest development snapshot (e.g. to test a bugfix which has not yet been released), then download an archive directly from the link:https://repository.apache.org/content/groups/snapshots/org/apache/openejb/apache-tomee[Apache Maven Snapshots Repository] instead.
@@ -79,4 +79,4 @@ If you started TomEE in foreground via `catalina.sh run` or `catalina.bat run`, 
 
 == Running as a service
 
-To run TomEE as a service, see xref:lin-service.adoc[]] for Linux, and xref:win-service.adoc[]] for Windows.
+To run TomEE as a service, see xref:daemon/lin-service.adoc[]] for Linux, and xref:daemon/win-service.adoc[]] for Windows.

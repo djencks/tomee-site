@@ -34,4 +34,4 @@ You're asking an ejb for some persistent objects, it uses the EntityManager in t
 . Call EntityManager.merge(..) inside the bean code to reattach your object.
 . Use PersistenceContextType.EXTENDED as in '@PersistenceContext(unitName = "movie-unit", type = PersistenceContextType.EXTENDED)' for EntityManager refs instead of the default of PersistenceContextType.TRANSACTION.
 . If testing, use a technique to execute transactions in your test code.
-That's described here in xref:unit-testing-transactions.adoc[Unit testing transactions]
+That's described here in xref:{common-vc}::unit-testing-transactions.adoc[Unit testing transactions]

@@ -10,7 +10,7 @@ openejb start - OpenEJB Remote Server
 
 == SYNOPSIS
 
-openejb start xref:options.adoc[#options]
+openejb start <<Options,options>>
 
 == NOTE
 
@@ -51,7 +51,7 @@ OpenEJB issues warnings when it works around a potential problem, encounters som
 OpenEJB itself is configured with the OpenEJB configuration file, which is extremely simple and self-documenting.
 This file is located at c:\openejb-3.0\conf\openejb.xml.
 
-== OPTIONS
+== Options
 
 [cols=2*]
 |===

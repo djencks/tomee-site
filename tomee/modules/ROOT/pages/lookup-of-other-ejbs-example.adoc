@@ -83,7 +83,7 @@ include::{examples-vc}::examples$lookup-of-ejbs/src/test/java/org/superbiz/ejblo
 == Running
 
 Running the example is fairly simple.
-In the "lookup-of-ejbs" directory of the xref:openejb:download.adoc[examples zip] , just run:
+In the "lookup-of-ejbs" directory of the xref:{common-vc}::download-ng.adoc[examples zip] , just run:
 
 [source,console]
 ----
