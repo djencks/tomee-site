@@ -19,7 +19,7 @@ Simply undeploy an application in a running TomEE
 * Requires dependency resolution of artifacts in scope: runtime.
 * Requires dependency collection of artifacts in scope: runtime.
 
-== Optional Parameters
+== Required Parameters
 
 [{supported-properties-table-layout}]
 |===
@@ -46,7 +46,11 @@ Simply undeploy an application in a running TomEE
 
 |(no description)+++<br>++++++</br>++++++<b>+++User property is+++</b>+++: tomee-plugin.archive.
 |===
-+++</div>++++++<div class="section">+++=== Optional Parameters+++<table class="bodyTable" border="0">++++++<tr class="a">+++
+
+== Optional Parameters
+
+[{supported-properties-table-layout}]
+|===
 |Name
 
 
