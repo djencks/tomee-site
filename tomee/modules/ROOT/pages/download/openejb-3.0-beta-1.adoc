@@ -1,5 +1,7 @@
 = OpenEJB 3.0 beta 1
-:tested-on-layout: cols="7*",options="header"
+:tested-on-layout6: cols="6*",options="header"
+:icons: font
+:y: icon:check[role="green"]
 
 * Release Date: September 29th, 2007
 * EJB 3.0 support
@@ -61,49 +63,49 @@
 
 == Tested On
 
-[cols=6*]
+[{tested-on-layout6}]
 |===
 | Embedded
-| \{center}(/)\{center}
-| \{center}(/)\{center}
-| \{center}(/)\{center}
-| \{center}(/)\{center}
-| \{center}(/)\{center}
+| {y}
+| {y}
+| {y}
+| {y}
+| {y}
 
 | Standalone
-| \{center}(/)\{center}
-| \{center}(/)\{center}
-| \{center}(/)\{center}
-| \{center}(/)\{center}
-| \{center}(/)\{center}
+| {y}
+| {y}
+| {y}
+| {y}
+| {y}
 
 | Tomcat 6.0.14
-| \{center}(/)\{center}
-| \{center}(/)\{center}
-| \{center}(/)\{center}
-| \{center}(/)\{center}
-| \{center}(/)\{center}
+| {y}
+| {y}
+| {y}
+| {y}
+| {y}
 
 | Tomcat 6.0.13
-| \{center}(/)\{center}
-| \{center}(/)\{center}
-| \{center}(/)\{center}
-| \{center}(/)\{center}
-| \{center}(/)\{center}
+| {y}
+| {y}
+| {y}
+| {y}
+| {y}
 
 | Tomcat 6.0.10
-| \{center}(/)\{center}
-| \{center}(/)\{center}
-| \{center}(/)\{center}
-| \{center}(/)\{center}
-| \{center}(/)\{center}
+| {y}
+| {y}
+| {y}
+| {y}
+| {y}
 
 | Tomcat 6.0.9
-| \{center}(/)\{center}
-| \{center}(/)\{center}
-| \{center}(/)\{center}
-| \{center}(/)\{center}
-| \{center}(/)\{center}
+| {y}
+| {y}
+| {y}
+| {y}
+| {y}
 |===
 
 

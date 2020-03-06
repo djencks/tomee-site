@@ -1,5 +1,8 @@
 = OpenEJB 1.0
 :tested-on-layout: cols="7*",options="header"
+:icons: font
+:y: icon:check[role="green"]
+:n: icon:times[role="red"]
 
 * Release Date: February 26th, 2006
 * EJB 1.1 support
@@ -29,75 +32,75 @@
 
 
 |Embedded
-|(/)
-|(/)
-|(/)
-|(/)
-|(/)
-|(/)
+|{y}
+|{y}
+|{y}
+|{y}
+|{y}
+|{y}
 
 
 |Standalone
-|(/)
-|(/)
-|(/)
-|(/)
-|(/)
-|(/)
+|{y}
+|{y}
+|{y}
+|{y}
+|{y}
+|{y}
 
 
 |Tomcat 4.1.x (Global Mode)
-|(/)
-|(/)
-|(/)
-|(/)
-|(/)
-|(/)
+|{y}
+|{y}
+|{y}
+|{y}
+|{y}
+|{y}
 
 
 |Tomcat 4.1.x (Webapp Mode)
-|(/)
-|(/)
-|(/)
-|(/)
-|(/)
-|(/)
+|{y}
+|{y}
+|{y}
+|{y}
+|{y}
+|{y}
 
 
 |Tomcat 5.0.x (Global Mode)
-|(/)
-|(/)
-|(/)
-|(/)
-|(/)
-|(/)
+|{y}
+|{y}
+|{y}
+|{y}
+|{y}
+|{y}
 
 
 |Tomcat 5.0.x (Webapp Mode)
-|(/)
-|(/)
-|(/)
-|(/)
-|(/)
-|(/)
+|{y}
+|{y}
+|{y}
+|{y}
+|{y}
+|{y}
 
 
 |Tomcat 5.5.x (Global Mode)
-|(/)
-|(/)
-|(/)
-|(/)
-|(/)
-|(/)
+|{y}
+|{y}
+|{y}
+|{y}
+|{y}
+|{y}
 
 
 |Tomcat 5.5.x (Webapp Mode)
 |
-|(/)
+|{y}
 |
-|(/)
+|{y}
 |
-|(/)
+|{y}
 |===
 
 
