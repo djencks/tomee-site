@@ -1,4 +1,7 @@
 = Application Composer Advanced
+:jbake-type: page
+:jbake-status: published
+:index-group: Testing
 
 xref:application-composer/getting-started.adoc[Getting Started] page gives you already a lot of inputs but you can even go further.
 
