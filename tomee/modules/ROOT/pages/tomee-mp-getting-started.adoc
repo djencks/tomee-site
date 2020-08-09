@@ -28,7 +28,7 @@ Even if you have an existing project you can always use the template as a refere
 TomEE provides a maven-archetype for generating a template project.
 This template project is preconfigured with `javaee-api` (scope provided) and with the xref:maven/index.adoc[`tomee-maven-plugin`] for starting the application with TomEE.
 
-For example, if current version of the archetype is '1.7.1', then the required command to generate an application would be:
+For example, if current version of the archetype is '8.0.3', then the required command to generate an application would be:
 
 [source,console]
 ----
