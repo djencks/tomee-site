@@ -23,7 +23,7 @@ It allows you :
 . To identify the end user with SSLv3 with client certificate required
 . OpenEJB supports BASIC authentication over HTTP(S), using the configured JAAS provider.
 This will honour any EJB security roles you have setup using @RolesAllowed.
-See the webservice-security example in the OpenEJB codebase http://svn.apache.org/repos/asf/tomee/tomee/trunk/examples/
+See the webservice-security example in the OpenEJB codebase link:https://github.com/apache/tomee/tree/master/examples[].
 
 _Warning: Currently only BASIC is the only HTTP authentication mechanism available when running OpenEJB standalone or in a unit test, but we hope to support DIGEST in the future._
 
@@ -211,4 +211,4 @@ public class CustomPasswordHandler implements CallbackHandler {
 
 == Examples
 
-A full example (webservice-ws-security) is available with OpenEJB Examples.
+A full example (webservice-ws-security) is available with link:https://github.com/apache/tomee/tree/master/examples/webservice-ws-security[OpenEJB Examples].
