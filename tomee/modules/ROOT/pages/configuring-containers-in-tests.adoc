@@ -7,7 +7,7 @@
 Like Resources, Containers can also be declared via InitialContext properties as well.
 The most useful is to declare a Stateful SessionBean container so that it's guaranteed to passivate and activate on each call to the bean, allowing you to test your callbacks behave as you need them to.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 Properties p = new Properties();
 p.put(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.core.LocalInitialContextFactory");

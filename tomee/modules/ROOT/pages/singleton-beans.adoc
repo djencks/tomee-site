@@ -8,7 +8,7 @@
 == Singleton Overview
 
 For the first time in years EJB has a new bean type, the _@Singleton_.
-In my opinion, the javax.ejb.Singleton will replace a lot of what people are using @Stateless for today.
+In my opinion, the {ee-prefix}.ejb.Singleton will replace a lot of what people are using @Stateless for today.
 
 The Singleton is essentially what you get if you take a Stateless bean and adjust the pool size to be exactly 1 resulting in there being exactly one instance of the Singleton bean in the application which can be invoked concurrently by multiple threads, like a servlet.
 It can do everything a Stateless can do such as support local and remote business interfaces, web services, security, transactions, and more.
@@ -26,7 +26,7 @@ Singletons support two modes of concurrent access, Container-Managed Concurrency
 ==== Bean-Managed Concurrency
 
 With Bean-Managed Concurrency, annotated as _@ConcurrencyManagement(BEAN)_, the container sends all invocations into the bean and lets the Singleton bean instance decide how and when to synchronize access, if at all.
-Here the 'synchronization' keyword is allowed as well as the full javax.util.concurrent set of libraries.
+Here the 'synchronization' keyword is allowed as well as the full {ee-prefix}.util.concurrent set of libraries.
 
 ==== Container-Managed Concurrency
 
@@ -46,7 +46,7 @@ Those that are aware of how to handle concurrent access can easily put @Lock(REA
 
 The locking modes of Container-Managed Concurrency map directly to the *link:http://java.sun.com/j2se/1.5.0/docs/api/java/util/concurrent/locks/ReadWriteLock.html[java.util.concurrent.ReadWriteLock] API which looks like this:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 public interface ReadWriteLock {
    /**
@@ -83,7 +83,7 @@ The _@AccessTimetout_ annotation can configure how long a thread will wait to ac
 This annotation can be used on the bean class or individual methods.
 The annotation maps directly to the http://java.sun.com/j2se/1.5.0/docs/api/java/util/concurrent/locks/Lock.html[java.util.concurrent.locks.Lock]  interface.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 public interface Lock {
 
@@ -111,7 +111,7 @@ public interface Lock {
 }
 ----
 
-In the event it is not possible to acquire the lock a _javax.ejb.ConcurrentAccessException_ or _javax.ejb.ConcurrentAccessTimeoutException_ will be thrown.
+In the event it is not possible to acquire the lock a _{ee-prefix}.ejb.ConcurrentAccessException_ or _{ee-prefix}.ejb.ConcurrentAccessTimeoutException_ will be thrown.
 
 ===== Default Timeout
 
@@ -137,7 +137,7 @@ When used, the Container will instantiate the Singleton instance _eagerly_ when 
 If one Singleton refers to another Singleton in the @PostConstruct or @PreDestroy method, there must be some measure taken to ensure the other Singleton exists and is started.
 This sort of ordering is achieved with the _@DependsOn_ annotation which can be used to list the names of Singleton beans that must be started before the Singleton bean using the annotation.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 @DependsOn({"SingletonB", "SingletonC"})
 @Singleton

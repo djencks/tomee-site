@@ -90,10 +90,10 @@ Whatever files you create should be placed under the projects directory
 
 Using your favorite editor, create a file named Hello.java (shown below)
 
-[source,java]
+[source,java,subs=+attributes]
 ----
  package org.acme;
- import javax.ejb.Remote;
+ import {ee-prefix}.ejb.Remote;
  @Remote
  public interface Hello{
  	public String sayHello();
@@ -105,10 +105,10 @@ Using your favorite editor, create a file named Hello.java (shown below)
 
 Now create a file named HelloBean.java (shown below)
 
-[source,java]
+[source,java,subs=+attributes]
 ----
  package org.acme;
- import javax.ejb.Stateless;
+ import {ee-prefix}.ejb.Stateless;
  @Stateless
  public class HelloBean implements Hello{
  	public String sayHello(){
@@ -120,7 +120,7 @@ Now create a file named HelloBean.java (shown below)
 
 === Compile the source code
 
-Since we have imported the javax.ejb.Stateless and javax.ejb.Remote annotations, we need these in our classpath to compile our source code.
+Since we have imported the {ee-prefix}.ejb.Stateless and {ee-prefix}.ejb.Remote annotations, we need these in our classpath to compile our source code.
 These annotations can be found in the $OPENEJB_HOME/lib/javaee-5.0-1.jar.
 Lets compile our source (make sure you are in the projects directory)
 
@@ -161,13 +161,13 @@ Below is the output from running the above command:
 Now we will write a Client class which will lookup the EJB , invoke the sayHello() business method and print the value returned from the method.
 While you are in the projects directory, create a new file named HelloClient.java . Add the following to this file:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
  package org.acme;
  import java.util.Properties;
- import javax.naming.InitialContext;
- import javax.naming.Context;
- import javax.rmi.PortableRemoteObject;
+ import {ee-prefix}.naming.InitialContext;
+ import {ee-prefix}.naming.Context;
+ import {ee-prefix}.rmi.PortableRemoteObject;
  public class HelloClient{
          public static void main(String[]  args) throws Exception{
  		Properties props = new Properties();

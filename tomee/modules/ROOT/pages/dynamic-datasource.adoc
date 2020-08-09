@@ -16,7 +16,7 @@ It can be useful for technical reasons (load balancing for example) or functionn
 
 The interface Router (_org.apache.openejb.resource.jdbc.Router_) have only one method to get the datasource to use:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 Router.getDataSource()
 ----
@@ -52,7 +52,7 @@ You want to use only one datasource in the code but you have a criteria to set t
 
 So in your code you want something like:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 public class RoutedEJBBean {
     @PersistenceContext(unitName = "router")
@@ -74,7 +74,7 @@ public class RoutedEJBBean {
 
 The router will simply manage a map to store proxied datasources and a field to store the datasource used in the current thread (ThreadLocal).
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 public class DeterminedRouter implements Router {
     private String dataSourceNames; // used to store configuration (openejb.xml)

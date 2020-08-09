@@ -15,14 +15,14 @@ As a simple example, a JMS queue can be defined within `tomee.xml` with the foll
 [source,xml]
 ----
 <tomee>
-    <Resource id="MyQueue" type="javax.jms.Queue"/>
+    <Resource id="MyQueue" type="{ee-prefix}.jms.Queue"/>
 </tomee>
 ----
 
 Once the resource has been defined, the server will create an instance of the resource during startup, and it will be available to be injected into managed components using the `@Resource` annotation, as shown below.
 The `name` attribute on the `@Resource` annotation should match the `id` attribute on the `Resource` tag.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 public class JmsClient {
 
@@ -40,7 +40,7 @@ As an alternative to defining a resource in XML, resources can also be defined u
 
 [source,properties]
 ----
-MyQueue = new://Resource?type=javax.jms.Queue
+MyQueue = new://Resource?type={ee-prefix}.jms.Queue
 ----
 
 Resources, or attributes for resources specified using system properties will override definitions specified in `tomee.xml`.
@@ -70,7 +70,7 @@ Specifying the key/value pairs specific to a Resource can also be done when defi
 This is done be specifying an additional property for each key/value pair, using the resource ID as a prefix: `<resourceId>.<propertyName>=<value>`.
 The system properties equivalent of the resource above is:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
  p.setProperty("DB", "new://Resource?type=DataSource");
  p.setProperty("DB.JdbcDriver", "com.mysql.jdbc.Driver");
@@ -112,7 +112,7 @@ TomEE allows you to define resources using your own Java classes, and these can 
 
 So the following simple resource
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 public class Configuration {
 
@@ -144,7 +144,7 @@ As shown above, a resource class can define a number of fields, and TomEE will a
 As an alternative to this, you can also add a properties field as shown below, and this will have any used properties from the resource configuration set added to it.
 So as an alternative to the above code, you could do:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 public class Configuration {
 
@@ -245,7 +245,7 @@ The `factory-name` attribute on the resource can reference any no argument metho
 
 For example:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 public class Factory {
 
@@ -285,7 +285,7 @@ As an alternative to using a factory method or a constructor, you can use `@Post
 TomEE will automatically call these methods when the application is started and destroyed.
 Using `@PostConstruct` will effectively force a lazily loaded resource to be instantiated when the application is starting - in the same way that the `InitializeAfterDeployment` property does.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 public class MyClass {
 

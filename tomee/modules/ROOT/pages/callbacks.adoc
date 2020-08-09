@@ -26,13 +26,13 @@ The AroundInvoke syntax for an EJB or Interceptor is the same:
 
 == Stateless
 
-[source,java]
+[source,java,subs=+attributes]
 ----
-import javax.ejb.Stateless;
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-import javax.interceptor.AroundInvoke;
-import javax.interceptor.InvocationContext;
+import {ee-prefix}.ejb.Stateless;
+import {ee-prefix}.annotation.PostConstruct;
+import {ee-prefix}.annotation.PreDestroy;
+import {ee-prefix}.interceptor.AroundInvoke;
+import {ee-prefix}.interceptor.InvocationContext;
 
 @Stateless
 public class MyStatelessBean implements  MyBusinessInterface  {
@@ -56,15 +56,15 @@ public class MyStatelessBean implements  MyBusinessInterface  {
 
 == Stateful
 
-[source,java]
+[source,java,subs=+attributes]
 ----
-import javax.ejb.Stateful;
-import javax.ejb.PostActivate;
-import javax.ejb.PrePassivate;
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-import javax.interceptor.AroundInvoke;
-import javax.interceptor.InvocationContext;
+import {ee-prefix}.ejb.Stateful;
+import {ee-prefix}.ejb.PostActivate;
+import {ee-prefix}.ejb.PrePassivate;
+import {ee-prefix}.annotation.PostConstruct;
+import {ee-prefix}.annotation.PreDestroy;
+import {ee-prefix}.interceptor.AroundInvoke;
+import {ee-prefix}.interceptor.InvocationContext;
 
 @Stateful
 public class MyStatefulBean implements	MyBusinessInterface  {
@@ -98,13 +98,13 @@ public class MyStatefulBean implements	MyBusinessInterface  {
 
 == MessageDriven
 
-[source,java]
+[source,java,subs=+attributes]
 ----
-import javax.ejb.MessageDriven;
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-import javax.interceptor.AroundInvoke;
-import javax.interceptor.InvocationContext;
+import {ee-prefix}.ejb.MessageDriven;
+import {ee-prefix}.annotation.PostConstruct;
+import {ee-prefix}.annotation.PreDestroy;
+import {ee-prefix}.interceptor.AroundInvoke;
+import {ee-prefix}.interceptor.InvocationContext;
 
 @MessageDriven
 public class MyMessageDrivenBean implements  MyListenerInterface  {
@@ -128,14 +128,14 @@ public class MyMessageDrivenBean implements  MyListenerInterface  {
 
 == Interceptor
 
-[source,java]
+[source,java,subs=+attributes]
 ----
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-import javax.interceptor.InvocationContext;
-import javax.interceptor.AroundInvoke;
-import javax.ejb.PostActivate;
-import javax.ejb.PrePassivate;
+import {ee-prefix}.annotation.PostConstruct;
+import {ee-prefix}.annotation.PreDestroy;
+import {ee-prefix}.interceptor.InvocationContext;
+import {ee-prefix}.interceptor.AroundInvoke;
+import {ee-prefix}.ejb.PostActivate;
+import {ee-prefix}.ejb.PrePassivate;
 
 public class MyInterceptor {
 

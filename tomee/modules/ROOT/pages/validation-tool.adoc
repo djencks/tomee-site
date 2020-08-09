@@ -104,7 +104,7 @@ This would occur, for example, if a class was loaded by the parent classloader, 
 
 Here is a more concrete example:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 public interface Person extends EJBObject {
 }

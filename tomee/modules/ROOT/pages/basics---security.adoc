@@ -30,10 +30,10 @@ it should be noted that this method of using the factories is OpenEJB specific, 
 For example, here is an EJB that returns another bean, through a remote method call.
 In this case, the _OtherBean_ instance, will have the same security as _MyBean_, including the principal (username), roles, etc.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
-import javax.ejb.EJB;
-import javax.naming.InitialContext;
+import {ee-prefix}.ejb.EJB;
+import {ee-prefix}.naming.InitialContext;
 
 @EJB(name = "otherBean", beanInterface = IOtherBean.class)
 public class MyBean

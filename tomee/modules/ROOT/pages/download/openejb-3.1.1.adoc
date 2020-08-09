@@ -191,7 +191,7 @@ Significant Improvements:
 === EJB 3.1 Singletons
 
 Singletons are a new type of Session bean being added to the EJB 3.1 specification.
-As the name implies a javax.ejb.Singleton is a session bean with a guarantee that there is at most one instance in the application.
+As the name implies a {ee-prefix}.ejb.Singleton is a session bean with a guarantee that there is at most one instance in the application.
 
 Singletons gives you some important things that are missing in EJB 3.0 and prior versions, such as the ability to have an EJB that is notified when the application starts and notified when the application stops, allowing you to do all sorts of things that previously could only be done with a load-on-startup servlet.
 Singletons also give provide a great place to hold data that pertains to the entire application and all users using it, without the need for a static.
@@ -208,7 +208,7 @@ In a simple 1, 2, 3 step of 1) add OpenEJB to your classpath, 2) add a META-INF/
 Configuration can be done through an openejb.xml file or can be encapsulated 100% in the test case through the parameters passed to the InitialContext.
 For example, to create a JTA DataSource for JPA usage, you can simply:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 Properties p = new Properties();
 p.put(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.LocalInitialContextFactory");
@@ -238,7 +238,7 @@ For those of you who would like to use final fields, wish to avoid numerous sett
 This is a feature we intended to add to OpenEJB 3.0 but didn't have time for.
 We're happy to bring it to the OpenEJB 3.1.1 release and with a bit of luck and support from people like yourself, we'll see this as an EJB 3.1 feature as well.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 @Stateless
 public class WidgetBean implements Widget {
@@ -331,7 +331,7 @@ See the xref:spring.adoc[Spring]  page and [Spring Example|OPENEJBx30:Spring EJB
 Add the http://people.apache.org/repo/m2-ibiblio-rsync-repository/org/apache/openejb/openejb-multicast/3.1/openejb-multicast-3.1.jar[openejb-multicast.jar]  to your OpenEJB distributions lib/ directory and gain the ability to use multicast discovery between clients and serves as well as between servers allowing for request failover to other discovered servers.
 Clients can discover and access servers with a new "multicast://239.255.3.2:6142" url as follows:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
  Properties p = new Properties();
  p.put("java.naming.factory.initial", "org.apache.openejb.client.RemoteInitialContextFactory");
@@ -366,7 +366,7 @@ This is just plain silly as the conversion of Strings to other basic data types 
 OpenEJB 3.1.1 supports injection of any data type for which you can supply a JavaBeans PropertyEditor.
 We include several built-in PropertyEditors already such as Date, InetAddress, Class, File, URL, URI, Map, List, any java.lang.Enum and more.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 import java.net.URI;
 import java.io.File;
@@ -388,7 +388,7 @@ Support for Java Generics makes the dependency injection that much more powerful
 Declare an injectable field that leverages Java Generics and we will use that information to boost your injection to the next level.
 For example:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 import java.net.URI;
 import java.io.File;
@@ -407,7 +407,7 @@ public class MyBean {
 You can easily add your own types or override the way built-in types are handled and claim dependency injection as your own making it a critical part of your architecture.
 For example, let's register a custom editor for our Pickup enum.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 import java.beans.PropertyEditorManager;
 
@@ -427,7 +427,7 @@ public enum Pickup {
 
 And referenced as follows
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 @Stateful
 public class StratocasterImpl implements Stratocaster {

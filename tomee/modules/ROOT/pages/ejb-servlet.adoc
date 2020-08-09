@@ -7,13 +7,13 @@ import org.apache.openejb.loader.SystemInstance;
 import org.apache.openejb.server.ServiceException;
 import org.apache.openejb.server.ejbd.EjbServer;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletException;
-import javax.servlet.ServletInputStream;
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import {ee-prefix}.servlet.ServletConfig;
+import {ee-prefix}.servlet.ServletException;
+import {ee-prefix}.servlet.ServletInputStream;
+import {ee-prefix}.servlet.ServletOutputStream;
+import {ee-prefix}.servlet.http.HttpServlet;
+import {ee-prefix}.servlet.http.HttpServletRequest;
+import {ee-prefix}.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class EjbServerServlet extends HttpServlet {

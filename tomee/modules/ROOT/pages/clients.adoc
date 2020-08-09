@@ -6,7 +6,7 @@
 
 == Local Client (embedded container)
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 Properties p = new Properties();
 p.put("java.naming.factory.initial", "org.apache.openejb.client.LocalInitialContextFactory");
@@ -38,7 +38,7 @@ MyApp {
 
 === Code
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 Properties p = new Properties();
 p.put("java.naming.factory.initial", "org.apache.openejb.client.LocalInitialContextFactory");
@@ -52,7 +52,7 @@ MyBean myBean = (MyBean) ctx.lookup("MyBeanRemote");
 
 == Remote Client (openejb standalone)
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 Properties p = new Properties();
 p.put("java.naming.factory.initial", "org.apache.openejb.client.RemoteInitialContextFactory");
@@ -68,7 +68,7 @@ MyBean myBean = (MyBean) ctx.lookup("MyBeanRemote");
 
 == Remote Client with HTTP (openejb standalone)
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 Properties p = new Properties();
 p.put("java.naming.factory.initial", "org.apache.openejb.client.RemoteInitialContextFactory");
@@ -84,7 +84,7 @@ MyBean myBean = (MyBean) ctx.lookup("MyBeanRemote");
 
 == Remote Client with HTTP (in TomEE)
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 Properties p = new Properties();
 p.put("java.naming.factory.initial", "org.apache.openejb.client.RemoteInitialContextFactory");

@@ -6,11 +6,11 @@
 
 This page shows the correct usage of the security related annotations:
 
-* javax.annotation.security.RolesAllowed
-* javax.annotation.security.PermitAll
-* javax.annotation.security.DenyAll
-* javax.annotation.security.RunAs
-* javax.annotation.security.DeclareRoles
+* {ee-prefix}.annotation.security.RolesAllowed
+* {ee-prefix}.annotation.security.PermitAll
+* {ee-prefix}.annotation.security.DenyAll
+* {ee-prefix}.annotation.security.RunAs
+* {ee-prefix}.annotation.security.DeclareRoles
 
 == Basic idea
 
@@ -25,7 +25,7 @@ Allow anyone logged in or not to invoke 'svnCheckout'.
 
 These three examples are all equivalent.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 @Stateless
 public class OpenSourceProjectBean implements Project {
@@ -63,7 +63,7 @@ public class OpenSourceProjectBean implements Project {
 Restrict the 'svnCommit' method to only individuals logged in and part of the "committer" role.
 Note that more than one role can be listed.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 @Stateless
 @DeclareRoles({"committer"})
@@ -87,7 +87,7 @@ public class OpenSourceProjectBean implements Project {
 
 You need to update the @DeclareRoles when referencing roles via isCallerInRole(roleName).
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 @Stateless
 @DeclareRoles({"committer", "contributor"})
@@ -112,7 +112,7 @@ public class OpenSourceProjectBean implements Project {
 
 Placing the annotation at the class level changes the default of PermitAll
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 @Stateless
 @DeclareRoles({"committer"})
@@ -140,7 +140,7 @@ public class OpenSourceProjectBean implements Project {
 Security annotations can be used at the class level and method level at the same time.
 These rules do not stack, so marking 'submitPatch' overrides the default of "committers".
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 @Stateless
 @DeclareRoles({"committer", "contributor"})
@@ -169,7 +169,7 @@ public class OpenSourceProjectBean implements Project {
 
 When annotating a bean class with @RolesAllowed, the @PermitAll annotation becomes very useful on individual methods to open them back up again.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 @Stateless
 @DeclareRoles({"committer", "contributor"})
@@ -201,7 +201,7 @@ public class OpenSourceProjectBean implements Project {
 The @DenyAll annotation can be used to restrict business interface access from anyone, logged in or not.
 The method is still invokable from within the bean class itself.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 @Stateless
 @DeclareRoles({"committer", "contributor"})
@@ -240,7 +240,7 @@ Generally, security restrictions cannot be made on AroundInvoke methods and most
 
 The following usages of @RolesAllowed have no effect.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 @Stateful
 @DecalredRoles({"committer"})

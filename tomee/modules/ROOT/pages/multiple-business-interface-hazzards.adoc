@@ -8,7 +8,7 @@
 
 When two java interfaces are implemented by a proxy and those two interfaces declare the _same method_ but with _different throws clauses_ some very nasty side effects happen, namely you loose the ability to throw any checked exceptions that are not in the throws clause of both methods.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 import junit.framework.TestCase;
 
@@ -103,7 +103,7 @@ This one is less of a runtime problem as doing this will cause things to fail up
 When two java interfaces are implemented by a proxy and those two interfaces declare the _same method_ but with _different return types_ the VM proxy code will refuse to create a proxy at all.
 Take this code example:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 import junit.framework.TestCase;
 

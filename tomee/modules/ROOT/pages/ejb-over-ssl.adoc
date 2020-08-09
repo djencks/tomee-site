@@ -20,7 +20,7 @@ link:http://tomcat.apache.org/tomcat-7.0-doc/ssl-howto.html
 
 Once that is done and the `tomee` webapp can be accessed with `https`, an EJB client can invoke over `https` using the following `InitialContext` setup:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 Properties p = new Properties();
 p.put("java.naming.factory.initial", "org.apache.openejb.client.RemoteInitialContextFactory");
@@ -63,7 +63,7 @@ discovery   = ejb:ejbds://{bind}:{port}
 
 To access this service from a remote client, the `InitialContext` would be setup like the following:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 Properties p = new Properties();
 p.put("java.naming.factory.initial", "org.apache.openejb.client.RemoteInitialContextFactory");
@@ -114,4 +114,4 @@ On the client, you must supply a property:
 
 The final piece is to make sure your server has available a private certificate that the the client can trust.
 This can be certificate from an authority or a self signed certificate.
-The javax.net.ssl.trustStore and javax.net.ssl.keyStore JVM properties link:http://fusesource.com/docs/broker/5.3/security/SSL-SysProps.html[are used to set this up.]
+The {ee-prefix}.net.ssl.trustStore and {ee-prefix}.net.ssl.keyStore JVM properties link:http://fusesource.com/docs/broker/5.3/security/SSL-SysProps.html[are used to set this up.]

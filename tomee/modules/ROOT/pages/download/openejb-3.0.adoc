@@ -212,7 +212,7 @@ In a simple 1, 2, 3 step of 1) add OpenEJB to your classpath, 2) add a META-INF/
 Configuration can be done through an openejb.xml file or can be encapsulated 100% in the test case through the parameters passed to the InitialContext.
 For example, to create a JTA DataSource for JPA usage, you can simply:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 Properties p = new Properties();
 p.put(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.LocalInitialContextFactory");
@@ -275,7 +275,7 @@ This is just plain silly as the conversion of Strings to other basic data types 
 OpenEJB 3.0 supports injection of any data type for which you can supply a JavaBeans PropertyEditor.
 We include several built-in PropertyEditors already such as Date, InetAddress, Class, File, URL, URI, Map, List, any java.lang.Enum and more.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 import java.net.URI;
 import java.io.File;
@@ -297,7 +297,7 @@ Support for Java Generics makes the dependency injection that much more powerful
 Declare an injectable field that leverages Java Generics and we will use that information to boost your injection to the next level.
 For example:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 import java.net.URI;
 import java.io.File;
@@ -316,7 +316,7 @@ public class MyBean {
 You can easily add your own types or override the way built-in types are handled and claim dependency injection as your own making it a critical part of your architecture.
 For example, let's register a custom editor for our Pickup enum.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 import java.beans.PropertyEditorManager;
 
@@ -336,7 +336,7 @@ public enum Pickup {
 
 Reference as follows
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 @Stateful
 public class StratocasterImpl implements Stratocaster {

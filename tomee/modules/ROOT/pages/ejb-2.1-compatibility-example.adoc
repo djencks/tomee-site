@@ -8,8 +8,8 @@ In EJB 3.0, your bean's interfaces are not required to extend any specific set o
 These are referred to in EJB spec lingo as _Business Interfaces_.
 
 In EJB 2.1 and prior, however, there were some pretty strict requirements on interfaces.
-Namely, you had to have a "home" interface that extended javax.ejb.EJBHome or javax.ejb.EJBLocalHome.
-This interface served as a sort of factory to create your bean's interface which itself had to extend either javax.ejb.EJBObject or javax.ejb.EJBLocalObject.
+Namely, you had to have a "home" interface that extended {ee-prefix}.ejb.EJBHome or {ee-prefix}.ejb.EJBLocalHome.
+This interface served as a sort of factory to create your bean's interface which itself had to extend either {ee-prefix}.ejb.EJBObject or {ee-prefix}.ejb.EJBLocalObject.
 These legacy styles of interfaces in EJB spec lingo are referred to as _Component Interfaces_.
 
 In this example we see how one can support both business interfaces and component interfaces on the same bean.
@@ -20,17 +20,17 @@ Source available in http://svn.apache.org/repos/asf/tomee/tomee/trunk/examples/c
 
 === FriendlyPerson
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 package org.superbiz;
 
-import javax.ejb.Init;
-import javax.ejb.Local;
-import javax.ejb.LocalHome;
-import javax.ejb.Remote;
-import javax.ejb.RemoteHome;
-import javax.ejb.Remove;
-import javax.ejb.Stateful;
+import {ee-prefix}.ejb.Init;
+import {ee-prefix}.ejb.Local;
+import {ee-prefix}.ejb.LocalHome;
+import {ee-prefix}.ejb.Remote;
+import {ee-prefix}.ejb.RemoteHome;
+import {ee-prefix}.ejb.Remove;
+import {ee-prefix}.ejb.Stateful;
 import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Locale;
@@ -38,7 +38,7 @@ import java.util.Properties;
 
 /**
  * This is an EJB 3 style pojo stateful session bean
- * it does not need to implement javax.ejb.SessionBean
+ * it does not need to implement {ee-prefix}.ejb.SessionBean
  *
  * @author <a href="mailto:david.blevins@visi.com">David Blevins</a>
  */
@@ -71,10 +71,10 @@ public class FriendlyPerson implements FriendlyPersonLocal, FriendlyPersonRemote
         languagePreferences = new Properties();
         defaultLanguage = Locale.getDefault().getLanguage();
 
-        addGreeting("en", "Hello {0}!");
-        addGreeting("es", "Hola {0}!");
-        addGreeting("fr", "Bonjour {0}!");
-        addGreeting("pl", "Witaj {0}!");
+        addGreeting("en", "Hello \{0}!");
+        addGreeting("es", "Hola \{0}!");
+        addGreeting("fr", "Bonjour \{0}!");
+        addGreeting("pl", "Witaj \{0}!");
     }
 
     /**
@@ -114,7 +114,7 @@ public class FriendlyPerson implements FriendlyPersonLocal, FriendlyPersonRemote
             return "Sorry, I don't speak " + locale.getDisplayLanguage() + ".";
         }
 
-        return greeting.format(new Object[]{friend});
+        return greeting.format(new Object[]\{friend});
     }
 
     public void addGreeting(String language, String message) {
@@ -137,14 +137,14 @@ public class FriendlyPerson implements FriendlyPersonLocal, FriendlyPersonRemote
 
 === FriendlyPersonEjbHome
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 package org.superbiz;
 
 //START SNIPPET: code
 
-import javax.ejb.CreateException;
-import javax.ejb.EJBHome;
+import {ee-prefix}.ejb.CreateException;
+import {ee-prefix}.ejb.EJBHome;
 import java.rmi.RemoteException;
 
 public interface FriendlyPersonEjbHome extends EJBHome {
@@ -154,14 +154,14 @@ public interface FriendlyPersonEjbHome extends EJBHome {
 
 === FriendlyPersonEjbLocalHome
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 package org.superbiz;
 
 //START SNIPPET: code
 
-import javax.ejb.CreateException;
-import javax.ejb.EJBLocalHome;
+import {ee-prefix}.ejb.CreateException;
+import {ee-prefix}.ejb.EJBLocalHome;
 import java.rmi.RemoteException;
 
 public interface FriendlyPersonEjbLocalHome extends EJBLocalHome {
@@ -171,11 +171,11 @@ public interface FriendlyPersonEjbLocalHome extends EJBLocalHome {
 
 === FriendlyPersonEjbLocalObject
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 package org.superbiz;
 
-import javax.ejb.EJBLocalObject;
+import {ee-prefix}.ejb.EJBLocalObject;
 
 public interface FriendlyPersonEjbLocalObject extends EJBLocalObject {
     String greet(String friend);
@@ -194,13 +194,13 @@ public interface FriendlyPersonEjbLocalObject extends EJBLocalObject {
 
 === FriendlyPersonEjbObject
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 package org.superbiz;
 
 //START SNIPPET: code
 
-import javax.ejb.EJBObject;
+import {ee-prefix}.ejb.EJBObject;
 import java.rmi.RemoteException;
 
 public interface FriendlyPersonEjbObject extends EJBObject {
@@ -220,13 +220,13 @@ public interface FriendlyPersonEjbObject extends EJBObject {
 
 === FriendlyPersonLocal
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 package org.superbiz;
 
 //START SNIPPET: code
 
-import javax.ejb.Local;
+import {ee-prefix}.ejb.Local;
 
 @Local
 public interface FriendlyPersonLocal {
@@ -246,11 +246,11 @@ public interface FriendlyPersonLocal {
 
 === FriendlyPersonRemote
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 package org.superbiz;
 
-import javax.ejb.Remote;
+import {ee-prefix}.ejb.Remote;
 
 //START SNIPPET: code
 @Remote
@@ -271,14 +271,14 @@ public interface FriendlyPersonRemote {
 
 === FriendlyPersonTest
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 package org.superbiz;
 
 import junit.framework.TestCase;
 
-import javax.ejb.embeddable.EJBContainer;
-import javax.naming.Context;
+import {ee-prefix}.ejb.embeddable.EJBContainer;
+import {ee-prefix}.naming.Context;
 import java.util.Locale;
 
 /**
@@ -324,7 +324,7 @@ public class FriendlyPersonTest extends TestCase {
         assertEquals("Sorry, I don't speak " + new Locale("pt").getDisplayLanguage() + ".", friendlyPerson.greet("pt", "David"));
 
         // Ok, well I've been meaning to learn, so...
-        friendlyPerson.addGreeting("pt", "Ola {0}!");
+        friendlyPerson.addGreeting("pt", "Ola \{0}!");
 
         assertEquals("Ola David!", friendlyPerson.greet("pt", "David"));
     }
@@ -361,7 +361,7 @@ public class FriendlyPersonTest extends TestCase {
         assertEquals("Sorry, I don't speak " + new Locale("pt").getDisplayLanguage() + ".", friendlyPerson.greet("pt", "David"));
 
         // Ok, well I've been meaning to learn, so...
-        friendlyPerson.addGreeting("pt", "Ola {0}!");
+        friendlyPerson.addGreeting("pt", "Ola \{0}!");
 
         assertEquals("Ola David!", friendlyPerson.greet("pt", "David"));
     }
@@ -397,7 +397,7 @@ public class FriendlyPersonTest extends TestCase {
         assertEquals("Sorry, I don't speak " + new Locale("pt").getDisplayLanguage() + ".", friendlyPerson.greet("pt", "David"));
 
         // Ok, well I've been meaning to learn, so...
-        friendlyPerson.addGreeting("pt", "Ola {0}!");
+        friendlyPerson.addGreeting("pt", "Ola \{0}!");
 
         assertEquals("Ola David!", friendlyPerson.greet("pt", "David"));
     }
@@ -433,7 +433,7 @@ public class FriendlyPersonTest extends TestCase {
         assertEquals("Sorry, I don't speak " + new Locale("pt").getDisplayLanguage() + ".", friendlyPerson.greet("pt", "David"));
 
         // Ok, well I've been meaning to learn, so...
-        friendlyPerson.addGreeting("pt", "Ola {0}!");
+        friendlyPerson.addGreeting("pt", "Ola \{0}!");
 
         assertEquals("Ola David!", friendlyPerson.greet("pt", "David"));
     }
@@ -453,7 +453,7 @@ Apache OpenEJB 4.0.0-beta-1    build: 20111002-04:06
 http://tomee.apache.org/
 INFO - openejb.home = /Users/dblevins/examples/component-interfaces
 INFO - openejb.base = /Users/dblevins/examples/component-interfaces
-INFO - Using 'javax.ejb.embeddable.EJBContainer=true'
+INFO - Using '{ee-prefix}.ejb.embeddable.EJBContainer=true'
 INFO - Configuring Service(id=Default Security Service, type=SecurityService, provider-id=Default Security Service)
 INFO - Configuring Service(id=Default Transaction Manager, type=TransactionManager, provider-id=Default Transaction Manager)
 INFO - Found EjbModule in classpath: /Users/dblevins/examples/component-interfaces/target/classes

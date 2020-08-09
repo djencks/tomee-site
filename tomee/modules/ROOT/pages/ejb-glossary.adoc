@@ -1,5 +1,5 @@
 = EJB Glossary
 
-* _JPA_ - javax.persistence API
-* _component interface_ - refers to the legacy interfaces that extend either javax.ejb.EJBObject or javax.ejb.EJBLocalObject
-* _business interface_ - refers to the new style of local or remote interfaces that does not extend either javax.ejb.EJBObject or javax.ejb.EJBLocalObject
+* _JPA_ - {ee-prefix}.persistence API
+* _component interface_ - refers to the legacy interfaces that extend either {ee-prefix}.ejb.EJBObject or {ee-prefix}.ejb.EJBLocalObject
+* _business interface_ - refers to the new style of local or remote interfaces that does not extend either {ee-prefix}.ejb.EJBObject or {ee-prefix}.ejb.EJBLocalObject

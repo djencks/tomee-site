@@ -8,13 +8,13 @@
 
 Usable by EJB, Interceptor, Servlet, Filter, or Listener
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 package org.superbiz.refs;
 
-import javax.ejb.EJB;
-import javax.ejb.Stateless;
-import javax.naming.InitialContext;
+import {ee-prefix}.ejb.EJB;
+import {ee-prefix}.ejb.Stateless;
+import {ee-prefix}.naming.InitialContext;
 
 @Stateless
 @EJB(name = "myFooEjb", beanInterface = FooLocal.class)

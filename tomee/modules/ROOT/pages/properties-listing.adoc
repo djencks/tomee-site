@@ -34,22 +34,22 @@
 |configure the hook called when closing the initial context. Useful when starting OpenEJB from a new InitialContext([properties]) instantiation. By default it simply logs out the logged user if it exists. DESTROY means clean the container.
 
 
-|javax.persistence.provider
+|{ee-prefix}.persistence.provider
 |string
 |override the JPA provider value
 
 
-|javax.persistence.transactionType
+|{ee-prefix}.persistence.transactionType
 |string
 |override the transaction type for persistence contexts
 
 
-|javax.persistence.jtaDataSource
+|{ee-prefix}.persistence.jtaDataSource
 |string
 |override the JTA datasource value for persistence contexts
 
 
-|javax.persistence.nonJtaDataSource
+|{ee-prefix}.persistence.nonJtaDataSource
 |string
 |override the non JTA datasource value for persistence contexts
 
@@ -350,7 +350,7 @@ The class to get the client identity.
 
 |openejb.jsessionid-support
 |bool
-|remove URL from session tracking modes for this context (see javax.servlet.SessionTrackingMode)
+|remove URL from session tracking modes for this context (see {ee-prefix}.servlet.SessionTrackingMode)
 
 
 |openejb.myfaces.disable-default-values

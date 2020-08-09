@@ -11,7 +11,7 @@ Both client-side and server-side request logging is supported and includes vario
 On the client requests/responses are logged on java.util.logging `FINEST` level in category `OpenEJB.client`.
 The code is similar to the following:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 final long time = System.nanoTime() - start;
 final String message = String.format("Invocation %sns - %s - Request(%s) - Response(%s)", time, conn.getURI(), req, res);
@@ -25,7 +25,7 @@ Note that the check to see if FINEST is enabled is cached for performance reason
 On the server requests/responses are logged in java.util.logging `FINE` in category``"OpenEJB.server.remote.ejb``.
 The code for that is similar to this:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 logger.fine("EJB REQUEST: " + req + " -- RESPONSE: " + res);
 ----
@@ -58,39 +58,39 @@ The time tracked is purely *bean time* which includes  interceptors, decorators 
 This information is available in JMX.
 A sample JMX ObjectName for a `CounterBean` will look like this:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 openejb.management:J2EEServer=openejb,J2EEApplication=null,EJBModule=StatsModule,StatelessSessionBean=CounterBean,j2eeType=Invocations,name=CounterBean
 ----
 
 All beans have the following MBean attributes, listed here in shorthand:
 
-* javax.management.MBeanAttributeInfo[description=, name=InvocationCount, type=long, read-only, descriptor={}]
-* javax.management.MBeanAttributeInfo[description=, name=InvocationTime, type=long, read-only, descriptor={}]
-* javax.management.MBeanAttributeInfo[description=, name=MonitoredMethods, type=long, read-only, descriptor={}]
-* javax.management.MBeanOperationInfo[description=, name=FilterAttributes, returnType=void, signature=[javax.management.MBeanParameterInfo[description="", name=excludeRegex, type=java.lang.String, descriptor={}], javax.management.MBeanParameterInfo[description="", name=includeRegex, type=java.lang.String, descriptor={}]], impact=unknown, descriptor={}]
+* {ee-prefix}.management.MBeanAttributeInfo[description=, name=InvocationCount, type=long, read-only, descriptor={}]
+* {ee-prefix}.management.MBeanAttributeInfo[description=, name=InvocationTime, type=long, read-only, descriptor={}]
+* {ee-prefix}.management.MBeanAttributeInfo[description=, name=MonitoredMethods, type=long, read-only, descriptor={}]
+* {ee-prefix}.management.MBeanOperationInfo[description=, name=FilterAttributes, returnType=void, signature=[{ee-prefix}.management.MBeanParameterInfo[description="", name=excludeRegex, type=java.lang.String, descriptor={}], {ee-prefix}.management.MBeanParameterInfo[description="", name=includeRegex, type=java.lang.String, descriptor={}]], impact=unknown, descriptor={}]
 
 Then for every method there will be these attributes and operations:
 
-* javax.management.MBeanAttributeInfo[description=, name=someMethod().Count, type=long, read-only, descriptor={}]
-* javax.management.MBeanAttributeInfo[description=, name=someMethod().GeometricMean, type=double, read-only, descriptor={}]
-* javax.management.MBeanAttributeInfo[description=, name=someMethod().Kurtosis, type=double, read-only, descriptor={}]
-* javax.management.MBeanAttributeInfo[description=, name=someMethod().Max, type=double, read-only, descriptor={}]
-* javax.management.MBeanAttributeInfo[description=, name=someMethod().Mean, type=double, read-only, descriptor={}]
-* javax.management.MBeanAttributeInfo[description=, name=someMethod().Min, type=double, read-only, descriptor={}]
-* javax.management.MBeanAttributeInfo[description=, name=someMethod().Percentile01, type=double, read-only, descriptor={}]
-* javax.management.MBeanAttributeInfo[description=, name=someMethod().Percentile10, type=double, read-only, descriptor={}]
-* javax.management.MBeanAttributeInfo[description=, name=someMethod().Percentile25, type=double, read-only, descriptor={}]
-* javax.management.MBeanAttributeInfo[description=, name=someMethod().Percentile50, type=double, read-only, descriptor={}]
-* javax.management.MBeanAttributeInfo[description=, name=someMethod().Percentile75, type=double, read-only, descriptor={}]
-* javax.management.MBeanAttributeInfo[description=, name=someMethod().Percentile90, type=double, read-only, descriptor={}]
-* javax.management.MBeanAttributeInfo[description=, name=someMethod().Percentile99, type=double, read-only, descriptor={}]
-* javax.management.MBeanAttributeInfo[description=, name=someMethod().SampleSize, type=int, read-only, descriptor={}]
-* javax.management.MBeanAttributeInfo[description=, name=someMethod().Skewness, type=double, read-only, descriptor={}]
-* javax.management.MBeanAttributeInfo[description=, name=someMethod().StandardDeviation, type=double, read-only, descriptor={}]
-* javax.management.MBeanAttributeInfo[description=, name=someMethod().Sum, type=double, read-only, descriptor={}]
-* javax.management.MBeanAttributeInfo[description=, name=someMethod().Sumsq, type=double, read-only, descriptor={}]
-* javax.management.MBeanAttributeInfo[description=, name=someMethod().Variance, type=double, read-only, descriptor={}]
-* javax.management.MBeanOperationInfo[description=, name=someMethod().setSampleSize, returnType=void, signature=[javax.management.MBeanParameterInfo[description=, name=p1, type=int, descriptor={}]], impact=unknown, descriptor={}]
-* javax.management.MBeanOperationInfo[description=, name=someMethod().sortedValues, returnType=[D, signature=[], impact=unknown, descriptor={}]
-* javax.management.MBeanOperationInfo[description=, name=someMethod().values, returnType=[D, signature=[], impact=unknown, descriptor={}]
+* {ee-prefix}.management.MBeanAttributeInfo[description=, name=someMethod().Count, type=long, read-only, descriptor={}]
+* {ee-prefix}.management.MBeanAttributeInfo[description=, name=someMethod().GeometricMean, type=double, read-only, descriptor={}]
+* {ee-prefix}.management.MBeanAttributeInfo[description=, name=someMethod().Kurtosis, type=double, read-only, descriptor={}]
+* {ee-prefix}.management.MBeanAttributeInfo[description=, name=someMethod().Max, type=double, read-only, descriptor={}]
+* {ee-prefix}.management.MBeanAttributeInfo[description=, name=someMethod().Mean, type=double, read-only, descriptor={}]
+* {ee-prefix}.management.MBeanAttributeInfo[description=, name=someMethod().Min, type=double, read-only, descriptor={}]
+* {ee-prefix}.management.MBeanAttributeInfo[description=, name=someMethod().Percentile01, type=double, read-only, descriptor={}]
+* {ee-prefix}.management.MBeanAttributeInfo[description=, name=someMethod().Percentile10, type=double, read-only, descriptor={}]
+* {ee-prefix}.management.MBeanAttributeInfo[description=, name=someMethod().Percentile25, type=double, read-only, descriptor={}]
+* {ee-prefix}.management.MBeanAttributeInfo[description=, name=someMethod().Percentile50, type=double, read-only, descriptor={}]
+* {ee-prefix}.management.MBeanAttributeInfo[description=, name=someMethod().Percentile75, type=double, read-only, descriptor={}]
+* {ee-prefix}.management.MBeanAttributeInfo[description=, name=someMethod().Percentile90, type=double, read-only, descriptor={}]
+* {ee-prefix}.management.MBeanAttributeInfo[description=, name=someMethod().Percentile99, type=double, read-only, descriptor={}]
+* {ee-prefix}.management.MBeanAttributeInfo[description=, name=someMethod().SampleSize, type=int, read-only, descriptor={}]
+* {ee-prefix}.management.MBeanAttributeInfo[description=, name=someMethod().Skewness, type=double, read-only, descriptor={}]
+* {ee-prefix}.management.MBeanAttributeInfo[description=, name=someMethod().StandardDeviation, type=double, read-only, descriptor={}]
+* {ee-prefix}.management.MBeanAttributeInfo[description=, name=someMethod().Sum, type=double, read-only, descriptor={}]
+* {ee-prefix}.management.MBeanAttributeInfo[description=, name=someMethod().Sumsq, type=double, read-only, descriptor={}]
+* {ee-prefix}.management.MBeanAttributeInfo[description=, name=someMethod().Variance, type=double, read-only, descriptor={}]
+* {ee-prefix}.management.MBeanOperationInfo[description=, name=someMethod().setSampleSize, returnType=void, signature=[{ee-prefix}.management.MBeanParameterInfo[description=, name=p1, type=int, descriptor={}]], impact=unknown, descriptor={}]
+* {ee-prefix}.management.MBeanOperationInfo[description=, name=someMethod().sortedValues, returnType=[D, signature=[], impact=unknown, descriptor={}]
+* {ee-prefix}.management.MBeanOperationInfo[description=, name=someMethod().values, returnType=[D, signature=[], impact=unknown, descriptor={}]

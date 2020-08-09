@@ -28,7 +28,7 @@ All properties in the element body are optional.
 ----
 
 Alternatively, a StatelessContainer can be declared via properties in the `<tomee-home>/conf/system.properties` file or via Java VirtualMachine `-D` properties.
-The properties can also be used when embedding TomEE via the `javax.ejb.embeddable.EJBContainer` API or `InitialContext`
+The properties can also be used when embedding TomEE via the `{ee-prefix}.ejb.embeddable.EJBContainer` API or `InitialContext`
 
 [source,properties]
 ----
@@ -209,7 +209,7 @@ After the timeout is reached, if an instance in the pool cannot be obtained, the
 Usable time units: nanoseconds, microsecons, milliseconds, seconds, minutes, hours, days.
 Or any combination such as "1 hour and 27 minutes and 10 seconds"
 
-Any usage of the `javax.ejb.AccessTimeout` annotation will override this setting for the bean or method where the annotation is used.
+Any usage of the `{ee-prefix}.ejb.AccessTimeout` annotation will override this setting for the bean or method where the annotation is used.
 
 == callbackThreads
 
@@ -274,7 +274,7 @@ To protect against this sudden drop scenario and provide a more gradual expirati
 The `MaxAgeOffset` is not the final value of the offset, but rather it is used in creating the offset and allows the spreading to push the initial ages into the future or into the past.
 The pool is filled at startup as follows:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 for (int i = 0; i < poolMin; i++) {
     long ageOffset = (maxAge / poolMin * i * maxAgeOffset) % maxAge;
@@ -343,11 +343,11 @@ Instances from the minimum side of the pool are always replaced when they are fl
 A bean may flush its pool by casting the `SessionContext` to `Flushable` and calling `flush()`.
 See `SweepInterval` for details on how flush is performed.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
-import javax.annotation.Resource;
-import javax.ejb.SessionContext;
-import javax.ejb.Stateless;
+import {ee-prefix}.annotation.Resource;
+import {ee-prefix}.ejb.SessionContext;
+import {ee-prefix}.ejb.Stateless;
 import java.io.Flushable;
 import java.io.IOException;
 

@@ -27,7 +27,7 @@ Spaces are also optional between the number and the time unit, which can be nice
 
 Abbreviations are accepted as follows:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
   if (u.equalsIgnoreCase("NANOSECONDS")) return TimeUnit.NANOSECONDS;
   if (u.equalsIgnoreCase("NANOSECOND")) return TimeUnit.NANOSECONDS;

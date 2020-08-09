@@ -6,9 +6,9 @@
 
 _Also see xref:{common-vc}::testing-transactions-example.adoc[Testing Transactions]  for an example of how to use and test EJB transaction attributes_
 
-The _javax.ejb.TransactionAttribute_ annotation (@TransactionAttribute) can be applied to a bean class or it's methods.
+The _{ee-prefix}.ejb.TransactionAttribute_ annotation (@TransactionAttribute) can be applied to a bean class or it's methods.
 
-Usage of the @TransactionAttribute requires you to specify one of six different transaction attribute types defined via the javax.ejb.TransactionAttributeType enum.
+Usage of the @TransactionAttribute requires you to specify one of six different transaction attribute types defined via the {ee-prefix}.ejb.TransactionAttributeType enum.
 
 * TransactionAttributeType._MANDATORY_
 * TransactionAttributeType._REQUIRED_
@@ -92,7 +92,7 @@ The container will do nothing to change that state.
 
 === On Methods
 
-[source,java]
+[source,java,subs=+attributes]
 ----
     @Stateless
     public static class MyBean implements MyBusinessInterface {
@@ -113,7 +113,7 @@ The container will do nothing to change that state.
 
 === On Classes
 
-[source,java]
+[source,java,subs=+attributes]
 ----
     @Stateless
     @TransactionAttribute(TransactionAttributeType.MANDATORY)
@@ -133,7 +133,7 @@ The container will do nothing to change that state.
 
 === Mixed on classes and methods
 
-[source,java]
+[source,java,subs=+attributes]
 ----
     @Stateless
     @TransactionAttribute(TransactionAttributeType.SUPPORTS)
@@ -165,7 +165,7 @@ Generally, transaction annotationss cannot be made on AroundInvoke methods and m
 
 The following usages of @TransactionAttribute have no effect.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
     @Stateful
     public class MyStatefulBean implements	MyBusinessInterface  {

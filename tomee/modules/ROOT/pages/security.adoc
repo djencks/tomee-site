@@ -12,9 +12,9 @@ We currently have two authentication mechanisms to choose from:
 * _PropertiesLoginModule_ (a basic text file based login that looks up users and groups from the specified properties files)
 * _SQLLoginModule_ (database based login that looks up users and groups in a database through SQL queries)
 
-To make your program authenticate itself to the server, simply construct your InitialContext with the standard javax.naming.Context properties for user/pass info, which is:
+To make your program authenticate itself to the server, simply construct your InitialContext with the standard {ee-prefix}.naming.Context properties for user/pass info, which is:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
  Properties props = new Properties();
  props.setProperty(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.RemoteInitialContextFactory");

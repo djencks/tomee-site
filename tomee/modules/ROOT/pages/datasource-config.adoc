@@ -10,7 +10,7 @@ All properties in the element body are optional.
 
 [source,xml]
 ----
-<Resource id="myDataSource" type="javax.sql.DataSource">
+<Resource id="myDataSource" type="{ee-prefix}.sql.DataSource">
     accessToUnderlyingConnectionAllowed = false
     alternateUsernameAllowed = false
     connectionProperties =
@@ -43,11 +43,11 @@ All properties in the element body are optional.
 ----
 
 Alternatively, a DataSource can be declared via properties in the `<tomee-home>/conf/system.properties` file or via Java VirtualMachine `-D` properties.
-The properties can also be used when embedding TomEE via the `javax.ejb.embeddable.EJBContainer` API or `InitialContext`
+The properties can also be used when embedding TomEE via the `{ee-prefix}.ejb.embeddable.EJBContainer` API or `InitialContext`
 
 [source,properties]
 ----
-myDataSource = new://Resource?type=javax.sql.DataSource
+myDataSource = new://Resource?type={ee-prefix}.sql.DataSource
 myDataSource.accessToUnderlyingConnectionAllowed = false
 myDataSource.alternateUsernameAllowed = false
 myDataSource.connectionProperties =
@@ -284,7 +284,7 @@ If specified, this query MUST be an SQL SELECT statement that returns at least o
 
 If true the raw physical connection to the database can be accessed using the following construct:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 Connection conn = ds.getConnection();
 Connection rawConn = ((DelegatingConnection) conn).getInnermostDelegate();
@@ -347,7 +347,7 @@ NOTE - Some drivers have limits on the number of open statements, so make sure t
 
 If true, a statement pool is created for each Connection and PreparedStatements created by one of the following methods are pooled:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 public PreparedStatement prepareStatement(String sql);
 public PreparedStatement prepareStatement(String sql, int resultSetType, int resultSetConcurrency)

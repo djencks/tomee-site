@@ -27,7 +27,7 @@ A given module may have as many classes annotated with `@LocalClient` as it wish
 
 The injection occurs via acquiring a LocalInitialContext via the LocalInitialContextFactory and calling _bind("inject", instance)_ passing in the instantiated local client object:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 @LocalClient
 public class MoviesTest extends TestCase {
@@ -61,7 +61,7 @@ If you see the following error message and are absolutely sure the module contai
 
 [source,console]
 ----
- javax.naming.NamingException: Unable to find injection meta-data for org.superbiz.MyClient.
+ {ee-prefix}.naming.NamingException: Unable to find injection meta-data for org.superbiz.MyClient.
 Ensure that class was annotated with @org.apache.openejb.api.LocalClient and was successfully discovered and deployed.
 ----
 

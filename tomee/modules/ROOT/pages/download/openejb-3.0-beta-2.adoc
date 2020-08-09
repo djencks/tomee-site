@@ -127,7 +127,7 @@ This is just plain silly as the conversion of Strings to other basic data types 
 OpenEJB 3.0 supports injection of any data type for which you can supply a JavaBeans PropertyEditor.
 We include several built-in PropertyEditors already such as Date, InetAddress, Class, File, URL, URI, Map, List and more.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 import java.net.URI;
 import java.io.File;

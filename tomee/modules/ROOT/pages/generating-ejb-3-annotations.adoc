@@ -41,7 +41,7 @@ Select or deselect the other options as appropriate, and select 'Next'.
 
 Options:
 
-* Alter SessionBean interfaces - This option makes your session beans implement your remote / local interfaces as opposed to javax.ejb.SessionBean, and stops your remote / local interfaces extending javax.ejb.EJBObject.
+* Alter SessionBean interfaces - This option makes your session beans implement your remote / local interfaces as opposed to {ee-prefix}.ejb.SessionBean, and stops your remote / local interfaces extending {ee-prefix}.ejb.EJBObject.
 * Add @Remote and @RemoteHome annotations - This adds @Remote and @RemoteHome annotations appropriately
 * Convert entity beans to POJOs - This options converts abstract CMP classes to POJOs generating simple getters and setters.
 

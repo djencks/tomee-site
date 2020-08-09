@@ -6,7 +6,7 @@
 
 
 
-The *<Resource>* element is used to configure a *javax.sql.DataSource*.
+The *<Resource>* element is used to configure a *{ee-prefix}.sql.DataSource*.
 It is also used to configure other resources like Timers, Topics, Queues.
 We will see some examples of using <Resource> to configure a DataSource.
 
@@ -14,21 +14,21 @@ The <Resource> element is designed after @Resource annotation and has similar at
 
 For example, this annotation in your bean:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
-@Resource(name = "myDerbyDatasource", type = javax.sql.DataSource.class)
+@Resource(name = "myDerbyDatasource", type = {ee-prefix}.sql.DataSource.class)
 ----
 
 Would map to a Resource declared in your openejb.xml as follows:
 
 [source,xml]
 ----
-<Resource id="myDerbyDatasource" type="javax.sql.DataSource">
+<Resource id="myDerbyDatasource" type="{ee-prefix}.sql.DataSource">
  . . . .
 <Resource>
 ----
 
-Note that in the xml element, the _type_ value of _javax.sql.DataSource_ can abbreviated to just _DataSource_ as follows:
+Note that in the xml element, the _type_ value of _{ee-prefix}.sql.DataSource_ can abbreviated to just _DataSource_ as follows:
 
 [source,xml]
 ----
@@ -119,7 +119,7 @@ There are several possible ways to refer to it, as follows.
 
 _BY matching variable name to resource name_
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 @Stateless
 public class FooBean {
@@ -129,7 +129,7 @@ public class FooBean {
 
 _OR BY matching name_
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 @Stateless
 public class FooBean {
@@ -140,9 +140,9 @@ public class FooBean {
 
 _OR BY JNDI lookup_
 
-[source,java]
+[source,java,subs=+attributes]
 ----
-@Resource(name="myDerbyDatabase", type=javax.sql.DataSource.class)
+@Resource(name="myDerbyDatabase", type={ee-prefix}.sql.DataSource.class)
 @Stateless
 public class FooBean {
 
@@ -165,7 +165,7 @@ _OR_
 ----
 <resource-ref>
   <res-ref-name>myDerbyDatabase</res-ref-name>
-  <res-type>javax.sql.DataSource</res-type>
+  <res-type>{ee-prefix}.sql.DataSource</res-type>
 </resource-ref>
 ----
 
@@ -175,7 +175,7 @@ _OR_
 ----
 <resource-ref>
    <res-ref-name>jdbc/myDerbyDatabase</res-ref-name>
-   <res-type>javax.sql.DataSource</res-type>
+   <res-type>{ee-prefix}.sql.DataSource</res-type>
 </resource-ref>
 ----
 
@@ -185,7 +185,7 @@ _OR_
 ----
 <resource-ref>
    <res-ref-name>someOtherName</res-ref-name>
-   <res-type>javax.sql.DataSource</res-type>
+   <res-type>{ee-prefix}.sql.DataSource</res-type>
    <mapped-name>myDerbyDatabase</mapped-name>
 </resource-ref>
 ----

@@ -72,7 +72,7 @@ The public, global JNDI namespace contains all beans and resources in the contai
 Each bean is added to the public, global namespace using it's deployment id as its JNDI lookup.
 For example, if a bean had a deployment-id of "/my/bean/foo", a non-bean client could lookup that bean as follows.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 ...
 Object bean = initialContext.lookup("/my/bean/Foo");
@@ -80,7 +80,7 @@ Object bean = initialContext.lookup("/my/bean/Foo");
 ----
 
 If a bean in the container system made the above JNDI call, the Local Server would see the bean's identity (deployment id) hidden in the Thread, go get the bean's private JNDI namespace and finish the lookup on that.
-Since all names in bean's JNDI namespace are required start with "java:comp/env", the lookup would fail and the bean would receive a javax.naming.NameNotFoundException.
+Since all names in bean's JNDI namespace are required start with "java:comp/env", the lookup would fail and the bean would receive a {ee-prefix}.naming.NameNotFoundException.
 
 In short...
 
@@ -107,7 +107,7 @@ Just as in the Local Server, the names in this namespace consist of the deployme
 Just as before, clients can lookup beans from the Remote Server using the bean's deployment id.
 For example, if a bean had a deployment-id of "/my/bean/foo", a client could lookup that bean as follows.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 ...
 Object bean = initialContext.lookup("/my/bean/Foo");
@@ -125,7 +125,7 @@ The beans are exported into OpenORB's naming service by deployment id.
 So, just as with the Local Server and Remote Server, clients can lookup beans using the bean's deployment id.
 OpenORB has a JNDI implementation of their naming service, so lookups can be done just as before.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 ...
 String[] args = ...

@@ -73,7 +73,7 @@ Serializing objects that are currently in a PersistenceContext/Cache will also c
 In some cases objects or collections of objects that become Detached may not have all the data you need.
 This can be because of lazy loading.
 With lazy loading, data isn't pulled from the database and into the PersistenceContext/Cache until it is requested in code.
-In many cases the Collections of persistent objects returned from an javax.persistence.Query.getResultList() call are completely empty until you iterate over them.
+In many cases the Collections of persistent objects returned from an {ee-prefix}.persistence.Query.getResultList() call are completely empty until you iterate over them.
 A side effect of this is that if the Collection becomes Detached before it's been fully read it will be permanently empty and of no use and calling methods on the Detached Collection can cause strange errors and exceptions to be thrown.
 If you wish to Detach a Collection of persistent objects it is always a good idea to iterate over the Collection at least once.
 
@@ -101,12 +101,12 @@ Servlets and EJBs can use RESOURCE_LOCAL persistence units through the EntityMan
 
 And referenced as follows
 
-[source,java]
+[source,java,subs=+attributes]
 ----
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityTransaction;
-import javax.persistence.PersistenceUnit;
+import {ee-prefix}.persistence.EntityManagerFactory;
+import {ee-prefix}.persistence.EntityManager;
+import {ee-prefix}.persistence.EntityTransaction;
+import {ee-prefix}.persistence.PersistenceUnit;
 
 public class MyEjbOrServlet ... {
 
@@ -153,13 +153,13 @@ EJBs can use JTA persistence units through the EntityManager as follows:
 
 And referenced as follows
 
-[source,java]
+[source,java,subs=+attributes]
 ----
-import javax.ejb.Stateless;
-import javax.ejb.TransactionAttribute;
-import javax.ejb.TransactionAttributeType;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+import {ee-prefix}.ejb.Stateless;
+import {ee-prefix}.ejb.TransactionAttribute;
+import {ee-prefix}.ejb.TransactionAttributeType;
+import {ee-prefix}.persistence.EntityManager;
+import {ee-prefix}.persistence.PersistenceContext;
 
 @Stateless
 public class MyEjb implements MyEjbInterface {

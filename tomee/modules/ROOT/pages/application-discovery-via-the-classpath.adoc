@@ -70,7 +70,7 @@ There are a number internal filters that may result in an unexpected exclusion.
 
 If you're having trouble determining if the META-INF/ejb-jar.xml file for your ejb module is in the classpath, a little debug code like this in your test setup will help you see what OpenEJB sees (which may be nothing):
 
-[source,java]
+[source,java,subs=+attributes]
 ----
  Enumeration<URL> ejbJars =
  this.getClass().getClassLoader().getResources("META-INF/ejb-jar.xml");

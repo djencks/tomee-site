@@ -8,14 +8,14 @@
 
 Both lookup and injection of an EntityManager can be configured via the `@PersistenceContext` annotation.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 package org.superbiz;
 
-import javax.persistence.PersistenceContext;
-import javax.persistence.EntityManager;
-import javax.ejb.Stateless;
-import javax.naming.InitialContext;
+import {ee-prefix}.persistence.PersistenceContext;
+import {ee-prefix}.persistence.EntityManager;
+import {ee-prefix}.ejb.Stateless;
+import {ee-prefix}.naming.InitialContext;
 
 @Stateless
 @PersistenceContext(name = "myFooEntityManager", unitName = "foo-unit")

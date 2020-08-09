@@ -7,11 +7,11 @@
 
 How to lookup WebLogic Objects from within a TomEE context:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 Hashtable<String, String> props = new Hashtable<String, String>();
-props.put(javax.naming.Context.INITIAL_CONTEXT_FACTORY, "weblogic.jndi.WLInitialContextFactory");
-props.put(javax.naming.Context.URL_PKG_PREFIXES, "weblogic.jndi.factories");
+props.put({ee-prefix}.naming.Context.INITIAL_CONTEXT_FACTORY, "weblogic.jndi.WLInitialContextFactory");
+props.put({ee-prefix}.naming.Context.URL_PKG_PREFIXES, "weblogic.jndi.factories");
 props.put("java.naming.provider.url", "t3://your.host.name:7023");
 Context ctx = new InitialContext(props);
 

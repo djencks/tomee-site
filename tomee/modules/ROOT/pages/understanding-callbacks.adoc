@@ -11,7 +11,7 @@ The bean or interceptor class may have an AroundInvoke method, its parent class 
 
 So the following is legal.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 public class Plant {
     @AroundInvoke
@@ -49,7 +49,7 @@ The result is that when the "grow" method on AppleLocal (and consequently on App
 What the ejb spec doesn't do such a good job at stating is that there are ways to effectively shut off the callbacks, including AroundInvoke, of a parent class by simply overriding the method.
 We can shut off the "a" around invoke with a slightly different version of Apple as follows:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 @Stateless
 public class Apple extends Fruit implements AppleLocal {
@@ -75,7 +75,7 @@ The result of this is that when the "grow" method on AppleLocal is invoked, the 
 When they say that an AroundInvoke method cannot be a business method, they mean that they cannot be exposed to clients through a local or remote interface.
 The following would be illegal.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 public interface AppleLocal {
     public String grow();

@@ -36,7 +36,7 @@ And this can be done on the command line as follows:
 Or by adding the property to the conf/system.properties file.
 Note that command line overrides win over overrides in the conf/system.properties file.
 
-In an embedded environment, the properties can be added to the Hashtable passed into the javax.naming.InitialContext when using the LocalInitialContextFactory or also to the System.getProperties() object before OpenEJB is embedded (which will be when the first InitialContext is created).
+In an embedded environment, the properties can be added to the Hashtable passed into the {ee-prefix}.naming.InitialContext when using the LocalInitialContextFactory or also to the System.getProperties() object before OpenEJB is embedded (which will be when the first InitialContext is created).
 
 At startup, OpenEJB will find the component with the given id and apply the new property value before constructing the individual component.
 
@@ -76,7 +76,7 @@ Default\ Stateless\ Container.TimeOut=0
 #
 Default\ MDB\ Container.ResourceAdapter=Default JMS Resource Adapter
 Default\ MDB\ Container.InstanceLimit=10
-Default\ MDB\ Container.MessageListenerInterface=javax.jms.MessageListener
+Default\ MDB\ Container.MessageListenerInterface={ee-prefix}.jms.MessageListener
 Default\ MDB\ Container.ActivationSpecClass=org.apache.activemq.ra.ActiveMQActivationSpec
 
 # ConnectionManager(id=Default Local TX ConnectionManager)
@@ -109,7 +109,7 @@ Default\ JDBC\ Database.UserName=sa
 Default\ JDBC\ Database.MaxOpenPreparedStatements=0
 Default\ JDBC\ Database.TestOnBorrow=true
 Default\ JDBC\ Database.PoolPreparedStatements=false
-Default\ JDBC\ Database.ConnectionInterface=javax.sql.DataSource
+Default\ JDBC\ Database.ConnectionInterface={ee-prefix}.sql.DataSource
 Default\ JDBC\ Database.TestOnReturn=false
 Default\ JDBC\ Database.MinEvictableIdleTimeMillis=1800000
 Default\ JDBC\ Database.NumTestsPerEvictionRun=3
@@ -131,7 +131,7 @@ Default\ Unmanaged\ JDBC\ Database.Password=xxxx
 Default\ Unmanaged\ JDBC\ Database.MinEvictableIdleTimeMillis=1800000
 Default\ Unmanaged\ JDBC\ Database.PoolPreparedStatements=false
 Default\ Unmanaged\ JDBC\ Database.MaxOpenPreparedStatements=0
-Default\ Unmanaged\ JDBC\ Database.ConnectionInterface=javax.sql.DataSource
+Default\ Unmanaged\ JDBC\ Database.ConnectionInterface={ee-prefix}.sql.DataSource
 Default\ Unmanaged\ JDBC\ Database.MinIdle=0
 Default\ Unmanaged\ JDBC\ Database.NumTestsPerEvictionRun=3
 Default\ Unmanaged\ JDBC\ Database.TimeBetweenEvictionRunsMillis=-1
@@ -143,8 +143,8 @@ Default\ Unmanaged\ JDBC\ Database.TestWhileIdle=false
 # Resource(id=Default JMS Connection Factory)
 # className: org.apache.activemq.ra.ActiveMQManagedConnectionFactory
 #
-Default\ JMS\ Connection\ Factory.ConnectionInterface=javax.jms.ConnectionFactory, \
-javax.jms.QueueConnectionFactory, javax.jms.TopicConnectionFactory
+Default\ JMS\ Connection\ Factory.ConnectionInterface={ee-prefix}.jms.ConnectionFactory, \
+{ee-prefix}.jms.QueueConnectionFactory, {ee-prefix}.jms.TopicConnectionFactory
 Default\ JMS\ Connection\ Factory.ResourceAdapter=Default JMS Resource Adapter
 
 # SecurityService(id=Default Security Service)

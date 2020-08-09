@@ -42,12 +42,12 @@ Every stateful session bean implementation must be annotated using the annotatio
 | lang=java}
 |===
 
-In EJB 3.0 session beans do not need to implement the javax.ejb.SessionBean interface.
+In EJB 3.0 session beans do not need to implement the {ee-prefix}.ejb.SessionBean interface.
 You can simply annotate it as @Stateful if you want it to be a stateful session bean.
 
 Users of EJB 2.x may notice the bean actually implements the business interfaces!
-In the prior version of EJB implementing the remote interface (which derives from javax.ejb.EJBObject) in your bean was just not allowed.
-Now there is no javax.ejb.EJBObject requirement, so implementing the business interfaces is standard practice for EJB 3.0.
+In the prior version of EJB implementing the remote interface (which derives from {ee-prefix}.ejb.EJBObject) in your bean was just not allowed.
+Now there is no {ee-prefix}.ejb.EJBObject requirement, so implementing the business interfaces is standard practice for EJB 3.0.
 
 
 
@@ -68,8 +68,8 @@ There are no restrictions on the method arguments, return types, or throws claus
 Unless specified otherwise, every interface your bean implements (and it's parent class implements and so on) is considered to be a local business interface.
 You can use the _@Local_ annotation to explicitly state that an interface is a local interface, but this is not required.
 
-You'll notice that in EJB 3.0 the Local Business Interface of a stateless session bean does not need to extend from javax.ejb.EJBLocalObject and does not need a javax.ejb.EJBLocalHome interface as they did in EJB 2.x and prior.
-Per the vocabulary of the EJB spec, interfaces that implement javax.ejb.EJBLocalObject or javax.ejb.EJBLocalHome are considered Component Interfaces and the plain java interface above is considered a Business Interface.
+You'll notice that in EJB 3.0 the Local Business Interface of a stateless session bean does not need to extend from {ee-prefix}.ejb.EJBLocalObject and does not need a {ee-prefix}.ejb.EJBLocalHome interface as they did in EJB 2.x and prior.
+Per the vocabulary of the EJB spec, interfaces that implement {ee-prefix}.ejb.EJBLocalObject or {ee-prefix}.ejb.EJBLocalHome are considered Component Interfaces and the plain java interface above is considered a Business Interface.
 
 
 
@@ -91,7 +91,7 @@ The _values_ passed into a method or returned from a method of a Remote interfac
 It is fine for the method signature to be, for example, "public Object myMethod(Object myParam)" as long as the _value_ passed in and returned implements _java.io.Serializable_.
 
 As stated above, the Remote Business Interface of a bean can be any plain old interface.
-It does not need to extend javax.ejb.EJBObject, it does not need a javax.ejb.EJBHome, the methods do not need to throw javax.rmi.RemoteException, and the bean class _can_ implement it!
+It does not need to extend {ee-prefix}.ejb.EJBObject, it does not need a {ee-prefix}.ejb.EJBHome, the methods do not need to throw {ee-prefix}.rmi.RemoteException, and the bean class _can_ implement it!
 
 At minimum the interface must be annotated with _@Remote_ either in the interface itself or in the bean class, or the interface must be declared via +++<business-remote>+++in the ejb-jar.xml.+++</business-remote>+++
 

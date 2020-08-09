@@ -173,7 +173,7 @@ We include several built-in PropertyEditors already such as Date, InetAddress, C
 
 *MyBean.java*
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 import java.net.URI;
 import java.io.File;

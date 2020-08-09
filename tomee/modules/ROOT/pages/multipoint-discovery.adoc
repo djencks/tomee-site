@@ -41,7 +41,7 @@ Only one of the servers listed is required to be running when this server starts
 Configuration in the client is similar, but note that EJB clients do not participate directly in multipoint communication and do *not* connect to the multipoint port.
 The server list is simply a list of the regular `ejbd://` urls that a client normally uses to connect to a server.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 Properties p = new Properties();
 p.put(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.RemoteInitialContextFactory");
@@ -52,7 +52,7 @@ InitialContext remoteContext = new InitialContext(p);
 Failover can work entirely driven by the server, the client does not need to be configured to participate.
 A client can connect as usual to the server.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 Properties p = new Properties();
 p.put(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.RemoteInitialContextFactory");

@@ -57,7 +57,7 @@ The multipulse functionality is not just for servers to find each other in a clu
 A special `multipulse://` URL can be used in the `InitialContext` properties to signify that multipulse should be used to seed the connection process.
 Such as:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 Properties p = new Properties();
 p.put(Context.INITIAL_CONTEXT_FACTORY, "org.apache.openejb.client.RemoteInitialContextFactory");
@@ -76,7 +76,7 @@ If the client knows the URL of a server in the cluster, it may use it and connec
 Note that clients do not need to use multipulse to communicate with servers.
 Servers can use multicast to discover each other, but clients are still free to connect to servers in the network using the server's TCP address.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 Properties p = new Properties();
 p.put(Context.INITIAL_CONTEXT_FACTORY,  "org.apache.openejb.client.RemoteInitialContextFactory");

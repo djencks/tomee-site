@@ -42,7 +42,7 @@ Where the datasources above are configured in your openejb.xml as follows:
 
 Or in properties as follows:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 p.put("movieDatabase", "new://Resource?type=DataSource");
 p.put("movieDatabase.JdbcDriver", "org.hsqldb.jdbcDriver");
@@ -87,7 +87,7 @@ Pending
 
 Using a EXTENDED persistence context ...
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 @PersistenceContext(unitName = "movie-unit", type = PersistenceContextType.EXTENDED)
 EntityManager entityManager;
@@ -104,7 +104,7 @@ on a persistence unit setup as RESOURCE_LOCAL ...
 
 inside of a transaction.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 @TransactionAttribute(TransactionAttributeType.REQUIRED)
 public void addMovie(Movie movie) throws Exception {

@@ -27,7 +27,7 @@ This works for snapshots or staging final binaries.
 
 Then publish via:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 $ mvn clean deploy
 ----

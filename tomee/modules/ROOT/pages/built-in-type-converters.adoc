@@ -49,15 +49,15 @@ OpenEJB 3.0 additional types:
 * java.util.WeakHashMap
 * java.util.logging.Logger
 * java.util.regex.Pattern
-* javax.management.ObjectName
-* javax.naming.Context
+* {ee-prefix}.management.ObjectName
+* {ee-prefix}.naming.Context
 * org.apache.commons.logging.Log
 * org.apache.log4j.Logger
 
 To use an OpenEJB additional type in xml, simply declare it as `<env-entry-type>java.lang.String</env-entry-type>` and it will be converted on the fly to the field/setter type used by the bean class.
 For example:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 package org.superbiz.foo;
 

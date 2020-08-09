@@ -59,7 +59,7 @@ The application is treated as it's own self-contained EAR, separate from other u
 |A FactoryBean that imports a Resource from OpenEJB into the Spring ApplicationContext.
 Has the following properties:
 
-* _type_ such as javax.sql.DataSource
+* _type_ such as {ee-prefix}.sql.DataSource
 * _resourceId_
 
 In the future this bean will not be required and all OpenEJB Resources will automatically be imported into the Spring ApplicationContext.

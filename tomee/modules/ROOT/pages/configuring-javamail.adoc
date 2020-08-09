@@ -6,13 +6,13 @@
 
 == Declaring a JavaMail Resource
 
-The basics are that any properties listed in the element are given directly to the javamail provider via javax.mail.Session.getDefaultInstance(Properties props).
+The basics are that any properties listed in the element are given directly to the javamail provider via {ee-prefix}.mail.Session.getDefaultInstance(Properties props).
 
 Here might be some example properties.
 
 [source,xml]
 ----
-<Resource id="SuperbizMail" type="javax.mail.Session">
+<Resource id="SuperbizMail" type="{ee-prefix}.mail.Session">
    mail.smtp.host=mail.superbiz.org
    mail.smtp.port=25
    mail.transport.protocol=smtp

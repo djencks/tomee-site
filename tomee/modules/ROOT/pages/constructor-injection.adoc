@@ -9,7 +9,7 @@ For those of you who would like to use final fields, wish to avoid numerous sett
 This is a feature we intended to add to OpenEJB 3.0 but didn't have time for.
 We're happy to bring it to the OpenEJB 3.1 release and with a bit of luck and support from people like yourself, we'll see this as an EJB 3.1 feature as well.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 @Stateless
 public class WidgetBean implements Widget {
@@ -41,7 +41,7 @@ public class WidgetBean implements Widget {
 
 The @EJB, @Resource, @PersistenceUnit, and @PersistenceContext annotations can be placed at the class-level instead such as:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 @Stateless
 @EJB(name = "foo", beanInterface = Foo.class, beanName = "FooBean")
@@ -73,7 +73,7 @@ If you'd like to see that change as much as we do, definitely voice your support
 
 Not yet possible
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 @Stateless
 

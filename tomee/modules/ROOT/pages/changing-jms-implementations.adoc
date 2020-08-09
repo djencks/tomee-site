@@ -59,7 +59,7 @@ Let's say that the following file lives in the jar at `META-INF/org.superbiz/ser
   <ServiceProvider
       id="ConnectionFactory"
       service="Resource"
-      types="javax.jms.ConnectionFactory, javax.jms.QueueConnectionFactory, javax.jms.TopicConnectionFactory, QueueConnectionFactory, TopicConnectionFactory"
+      types="{ee-prefix}.jms.ConnectionFactory, {ee-prefix}.jms.QueueConnectionFactory, {ee-prefix}.jms.TopicConnectionFactory, QueueConnectionFactory, TopicConnectionFactory"
       class-name="com.sun.genericra.outbound.ManagedJMSConnectionFactory">
           ConnectionFactoryJndiName
           ClientId
@@ -70,7 +70,7 @@ Let's say that the following file lives in the jar at `META-INF/org.superbiz/ser
   <ServiceProvider
       id="Queue"
       service="Resource"
-      types="javax.jms.Queue, Queue"
+      types="{ee-prefix}.jms.Queue, Queue"
       class-name="com.sun.genericra.outbound.QueueProxy">
           DestinationJndiName
           ResourceAdapter
@@ -83,7 +83,7 @@ Let's say that the following file lives in the jar at `META-INF/org.superbiz/ser
   <ServiceProvider
       id="Topic"
       service="Resource"
-      types="javax.jms.Topic, Topic"
+      types="{ee-prefix}.jms.Topic, Topic"
       class-name="com.sun.genericra.outbound.TopicProxy">
           DestinationJndiName
           ResourceAdapter

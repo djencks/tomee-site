@@ -27,7 +27,7 @@ The source for this example is the "custom-injection" directory located in the o
 
 === Bean Class
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 @Stateless
 public class Stratocaster {
@@ -92,7 +92,7 @@ style=VINTAGE
 Support for java.lang.Enum types is already built-in, but we've decided we'd like to allow abbreviated versions of the enum constants to be usable.
 We do this by creating a custom PropertyEditor for our Pickup enum like so:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 public class PickupEditor extends java.beans.PropertyEditorSupport {
     public void setAsText(String text) throws IllegalArgumentException {
@@ -107,7 +107,7 @@ public class PickupEditor extends java.beans.PropertyEditorSupport {
 
 We cleverly install this PropertyEditor in a static block in the Pickup class that will be executed should someone actually reference the Pickup type.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 public enum Pickup {
 
@@ -125,7 +125,7 @@ public enum Pickup {
 
 == Test Case
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 public class StratocasterTest extends TestCase {
 
@@ -169,7 +169,7 @@ ___________________
 
 Which should create output like the following:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 -------------------------------------------------------
  T E S T S

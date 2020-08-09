@@ -5,7 +5,7 @@
 :jbake-status: published
 
 
-TomEE complains it doesn't know the container type, so I added type="javax.naming.InitialContext" and it worked (mostly).
+TomEE complains it doesn't know the container type, so I added type="{ee-prefix}.naming.InitialContext" and it worked (mostly).
 
 
 == Referencing a bean in another jar (with annotations)
@@ -14,11 +14,11 @@ When using annotations to reference a bean from another ejb in your ear you have
 
 So in ejb app A colorsApp.jar you have this bean:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 package com.foo.colors;
 
-import javax.ejb.Stateless;
+import {ee-prefix}.ejb.Stateless;
 
 @Stateless
 public class OrangeBean implements OrangeRemote {
@@ -27,11 +27,11 @@ public class OrangeBean implements OrangeRemote {
 
 Then in ejb app B shapesApp.jar you have this bean with a reference to OrangeRemote:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 package com.foo.shapes;
 
-import javax.ejb.Stateless;
+import {ee-prefix}.ejb.Stateless;
 import com.foo.colors.OrangeRemote;
 
 @Stateless
@@ -65,11 +65,11 @@ The same basic approach applies and dependency injection is still possible, howe
 
 In ejb app A colorsApp.jar you have this bean:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 package com.foo.colors;
 
-import javax.ejb.Stateless;
+import {ee-prefix}.ejb.Stateless;
 
 @Stateless
 public class OrangeBean implements OrangeRemote {
@@ -78,11 +78,11 @@ public class OrangeBean implements OrangeRemote {
 
 Then in ejb app B shapesApp.jar -- note there is no `@EJB` annotation:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 package com.foo.shapes;
 
-import javax.ejb.Stateless;
+import {ee-prefix}.ejb.Stateless;
 import com.foo.colors.OrangeRemote;
 
 @Stateless
@@ -132,7 +132,7 @@ In this example we are calling our InitialContext `shoe` for fun.
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <openejb>
 
-  <JndiProvider id="shoe" type="javax.naming.InitialContext">
+  <JndiProvider id="shoe" type="{ee-prefix}.naming.InitialContext">
     java.naming.provider.url = ejbd://localhost:4201
     java.naming.factory.initial = org.apache.openejb.client.RemoteInitialContextFactory
   </JndiProvider>
@@ -142,7 +142,7 @@ In this example we are calling our InitialContext `shoe` for fun.
 
 Declaring the `@EJB` reference is then done using a `mappedName`  that references the named `InitialContext`
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 public class BlueBean implements BlueRemote {
 
@@ -168,7 +168,7 @@ If say, there are two servers that have the `OrangeBeanRemote` bean, you could e
 
 [source,xml]
 ----
-  <JndiProvider id="shoe" type="javax.naming.InitialContext">
+  <JndiProvider id="shoe" type="{ee-prefix}.naming.InitialContext">
     java.naming.provider.url = failover:ejbd://192.168.1.20:4201,ejbd://192.168.1.30:4201
     java.naming.factory.initial = org.apache.openejb.client.RemoteInitialContextFactory
   </JndiProvider>

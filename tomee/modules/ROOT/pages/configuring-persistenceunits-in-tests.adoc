@@ -47,7 +47,7 @@ So for example with the following persistence.xml:
 You can override and add persistence unit properties in your test case.
 There are currently no facilities for removing them (if you have a need for that let us know -- it hasn't really come up so far).
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 Properties p = new Properties();
 p.put(Context.INITIAL_CONTEXT_FACTORY,"org.apache.openejb.client.LocalInitialContextFactory");
@@ -82,7 +82,7 @@ Details on that one exception below.
 Note that you *must* use the *unit name* as the prefix.
 This will not work:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
     Properties p = new Properties();
     p.put(Context.INITIAL_CONTEXT_FACTORY,"org.apache.openejb.client.LocalInitialContextFactory");

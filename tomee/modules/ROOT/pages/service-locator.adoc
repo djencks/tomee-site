@@ -12,7 +12,7 @@ Creating the exact layout you want using the exact data you want means you can c
 To get the creative juices flowing here are a few examples of lookup methods you could create for your service locator, the jndi name formats that would work with those lookups, and examples of client code using the service locator.
 For simplicity, we'll assume all the lookup examples start with this basic class that has a built-in lookup allowing for a common prefix to be optionally applied to the beginning of all lookup strings.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 public class MyLocator {
     private final Context context;
@@ -47,7 +47,7 @@ Usable with JNDI name formats ending in the full class name of the interface suc
 
 * \{interfaceClass}
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 public <T> T lookup(Class<T> type) {
     return (T) lookup(type.getName());
@@ -62,7 +62,7 @@ Or with a common prefix or with a common prefix supplied in constructor such as:
 * \{moduleId}/\{interfaceClass}
 * ejb/\{moduleId}/\{interfaceClass}
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 MyLocator locator = new MyLocator("ejb/superbiz");
 Widget widget = locator.lookup(Widget.class);
@@ -76,7 +76,7 @@ Usable with JNDI name formats including a varying prefix such as ejbName or depl
 * \{ejbName}/\{interfaceClass}
 * \{deploymentId}/\{interfaceClass}
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 public <T> T lookup(String prefix, Class <T> type) {
     return (T) lookup(prefix + "/" + type.getName());
@@ -92,7 +92,7 @@ Or with a common prefix or with a common prefix supplied in constructor such as:
 * \{moduleId}/\{ejbName}/\{interfaceClass}
 * ejb/\{moduleId}/\{deploymentId}/\{interfaceClass}
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 MyLocator locator = new MyLocator("accountingApp");
 Widget widget = locator.lookup("RedWidgetBean", Widget.class);
@@ -110,7 +110,7 @@ Works with:
 
 * \{interfaceClass}/\{ejbClass}
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 public <T> T lookup(Class<T> type, Class ejbClass) {
     return (T) lookup(type.getName() + "/" + ejbClass.getName());
@@ -125,7 +125,7 @@ Or with a common prefix or with a common prefix supplied in constructor such as:
 * \{moduleId}/\{interfaceClass}/\{ejbClass}
 * ejb/\{moduleId}/\{interfaceClass}/\{ejbClass}
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 MyLocator locator = new MyLocator("ejb/purchasingApp");
 Widget widget = locator.lookup(Widget.class, RedWidgetBean.class);
@@ -138,7 +138,7 @@ Similar to the above example but using the simple name of the classes resulting 
 
 * {ejbClass.simpleName}/{interfaceClass.simpleName}
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 public <T> T lookup(Class ejbClass, Class<T> type) {
     return (T) lookup(ejbClass.getSimpleName() + "" + type.getSimpleName());
@@ -147,7 +147,7 @@ public <T> T lookup(Class ejbClass, Class<T> type) {
 
 and
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 MyLocator locator = new MyLocator();
 Widget widget = locator.lookup(RedWidgetBean.class, Widget.class);
@@ -158,7 +158,7 @@ Or with a common prefix or with a common prefix supplied in constructor such as:
 * \{moduleId}/{ejbClass.simpleName}/{interfaceClass.simpleName}
 * ejb/\{moduleId}/{ejbClass.simpleName}/{interfaceClass.simpleName}
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 MyLocator locator = new MyLocator("shippingApp");
 Widget widget = locator.lookup(GreenWidgetBean.class, Widget.class);

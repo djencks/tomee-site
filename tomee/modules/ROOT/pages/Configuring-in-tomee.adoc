@@ -13,7 +13,7 @@
 
 For example,
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 @Resource DataSource moviesDatabase
 ----

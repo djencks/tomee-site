@@ -54,7 +54,7 @@ This is key to avoiding port conflicts on CI systems or for just plain clean tes
 The TomEE Arquillian adapters will export the actual port chosen back as a system property using the same name.
 The test case can use the property to retrieve the port and contact the server.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 URL url = new URL("http://localhost:" + System.getProperty("tomee.httpPort");
 // use the URL to connect to the server
@@ -64,7 +64,7 @@ If that property returns null
 
 When you are actually using a test on the client side, you can use instead
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 import org.jboss.arquillian.test.api.ArquillianResource;
 ...
@@ -132,7 +132,7 @@ This will be slower, but with the added benefit it is 100% match with the produc
 
 On a local machine clients can get the remote server port using the following System property:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 final String port = System.getProperty("server.http.port");
 ----

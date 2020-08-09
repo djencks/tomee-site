@@ -35,7 +35,7 @@ See the xref:transaction-annotations.adoc[Transaction Annotations]  page for a f
 ....
 package org.superbiz.injection.tx;
 
-import javax.persistence.Entity;
+import {ee-prefix}.persistence.Entity;
 
 @Entity
 public class Movie {
@@ -85,15 +85,15 @@ public class Movie {
 ....
 package org.superbiz.injection.tx;
 
-import javax.ejb.Stateful;
-import javax.ejb.TransactionAttribute;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceContextType;
-import javax.persistence.Query;
+import {ee-prefix}.ejb.Stateful;
+import {ee-prefix}.ejb.TransactionAttribute;
+import {ee-prefix}.persistence.EntityManager;
+import {ee-prefix}.persistence.PersistenceContext;
+import {ee-prefix}.persistence.PersistenceContextType;
+import {ee-prefix}.persistence.Query;
 import java.util.List;
 
-import static javax.ejb.TransactionAttributeType.MANDATORY;
+import static {ee-prefix}.ejb.TransactionAttributeType.MANDATORY;
 
 //START SNIPPET: code
 @Stateful(name = "Movies")
@@ -158,15 +158,15 @@ package org.superbiz.injection.tx;
 
 import junit.framework.TestCase;
 
-import javax.ejb.EJB;
-import javax.ejb.Stateless;
-import javax.ejb.TransactionAttribute;
-import javax.ejb.embeddable.EJBContainer;
+import {ee-prefix}.ejb.EJB;
+import {ee-prefix}.ejb.Stateless;
+import {ee-prefix}.ejb.TransactionAttribute;
+import {ee-prefix}.ejb.embeddable.EJBContainer;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.Callable;
 
-import static javax.ejb.TransactionAttributeType.REQUIRES_NEW;
+import static {ee-prefix}.ejb.TransactionAttributeType.REQUIRES_NEW;
 
 /**
  * See the transaction-rollback example as it does the same thing
@@ -219,7 +219,7 @@ public class MoviesTest extends TestCase {
         try {
             doWork();
             fail("The Movies bean should be using TransactionAttributeType.MANDATORY");
-        } catch (javax.ejb.EJBTransactionRequiredException e) {
+        } catch ({ee-prefix}.ejb.EJBTransactionRequiredException e) {
             // good, our Movies bean is using TransactionAttributeType.MANDATORY as we want
         }
     }
@@ -255,7 +255,7 @@ Apache OpenEJB 4.0.0-beta-1    build: 20111002-04:06
 http://tomee.apache.org/
 INFO - openejb.home = /Users/dblevins/examples/testing-transactions
 INFO - openejb.base = /Users/dblevins/examples/testing-transactions
-INFO - Using 'javax.ejb.embeddable.EJBContainer=true'
+INFO - Using '{ee-prefix}.ejb.embeddable.EJBContainer=true'
 INFO - Configuring Service(id=Default Security Service, type=SecurityService, provider-id=Default Security Service)
 INFO - Configuring Service(id=Default Transaction Manager, type=TransactionManager, provider-id=Default Transaction Manager)
 INFO - Configuring Service(id=movieDatabase, type=Resource, provider-id=Default JDBC Database)

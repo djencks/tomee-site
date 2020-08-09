@@ -10,7 +10,7 @@ xref:application-composer/getting-started.adoc[Getting Started] page gives you a
 You can reuse existing file descriptors using `@Descriptors`.
 The name is the file name and the path either a classpath path or a file path:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
  // runner if needed etc...
  @Descriptors(@Descriptor(name = "persistence.xml", path = "META-INF/persistence.xml"))
@@ -27,7 +27,7 @@ If you want to test a JAXRS or JAXWS service you need to activate these services
 
 To do so just add the needed dependency and use `@EnableServices`:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
  // runner if needed etc...
  @EnableService("jaxrs") // jaxws supported as well
@@ -44,7 +44,7 @@ Often it is nice to have a random port to be able to deploy multiple tests/proje
 To shortcut all the needed logic you can use `@RandomPort`.
 It is simply an injection giving you either the port (`int`) or the root context (`URL`):
 
-[source,java]
+[source,java,subs=+attributes]
 ----
  // runner, services if needed etc...
  public class MyTest {
@@ -68,7 +68,7 @@ The value is the name of the service it will apply on (being said http is an ali
 
 `@Jars` allows you to add dependencies (scanned) to your application automatically (like CDI libraries):
 
-[source,java]
+[source,java,subs=+attributes]
 ----
  @Module
  @Classes(cdi = true, value = { C1.class, C2.class, E1.class })

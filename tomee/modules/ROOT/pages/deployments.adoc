@@ -55,7 +55,7 @@ Simply meaning that you don't need to pack your ejb's into a jar file in order t
 
 For example, if you have a directory structure like this:
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 > C:\myapp\
 > C:\myapp\acmeEjbs\

@@ -16,7 +16,7 @@
         ServerUrl = tcp://someHostName:61616
     </Resource>
 
-    <Resource id="MyJmsConnectionFactory" type="javax.jms.ConnectionFactory">
+    <Resource id="MyJmsConnectionFactory" type="{ee-prefix}.jms.ConnectionFactory">
         ResourceAdapter = MyJmsResourceAdapter
     </Resource>
 
@@ -24,8 +24,8 @@
         ResourceAdapter = MyJmsResourceAdapter
     </Container>
 
-    <Resource id="FooQueue" type="javax.jms.Queue"/>
-    <Resource id="BarTopic" type="javax.jms.Topic"/>
+    <Resource id="FooQueue" type="{ee-prefix}.jms.Queue"/>
+    <Resource id="BarTopic" type="{ee-prefix}.jms.Topic"/>
 </tomee>
 ----
 
@@ -42,7 +42,7 @@ The various URL formats that ActiveMQ supports also work, such as 'failover:'.
         ServerUrl       =  tcp://someHostName:61616
     </Resource>
 
-    <Resource id="MyJmsConnectionFactory" type="javax.jms.ConnectionFactory">
+    <Resource id="MyJmsConnectionFactory" type="{ee-prefix}.jms.ConnectionFactory">
         ResourceAdapter = MyJmsResourceAdapter
     </Resource>
 
@@ -50,8 +50,8 @@ The various URL formats that ActiveMQ supports also work, such as 'failover:'.
         ResourceAdapter = MyJmsResourceAdapter
     </Container>
 
-    <Resource id="FooQueue" type="javax.jms.Queue"/>
-    <Resource id="BarTopic" type="javax.jms.Topic"/>
+    <Resource id="FooQueue" type="{ee-prefix}.jms.Queue"/>
+    <Resource id="BarTopic" type="{ee-prefix}.jms.Topic"/>
 </tomee>
 ----
 
@@ -70,7 +70,7 @@ Adding the `DataSource` property to your `ActiveMQResourceAdapter` config will a
         DataSource      =  MyDataSource
     </Resource>
 
-    <Resource id="MyDataSource" type="javax.sql.DataSource">
+    <Resource id="MyDataSource" type="{ee-prefix}.sql.DataSource">
         JdbcDriver  = org.hsqldb.jdbcDriver.
         JdbcUrl	    = jdbc:hsqldb:file:data/hsqldb/hsqldb.
         UserName    = sa
@@ -109,7 +109,7 @@ Then use the `xbean:file:` url prefix in the `BrokerXmlConfig` as shown belog.
         ServerUrl       =  tcp://someHostName:61616
     </Resource>
 
-    <Resource id="MyJmsConnectionFactory" type="javax.jms.ConnectionFactory">
+    <Resource id="MyJmsConnectionFactory" type="{ee-prefix}.jms.ConnectionFactory">
         ResourceAdapter = MyJmsResourceAdapter
     </Resource>
 
@@ -117,8 +117,8 @@ Then use the `xbean:file:` url prefix in the `BrokerXmlConfig` as shown belog.
         ResourceAdapter = MyJmsResourceAdapter
     </Container>
 
-    <Resource id="FooQueue" type="javax.jms.Queue"/>
-    <Resource id="BarTopic" type="javax.jms.Topic"/>
+    <Resource id="FooQueue" type="{ee-prefix}.jms.Queue"/>
+    <Resource id="BarTopic" type="{ee-prefix}.jms.Topic"/>
 </tomee>
 ----
 
@@ -128,7 +128,7 @@ Finally, restart the server.
 
 The same can be done via properties in an embedded configuration, via the `conf/system.properties` file or on the command line via `-D` flags.
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 Properties p = new Properties();
 p.put(Context.INITIAL_CONTEXT_FACTORY, LocalInitialContextFactory.class.getName());
@@ -137,14 +137,14 @@ p.put("MyJmsResourceAdapter", "new://Resource?type=ActiveMQResourceAdapter");
 p.put("MyJmsResourceAdapter.ServerUrl", "tcp://someHostName:61616");
 p.put("MyJmsResourceAdapter.BrokerXmlConfig", "");
 
-p.put("MyJmsConnectionFactory", "new://Resource?type=javax.jms.ConnectionFactory");
+p.put("MyJmsConnectionFactory", "new://Resource?type={ee-prefix}.jms.ConnectionFactory");
 p.put("MyJmsConnectionFactory.ResourceAdapter", "MyJmsResourceAdapter");
 
 p.put("MyJmsMdbContainer", "new://Container?type=MESSAGE");
 p.put("MyJmsMdbContainer.ResourceAdapter", "MyJmsResourceAdapter");
 
-p.put("FooQueue", "new://Resource?type=javax.jms.Queue");
-p.put("BarTopic", "new://Resource?type=javax.jms.Topic");
+p.put("FooQueue", "new://Resource?type={ee-prefix}.jms.Queue");
+p.put("BarTopic", "new://Resource?type={ee-prefix}.jms.Topic");
 
 InitialContext context = new InitialContext(p);
 ----
@@ -155,18 +155,18 @@ From anywhere in the same VM as the EJB Container you could lookup the above res
 
 [source,properties]
 ----
-javax.jms.ConnectionFactory cf = (ConnectionFactory)
+{ee-prefix}.jms.ConnectionFactory cf = (ConnectionFactory)
         context.lookup("openejb:Resource/MyJmsConnectionFactory");
 
-javax.jms.Queue queue = (Queue) context.lookup("openejb:Resource/FooQueue");
-javax.jms.Topic topic = (Topic) context.lookup("openejb:Resource/BarTopic");
+{ee-prefix}.jms.Queue queue = (Queue) context.lookup("openejb:Resource/FooQueue");
+{ee-prefix}.jms.Topic topic = (Topic) context.lookup("openejb:Resource/BarTopic");
 ----
 
 === MDB ActivationConfig
 
 Here, the value for `destination` is the physical name of the desired destination.
 The value for `destinationType` is the class name that defines the type of destination.
-It should be `javax.jms.Queue` or `javax.jms.Topic`.
+It should be `{ee-prefix}.jms.Queue` or `{ee-prefix}.jms.Topic`.
 
 The Activation Spec properties that can be configured are:
 [{supported-properties-table-layout}]

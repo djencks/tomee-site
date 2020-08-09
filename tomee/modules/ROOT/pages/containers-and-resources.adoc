@@ -38,7 +38,7 @@ Declarable in tomee.xml via
 
 [source,xml]
 ----
- <TransactionManager type="javax.transaction.TransactionManager">
+ <TransactionManager type="{ee-prefix}.transaction.TransactionManager">
  </TransactionManager>
 ----
 
@@ -238,7 +238,7 @@ Default value is `Default JMS Resource Adapter`.
 
 |Specifies the message listener interface handled by this container.
 
-Default value is `javax.jms.MessageListener`.
+Default value is `{ee-prefix}.jms.MessageListener`.
 
 
 |ActivationSpecClass
@@ -257,18 +257,18 @@ Default value is `10`.
 
 == Resources
 
-=== javax.sql.DataSource
+=== {ee-prefix}.sql.DataSource
 
 Declarable in tomee.xml via
 
 [source,xml]
 ----
- <Resource id="Foo" type="javax.sql.DataSource">
+ <Resource id="Foo" type="{ee-prefix}.sql.DataSource">
  </Resource>
 ----
 
 Declarable in properties via
-`Foo = new://Resource?type=javax.sql.DataSource`
+`Foo = new://Resource?type={ee-prefix}.sql.DataSource`
 
 
 
@@ -451,7 +451,7 @@ Default value is `1800000`.
 |PoolPreparedStatements
 
 |If true, a statement pool is created for each Connection and PreparedStatements created by one of the following methods are pooled:
-[source,java]
+[source,java,subs=+attributes]
 ----
 public PreparedStatement prepareStatement(String sql);
 public PreparedStatement prepareStatement(String sql, int resultSetType, int resultSetConcurrency)
@@ -472,7 +472,7 @@ Default value is `0`.
 |AccessToUnderlyingConnectionAllowed
 
 |If true the raw physical connection to the database can be accessed using the following construct:
-[source,java]
+[source,java,subs=+attributes]
 ----
 Connection conn = ds.getConnection();
 Connection rawConn = ((DelegatingConnection) conn).getInnermostDelegate();
@@ -529,18 +529,18 @@ Default value is `vm://localhost?async=true`.
 Default value is `Default Unmanaged JDBC Database`.
 |===
 
-=== javax.jms.ConnectionFactory
+=== {ee-prefix}.jms.ConnectionFactory
 
 Declarable in tomee.xml via
 
 [source,xml]
 ----
- <Resource id="Foo" type="javax.jms.ConnectionFactory">
+ <Resource id="Foo" type="{ee-prefix}.jms.ConnectionFactory">
  </Resource>
 ----
 
 Declarable in properties via
-`Foo = new://Resource?type=javax.jms.ConnectionFactory`
+`Foo = new://Resource?type={ee-prefix}.jms.ConnectionFactory`
 
 
 
@@ -592,18 +592,18 @@ Default value is `5000`.
 Default value is `15`.
 |===
 
-=== javax.jms.Queue
+=== {ee-prefix}.jms.Queue
 
 Declarable in tomee.xml via
 
 [source,xml]
 ----
- <Resource id="Foo" type="javax.jms.Queue">
+ <Resource id="Foo" type="{ee-prefix}.jms.Queue">
  </Resource>
 ----
 
 Declarable in properties via
-`Foo = new://Resource?type=javax.jms.Queue`
+`Foo = new://Resource?type={ee-prefix}.jms.Queue`
 
 
 
@@ -621,18 +621,18 @@ Supports the following properties
 |Specifies the name of the queue
 |===
 
-=== javax.jms.Topic
+=== {ee-prefix}.jms.Topic
 
 Declarable in tomee.xml via
 
 [source,xml]
 ----
- <Resource id="Foo" type="javax.jms.Topic">
+ <Resource id="Foo" type="{ee-prefix}.jms.Topic">
  </Resource>
 ----
 
 Declarable in properties via
-`Foo = new://Resource?type=javax.jms.Topic`
+`Foo = new://Resource?type={ee-prefix}.jms.Topic`
 
 
 
@@ -667,18 +667,18 @@ Declarable in properties via
 
 No properties.
 
-=== javax.mail.Session
+=== {ee-prefix}.mail.Session
 
 Declarable in tomee.xml via
 
 [source,xml]
 ----
- <Resource id="Foo" type="javax.mail.Session">
+ <Resource id="Foo" type="{ee-prefix}.mail.Session">
  </Resource>
 ----
 
 Declarable in properties via
-`Foo = new://Resource?type=javax.mail.Session`
+`Foo = new://Resource?type={ee-prefix}.mail.Session`
 
 
 

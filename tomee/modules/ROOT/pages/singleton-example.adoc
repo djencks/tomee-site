@@ -2,7 +2,7 @@
 
 #Overview
 
-As the name implies a javax.ejb.Singleton is a session bean with a guarantee that there is at most one instance in the application.
+As the name implies a {ee-prefix}.ejb.Singleton is a session bean with a guarantee that there is at most one instance in the application.
 
 What it gives that is completely missing in EJB 3.0 and prior versions is the ability to have an EJB that is notified when the application starts and notified when the application stops.
 So you can do all sorts of things that you previously could only do with a load-on-startup servlet.
@@ -19,12 +19,12 @@ The bean shown is a simple properties "registry" and provides a place where opti
 
 ....
 
-import static javax.ejb.ConcurrencyManagementType.BEAN;
-import javax.ejb.Singleton;
-import javax.ejb.ConcurrencyManagement;
-import javax.ejb.Startup;
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
+import static {ee-prefix}.ejb.ConcurrencyManagementType.BEAN;
+import {ee-prefix}.ejb.Singleton;
+import {ee-prefix}.ejb.ConcurrencyManagement;
+import {ee-prefix}.ejb.Startup;
+import {ee-prefix}.annotation.PostConstruct;
+import {ee-prefix}.annotation.PreDestroy;
 import java.util.Properties;
 @Singleton
 @ConcurrencyManagement(BEAN)
@@ -68,10 +68,10 @@ With @ConcurrencyManagement(CONTAINER) the container controls whether multi-thre
 
 ....
 
-import static javax.ejb.LockType.READ;
-import static javax.ejb.LockType.WRITE;
-import javax.ejb.Lock;
-import javax.ejb.Singleton;
+import static {ee-prefix}.ejb.LockType.READ;
+import static {ee-prefix}.ejb.LockType.WRITE;
+import {ee-prefix}.ejb.Lock;
+import {ee-prefix}.ejb.Singleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Collection;

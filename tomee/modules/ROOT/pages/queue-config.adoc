@@ -10,17 +10,17 @@ All properties in the element body are optional.
 
 [source,xml]
 ----
-<Resource id="myQueue" type="javax.jms.Queue">
+<Resource id="myQueue" type="{ee-prefix}.jms.Queue">
     destination =
 </Resource>
 ----
 
 Alternatively, a Queue can be declared via properties in the `<tomee-home>/conf/system.properties` file or via Java VirtualMachine `-D` properties.
-The properties can also be used when embedding TomEE via the `javax.ejb.embeddable.EJBContainer` API or `InitialContext`
+The properties can also be used when embedding TomEE via the `{ee-prefix}.ejb.embeddable.EJBContainer` API or `InitialContext`
 
 [source,properties]
 ----
-myQueue = new://Resource?type=javax.jms.Queue
+myQueue = new://Resource?type={ee-prefix}.jms.Queue
 myQueue.destination =
 ----
 

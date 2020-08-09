@@ -11,14 +11,14 @@ Annotations and xml have equal function in both lookup and injection.
 
 === Via annotation
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 package org.superbiz;
 
-import javax.persistence.PersistenceUnit;
-import javax.persistence.EntityManagerFactory;
-import javax.ejb.Stateless;
-import javax.naming.InitialUnit;
+import {ee-prefix}.persistence.PersistenceUnit;
+import {ee-prefix}.persistence.EntityManagerFactory;
+import {ee-prefix}.ejb.Stateless;
+import {ee-prefix}.naming.InitialUnit;
 
 @Stateless
 public class MyBean implements MyInterface {
@@ -57,14 +57,14 @@ The above `@PersistenceUnit` annotation usage is 100% equivalent to the followin
 
 ==== Via annotation
 
-[source,java]
+[source,java,subs=+attributes]
 ----
 package org.superbiz;
 
-import javax.persistence.PersistenceUnit;
-import javax.persistence.EntityManagerFactory;
-import javax.ejb.Stateless;
-import javax.naming.InitialUnit;
+import {ee-prefix}.persistence.PersistenceUnit;
+import {ee-prefix}.persistence.EntityManagerFactory;
+import {ee-prefix}.ejb.Stateless;
+import {ee-prefix}.naming.InitialUnit;
 
 @Stateless
 @PersistenceUnit(name = "myFooEntityManagerFactory", unitName = "foo-unit")

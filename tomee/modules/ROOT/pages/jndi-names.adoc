@@ -379,7 +379,7 @@ Similarly, any proxy OpenEJB creates for a business remote interface will also i
 *Who should read?*
 Read this section of either of these two apply to you:
 * You do not implement your business interfaces in your bean class
-* One or more of your business remote interfaces extend from javax.rmi.Remote
+* One or more of your business remote interfaces extend from {ee-prefix}.rmi.Remote
 
 If neither of these two items describe your apps, then there is no need to read further.
 Go have fun.
@@ -390,9 +390,9 @@ If you do not implement your business interfaces it may not be possible for us t
 Conflicts in the throws clauses and the return values can occur as detailed xref:multiple-business-interface-hazzards.adoc[here].
 When creating a proxy for an interface we will detect and remove any other business interfaces that would conflict with the main interface.
 
-=== Business interfaces extending javax.rmi.Remote
+=== Business interfaces extending {ee-prefix}.rmi.Remote
 
-Per spec rules many runtime exceptions (container or connection related) are thrown from javax.rmi.Remote proxies as java.rmi.RemoteException which is not a runtime exception and must be throwable via the proxy as a checked exception.
+Per spec rules many runtime exceptions (container or connection related) are thrown from {ee-prefix}.rmi.Remote proxies as java.rmi.RemoteException which is not a runtime exception and must be throwable via the proxy as a checked exception.
 The issue is that conflicting throws clauses are actually removed for two interfaces sharing the same method signature.
 For example two methods such as these:
 
@@ -403,8 +403,8 @@ can be implemented by trimming out the conflicting throws clauses as follows:
 
 * Implementation: void doIt(){}
 
-This is fine for a bean class as it does not need to throw the RMI required javax.rmi.RemoteException.
-However if we create a proxy from these two interfaces it will also wind up with a 'doIt(){}' method that cannot throw javax.rmi.RemoteException.
+This is fine for a bean class as it does not need to throw the RMI required {ee-prefix}.rmi.RemoteException.
+However if we create a proxy from these two interfaces it will also wind up with a 'doIt(){}' method that cannot throw {ee-prefix}.rmi.RemoteException.
 This is very bad as the container does need to throw RemoteException to any business interfaces extending java.rmi.Remote for any container related issues or connection issues.
 If the container attempts to throw a RemoteException from the proxies 'doIt(){}' method, it will result in an UndeclaredThrowableException thrown by the VM.
 
